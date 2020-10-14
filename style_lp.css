@@ -5,7 +5,7 @@ body
 html 
 {
     box-sizing: border-box;
-    font-family: "Forma DJR Text Edu";
+    font-family: 'Alata';
 }
   *, *:before, *:after 
 {
@@ -13,7 +13,7 @@ html
 }
 .text
 {
-    font-family: "Forma DJR Text Edu";
+    font-family: 'Alata';
     color: #6F7A88;
 }
 .atlas-nav-bar
