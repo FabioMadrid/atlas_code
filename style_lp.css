@@ -12,7 +12,7 @@ html
     box-sizing: inherit;
 }
 @font-face {
-    font-family: "Forma DJR Text Edu";
+    font-family: "FormaDJRText";
     src: url(https://atlas-home-colombia.s3.amazonaws.com/fonts/fonts.css);
   }
 .text
