@@ -5,15 +5,19 @@ body
 html 
 {
     box-sizing: border-box;
-    font-family: "Forma DJR Text Edu";
+    font-family: "FormaDJRText";
 }
   *, *:before, *:after 
 {
     box-sizing: inherit;
 }
+@font-face {
+    font-family: "FormaDJRText";
+    src: url(https://atlas-home-colombia.s3.amazonaws.com/fonts/fonts.css);
+  }
 .text
 {
-    font-family: "Forma DJR Text Edu";
+    font-family:"FormaDJRText";
     color: #6F7A88;
 }
 .atlas-nav-bar
