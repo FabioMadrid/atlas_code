@@ -1,0 +1,320 @@
+body
+{
+    margin: 0 8%;
+}
+html 
+{
+    box-sizing: border-box;
+    font-family: "Forma DJR Text Edu";
+}
+  *, *:before, *:after 
+{
+    box-sizing: inherit;
+}
+.text
+{
+    font-family: "Forma DJR Text Edu";
+    color: #6F7A88;
+}
+.atlas-nav-bar
+{
+    display: block;
+    background-color: white;
+    width: 100%;
+    top:0;
+    position: fixed;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 10px grey;
+    left: 0;
+    right: 0;
+    z-index: +1;
+}
+.title
+{
+    margin-top: 50px ;
+    color:#0894FE;
+    font-size:2em;
+    font-weight:bold;
+    display: block;
+}
+.subtitles
+{
+    margin-top: 50px ;
+    color:#0894FE;
+    font-size:1em;
+    font-weight:bold;
+    display: block;
+}
+.row:after 
+{
+    content: "";
+    display: table;
+    clear: both;
+}
+.column-left
+{
+    float: left;
+    width: 49.99%;
+    padding: 15px;
+    height:auto;
+    display: block;
+}
+.column-50
+{
+    width: 49.99%;
+    float: right;
+    margin: auto;
+}
+.column-33
+{
+    width: 33.33%;
+    float: left;
+    margin: auto;
+}
+.icon-lp
+{
+    width: 90%;
+    height: auto;
+    margin-top: 50px;
+    display: block;
+    margin: auto;
+}
+.icon-v
+{
+    max-height: 400px;
+}
+.boton-landing
+{
+    background: white ;
+    color:#0894FE;
+    border: #0894FE solid 1px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: block;
+    width: 350px;
+    height: 60px;
+    margin: 30px auto 30px auto;
+    font:"Forma DJR Text Edu" bold 15px;
+    transition: background-color 0.4s;
+    outline: none;
+}
+.boton-landing:hover
+{
+    background-color: #2680EB;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.boton-landing:active 
+{
+    background-color: #6eb9f7;
+    background-size: 100%;
+    transition: background-color 0s;
+    border: #0894FE solid 1px;
+}
+.triangulo-decor
+{
+    position: absolute;
+    padding-top: 0px;
+    width: 20%;
+    height: auto;
+    vertical-align: middle;
+    border-style: none;
+    box-sizing: border-box;
+    max-width: 100%;
+    z-index: -1;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+.box
+{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(133, 133, 133, 0.19);
+    box-shadow: 5px grey;
+    display: block;
+    background-color: white;
+    width: auto;
+    text-align: left;
+    margin: 20px 0% 20px 0%;
+    padding: 10px 20px 40px 20px;
+    border-radius: 5px;
+}
+.img
+{
+    float: left;
+    padding-right: 5px;
+    height: 100px;
+    width: 100px;
+}
+.box::after 
+{
+    content: "";
+    clear: both;
+    display: table;
+}
+.figcaption
+{
+    font:"Forma DJR Text Edu" medium 12px;
+    color: #0894FE;
+    margin-top: 15px;
+    text-align: left;
+}
+.flex-box
+{
+ display: flex;
+ flex-flow: row wrap;
+ justify-content: center;
+}
+.footer
+{
+    height: 250px;
+    width: 100%;
+    border-top: 5px solid #0048CD;
+}
+.footer-img
+{
+    background-image: url(./svg/city2.svg);
+    background-color: transparent;
+    height: 250px;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+.footer-logo
+{
+    display: block;
+    width: auto;
+    height: 80px;
+    padding-top: 10px;
+    margin: auto;
+}
+.fa
+{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border: 3px;
+    background-color: #fff;
+    color: #0f4aa2;
+    padding: 20px;
+    font-size: 30px;
+    text-decoration: none;
+    margin:0;
+}
+a
+{
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+li
+{
+    list-style-type: none;
+    display: inline-block;
+    border: 3px solid  #0f4aa2;
+    margin: 5px 7px;
+    border-radius: 7px;
+}
+.fa:hover {
+    opacity: 0.7;
+    color: #2680EB;
+    border: #2680EB;
+}
+.footer-ul
+{
+    padding-left: 0;
+}
+
+/*diseño para ipads*/
+@media only screen and (max-width: 800px) 
+{
+    .caja 
+    {
+        text-align: center;
+    }
+    .img
+     {
+        margin: auto;
+        float: none;
+        display: block;
+    }
+    .figcaption
+    {
+        text-align: center;
+    }
+    .icon-lp
+    {
+        width: auto;
+        height: auto;
+        display: block;
+        margin:auto;
+        float: none;
+    }
+    .row:after 
+    {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    .boton-landing
+    {
+        width: 250px;
+        height: 60px;
+    }
+    .title
+    {
+        font-size:1.3em;
+    }
+    .icon-v
+    {
+        height: 300px;
+    }
+    .icon-i
+    {
+        padding-top: 40%;
+    }
+    .text
+    {
+        text-align: center;
+    }
+}
+/*diseño para moviles*/
+@media only screen and (max-width: 700px) 
+{
+    .column-50
+    {
+        width: 100%;
+        float: none;
+        margin: auto;
+        overflow: hidden;
+        padding: 15px;
+        height:auto;
+        display: block;
+    }
+    .column-left
+    {
+        float: none;
+        width: 100%;
+        padding: 15px;
+        height:auto;
+        display: block;
+    }
+    .boton-landing
+    {
+        width: 100%;
+    }
+    .icon-i
+    {
+        padding-top: 10px;
+    }
+    .triangulo-decor
+    {
+        width: 40%;
+    }
+}
