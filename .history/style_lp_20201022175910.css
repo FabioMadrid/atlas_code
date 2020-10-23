@@ -306,8 +306,7 @@ button:hover
   
   .close:hover,
   .close:focus {
-    background-color: #CC5F54;
-    border: none;
+    color: #000;
     text-decoration: none;
     cursor: pointer;
   }
@@ -337,12 +336,6 @@ button:hover
     appearance:none;
   }
 
-  input[type="submit" i]
-{
-    border: none;
-    outline: none;
-}
-
 .vivienda
 {
     background-image:url(./svg/vivienda-icon-azul.svg);
@@ -359,13 +352,13 @@ button:hover
 .inmueble-selector input:active + .drinkcard-cc
 {
     opacity:none;
+    color:#0048CD;
 }
 .inmueble-selector input:checked + .drinkcard-cc
 {
     -webkit-filter: none;
        -moz-filter: none;
             filter: none;
-            color:#0048CD;
 }
 .drinkcard-cc
 {
@@ -374,7 +367,6 @@ button:hover
     background-repeat:no-repeat;
     display:inline-block;
     width:90px;height:80px;
-    color: inherit;
     -webkit-transition: all 100ms ease-in;
        -moz-transition: all 100ms ease-in;
             transition: all 100ms ease-in;
@@ -387,7 +379,7 @@ button:hover
     -webkit-filter: none;
        -moz-filter: none;
             filter: none;
-            width:93px;height:83px;
+            width:100px;height:90px;
             color:#0048CD;
 }
 
@@ -398,15 +390,6 @@ button:hover
     text-align: center;
     display: block;
     margin: 15px auto;
-}
-.correcion
-{
-    left: 16px;
-    bottom: -110px;
-}
-.correcion-a
-{
-    bottom: -110px;
 }
 select
 {
@@ -445,6 +428,7 @@ input:checked
 .bottom-text
 {
     position: absolute;
+    bottom: -110px;
     text-align: center;
     font-size: 16px;
 }
@@ -470,6 +454,11 @@ input:checked
     {
         justify-content: space-around;
     }
+    .bottom-text
+    {
+        bottom: -95px;
+        font-size: 14px;
+    }
     .modal-content
     {
         width: 90%;
@@ -484,10 +473,6 @@ input:checked
     .drinkcard-cc
     {
         margin-top: 30px;
-    }
-    .bottom-text
-    {
-        bottom: -105px;
     }
 }
 /* ----------------------------------------------------- titulos, textos y fonts ------------------------------------------------------------------ */

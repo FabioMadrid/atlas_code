@@ -307,7 +307,6 @@ button:hover
   .close:hover,
   .close:focus {
     background-color: #CC5F54;
-    border: none;
     text-decoration: none;
     cursor: pointer;
   }

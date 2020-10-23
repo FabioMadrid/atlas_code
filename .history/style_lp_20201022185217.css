@@ -306,8 +306,7 @@ button:hover
   
   .close:hover,
   .close:focus {
-    background-color: #CC5F54;
-    border: none;
+    color: #000;
     text-decoration: none;
     cursor: pointer;
   }
@@ -387,7 +386,7 @@ button:hover
     -webkit-filter: none;
        -moz-filter: none;
             filter: none;
-            width:93px;height:83px;
+            width:100px;height:90px;
             color:#0048CD;
 }
 
@@ -470,6 +469,11 @@ input:checked
     {
         justify-content: space-around;
     }
+    .bottom-text
+    {
+        bottom: -95px;
+        font-size: 14px;
+    }
     .modal-content
     {
         width: 90%;
@@ -488,6 +492,7 @@ input:checked
     .bottom-text
     {
         bottom: -105px;
+
     }
 }
 /* ----------------------------------------------------- titulos, textos y fonts ------------------------------------------------------------------ */

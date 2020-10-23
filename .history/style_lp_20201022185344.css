@@ -306,8 +306,7 @@ button:hover
   
   .close:hover,
   .close:focus {
-    background-color: #CC5F54;
-    border: none;
+    color: #000;
     text-decoration: none;
     cursor: pointer;
   }
@@ -387,7 +386,7 @@ button:hover
     -webkit-filter: none;
        -moz-filter: none;
             filter: none;
-            width:93px;height:83px;
+            width:100px;height:90px;
             color:#0048CD;
 }
 
@@ -474,6 +473,15 @@ input:checked
     {
         width: 90%;
     }
+    .correcion
+    {
+    left: 16px;
+    bottom: -120px;
+    }
+    .correcion-a
+    {
+    bottom: -120px;
+    }
 }
 @media screen and (max-width:330px)
 {
@@ -488,6 +496,7 @@ input:checked
     .bottom-text
     {
         bottom: -105px;
+
     }
 }
 /* ----------------------------------------------------- titulos, textos y fonts ------------------------------------------------------------------ */
