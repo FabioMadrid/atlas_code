@@ -1,6 +1,6 @@
 //----------- funcion para responsive design del hamburger menu --------------//
 
-    function myFunction() {
+    function HamburgerFuction() {
 var x = document.getElementById("myTopnav");
 if (x.className === "topnav") {
   x.className += " responsive";
@@ -10,6 +10,22 @@ if (x.className === "topnav") {
 }
 
 // ------------ funcion para el modal de busqueda inmueble-------------//
+
+//Modal Registro//
+var modalregistro = document.getElementById("modal-registro");
+function modalR() 
+{
+modalregistro.style.display = "block";
+}
+//Modal Ingreso//
+var modalingreso = document.getElementById("modal-ingreso");
+function modalI() 
+{
+modalingreso.style.display = "block";
+}
+
+
+
 
 // Get the modal
 var modal = document.getElementById("myModal");
@@ -36,3 +52,4 @@ if (event.target == modal) {
 modal.style.display = "none";
 }
 }
+// ------------A DEPURAR Y UNIFICAR CODIGO PARA TENER UNA SOLA FUNCION ----------------//
