@@ -57,19 +57,50 @@
                    <span class="" id="" style="display: inline-block;">&times;</span>        
                 </div>-->
                 <h3 class="titulo-modal">¿Cómo deseas Registrarte?</h3>
-                    <h3 class="multitab">Registro Usuario</h3>
+                    <h3 class="multitab tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Registro Usuario</h3>
+                    <h3 class="multitab tablinks" onclick="openCity(event, 'Paris')">Registro Empresa</h3>
+
+                    <div id="London" class="tabcontent">
                     <p class="text" style="text-align: left;">Crea una cuenta personal.</p> 
+                    <p style="display: block; text-align:left;" class="text">
+                        ¿Ya tienes cuenta?   <a href="#" style="color: #0894FE;">  Ingresa Aquí</a></p>
                     <form action="" method="POST"> 
-                        <input type="text" placeholder="Tu Nombre y Apellido" name="nombre-apellido" id="nombre-apellido" required>
-                        <input type="email" placeholder="Tu Correo Electrónico" name="email" id="email" required>
-                        <input type="password" placeholder="Introduce tu Contraseña" name="psw" id="psw" required>
-                    </form>
+                        <input type="text" placeholder="Tu Nombre y Apellido" name="registro-usuario" id="nombre-apellido-usuario-registro" required>
+                        <input type="email" placeholder="Tu Correo Electrónico" name="registro-usuario" id="email-usuario-registro" required>
+                        <input type="password" placeholder="Introduce tu Contraseña" name="registro-usuario" id="psw-usuario-registro" required title="8 Caractéres mínimo" minlength="8">
                     <p style="clear: both; display: block; text-align: center;" class="text">Al Crear una cuenta aceptas nuestras<br>
                         <a href="#" style="color: #0894FE;">Politicas de Privacidad </a> & <a href=""  style="color: #0894FE;"> Términos y Condiciones</a></p>
                     <button type="submit" class="submit-boton" style="margin: 30px auto; width: 100%;">Registrarme</button>
-
+                    </form>
                     <a href="#" class="btn-social-login fb-icon"> Registo Con Facebook </a>
                     <a href="#" class="btn-social-login google-icon"> Registro Con Google </a>
+                    </div>
+
+                    
+                    <div id="Paris" class="tabcontent">
+                        <p class="text" style="text-align: left;">Crea una cuenta Empresarial.</p> 
+                        <p style="display: block; text-align:left;" class="text">
+                            ¿Ya tienes cuenta?   <a href="#" style="color: #0894FE;">  Ingresa Aquí</a></p>
+                        <form action="" method="POST"> 
+                            <input type="text" placeholder="Nombre de Empresa" name="nombre-empresa" id="nombre-empresa-registro" required title="Nombre Comercial">
+                            <input type="email" placeholder="Correo Electrónico Empresarial" name="email-empresa" id="email-empresa-registro" required title="Correo de Contacto">
+                            <input type="password" placeholder="Introduce tu Contraseña" name="psw-empresa" id="psw-empresa-registro" required 
+                            title="8 Caractéres mínimo" minlength="8">
+                            <input type="number" placeholder="Registro Tributario Empresa" name="rtn-empresa" id="rtn-empresa-registro" 
+                            title="RTN debe contener 14 números" required pattern=".{8,}">
+                            <select name="tipo-empresa-registro" id="tipo-empresa" class="minimal" required style="width: 100%;">
+                                <option value="constructora">Constructora</option>
+                                <option value="bienes-raices">Bienes Raices</option>
+                                <option value="independiente">Independiente</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                            <input type="tel" style="margin-top: 10px;" placeholder="Celular de Contacto" name="celular-empresa-registro" 
+                            id="telefono-empresa-registro" required minlength="8">
+                            <p style="clear: both; display: block; text-align: center;" class="text">Al Crear una cuenta aceptas nuestras<br>
+                            <a href="#" style="color: #0894FE;">Politicas de Privacidad </a> & <a href=""  style="color: #0894FE;"> Términos y Condiciones</a></p>
+                            <button type="submit" class="submit-boton" style="margin: 30px auto; width: 100%;">Registrar Empresa</button>
+                        </form>
+                    </div>
             </div>
         </div>
         <!---------MODAL INGRESO---------------->
@@ -79,18 +110,20 @@
                     <span class="" id="close-registro">&times;</span>
                 </div>-->
                 <h3 class="titulo-modal">¿Como deseas Ingresar?</h3>
+                <h3 class="multitab">Ingreso Usuario</h3>
+                <h3 class="multitab " >Registro Empresa</h3>
+
                 <form action="" method="POST">
-                    <h3 class="multitab">Ingreso Usuario</h3>
                         <p class="text" style="text-align: left;">Ingresa a tú perfil personal.</p>                 
-                        <input type="email" placeholder="Tu Correo Electrónico" name="email" id="email" required>
-                        <input type="password" placeholder="Introduce tu Contraseña" name="psw" id="psw" required>
+                        <input type="email" placeholder="Tu Correo Electrónico" name="email" id="email-usuario-ingreso" required autocomplete="on">
+                        <input type="password" placeholder="Introduce tu Contraseña" name="psw" id="psw-usuario-ingreso" required autocomplete="on">
+                        <button type="submit" class="submit-boton" style="margin: 30px auto; width: 100%;">Ingresar</button>
                 </form>
-                    <button type="submit" class="submit-boton" style="margin: 30px auto; width: 100%;">Ingresar</button>
                     <p style="display: block; text-align: center;" class="text">
                         <a href="#" style="color: #0894FE;">¿Olvidaste tu Contraseña?</a>
                     </p> 
                     <p style="display: block; text-align: center;" class="text">
-                        ¿Ya tienes cuenta? <a href="#" style="color: #0894FE;">Ingresa Aquí</a></p>
+                        ¿No tienes cuenta? <a href="#" style="color: #0894FE;">Registrate Aquí</a></p>
                     </p>
                 <a href="#" class="btn-social-login fb-icon"> Ingresa Con Facebook </a>
                 <a href="#" class="btn-social-login google-icon"> Ingresa Con Google </a>

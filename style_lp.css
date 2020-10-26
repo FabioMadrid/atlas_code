@@ -500,6 +500,7 @@ input:checked
     border-color: #2680EB;
     width: 80%;
     outline: none;
+    text-align: center !important;
 }
 .bottom-text
 {
@@ -513,7 +514,7 @@ input:checked
 }
 /* --------------------------------------------------------- MODAL DE REGISTRO -------------------------------------------------------------*/
 
-input[type=text], input[type=password], input[type=email]
+input[type=text], input[type=password], input[type=email],input[type=number],input[type=tel]
 {
     width: 100%;
     padding: 10px;
@@ -523,25 +524,41 @@ input[type=text], input[type=password], input[type=email]
     background: white;
     border-radius: 7px;
 }
-input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
+input[type=number]:focus
+{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=number]:focus input[type=tel]:focus{
     border-color: #0894FE;
     outline: none;
   }
-
 .multitab
 {
-    color: #0048CD;
-    border-bottom: 5px solid #0048CD;
-    display: inline-block;
+    color: #6F7A88;
+    border-bottom: 5px solid #6F7A88;
+    display: block;
     text-align: center;
     width: 50%;
     margin-top: 0;
     float:left;
+    cursor: pointer;
+    outline: none;
 }
-.multitab:active
+.multitab:hover
 {
-    
+    color: #0048CD;
+    border-bottom: 5px solid #0048CD;
 }
+.multitab.active
+{
+    color: #0048CD;
+    border-bottom: 5px solid #0048CD;
+}
+.tabcontent {
+    display: none;
+  }
 .btn-social-login {
     width: 100%;
     padding: 10px;
