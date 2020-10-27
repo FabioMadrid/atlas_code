@@ -298,10 +298,37 @@
                 </p>
             </div>
             <div class="column-50" style="float: left;">
-                <img src="./svg/contacto.svg" alt="." class="icon-lp" style="margin: auto;" >
-                <button class="boton-landing"  onclick="">Contáctanos</button>
+                <img src="./svg/contacto.svg" alt="." class="icon-lp" style="margin: auto; width: 70%;" >
+                <button class="boton-landing" style="width: 80%;" id="boton-contacto" onclick="modalC()">Contáctanos</button>
             </div>
         </div>
+                <!----------MODAL DEL CONTACTO--------->
+                <div id="modal-contacto" class="modal">
+                    <div class="modal-content overflow">
+                        <!--<div class="relative-container" >
+                           <span class="" id="" style="display: inline-block;">&times;</span>        
+                        </div>-->
+                            <h3 class="titulo-modal">Déjanos un Mensaje</h3>
+                            <form action="#" method="POST">
+
+                                <input type="text" id="nombre_contacto" name="nombre" placeholder="Nombre personal o Empresa" required autocomplete="on">
+                                <input type="email" id="contacto_email" name="correo" placeholder="Correo Electrónico" required autocomplete="on">
+                                
+                                <select name="tipo-empresa-registro" class="minimal" required style="width: 100%;" required>
+                                    <option value="independiente">Cliente</option>
+                                    <option value="constructora">Constructora</option>
+                                    <option value="bienes-raices">Bienes Raices</option>
+                                    <option value="bienes-raices">Institución financiera</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                                <input type="tel" style="margin-top: 10px;" placeholder="Celular de Contacto" name="celular-contacto" 
+                                id="telefono-contacto" minlength="8" autocomplete="on">
+                                <textarea id="subject" name="subject" placeholder="Déjanos tu mensaje.." style="height:200px" required></textarea>
+                                <button type="submit" class="submit-boton" style="margin: 30px auto; width: 100%;">Enviar Mensaje</button>
+                              </form>
+                    </div>
+                </div>
+        
     </section>
     <footer style="position: absolute; width: 100%; left: 0;">
             <div class="footer flex-box footer-img" style="left: 0;right: 0;"> 

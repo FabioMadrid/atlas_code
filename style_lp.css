@@ -269,6 +269,7 @@ button:hover
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
     padding: 40px;
     overflow: hidden;
+    animation: fadeEffect 0.5s; /* Fading effect takes 1 second */
 }
   
   /* Modal Content */
@@ -514,12 +515,12 @@ input:checked
 }
 /* --------------------------------------------------------- MODAL DE REGISTRO -------------------------------------------------------------*/
 
-input[type=text], input[type=password], input[type=email],input[type=number],input[type=tel]
+input[type=text], input[type=password], input[type=email], input[type=number], input[type=tel], textarea
 {
     width: 100%;
     padding: 10px;
     margin: 5px 0 10px 0;
-    display: inline-block;
+    display: block;
     border: 2px solid #99A2AB;
     background: white;
     border-radius: 7px;
@@ -530,10 +531,11 @@ input[type=number]:focus
     -webkit-appearance: none;
     -moz-appearance: none;
 }
-input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=number]:focus input[type=tel]:focus{
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=number]:focus, input[type=tel]:focus, textarea:focus{
     border-color: #0894FE;
     outline: none;
   }
+
 .multitab
 {
     color: #6F7A88;
@@ -559,8 +561,15 @@ input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, inp
     color: #0048CD;
     border: 3px solid #0048CD;
 }
-.tabcontent {
+.tabcontent 
+{
     display: none;
+    animation: fadeEffect 0.5s; /* Fading effect takes 1 second */
+}
+  /* Go from zero to full opacity */
+  @keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
   }
 .btn-social-login {
     width: 100%;

@@ -23,6 +23,11 @@ function modalI()
 {
 modalingreso.style.display = "block";
 }
+var modalcontacto = document.getElementById("modal-contacto");
+function modalC() 
+{
+modalcontacto.style.display = "block";
+}
 
 
 
