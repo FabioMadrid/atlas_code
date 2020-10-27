@@ -58,7 +58,7 @@ modal.style.display = "none";
 }
 }
 
-// ------------A DEPURAR Y UNIFICAR CODIGO PARA TENER UNA SOLA FUNCION ----------------//
+// ------------ FUNCION PARA LOS TABS ----------------//
 
 function openRegistro(evt, tipoRegistro) {
   var i, tabcontent, tablinks;
