@@ -56,14 +56,14 @@
                 <!--<div class="relative-container" >
                    <span class="" id="" style="display: inline-block;">&times;</span>        
                 </div>-->
-                <h3 class="titulo-modal">¿Cómo deseas Registrarte?</h3>
-                    <h3 class="multitab tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Registro Usuario</h3>
-                    <h3 class="multitab tablinks" onclick="openCity(event, 'Paris')">Registro Empresa</h3>
+                    <h3 class="titulo-modal">¿Cómo deseas Registrarte?</h3>
+                    <h4 class="multitab tablinks" onclick="openRegistro(event, 'registro_usuario')" id="defaultOpen">Como Usuario</h4>
+                    <h4 class="multitab tablinks" onclick="openRegistro(event, 'registro_empresa')">Como Empresa</h4>
 
-                    <div id="London" class="tabcontent">
-                    <p class="text" style="text-align: left;">Crea una cuenta personal.</p> 
+                    <div id="registro_usuario" class="tabcontent">
+                    <p class="text" style="text-align: left;clear: both;padding-top: 25px;">Crea una cuenta personal.</p> 
                     <p style="display: block; text-align:left;" class="text">
-                        ¿Ya tienes cuenta?   <a href="#" style="color: #0894FE;">  Ingresa Aquí</a></p>
+                        ¿Ya tienes cuenta personal?   <a href="#" style="color: #0894FE;">  Ingresa Aquí</a></p>
                     <form action="" method="POST"> 
                         <input type="text" placeholder="Tu Nombre y Apellido" name="registro-usuario" id="nombre-apellido-usuario-registro" required>
                         <input type="email" placeholder="Tu Correo Electrónico" name="registro-usuario" id="email-usuario-registro" required>
@@ -76,11 +76,10 @@
                     <a href="#" class="btn-social-login google-icon"> Registro Con Google </a>
                     </div>
 
-                    
-                    <div id="Paris" class="tabcontent">
-                        <p class="text" style="text-align: left;">Crea una cuenta Empresarial.</p> 
+                    <div id="registro_empresa" class="tabcontent">
+                        <p class="text" style="text-align: left;clear: both;padding-top: 25px;">Crea una cuenta Empresarial.</p> 
                         <p style="display: block; text-align:left;" class="text">
-                            ¿Ya tienes cuenta?   <a href="#" style="color: #0894FE;">  Ingresa Aquí</a></p>
+                            ¿Ya tienes cuenta empresarial?   <a href="#" style="color: #0894FE;">  Ingresa Aquí</a></p>
                         <form action="" method="POST"> 
                             <input type="text" placeholder="Nombre de Empresa" name="nombre-empresa" id="nombre-empresa-registro" required title="Nombre Comercial">
                             <input type="email" placeholder="Correo Electrónico Empresarial" name="email-empresa" id="email-empresa-registro" required title="Correo de Contacto">
@@ -110,23 +109,39 @@
                     <span class="" id="close-registro">&times;</span>
                 </div>-->
                 <h3 class="titulo-modal">¿Como deseas Ingresar?</h3>
-                <h3 class="multitab">Ingreso Usuario</h3>
-                <h3 class="multitab " >Registro Empresa</h3>
+                <h4 class="multitab tablinks" onclick="openRegistro(event, 'ingreso_usuario')" id="defaultOpen2" >Como Usuario</h4>
+                <h4 class="multitab tablinks" onclick="openRegistro(event, 'ingreso_empresa')">Como Empresa</h4>
 
-                <form action="" method="POST">
-                        <p class="text" style="text-align: left;">Ingresa a tú perfil personal.</p>                 
-                        <input type="email" placeholder="Tu Correo Electrónico" name="email" id="email-usuario-ingreso" required autocomplete="on">
+                <div id="ingreso_usuario" class="tabcontent">
+                    <form action="" method="POST">
+                        <p class="text" style="text-align: left;clear: both;padding-top: 25px;">Ingresa a tú perfil personal.</p>   
+                        <p style="display: block; text-align:left;" class="text">
+                            ¿No tienes cuenta personal?   <a href="#" style="color: #0894FE;">  Registrate Aquí</a></p>              
+                        <input type="email" placeholder="Correo Electrónico" name="email" id="email-usuario-ingreso" required autocomplete="on">
                         <input type="password" placeholder="Introduce tu Contraseña" name="psw" id="psw-usuario-ingreso" required autocomplete="on">
                         <button type="submit" class="submit-boton" style="margin: 30px auto; width: 100%;">Ingresar</button>
-                </form>
+                    </form>
                     <p style="display: block; text-align: center;" class="text">
                         <a href="#" style="color: #0894FE;">¿Olvidaste tu Contraseña?</a>
                     </p> 
+                    <a href="#" class="btn-social-login fb-icon"> Ingresa Con Facebook </a>
+                    <a href="#" class="btn-social-login google-icon"> Ingresa Con Google </a>
+                </div>
+
+                <div id="ingreso_empresa" class="tabcontent">
+                    <form action="" method="POST">
+                        <p class="text" style="text-align: left;clear: both; padding-top: 25px;">Ingresa a tú perfil Empresarial.</p>   
+                        <p style="display: block; text-align:left;" class="text">
+                            ¿No tienes cuenta empresarial?   <a href="#" style="color: #0894FE;">  Registrate Aquí</a></p>              
+                        <input type="email" placeholder="Correo Electrónico" name="email" id="email-usuario-ingreso" required autocomplete="on">
+                        <input type="password" placeholder="Introduce tu Contraseña" name="psw" id="psw-usuario-ingreso" required autocomplete="on">
+                        <button type="submit" class="submit-boton" style="margin: 30px auto; width: 100%;">Ingresar</button>
+                    </form>
                     <p style="display: block; text-align: center;" class="text">
-                        ¿No tienes cuenta? <a href="#" style="color: #0894FE;">Registrate Aquí</a></p>
-                    </p>
-                <a href="#" class="btn-social-login fb-icon"> Ingresa Con Facebook </a>
-                <a href="#" class="btn-social-login google-icon"> Ingresa Con Google </a>
+                        <a href="#" style="color: #0894FE;">¿Olvidaste tu Contraseña?</a>
+                    </p> 
+                </div>
+
             </div>
         </div>
         <!--------------------------------------------- INICIO DE TITULO PRINCIPAL------------------------------------------------->

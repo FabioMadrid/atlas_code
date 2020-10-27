@@ -537,24 +537,27 @@ input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, inp
 .multitab
 {
     color: #6F7A88;
-    border-bottom: 5px solid #6F7A88;
+    border: 3px solid #6F7A88;
     display: block;
     text-align: center;
-    width: 50%;
+    width: 45%;
     margin-top: 0;
     float:left;
     cursor: pointer;
     outline: none;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 0 2.5% 0 2.5%;
 }
 .multitab:hover
 {
     color: #0048CD;
-    border-bottom: 5px solid #0048CD;
+    border: 3px solid #0048CD;
 }
 .multitab.active
 {
     color: #0048CD;
-    border-bottom: 5px solid #0048CD;
+    border: 3px solid #0048CD;
 }
 .tabcontent {
     display: none;
