@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/8bf4511c4b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style_lp.css">
+    <title>Atlas Home</title>
+</head>
+<body>
+    <div class="topnav" id="myTopnav">
+        <div class="column-25" style="left: 0;">
+            <a href="#">
+                <img src="./svg/logo_alargado_azul.svg" alt="Logo Atlas" id="logo-navbar">
+            </a>
+        </div>
+        <div class="column-85">
+                <button class="boton-registro" id="boton-registro" onclick="modalR()">Registrarme</button>
+                <button class="boton-ingresar" id="boton-ingresar" onclick="modalI()">Ingresar</button>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="modalCR()">Crédito Hipotecario</button>
+                    <!--
+                    <div class="dropdown-content">
+                        <a href="#credito-vivienda">Compra de Vivienda</a>
+                        <a href="#credito-construccion">Construcción</a>
+                        <a href="#credito-libre-inversion">Libre Inversión</a>
+                        <a href="#credito-compra-cartera">Compra de Cartera</a>
+                        <a href="#credito-remodelaciones">Remodelaciones</a>
+                    </div>-->
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="modalV()">Vender</button>
+                <!--
+                    <div class="dropdown-content">
+                        <a href="#vender-vivienda">Como Persona Natural</a>
+                        <a href="#vender-constructora">Como Constructora</a>
+                        <a href="#vender-inmobiliaria">Como Bienes Raíces</a>
+                    </div>-->
+            </div>
+            <a href="javascript:void(0);" style="font-size:35px;" class="icon" onclick="HamburgerFuction()">&#9776;</a>
+        </div> 
+    </div>  
+    
+    <!--------------------------------------------------------------------------------------- MODALS DE LANDING PAGE------------------------------------------------->
+
+
+<!-----------------------------------------------------------MODAL DE REGISTRO---------------------------------------------------------------------------------->
+
+<div id="modal-registro" class="modal">
+    <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+    <div class="modal-content overflow">
+            <h3 class="titulo-modal">¿Cómo deseas Registrarte?</h3>
+            <h4 class="multitab tablinks" onclick="openRegistro(event, 'registro_usuario')" id="defaultOpen">Como Usuario</h4>
+            <h4 class="multitab tablinks" onclick="openRegistro(event, 'registro_empresa')">Como Empresa</h4>
+
+            <div id="registro_usuario" class="tabcontent">
+            <p class="text" style="text-align: left;clear: both;padding-top: 25px;">Crea una cuenta personal.</p> 
+            <p style="display: block; text-align:left;" class="text">
+                ¿Ya tienes cuenta personal?   <a href="#" style="color: #0894FE;">  Ingresa Aquí</a></p>
+            <form action="" method="POST"> 
+                <input type="text" placeholder="Tu Nombre y Apellido" name="registro-usuario" id="nombre-apellido-usuario-registro" required>
+                <input type="email" placeholder="Tu Correo Electrónico" name="registro-usuario" id="email-usuario-registro" required>
+                <input type="password" placeholder="Introduce tu Contraseña" name="registro-usuario" id="psw-usuario-registro" required title="8 Caractéres mínimo" minlength="8">
+            <p style="clear: both; display: block; text-align: center;" class="text">Al Crear una cuenta aceptas nuestras<br>
+                <a href="#" style="color: #0894FE;">Politicas de Privacidad </a> & <a href=""  style="color: #0894FE;"> Términos y Condiciones</a></p>
+            <input type="submit" formtarget="_blank" value="Registrarme" class="submit-boton" style="margin: 30px auto; width: 100%;">
+            </form>
+            <a href="#" class="btn-social-login fb-icon"> Registo Con Facebook </a>
+            <a href="#" class="btn-social-login google-icon"> Registro Con Google </a>
+            </div>
+
+            <div id="registro_empresa" class="tabcontent">
+                <p class="text" style="text-align: left;clear: both;padding-top: 25px;">Crea una cuenta Empresarial.</p> 
+                <p style="display: block; text-align:left;" class="text">
+                    ¿Ya tienes cuenta empresarial?   <a href="#" style="color: #0894FE;">  Ingresa Aquí</a></p>
+                <form action="" method="POST"> 
+                    <input type="text" placeholder="Nombre de Empresa" name="nombre-empresa" id="nombre-empresa-registro" required title="Nombre Comercial">
+                    <input type="email" placeholder="Correo Electrónico Empresarial" name="email-empresa" id="email-empresa-registro" required title="Correo de Contacto">
+                    <input type="password" placeholder="Introduce tu Contraseña" name="psw-empresa" id="psw-empresa-registro" required 
+                    title="8 Caractéres mínimo" minlength="8">
+                    <input type="number" placeholder="Registro Tributario Empresa" name="rtn-empresa" id="rtn-empresa-registro" 
+                    title="RTN debe contener 14 números" required pattern=".{8,}">
+                    <select name="tipo-empresa-registro" id="tipo-empresa" class="minimal" required style="width: 100%;">
+                        <option value="constructora">Constructora</option>
+                        <option value="bienes-raices">Bienes Raices</option>
+                        <option value="independiente">Independiente</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                    <input type="tel" style="margin-top: 10px;" placeholder="Celular de Contacto" name="celular-empresa-registro" 
+                    id="telefono-empresa-registro" required minlength="8">
+                    <p style="clear: both; display: block; text-align: center;" class="text">Al Crear una cuenta aceptas nuestras<br>
+                    <a href="#" style="color: #0894FE;">Politicas de Privacidad </a> & <a href=""  style="color: #0894FE;"> Términos y Condiciones</a></p>
+                    <input type="submit" formtarget="_blank" value="Registrar Empresa" class="submit-boton" style="margin: 30px auto; width: 100%;">
+                </form>
+            </div>
+    </div>
+</div>
+
+
+<!--------------------------------------------------------------------------MODAL INGRESO--------------------------------------------------------------->
+
+
+<div id="modal-ingreso" class="modal">
+    <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+    <div class="modal-content overflow">
+        <h3 class="titulo-modal">¿Como deseas Ingresar?</h3>
+        <h4 class="multitab tablinks" onclick="openRegistro(event, 'ingreso_usuario')" id="defaultOpen2" >Como Usuario</h4>
+        <h4 class="multitab tablinks" onclick="openRegistro(event, 'ingreso_empresa')">Como Empresa</h4>
+
+        <div id="ingreso_usuario" class="tabcontent">
+            <form action="" method="POST">
+                <p class="text" style="text-align: left;clear: both;padding-top: 25px;">Ingresa a tú perfil personal.</p>   
+                <p style="display: block; text-align:left;" class="text">
+                    ¿No tienes cuenta personal?   <a href="#" style="color: #0894FE;">  Registrate Aquí</a></p>              
+                <input type="email" placeholder="Correo Electrónico" name="email" id="email-usuario-ingreso" required autocomplete="email">
+                <input type="password" placeholder="Introduce tu Contraseña" name="psw" id="psw-usuario-ingreso" required autocomplete="current-password">
+                <input type="submit" value="Ingresar" class="submit-boton" style="margin: 30px auto; width: 100%;">
+            </form>
+            <p style="display: block; text-align: center;" class="text">
+                <a href="#" style="color: #0894FE;">¿Olvidaste tu Contraseña?</a>
+            </p> 
+            <a href="#" class="btn-social-login fb-icon"> Ingresa Con Facebook </a>
+            <a href="#" class="btn-social-login google-icon"> Ingresa Con Google </a>
+        </div>
+
+        <div id="ingreso_empresa" class="tabcontent">
+            <form action="" method="POST">
+                <p class="text" style="text-align: left;clear: both; padding-top: 25px;">Ingresa a tú perfil Empresarial.</p>   
+                <p style="display: block; text-align:left;" class="text">
+                    ¿No tienes cuenta empresarial?   <a href="#" style="color: #0894FE;">  Registrate Aquí</a></p>              
+                <input type="email" placeholder="Correo Electrónico" name="email" id="email-empresa-ingreso" required autocomplete="email">
+                <input type="password" placeholder="Introduce tu Contraseña" name="psw" id="psw-empresa-ingreso" required autocomplete="current-password">
+                <input type="submit" value="Ingresar" class="submit-boton" style="margin: 30px auto; width: 100%;">
+            </form>
+            <p style="display: block; text-align: center;" class="text">
+                <a href="#" style="color: #0894FE;">¿Olvidaste tu Contraseña?</a>
+            </p> 
+        </div>
+    </div>
+</div>
+<!------------------------------------------------------------------------- MODAL DE VENTA ----------------------------------------------------------------------->
+
+
+<div id="modal-venta" class="modal">
+    <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+        <div class="modal-content overflow">
+
+        <div class="cr-titulo">
+            <div> <h3 style="margin: 0px auto 0px;">Vende con Atlas Home</h3>
+                <!-- Circles which indicates the steps of the form: -->
+                <div style="text-align:center;">
+                    <span class="step1"></span>
+                    <span class="step1"></span>
+                    <span class="step1"></span>
+                    <span class="step1"></span>
+                    <span class="step1"></span>
+                </div>
+            </div>
+        </div>
+
+            <form id="regForm1"  action="" method="POST">
+
+                <div class="tab1">
+                    <p class="text" style="text-align: left; margin-bottom: 2px;color:#0048CD">Vender o alquilar
+                    <br><b style="font-size: 20px;">Anuncia tú Propiedad</b></p>  
+                    <img src="svg/megafono.svg" alt="." class="icon-lp"style="width:50%;">
+                    
+                    <div class="cr-container">
+                        <p class="text" style="padding:10px;">
+                         <b class="subtitles" style="padding-bottom:10px;">Acceso a los clientes de la Banca</b>
+                         Atlas Home es la única plataforma que centraliza compradores, vendedores y bancos.
+                        </p>
+                        <img src="svg/women_pc.svg" alt="." style="height: 140px;padding-right: 10px;">
+                    </div>
+                    <div class="cr-container">
+                        <img src="svg/data_analisis.svg" alt="." style="height: 130px;padding-left: 10px;">
+                        <p class="text" style="padding:10px; text-align: right;">
+                         <b class="subtitles" style="padding-bottom:10px; text-align: right;">Clientes de Calidad</b>
+                         Perfilamos de forma financiera y juridica al cliente. Recibe clientes de calidad.
+                        </p>
+                    </div>
+                    <div class="cr-container">
+                        <p class="text" style="padding:10px;">
+                         <b class="subtitles" style="padding-bottom:10px;">Encontramos tu comprador</b>
+                         Conectamos a tu comprador con tu producto con algoritmos de AI . ¿Perfecto no? 
+                        </p>
+                        <img src="svg/house.svg" alt="." style="height: 140px;padding-right: 10px;">
+                    </div>
+                </div>
+
+                <div class="tab1">
+                    <p class="text" style="text-align: left; margin-bottom: 2px;color:#0048CD">Vender o alquilar
+                    <br><b style="font-size: 20px;">Anuncia tú Propiedad</b></p>  
+                    <img src="svg/data_analisis.svg" alt="." class="icon-lp"style="width:50%;">
+                    <p class="text" style="text-align: left;display: block;">Cuentanos un poco sobre tu propiedad(es)</p>
+                    <label for="anunciar-operacion">Operación</label>
+                    <select name="anunciar-operacion" style="width: 100%;" id="anunciar-operacion" class="minimal" required oninput="this.className = ''"><br>
+                        <option value="venta">Venta</option>
+                        <option value="renta">Renta</option>
+                    </select>
+                    <br>
+                    <label for="anunciar-tipo-propiedad">Tipo de Propiedad</label>
+                    <select name="anunciar-tipo-propiedad" style="width: 100%;" id="anunciar-tipo-propiedad" class="minimal" required oninput="this.className = ''"><br>
+                        <option value="casa">Casa</option>
+                        <option value="apartamento">Apartamento</option>
+                        <option value="terreno">Terreno</option>
+                        <option value="comercio">Comercio</option>
+                        <option value="proyecto-inmobiliario">Proyecto Inmobiliario</option>
+                    </select>
+                    <br>
+                    <label for="anunciar-condicion-propiedad">Condición de la Propiedad</label>
+                    <select name="anunciar-condicion-propiedad" style="width: 100%;" id="anunciar-condicion-propiedad" class="minimal" required oninput="this.className = ''"><br>
+                        <option value="nueva">Nueva sin uso</option>
+                        <option value="usada">Usada</option>
+                        <option value="pre-venta">Pre Venta</option>
+                        <option value="construccion">En Construcción</option>
+                    </select>
+                    <br>
+                    <label for="anunciar-tipo-vendedor">¿Bajo que figura actuas?</label>
+                    <select name="anunciar-tipo-vendedor" style="width: 100%;" id="anunciar-tipo-vendedor" class="minimal" required oninput="this.className = ''"><br>
+                        <option value="persona-natural">Persona Natural</option>
+                        <option value="constructora">Constructora</option>
+                        <option value="bienes-raices">Bienes Raíces</option>
+                        <option value="otro-vendedor">Otro</option>
+                    </select>
+                    <br>
+                    <label for="anunciar-motivo">¿Motivo de la transacción?</label>
+                    <select name="anunciar-motivo" style="width: 100%;" id="anunciar-motivo" class="minimal" required oninput="this.className = ''"><br>
+                        <option value="negocio">Negocio</option>
+                        <option value="mudanza">Mudanza</option>
+                        <option value="otro-motivo">Otro</option>
+                    </select>
+                    <br>
+                </div>
+
+                <div class="tab1">
+                    <p class="text" style="text-align: left; margin-bottom: 2px;color:#0048CD">¿Donde se encuentra tu propiedad?
+                    <br><b style="font-size: 20px;">Ubicación</b></p>  
+                    <img src="svg/casa_gps.svg" alt="." class="icon-lp"style="width:50%;">
+                    <p class="text" style="text-align: left;display: block;">Ubicación en mapa o escribe la dirreción</p>
+                    <!--Quitar required de ubicacion si ya tenemos coordenadas GPS-->
+                    <button class="btn-social-login gps-icon" onclick="getLocation()"> Usar Mi Ubicación Actual</button>
+                    <label for="anunciar-ubicacion">Ciudad</label>
+                        <select name="anunciar-ubicacion" style="width: 100%;" id="anunciar-ubicacion" class="minimal" required oninput="this.className = ''"><br>
+                            <option value="tegucigalpa">Tegucigalpa</option>
+                            <option value="sanpedrosula">San Pedro Sula</option>
+                            <option value="otro-ciudad">Otro</option>
+                    </select>
+                    <br>
+                    <label for="dirrecion-propiedad">Dirreción de la Propiedad</label>
+                    <input type="text" placeholder="Dirreción de la propiedad" name="dirrecion-propiedad" id="dirrecion-propiedad" required oninput="this.className = ''">
+                    <br>
+                </div>
+
+                <div class="tab1">
+                    <p class="text" style="text-align: left; margin-bottom: 2px;color:#0048CD">Compartenos tu
+                    <br><b style="font-size: 20px;">Información de Contacto</b></p>  
+                    <img src="svg/contacto_cliente.svg" alt="." class="icon-lp"style="width:50%;">
+                    <input type="text" placeholder="Nombre y Apellido" name="anunciar-contacto" id="anunciar-contacto" required autofocus oninput="this.className = ''">
+                    <input type="email" id="anunciar_contacto_email" name="correo" placeholder="Correo Electrónico" required autocomplete="on" oninput="this.className = ''">
+                    <input type="tel" placeholder="Celular de Contacto" name="celular-contacto" 
+                    id="anunciar-telefono-contacto" minlength="8" autocomplete="on" oninput="this.className = ''">
+                </div>
+
+                <div class="tab1">
+                    <p class="text" style="text-align: center; margin-bottom: 2px;color:#0048CD">Gracias
+                    <br><b style="font-size: 20px;">¡Haz Clic en Enviar!</b></p>  
+                    <img src="svg/exito.svg" alt="." class="icon-lp"style="width:50%;">
+                    <p class="text" style="text-align: center;display: block;"><b>Haz Clic en Enviar para Finalizar</b><br>
+                    Un Miembro de nuestro equipo te estará contactando para darle seguimiento a tu Solicitud.
+                    </p>  
+                </div>
+
+
+                <div class="flex-container flex-centrar">
+                      <button type="button" id="prevBtn1" class="submit-boton cr-boton"  onclick="nextPrev1(-1)">Anterior</button>
+                      <button type="button" id="nextBtn1" class="submit-boton cr-boton" style="margin:auto;" onclick="nextPrev1(1)">Empezar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!---------------------------------------------------------------INICIO DEL CONTENIDO-------------------------------------------------------------------->
+
+</body>
+
+<script src="./index.js"></script>
+
+</html>

@@ -1,0 +1,1064 @@
+
+/* ------------- declaraciones generales --------------------------- */
+
+body
+{
+    margin: 0 8%;
+    -webkit-font-smoothing: antialiased;
+}
+html 
+{
+    box-sizing: border-box;
+    font-family: "Forma DJR Text Edu";
+}
+  *, *:before, *:after 
+{
+    box-sizing: inherit;
+}
+::-webkit-scrollbar {
+    width: 15px;
+  }
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+}
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+button:hover
+{
+    cursor: pointer;
+}
+
+/* -------------------------------------------------------------INCIO DE NAVBAR -------------------------------------------------------*/
+.topnav 
+{
+    overflow: hidden;
+    background-color:white;
+    left: 0;
+    right: 0;
+    top: 0;
+    position: fixed;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    min-height: 80px;
+    z-index: 1;
+  }
+  
+  .topnav>a 
+  {
+    float: right;
+    display: block;
+    color:#707070;
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    vertical-align: middle;
+  }
+  .topnav .icon 
+  {
+    display: none;
+    position: absolute;
+  }
+  
+  .dropdown 
+  {
+    float: right;
+    overflow:visible;
+  }
+  .dropdown .dropbtn 
+  {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color:#707070;    
+    padding: 20px 20px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  .dropdown-content 
+  {
+    display: none;
+    position: fixed;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+  }
+  
+  .dropdown-content>a 
+  {
+    float: none;
+    color: #6F7A88;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    border-bottom: 2px solid rgba(156, 156, 156, 0.219);
+  }
+
+  .dropdown-content a:hover 
+  {
+    background-color: rgba(156, 156, 156, 0.151);
+    color:#0048CD;
+  }
+  
+  .dropdown:hover .dropdown-content 
+  {
+    display: block;
+  }
+  .topnav a:hover, .dropdown:hover .dropbtn {
+    color: #0894FE;
+  }
+
+#logo-navbar
+{
+  width: 110px;
+  padding:0;
+  position: absolute;
+  top: 20px;
+  left: 18px;
+}
+.column-25
+{
+    float: left;
+    margin: auto;
+    display: inline-block;
+}
+.column-85
+{
+    width: 85%;
+    float: right;
+    margin-top: 10px;
+    display: inline-block;
+}
+.boton-ingresar
+{
+    color: #0894FE;
+    background-color: white;
+    border: #0894FE solid 1px;
+    padding: 4px 8px;
+    border-radius: 5px;
+    display: block;
+    width: 150px;
+    height: 40px;
+    font-size:16px;
+    transition: background-color 0.4s;
+    outline: none;
+    margin: 8px 10px;
+    float: right;
+}
+
+.boton-registro
+{
+    color: white;
+    background-color: #2680EB;
+    border: #0894FE solid 1px;
+    padding: 4px 8px;
+    border-radius: 5px;
+    display: block;
+    width: 150px;
+    height: 40px;
+    font-size:16px;
+    transition: background-color 0.4s;
+    outline: none;
+    margin: 8px 10px;
+    float: right;
+}
+
+  /* When the screen is less than 1015 pixels wide, hide all links, except for the first one ("lOGO"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 1015px) 
+{
+    .topnav>a:not(:first-child), .dropdown .dropbtn 
+    {
+      display: none;
+    }
+    .topnav a.icon 
+    {
+      float: right;
+      display: block;
+      color:#0894FE;
+      right: 18px;
+      top: 18px;
+    }
+    .topnav img
+    {
+        display: block;
+    }
+    .boton-ingresar 
+    {
+        display: none;
+    }
+    .boton-registro
+    {
+        display: none;
+    }
+    button:active
+    {
+    background-color:white;
+    background-size: 100%;
+    transition: background-color 0s;
+    border: #0894FE solid 1px;
+    }
+}
+  
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  @media screen and (max-width: 1015px) 
+{
+    .topnav.responsive 
+    {
+        padding-top: 90px;
+    }
+    .topnav.responsive>a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .topnav.responsive .dropdown {float: none; clear: both;}
+    .topnav.responsive .dropdown-content {position: relative;}
+    .topnav.responsive .dropdown .dropbtn 
+    {
+      display: block;
+      width: 100%;
+      text-align: left;
+      left: 0;
+      right: 0;
+      border-bottom: 2px solid rgba(156, 156, 156, 0.219);
+      clear: both;
+    }
+
+    .column-85
+    {
+    width: 100%;
+    clear: both;
+    margin: 0;
+    display: inline-block;
+    }
+    .topnav.responsive .boton-ingresar 
+    {
+        display: inline-block;
+        width: 41%;
+        float: left;
+        margin-left: 4%;
+    }
+    .topnav.responsive .boton-registro
+    {
+        display: inline-block;
+        width: 41%;
+        float: left;
+        margin-left: 6%;
+    }
+}
+/* ---------------------------------------------- INICIO DE MODAL BUSQUEDA DE PROPIEDADES ------------------------------------------------------------*/
+.modal 
+{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: +2; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding: 40px;
+    overflow: hidden;
+    animation: fadeEffect 0.5s; /* Fading effect takes 1 second */
+}
+  
+  /* Modal Content */
+
+  .modal-content 
+{
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid #0894FE;
+    border-radius: 10px;
+    width: 45%;
+    z-index: +3;
+}
+.overflow
+{
+    max-height: 100%;
+    overflow-y: auto !important;
+}
+  
+  /* The Close Button */
+  .close 
+{
+    color: white;
+    float: right;
+    font-size: 28px;
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid #0894FE;
+    background-color: #0894FE;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: -35px;
+    right:-35px;
+}
+  
+  .close:hover,
+  .close:focus {
+    background-color: #CC5F54;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .titulo-modal
+  {
+    text-align: center; 
+    border-bottom: 2px solid rgba(156, 156, 156, 0.219);
+    padding-bottom: 7px;
+    margin: 15px 10%;
+  }
+
+  /*-------------------------------------------------------------- Iconos del Search Modal------------------------------------------- */
+
+.inmueble-selector
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+  .inmueble-selector input
+  {
+    margin:0;padding:0;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+  }
+
+  input
+{
+    border: none;
+    outline: none;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    white-space: pre;
+    text-align: left;
+    cursor: pointer;
+    color: #081C33;
+    background-color:white;
+    box-sizing: inherit;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+
+.vivienda
+{
+    background-image:url(./svg/vivienda-icon-azul.svg);
+}
+.apartamento
+{
+    background-image:url(./svg/apartamento-icon-azul.svg);
+}
+.terreno
+{
+    background-image:url(./svg/terreno-icon-azul.svg);
+}
+
+.inmueble-selector input:active + .drinkcard-cc
+{
+    opacity:none;
+}
+.inmueble-selector input:checked + .drinkcard-cc
+{
+    -webkit-filter: none;
+       -moz-filter: none;
+            filter: none;
+            color:#0048CD;
+}
+.drinkcard-cc
+{
+    cursor:pointer;
+    background-size:contain;
+    background-repeat:no-repeat;
+    display:inline-block;
+    width:90px;height:80px;
+    color: inherit;
+    -webkit-transition: all 100ms ease-in;
+       -moz-transition: all 100ms ease-in;
+            transition: all 100ms ease-in;
+            -webkit-filter: brightness(1) grayscale(1) opacity(1);
+            -moz-filter: brightness(1) grayscale(1) opacity(1);
+                 filter: brightness(1) grayscale(1) opacity(1);
+}
+.drinkcard-cc:hover
+{
+    -webkit-filter: none;
+       -moz-filter: none;
+            filter: none;
+            width:93px;height:83px;
+            color:#0048CD;
+}
+
+/* Selects del modal */
+.text-modal
+{
+    font-size: 16px;
+    text-align: center;
+    display: block;
+    margin: 15px auto;
+}
+.correcion
+{
+    left: 16px;
+    bottom: -110px;
+}
+.correcion-a
+{
+    bottom: -110px;
+}
+select
+{
+    font-size: 16px;
+    display: block;
+    width: 80%;
+    margin: auto;
+    padding: 7px;
+    border: 2px solid #0894FE;
+    border-radius: 5px;
+    box-shadow: 0px 8px 5px 0px rgba(0,0,0,0.07);
+    font-family: "Forma DJR Text Edu";
+    background-color: white;
+    color: none;
+
+    /*quitar default settings*/
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+select.minimal {
+    background-image:
+      linear-gradient(45deg, transparent 50%, gray 50%),
+      linear-gradient(135deg, gray 50%, transparent 50%),
+      linear-gradient(to right, #ccc, #ccc);
+    background-position:
+      calc(100% - 20px) calc(1em + 2px),
+      calc(100% - 15px) calc(1em + 2px),
+      calc(100% - 2.5em) 0.5em;
+    background-size:
+      5px 5px,
+      5px 5px,
+      1px 1.5em;
+    background-repeat: no-repeat;
+  }
+  
+  select.minimal:focus {
+    background-image:
+      linear-gradient(45deg, green 50%, transparent 50%),
+      linear-gradient(135deg, transparent 50%, green 50%),
+      linear-gradient(to right, #ccc, #ccc);
+    background-position:
+      calc(100% - 15px) 1em,
+      calc(100% - 20px) 1em,
+      calc(100% - 2.5em) 0.5em;
+    background-size:
+      5px 5px,
+      5px 5px,
+      1px 1.5em;
+    background-repeat: no-repeat;
+    border-color: green;
+    outline: 0;
+  }
+  select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+  }
+  
+option
+{
+    font-family: "Forma DJR Text Edu";
+    padding: 8px 2px 1px;
+}
+input:checked
+{
+    color: #0894FE;
+}
+.submit-boton
+{
+    display: block;
+    font-size: 16px;
+    background-color: #2680EB;
+    padding: 10px 15px;
+    color: white;
+    border-radius: 8px;
+    border-color: #2680EB;
+    width: 80%;
+    outline: none;
+    text-align: center !important;
+}
+.bottom-text
+{
+    position: absolute;
+    text-align: center;
+    font-size: 16px;
+}
+.relative-container
+{
+    position: relative;
+}
+/* --------------------------------------------------------- MODAL DE REGISTRO -------------------------------------------------------------*/
+
+input[type=text], input[type=password], input[type=email], input[type=number], input[type=tel], textarea
+{
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 10px 0;
+    display: block;
+    border: 2px solid #99A2AB;
+    background: white;
+    border-radius: 7px;
+}
+input[type=number]:focus
+{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=number]:focus, input[type=tel]:focus, textarea:focus{
+    border-color: #0894FE;
+    outline: none;
+  }
+
+.multitab
+{
+    color: #6F7A88;
+    border: 3px solid #6F7A88;
+    display: block;
+    text-align: center;
+    width: 45%;
+    margin-top: 0;
+    float:left;
+    cursor: pointer;
+    outline: none;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 0 2.5% 0 2.5%;
+}
+.multitab:hover
+{
+    color: #0048CD;
+    border: 3px solid #0048CD;
+}
+.multitab.active
+{
+    color: #0048CD;
+    border: 3px solid #0048CD;
+}
+.tabcontent 
+{
+    display: none;
+    animation: fadeEffect 0.5s; /* Fading effect takes 1 second */
+}
+  /* Go from zero to full opacity */
+  @keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+.topright
+{
+    float: right;
+    cursor: pointer;
+    font-size: 28px;
+    position: absolute;
+    color: white;
+    font-size: 28px;
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid #0894FE;
+    background-color: #0894FE;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    right: 27.7%;
+    top: 3.5%;
+}
+  
+.topright:hover,
+.topright:focus {
+  background-color: #CC5F54;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn-social-login {
+    width: 100%;
+    padding: 10px;
+    border: 3px solid #C4C9CE;
+    border-radius: 8px;
+    margin: 10px 0;
+    display: inline-block;
+    font-size: 16px;
+    text-decoration: none; /* remove underline from anchors */
+    text-indent: 50px;
+  }
+.btn-social-login:hover
+{
+   border-color: #425163;
+}
+.fb-icon
+  {
+    background: url(./svg/facebook-icon.svg);
+    background-repeat: no-repeat;
+    background-position:10px 5px;
+  }
+  .google-icon
+  {
+    background: url(./svg/google-icon.svg);
+    background-repeat: no-repeat;
+    background-position:10px 5px;
+  }
+
+/* Clases para el Modal de Solicitud de credito */
+.cr-container
+{
+    width: 100%; 
+    background-color:#F2F2F2;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+}
+.cr-titulo
+{
+  text-align: center; 
+  border-bottom: 2px solid #99A2AB;
+  padding-bottom: 7px;
+  margin: auto;
+  position: fixed;
+  background-color: white;
+  z-index: 1;
+  display: block;
+  width: 37%;
+  top: 8%;
+}
+.step {
+    height: 10px;
+    width: 8%;
+    margin: 0 1px;
+    background-color: #bbbbbb;
+    border: none;
+    display: inline-block;
+    opacity: 0.5;
+  }
+  
+  /* Mark the active step: */
+  .step.active {
+    opacity: 1;
+  }
+  
+  /* Mark the steps that are finished and valid: */
+  .step.finish {
+    background-color: #4CAF50;
+  }
+/* Debajo de los modals */
+
+@media screen and (max-width:880px)
+{
+    .modal-content 
+    {
+        width: 90%;
+    }
+    .correcion
+    {
+    left: 16px;
+    bottom: -100px;
+    }
+    .correcion-a
+    {
+    bottom: -100px;
+    }
+    .selects-50
+    {
+    float: none; 
+    width: 100%;
+    margin: none;
+    }
+    .selects-50-right
+    {
+    float: none; 
+    width: 100%;
+    }
+    .topright
+    {
+    right: 7.5%;
+    }
+    .cr-titulo
+    {
+      width: 76%;
+    }
+}
+@media screen and (max-width:450px)
+{
+    .drinkcard-cc
+    {
+        width: 80px;
+        height: 70px;
+    }
+    .inmueble-selector
+    {
+        justify-content: space-around;
+    }
+    .modal-content
+    {
+        width: 100%;
+    }
+    .modal
+    {
+        padding: 0px;
+    }
+    .topright
+    {
+    right: 7%;
+    top: 4%;
+    }
+}
+@media screen and (max-width:365px)
+{
+    .inmueble-selector
+    {
+        flex-direction: column;
+    }
+    .drinkcard-cc
+    {
+        margin-top: 30px;
+    }
+    .bottom-text
+    {
+        bottom: -105px;
+    }
+}
+
+/* ----------------------------------------------------- titulos, textos y fonts ------------------------------------------------------------------ */
+@font-face 
+{
+    font-family: "FormaDJRText";
+    src: url(https://atlas-home-colombia.s3.amazonaws.com/fonts/fonts.css);
+}
+.text
+{
+    font-family:"Forma DJR Text Edu";
+    color: #6F7A88;
+}
+.title
+{
+    margin-top: 50px ;
+    color:#0894FE;
+    font-size:2em;
+    font-weight:bold;
+    display: block;
+}
+.subtitles
+{
+    color:#0894FE;
+    font-weight:bold;
+    display: block;
+
+}
+/* diseño de columnas y layout */
+.flex-container
+{
+    display: flex;
+    flex-flow: row wrap;
+}
+.row:after 
+{
+    content: "";
+    display: table;
+    clear: both;
+}
+.column-left
+{
+    float: left;
+    width: 49.99%;
+    padding: 15px;
+    height:auto;
+    display: block;
+}
+.column-50
+{
+    width: 49.99%;
+    float: right;
+    margin: auto;
+}
+.column-33
+{
+    width: 33.33%;
+    float: left;
+    margin: auto;
+}
+.clearfix::after 
+{
+    content: "";
+    clear: both;
+    display: table;
+}
+.flex-box
+{
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: center;
+}
+
+/* declaraciones de iconos */
+
+.icon-lp
+{
+    width: 90%;
+    height: auto;
+    margin-top: 50px;
+    display: block;
+    margin: auto;
+}
+.icon-v
+{
+    max-height: 400px;
+}
+.boton-landing
+{
+    background: white ;
+    color:#0894FE;
+    border: #0894FE solid 1px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: block;
+    width: 350px;
+    height: 60px;
+    margin: 30px auto 30px auto;
+    font-size:15px;
+    transition: background-color 0.4s;
+    outline: none;
+}
+.triangulo-decor
+{
+    position: absolute;
+    padding-top: 0px;
+    width: 20%;
+    height: auto;
+    vertical-align: middle;
+    border-style: none;
+    box-sizing: border-box;
+    max-width: 100%;
+    z-index: -1;
+}
+
+/* declaraciones de botones */
+
+.boton-landing:hover
+{
+    background-color: #2680EB;
+    color: white;
+    cursor: pointer;
+    font-size: 17px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+button:active
+{
+    background-color: #6eb9f7;
+    background-size: 100%;
+    transition: background-color 0s;
+    border: #0894FE solid 1px;
+}
+
+/* testimonios */
+.box
+{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(133, 133, 133, 0.19);
+    box-shadow: 5px grey;
+    display: block;
+    background-color: white;
+    width: auto;
+    text-align: left;
+    margin: 20px 0% 20px 0%;
+    padding: 10px 20px 40px 20px;
+    border-radius: 5px;
+}
+.img
+{
+    float: left;
+    padding-right: 5px;
+    height: 100px;
+    width: 100px;
+}
+.box::after 
+{
+    content: "";
+    clear: both;
+    display: table;
+}
+.figcaption
+{
+    font:"Forma DJR Text Edu" medium 12px;
+    color: #0894FE;
+    margin-top: 15px;
+    text-align: left;
+}
+
+/* footer */
+
+.footer
+{
+    height: 250px;
+    width: 100%;
+    border-top: 5px solid #75C6FA;
+}
+.footer-img
+{
+    background-image: url(./svg/city2.svg);
+    background-color: transparent;
+    height: 250px;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+.footer-logo
+{
+    display: block;
+    width: auto;
+    height: 80px;
+    padding-top: 10px;
+    margin: auto;
+}
+.fa
+{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border: 3px;
+    background-color: #fff;
+    color: #0f4aa2;
+    font-size: 30px;
+    text-decoration: none;
+    margin:0;
+}
+a
+{
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+li
+{
+    list-style-type: none;
+    display: inline-block;
+    border: 1.5px solid  #0f4aa2;
+    margin: 5px 7px;
+}
+.fa:hover {
+    opacity: 0.7;
+    color: #2680EB;
+}
+.footer-ul
+{
+    padding-left: 0;
+}
+
+/* ----- INICIO DE RESPONSIVE DESIGN------*/
+
+/*diseño para ipads*/
+
+@media only screen and (max-width: 800px) 
+{
+    .caja 
+    {
+        text-align: center;
+    }
+    .img
+     {
+        margin: auto;
+        float: none;
+        display: block;
+    }
+    .figcaption
+    {
+        text-align: center;
+    }
+    .icon-lp
+    {
+        height: auto;
+        display: block;
+        margin:auto;
+        float: none;
+    }
+    .row:after 
+    {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    .boton-landing
+    {
+        width: 250px;
+        height: 60px;
+    }
+    .title
+    {
+        font-size:1.3em;
+    }
+    .icon-v
+    {
+        height: 300px;
+    }
+    .icon-i
+    {
+        padding-top: 40%;
+    }
+    .text
+    {
+        text-align: center;
+    }
+}
+
+/*diseño para moviles*/
+
+@media only screen and (max-width: 700px) 
+{
+    .column-50
+    {
+        width: 100%;
+        float: none;
+        margin: auto;
+        overflow: hidden;
+        padding: 15px;
+        height:auto;
+        display: block;
+    }
+    .column-left
+    {
+        float: none;
+        width: 100%;
+        padding: 15px;
+        height:auto;
+        display: block;
+    }
+    .boton-landing
+    {
+        width: 100%;
+    }
+    .icon-i
+    {
+        padding-top: 10px;
+    }
+    .triangulo-decor
+    {
+        width: 40%;
+    }
+}
