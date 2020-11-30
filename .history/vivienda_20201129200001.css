@@ -536,7 +536,7 @@
   transform: translate(-50%, -50%);
 }
 
-.content {
+#content {
   display: grid;
   grid-gap: 16px;
   grid-auto-flow: column;
@@ -550,77 +550,7 @@
   background: green;
 }
 
-/*--------------------- Clases de los Atlas Cards--------------------*/
 
-.image-card
-{
-    height: 170px;
-    width: 100%;
-    object-fit: cover;
-    vertical-align: middle;
-}
-.top-text 
-{
-    position: absolute;
-    top: 8px;
-    left: 16px;
-    color: white;
-    font-size: 16px;
-}
-.atlas-card
-{
-    height: 290px;
-    width: 350px;
-    margin:.7em;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    border-radius: 8px;
-    padding: none;
-    overflow: hidden;
-}
-.atlas-card:hover 
-{
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-.titulo-propiedades
-{
-    font:"Forma DJR Text Edu" medium 16px;
-    color: #0048CD;
-    text-align: left;
-}
-.space-between
-{
-    justify-content: space-between;
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-}
-.corazon-right 
-{
-    position: absolute;
-    top: 8px;
-    right: 16px;
-    height: 20px;
-    cursor: pointer;
-}
-.share-right 
-{
-    position: absolute;
-    top: 8px;
-    right: 50px;
-    height: 20px;
-    cursor: pointer;
-}
-/* Caption text */
-.text-number {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
 
 
 /*--------INICIA DECLARACIONES PARA RESPONSIVE DESIGN-----------*/
