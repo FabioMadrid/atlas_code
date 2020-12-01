@@ -653,9 +653,6 @@
 
 /* Standard syntax */
 #titulo-propiedad  {order: 1;}
-#sticky-call-to-actions  {order: 2;}
-#medialinks {order: 3;}
-#informacion-propiedad {order: 1;}
 
 /*--------INICIA DECLARACIONES PARA RESPONSIVE DESIGN-----------*/
 @media screen and (max-width: 1350px)
@@ -663,39 +660,9 @@
  
   .carousel-tabs::-webkit-scrollbar 
   {
-    height: 10px;
-  }
-  .medialink 
-  {
-    margin: 0 13px;
-  }
-}
-
-@media screen and (max-width: 1180px)
-{
-  .medialink 
-  {
-    margin: 0 25px;
-  }
-}
-
-@media screen and (max-width: 1100px)
-{
-  .sticky
-  {
-    position: static;
-  }
-  .left-column
-  {
-  width: 90%;
-  margin: 0 5% 0 5%; 
-  clear: both;
-  }
-  .right-column
-  {
-  width:100%;
-  margin: 30px 5% 0 2.5%;
-  clear: both;
+      background-color: #F2F2F2;
+      border-radius: 10px;
+      border: 2px solid #ffffff;
   }
 
 }

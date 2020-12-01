@@ -153,11 +153,11 @@
         </div>
         <div>
             <a href="" style="margin: 0 10px;">
-            <img src="./svg/share_icon.svg" alt="c" style="margin: 0 5px;" >
+            <img src="./svg/share_icon.svg" alt="c" style="margin: 0 10px;" >
             <span class="text">Compartir</span>   
             </a>
             <a href="">
-            <img src="./svg/corazon.svg" alt="c" style="margin: 0 5px;">
+            <img src="./svg/corazon.svg" alt="c" style="margin: 0 10px;">
             <span class="text">Guardar</span>   
             </a>
         </div>
@@ -181,8 +181,7 @@
 
 <section>
 
-    <div class="second-container sticky" id="sticky-call-to-actions">
-
+    <div class="second-container sticky">
         <a href="" target="_blank">
             <div class="proyecto">
                 <img src="./img/logotipo-oak-tree.jpg" alt="logo" class="logo-proyecto">
@@ -199,9 +198,10 @@
         
         <div>
             <p class="text"> Pago Mensual Estimado: <span style="color: #0894FE;"> L.49,548.90</span></p>
-            <button class="boton-credito"> Solicita tú Crédito</button>
-                <button class="boton-cita"> Agenda una Cita</button>
+            <button class="boton-credito"> Solicitar Crédito</button>
+                <button class="boton-cita"> Agendar Cita</button>
         </div>
+        
     </div>
 
 
@@ -286,24 +286,20 @@
     </div>
     <!--Termina las tecnlogias de visualizacion-->
 
-    <div class="left-column" id="medialinks">
+    <div class="left-column">
         <!--Contenedor con los tabs para las tecnologias--->
-        <div class="wrapper">
-            <div class="carousel-tabs">
-                <div class="content-tabs" >
-                    <button class="medialink" onclick="showMedia(event,'fotos')" id="open" style="margin-left: 0;">Fotos</button>
-                    <button class="medialink" onclick="showMedia(event,'tv')" >Tour Virtual</button>
-                    <button class="medialink" onclick="showMedia(event,'planos')">Planos</button>
-                    <button class="medialink" onclick="showMedia(event,'mapa')">Mapa</button>
-                    <button class="medialink" onclick="showMedia(event,'stv')" style="margin-right: 0;">G. Street View</button>
-                </div>
-            </div>
+        <div class="tablinks-container" >
+            <button class="medialink" onclick="showMedia(event,'fotos')" id="open">Fotos</button>
+            <button class="medialink" onclick="showMedia(event,'tv')" >Tour Virtual</button>
+            <button class="medialink" onclick="showMedia(event,'planos')">Planos</button>
+            <button class="medialink" onclick="showMedia(event,'mapa')">Mapa</button>
+            <button class="medialink" onclick="showMedia(event,'stv')">G. Street View</button>
         </div>
     </div>
 
-    <section class="left-column" style="margin-top: 50px;" id="informacion-propiedad">
+    <section class="left-column">
 
-        <p class="subtitles" style="color: #0048CD;font-size: 18px;"> Información Específica</p>
+        <p class="subtitles" style="color: #0048CD;"> Información Específica</p>
 
         <!--Inician los accordiones-->
         <button class="accordion">Descripción</button>

@@ -29,7 +29,6 @@
 {
     justify-content: space-between;
     display: flex;
-    display: -webkit-flex; /* Safari */
     flex-flow: row wrap;
     align-items: center;
 }
@@ -43,35 +42,12 @@
 
 /*------------------------------ MEDIA TABS -----------------------------------------*/
 
-
-.carousel-tabs 
-{
-  overflow: auto;
-  scroll-behavior: smooth;
-  scrollbar-width: 0;
-}
-
-.carousel-tabs::-webkit-scrollbar 
-{
-  height: 0;
-}
-.content-tabs 
-{
-  display: flex; 
-  display: -webkit-flex; /* Safari */
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
-}
-
-
 .tablinks-container
 {
   width: 100%; 
   height: 70px;
   margin: 0px 0 50px 0;
   display: flex; 
-  display: -webkit-flex; /* Safari */
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
@@ -85,11 +61,10 @@
   cursor: pointer;
   padding: 5px 15px;
   font-size: 16px;
-  min-width: 140px;
+  width: 140px;
   height: 40px;
   text-align: center;
   font-size: 16px;
-  margin: 0 5px;
 }
   
 .medialink:hover 
@@ -260,7 +235,6 @@
     width: 100%;
     height: 110px;
     display: flex;
-    display: -webkit-flex; /* Safari */
     justify-content: flex-start;
     padding: 10px 10px;
   }
@@ -490,7 +464,6 @@
   border-radius: 50%;
   align-items: center;
   display: flex;
-  display: -webkit-flex; /* Safari */
   justify-content: center;
 }
 .mapa
@@ -513,7 +486,6 @@
 .carrusel-container
 {
   display: flex;
-  display: -webkit-flex; /* Safari */
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -540,7 +512,6 @@
 #prev,
 #next {
   display: flex;
-  display: -webkit-flex; /* Safari */
   justify-content: center;
   align-content: center;
   background: white;
@@ -571,6 +542,12 @@
   grid-auto-flow: column;
   margin: auto;
   box-sizing: border-box;
+}
+
+.item {
+  width: 180px;
+  height: 180px;
+  background: green;
 }
 
 /*--------------------- Clases de los Atlas Cards--------------------*/
@@ -615,7 +592,6 @@
 {
     justify-content: space-between;
     display: flex;
-    display: -webkit-flex; /* Safari */
     flex-flow: row wrap;
     align-items: center;
 }
@@ -646,56 +622,13 @@
   text-align: center;
 }
 
-/*-------- CLASES PARA EL ORDEN DE LOS ELEMENTOS --------------*/
-/* Safari 6.1+ */
-#titulo-propiedad {-webkit-order: 1;}
-
-
-/* Standard syntax */
-#titulo-propiedad  {order: 1;}
-#sticky-call-to-actions  {order: 2;}
-#medialinks {order: 3;}
-#informacion-propiedad {order: 1;}
 
 /*--------INICIA DECLARACIONES PARA RESPONSIVE DESIGN-----------*/
 @media screen and (max-width: 1350px)
 {
- 
-  .carousel-tabs::-webkit-scrollbar 
+  .tablinks-container
   {
-    height: 10px;
+    max-width: 500px;
+    overflow: auto;
   }
-  .medialink 
-  {
-    margin: 0 13px;
-  }
-}
-
-@media screen and (max-width: 1180px)
-{
-  .medialink 
-  {
-    margin: 0 25px;
-  }
-}
-
-@media screen and (max-width: 1100px)
-{
-  .sticky
-  {
-    position: static;
-  }
-  .left-column
-  {
-  width: 90%;
-  margin: 0 5% 0 5%; 
-  clear: both;
-  }
-  .right-column
-  {
-  width:100%;
-  margin: 30px 5% 0 2.5%;
-  clear: both;
-  }
-
 }

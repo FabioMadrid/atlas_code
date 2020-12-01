@@ -652,7 +652,7 @@
 
 
 /* Standard syntax */
-#titulo-propiedad  {order: 1;}
+#titulo-propiedad  {order: 4;}
 #sticky-call-to-actions  {order: 2;}
 #medialinks {order: 3;}
 #informacion-propiedad {order: 1;}
@@ -663,7 +663,7 @@
  
   .carousel-tabs::-webkit-scrollbar 
   {
-    height: 10px;
+  height: 10px;
   }
   .medialink 
   {
@@ -679,7 +679,7 @@
   }
 }
 
-@media screen and (max-width: 1100px)
+@media screen and (max-width: 1128px)
 {
   .sticky
   {
@@ -697,5 +697,16 @@
   margin: 30px 5% 0 2.5%;
   clear: both;
   }
+  /* Safari 6.1+ */
+  .order
+  {
+    -webkit-order: 1;
+  }
+
+  /* Standard syntax */
+  .order
+  {  
+    order: 1;
+  } 
 
 }

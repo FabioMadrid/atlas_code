@@ -43,27 +43,22 @@
 
 /*------------------------------ MEDIA TABS -----------------------------------------*/
 
-
-.carousel-tabs 
+.tablink-wrapper
 {
+    width: 100%;
+    min-width: 600px;
+    position: relative;
+}
+.carousel-tabs {
   overflow: auto;
   scroll-behavior: smooth;
-  scrollbar-width: 0;
+  scrollbar-width: 10px;
+  scrollbar-color: #BFBFBF;
 }
 
-.carousel-tabs::-webkit-scrollbar 
-{
-  height: 0;
+.carousel-tabs::-webkit-scrollbar {
+  height: 10px;
 }
-.content-tabs 
-{
-  display: flex; 
-  display: -webkit-flex; /* Safari */
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
-}
-
 
 .tablinks-container
 {
@@ -85,11 +80,10 @@
   cursor: pointer;
   padding: 5px 15px;
   font-size: 16px;
-  min-width: 140px;
+  width: 140px;
   height: 40px;
   text-align: center;
   font-size: 16px;
-  margin: 0 5px;
 }
   
 .medialink:hover 
@@ -653,49 +647,13 @@
 
 /* Standard syntax */
 #titulo-propiedad  {order: 1;}
-#sticky-call-to-actions  {order: 2;}
-#medialinks {order: 3;}
-#informacion-propiedad {order: 1;}
 
 /*--------INICIA DECLARACIONES PARA RESPONSIVE DESIGN-----------*/
 @media screen and (max-width: 1350px)
 {
- 
-  .carousel-tabs::-webkit-scrollbar 
+  .tablinks-container
   {
-    height: 10px;
+    max-width: 500px;
+    overflow: auto;
   }
-  .medialink 
-  {
-    margin: 0 13px;
-  }
-}
-
-@media screen and (max-width: 1180px)
-{
-  .medialink 
-  {
-    margin: 0 25px;
-  }
-}
-
-@media screen and (max-width: 1100px)
-{
-  .sticky
-  {
-    position: static;
-  }
-  .left-column
-  {
-  width: 90%;
-  margin: 0 5% 0 5%; 
-  clear: both;
-  }
-  .right-column
-  {
-  width:100%;
-  margin: 30px 5% 0 2.5%;
-  clear: both;
-  }
-
 }

@@ -181,29 +181,6 @@
 
 <section>
 
-    <div class="second-container sticky" id="sticky-call-to-actions">
-
-        <a href="" target="_blank">
-            <div class="proyecto">
-                <img src="./img/logotipo-oak-tree.jpg" alt="logo" class="logo-proyecto">
-                <p class="text" style="display: block;">Propiedad forma parte del proyecto:<br>
-                <span style="color: #0894FE;">Portal de los Pinos</span><br>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-                </p>
-            </div>
-        </a>
-        
-        <div>
-            <p class="text"> Pago Mensual Estimado: <span style="color: #0894FE;"> L.49,548.90</span></p>
-            <button class="boton-credito"> Solicita tú Crédito</button>
-                <button class="boton-cita"> Agenda una Cita</button>
-        </div>
-    </div>
-
 
     <div class="left-column">
         <div id="media-render" class="general-media-container">
@@ -286,24 +263,43 @@
     </div>
     <!--Termina las tecnlogias de visualizacion-->
 
-    <div class="left-column" id="medialinks">
+    <div class="left-column">
         <!--Contenedor con los tabs para las tecnologias--->
-        <div class="wrapper">
-            <div class="carousel-tabs">
-                <div class="content-tabs" >
-                    <button class="medialink" onclick="showMedia(event,'fotos')" id="open" style="margin-left: 0;">Fotos</button>
-                    <button class="medialink" onclick="showMedia(event,'tv')" >Tour Virtual</button>
-                    <button class="medialink" onclick="showMedia(event,'planos')">Planos</button>
-                    <button class="medialink" onclick="showMedia(event,'mapa')">Mapa</button>
-                    <button class="medialink" onclick="showMedia(event,'stv')" style="margin-right: 0;">G. Street View</button>
-                </div>
-            </div>
+        <div class="tablinks-container" >
+            <button class="medialink" onclick="showMedia(event,'fotos')" id="open">Fotos</button>
+            <button class="medialink" onclick="showMedia(event,'tv')" >Tour Virtual</button>
+            <button class="medialink" onclick="showMedia(event,'planos')">Planos</button>
+            <button class="medialink" onclick="showMedia(event,'mapa')">Mapa</button>
+            <button class="medialink" onclick="showMedia(event,'stv')">G. Street View</button>
         </div>
     </div>
 
-    <section class="left-column" style="margin-top: 50px;" id="informacion-propiedad">
+    <div class="second-container sticky" id="sticky-call-to-actions">
 
-        <p class="subtitles" style="color: #0048CD;font-size: 18px;"> Información Específica</p>
+        <a href="" target="_blank">
+            <div class="proyecto">
+                <img src="./img/logotipo-oak-tree.jpg" alt="logo" class="logo-proyecto">
+                <p class="text" style="display: block;">Propiedad forma parte del proyecto:<br>
+                <span style="color: #0894FE;">Portal de los Pinos</span><br>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                </p>
+            </div>
+        </a>
+        
+        <div>
+            <p class="text"> Pago Mensual Estimado: <span style="color: #0894FE;"> L.49,548.90</span></p>
+            <button class="boton-credito"> Solicita tú Crédito</button>
+                <button class="boton-cita"> Agenda una Cita</button>
+        </div>
+    </div>
+
+    <section class="left-column">
+
+        <p class="subtitles" style="color: #0048CD;"> Información Específica</p>
 
         <!--Inician los accordiones-->
         <button class="accordion">Descripción</button>

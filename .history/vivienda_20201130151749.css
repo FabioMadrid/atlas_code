@@ -49,6 +49,7 @@
   overflow: auto;
   scroll-behavior: smooth;
   scrollbar-width: 0;
+  min-width: 400px;
 }
 
 .carousel-tabs::-webkit-scrollbar 
@@ -85,11 +86,10 @@
   cursor: pointer;
   padding: 5px 15px;
   font-size: 16px;
-  min-width: 140px;
+  width: 140px;
   height: 40px;
   text-align: center;
   font-size: 16px;
-  margin: 0 5px;
 }
   
 .medialink:hover 
@@ -653,49 +653,13 @@
 
 /* Standard syntax */
 #titulo-propiedad  {order: 1;}
-#sticky-call-to-actions  {order: 2;}
-#medialinks {order: 3;}
-#informacion-propiedad {order: 1;}
 
 /*--------INICIA DECLARACIONES PARA RESPONSIVE DESIGN-----------*/
 @media screen and (max-width: 1350px)
 {
- 
-  .carousel-tabs::-webkit-scrollbar 
+  .tablinks-container
   {
-    height: 10px;
+    max-width: 500px;
+    overflow: auto;
   }
-  .medialink 
-  {
-    margin: 0 13px;
-  }
-}
-
-@media screen and (max-width: 1180px)
-{
-  .medialink 
-  {
-    margin: 0 25px;
-  }
-}
-
-@media screen and (max-width: 1100px)
-{
-  .sticky
-  {
-    position: static;
-  }
-  .left-column
-  {
-  width: 90%;
-  margin: 0 5% 0 5%; 
-  clear: both;
-  }
-  .right-column
-  {
-  width:100%;
-  margin: 30px 5% 0 2.5%;
-  clear: both;
-  }
-
 }
