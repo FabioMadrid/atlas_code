@@ -769,8 +769,11 @@
   }
   .boton-contacto
   {
-  padding: 15px 45px;
-  height: 50px;
+  padding: 10px 45px;
+  }
+  .whatsapp
+  {
+    align-self: center;
   }
 }
 
@@ -820,15 +823,6 @@
   .medialink 
   {
     margin: 0 30px;
-  }
-  .correcion-mobile-center
-  {
-    justify-content: center;
-  }
-  .boton-contacto
-  {
-    margin: 35px auto;
-    width: 300px;
   }
 }
 @media screen and (max-width: 475px)

@@ -200,7 +200,7 @@
         <div>
             <p class="text"> Pago Mensual Estimado: <span style="color: #0894FE;"> L.49,548.90</span></p>
             <button class="boton-credito"> Solicita tú Crédito</button>
-            <button class="boton-cita"> Agenda una Cita</button>
+                <button class="boton-cita"> Agenda una Cita</button>
         </div>
     </div>
 
@@ -301,32 +301,24 @@
         </div>
     </div>
 
-
-    <div style="color: #0894FE;text-align: center;font-size: 18px;margin-top: 20px;" class="show-mobile"> 
-        Desliza para ver las opciones de visualización<br>
-    </div>
-
     <div class="titulo-inmueble show-mobile" style="margin-top: 25px;" id="titulo-propiedad-mobile">
-        
         <div class="space-between" style="margin-top: 5px;">
             <div>
                 <h2 class="titulo-propiedades" style="display: inline"> Residencial El Hatillo </h2>       
             </div>
             <div>
-                <div class="text-t" style="font-size: 20px;color: #081C33;font-weight: bold;">  L.4,500,000</div>           
+                <div class="text-t" style="font-size: 20px;color: #081C33;font-weight: bold;">  L.4,500,000</div>
+                
             </div>
         </div>
-        <h2 class="text-t" style="display: inline;font-size: 20px;">Modelo Jazmín</h2>
         <div class="space-between" style="margin-top: 5px;">
-                     
+            <h2 class="text-t" style="display: inline;font-size: 20px;">Modelo Jazmín</h2>
+            <div class="text-t" style="display: inline;"> <span style="color:#0894FE"> Precio de Renta: </span> L.42,000</div>
             <div class="text-t" style="display: inline;"> 
                 3 <span style="color:#0894FE"> Habs </span>
                  | 2 <span style="color:#0894FE"> Baños </span> 
                  | 78 <span style="color:#0894FE"> M2 </span>
             </div>
-
-            <div class="text-t" style="display: inline;"> <span style="color:#0894FE"> Precio de Renta: </span> L.42,000</div>
-
             <div class="text-t" style="display: inline;"> Área de lote: <span style="color:#0894FE"> 320m2</span></div>
             
             <div class="text-t" style="display: inline;"> 
@@ -335,15 +327,17 @@
     </div>
     
 
-    <div class="second-container-mobile" style="margin-top:50px;">
-
+    <div class="second-container-mobile">
+        <div style="color: #0894FE;text-align: center;font-size: 18px;margin-top: 20px;"> Desliza para ver las opciones de visualización</div>
+        <br>
         <div style="font-size: 18px;" class="space-between">
             <div class="text"> Pago Mensual Estimado: </div>
             <div style="color: #0894FE;"> L.49,548.90</div>   
         </div>
-        
+        <br>
         <button class="boton-credito"> Solicita tú Crédito</button>
         
+        <div class="line"></div>
 
         <a href="" target="_blank">
             <div class="proyecto" style="justify-content: center;font-size: 18px;">
@@ -360,34 +354,7 @@
             <br>
             <div style="color: #0894FE;text-align: center;font-size: 18px;"> ¡Haz Clic para ver el Proyecto entero!</div>
         </a>
-    </div>
-
-    <!-- BARRA DE CERTIFICACION Y CONTACTO -->
-    <div class="show-mobile" style="margin: 50px 5%;">
-    
-        <div class="space-between correcion-mobile-center">
-
-            <div style="color:#1FC26B;font-size: 20px;" class="tag-icon">
-            Propiedad Certificada
-            </div>
-
-            <div>
-
-                <a class="" rel="noopener noreferrer nofollow"
-                href="https://api.whatsapp.com/send?phone=50495775730&text=Hola,%20Me%20gustaría%20recibir%20más%20información%20sobre%20la%20propiedad%20https://atlashome.hn/inmueble/54" 
-                target="_blank" >
-                
-                   <div class="boton-contacto" style="position: relative;"> 
-                        <img src="./svg/whatsapp_icon.svg" alt="" style="position: absolute;left: 13px;"> 
-                        Contáctanos
-                    </div>
-
-                </a>
-
-            </div>
-
-        </div>
-
+        
     </div>
 
     <section class="left-column" style="margin-top: 50px;" id="informacion-propiedad">
@@ -679,13 +646,11 @@
     Así es vivir en <span>Residencial El Hatillo</span>
 </div>
 
-<div class="space-between">
-    
-    <div class="left-column">
-        <div id="map" class=" mapa"></div>
-    </div>
-    
-    <div class="right-column" >
+<div class="space-between" style="justify-content: flex-start;">
+
+    <div id="map" class="left-column mapa"></div>
+
+    <div style="width: 33.5%;" >
 
         <div style="display: flex; justify-content: flex-start; margin: 25px 0;">
             <div class="burbuja" style="background-color: #3ecfaf;">
@@ -730,13 +695,13 @@
     </div>
 </div>
 
-<div class="big-titles">
+<div class="big-titles" style="margin: 15px auto;">
     Propiedades que también podrían Interesarte
 </div>
 
 <!--Carusel de propiedades sugeridas---->
 <section class="carrusel-container" style="margin-bottom: 100px;">
-<div id="wrapper" class="wrapper" >
+<div id="wrapper" class="wrapper">
     <div id="carousel" class="carousel">
       <div id="content" class="content">
         
@@ -971,7 +936,7 @@
 </section>
 
 <!-- BARRA DE CERTIFICACION Y CONTACTO -->
-<div class="sticky-info space-between hide-mobile" id="sticky-info">
+<div class="sticky-info space-between" id="sticky-info">
 
         <div style="color:#1FC26B;margin-left: 5%;" class="tag-icon">
             Propiedad Certificada
@@ -983,11 +948,6 @@
         </a>
 
 </div>
-<!--boton agendar cita / se muestra solo en mobile-->
-<div class="show-mobile">
-    <button class="boton-cita"> Agenda una Cita</button>
-</div>
-
 
 
 <script src="./general.js"></script>

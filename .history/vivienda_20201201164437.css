@@ -90,7 +90,6 @@
   text-align: center;
   font-size: 16px;
   margin: 0 5px;
-  border-radius: 5px;
 }
   
 .medialink:hover 
@@ -112,16 +111,12 @@
 {
   width: 55%;
   margin: 10px 0 0 5%; 
-}
-.left-column-media
-{
-  width: 55%;
-  margin: 10px 0 0 5%; 
+
 }
 .right-column
 {
-  width:33.5%;
-  margin: none;
+  width:32.5%;
+  margin: 30px 5% 0 2.5%;
   height: auto;
 }
 
@@ -508,12 +503,12 @@
 .mapa
 {
   height: 300px; 
-  margin: 0;
+  margin: 50px 5% 50px 5%;
 }
 .big-titles
 {
   text-align: center;
-  margin: 50px 0; 
+  margin-top: 50px ; 
   color:#0894FE; 
   font-size:1.5em;
   font-weight:bold;
@@ -533,7 +528,7 @@
 .wrapper 
 {
   width: 100%;
-  max-width: 1400px;
+  max-width: 964px;
   position: relative;
 }
 
@@ -583,10 +578,6 @@
   grid-auto-flow: column;
   margin: auto;
   box-sizing: border-box;
-}
-.show-mobile
-{
-  display: none;
 }
 
 /*--------------------- Clases de los Atlas Cards--------------------*/
@@ -662,6 +653,16 @@
   text-align: center;
 }
 
+/*-------- CLASES PARA EL ORDEN DE LOS ELEMENTOS --------------*/
+/* Safari 6.1+ */
+#titulo-propiedad {-webkit-order: 1;}
+
+
+/* Standard syntax */
+#titulo-propiedad  {order: 1;}
+#sticky-call-to-actions  {order: 2;}
+#medialinks {order: 3;}
+#informacion-propiedad {order: 1;}
 
 /*--------INICIA DECLARACIONES PARA RESPONSIVE DESIGN-----------*/
 @media screen and (max-width: 1350px)
@@ -687,6 +688,10 @@
 
 @media screen and (max-width: 1100px)
 {
+  .sticky
+  {
+    position: static;
+  }
   .left-column
   {
   width: 90%;
@@ -695,15 +700,9 @@
   }
   .right-column
   {
-  width:90%;
-  margin: 30px 5% 0 5%;
+  width:100%;
+  margin: 30px 5% 0 2.5%;
   clear: both;
-  }
-  
-  .left-column-media
-  {
-  width: 90%;
-  margin: 80px 5% 0 5%;  
   }
   .second-container
   {
@@ -719,122 +718,17 @@
     background-color: #CC5F54;
     width: 80%;
     color: white;
-    margin: 25px 0 25px 10%;
+    margin-left: 10%;
   }
   .proyecto
   {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
-    height: auto;
   }
   .line
   {
     background-color: #F2F2F2;
     display: block;
     height: 5px;
-    margin: 35px 0;
-  }
-  .show-mobile
-  {
-    display: block;
-  }
-  .hide-mobile
-  {
-    display: none;
-  }
-  .titulo-inmueble
-  {
-    min-height: 80px;
-    width: 100%;
-    margin: none;
-    border-radius: 0px;
-  }
-  .text-t
-  {
-    font-size: 18px;
-  }
-  .boton-cita
-  {
-    width: 100%;
-    text-align: center;
-    background-color:#0894FE;
-    color: white;
-    height: 60px;
-    border-radius: 0px;
-    font-size: 20px;
-    margin: 0 ;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    left: 0;
-  }
-  .boton-contacto
-  {
-  padding: 15px 45px;
-  height: 50px;
-  }
-}
-
-@media screen and (max-width: 1230px)
-{
-  .medialink 
-  {
-    margin: 0 28px;
-  }
-}
-
-@media screen and (max-width: 1100px)
-{
-  .left-column-media
-  {
-  width: 100%;
-  margin: 80px 0 0 0;  
-  }
-  .medialink 
-  {
-    margin: 0 10px;
-  }
-}
-@media screen and (max-width: 735px)
-{
-  .medialink 
-  {
-    margin: 0 28px;
-  }
-}
-@media screen and (max-width: 680px)
-{
-  .medialink 
-  {
-    margin: 0 18px;
-  }
-}
-@media screen and (max-width: 620px)
-{
-  .medialink 
-  {
-    margin: 0 10px;
-  }
-}
-@media screen and (max-width: 550px)
-{
-  .medialink 
-  {
-    margin: 0 30px;
-  }
-  .correcion-mobile-center
-  {
-    justify-content: center;
-  }
-  .boton-contacto
-  {
-    margin: 35px auto;
-    width: 300px;
-  }
-}
-@media screen and (max-width: 475px)
-{
-  .medialink 
-  {
-    margin: 0 10px;
+    margin: 20px 0;
   }
 }

@@ -90,7 +90,6 @@
   text-align: center;
   font-size: 16px;
   margin: 0 5px;
-  border-radius: 5px;
 }
   
 .medialink:hover 
@@ -508,12 +507,12 @@
 .mapa
 {
   height: 300px; 
-  margin: 0;
+  margin: 50px 5% 50px 5%;
 }
 .big-titles
 {
   text-align: center;
-  margin: 50px 0; 
+  margin-top: 50px ; 
   color:#0894FE; 
   font-size:1.5em;
   font-weight:bold;
@@ -719,7 +718,7 @@
     background-color: #CC5F54;
     width: 80%;
     color: white;
-    margin: 25px 0 25px 10%;
+    margin-left: 10%;
   }
   .proyecto
   {
@@ -747,6 +746,8 @@
     width: 100%;
     margin: none;
     border-radius: 0px;
+    overflow: hidden;
+    border: 1px solid #0894FE;
   }
   .text-t
   {
@@ -766,11 +767,6 @@
     bottom: 0;
     right: 0;
     left: 0;
-  }
-  .boton-contacto
-  {
-  padding: 15px 45px;
-  height: 50px;
   }
 }
 
@@ -820,15 +816,6 @@
   .medialink 
   {
     margin: 0 30px;
-  }
-  .correcion-mobile-center
-  {
-    justify-content: center;
-  }
-  .boton-contacto
-  {
-    margin: 35px auto;
-    width: 300px;
   }
 }
 @media screen and (max-width: 475px)

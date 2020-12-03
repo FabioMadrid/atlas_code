@@ -90,7 +90,6 @@
   text-align: center;
   font-size: 16px;
   margin: 0 5px;
-  border-radius: 5px;
 }
   
 .medialink:hover 
@@ -508,7 +507,7 @@
 .mapa
 {
   height: 300px; 
-  margin: 0;
+  margin: 0px 5% 50px 5%;
 }
 .big-titles
 {
@@ -767,11 +766,6 @@
     right: 0;
     left: 0;
   }
-  .boton-contacto
-  {
-  padding: 15px 45px;
-  height: 50px;
-  }
 }
 
 @media screen and (max-width: 1230px)
@@ -820,15 +814,6 @@
   .medialink 
   {
     margin: 0 30px;
-  }
-  .correcion-mobile-center
-  {
-    justify-content: center;
-  }
-  .boton-contacto
-  {
-    margin: 35px auto;
-    width: 300px;
   }
 }
 @media screen and (max-width: 475px)
