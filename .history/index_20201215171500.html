@@ -236,227 +236,144 @@
 <!---------------------------------------------------------- MODAL DE VENTA ----------------------------------------------------------------------->
 
 
-    <div id="modal-venta" class="modal">
-        <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
-        <div class="modal-content overflow">
-            <div class="show-mobile-2 correcion-cita"></div>
-            
-                <form action="" method="POST" >
-                    <input id="step2"  type="checkbox">
-                    <input id="step3"  type="checkbox">
-                    <input id="step4"  type="checkbox">
-                    <input id="step5"  type="checkbox">
+                <div id="modal-venta" class="modal">
+                    <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+                        <div class="modal-content overflow">
 
-                    <div id="part1">
-                        <p class="text" style="text-align: left; margin: 2px auto;color:#0048CD">Vende o alquila
-                        <br><b style="font-size: 20px;">Con Atlas Home</b></p>  
-                                        
-                         <!--               
-                        <div class="cr-container">
-                            <p class="text" style="padding:10px;">
-                                <b class="subtitles" style="padding-bottom:10px;">Acceso a los clientes de la Banca</b>
-                                Atlas Home es la única plataforma que centraliza compradores, vendedores y bancos.
-                            </p>
-                            <img src="svg/women_pc.svg" alt="." style="height: 110px;padding-right: 10px;">
+                        <div class="cr-titulo">
+                            <div> <h3 style="margin: 0px auto 0px;">Vende con Atlas Home</h3>
+                                <!-- Circles which indicates the steps of the form: -->
+                                <div style="text-align:center;">
+                                    <span class="step1"></span>
+                                    <span class="step1"></span>
+                                    <span class="step1"></span>
+                                    <span class="step1"></span>
+                                    <span class="step1"></span>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="cr-container">
-                            <img src="svg/data_analisis.svg" alt="." style="height: 100px;padding-left: 10px;">
-                            <p class="text" style="padding:10px; text-align: right;">
-                                <b class="subtitles" style="padding-bottom:10px; text-align: right;">Clientes de Calidad</b>
-                                Perfilamos de forma financiera y juridica al cliente. Recibe clientes de calidad.
-                            </p>
+                            <form id="regForm1"  action="" method="POST">
+
+                                <div class="tab1">
+                                    <p class="text" style="text-align: left; margin: 2px auto;color:#0048CD">Vender o alquilar
+                                    <br><b style="font-size: 20px;">Con Atlas Home</b></p>  
+                                    
+                                    
+                                    <div class="cr-container">
+                                        <p class="text" style="padding:10px;">
+                                         <b class="subtitles" style="padding-bottom:10px;">Acceso a los clientes de la Banca</b>
+                                         Atlas Home es la única plataforma que centraliza compradores, vendedores y bancos.
+                                        </p>
+                                        <img src="svg/women_pc.svg" alt="." style="height: 110px;padding-right: 10px;">
+                                    </div>
+                                    <div class="cr-container">
+                                        <img src="svg/data_analisis.svg" alt="." style="height: 100px;padding-left: 10px;">
+                                        <p class="text" style="padding:10px; text-align: right;">
+                                         <b class="subtitles" style="padding-bottom:10px; text-align: right;">Clientes de Calidad</b>
+                                         Perfilamos de forma financiera y juridica al cliente. Recibe clientes de calidad.
+                                        </p>
+                                    </div>
+                                    <div class="cr-container">
+                                        <p class="text" style="padding:10px;">
+                                         <b class="subtitles" style="padding-bottom:10px;">Encontramos tu comprador</b>
+                                         Conectamos a tu comprador con tu producto con algoritmos de AI . ¿Perfecto no? 
+                                        </p>
+                                        <img src="svg/house.svg" alt="." style="height: 100px;padding-right: 10px;">
+                                    </div>
+                                </div>
+
+                                <div class="tab1">
+                                    
+                                    <img src="svg/data_analisis.svg" alt="." class="icon-lp"style="width:30%;">
+                                    <p class="text" style="text-align: left;display: block;">Cuentanos un poco sobre tu propiedad(es)</p>
+                                    <label for="anunciar-operacion">Operación</label>
+                                    <select name="anunciar-operacion" style="width: 100%;" id="anunciar-operacion" class="minimal" required oninput="this.className = ''"><br>
+                                        <option value="venta">Venta</option>
+                                        <option value="renta">Renta</option>
+                                    </select>
+                                    <br>
+                                    <label for="anunciar-tipo-propiedad">Tipo de Propiedad</label>
+                                    <select name="anunciar-tipo-propiedad" style="width: 100%;" id="anunciar-tipo-propiedad" class="minimal" required oninput="this.className = ''"><br>
+                                        <option value="casa">Casa</option>
+                                        <option value="apartamento">Apartamento</option>
+                                        <option value="terreno">Terreno</option>
+                                        <option value="comercio">Comercio</option>
+                                        <option value="proyecto-inmobiliario">Proyecto Inmobiliario</option>
+                                    </select>
+                                    <br>
+                                    <label for="anunciar-condicion-propiedad">Condición de la Propiedad</label>
+                                    <select name="anunciar-condicion-propiedad" style="width: 100%;" id="anunciar-condicion-propiedad" class="minimal" required oninput="this.className = ''"><br>
+                                        <option value="nueva">Nueva sin uso</option>
+                                        <option value="usada">Usada</option>
+                                        <option value="pre-venta">Pre Venta</option>
+                                        <option value="construccion">En Construcción</option>
+                                    </select>
+                                    <br>
+                                    <label for="anunciar-tipo-vendedor">¿Bajo que figura actuas?</label>
+                                    <select name="anunciar-tipo-vendedor" style="width: 100%;" id="anunciar-tipo-vendedor" class="minimal" required oninput="this.className = ''"><br>
+                                        <option value="persona-natural">Persona Natural</option>
+                                        <option value="constructora">Constructora</option>
+                                        <option value="bienes-raices">Bienes Raíces</option>
+                                        <option value="otro-vendedor">Otro</option>
+                                    </select>
+                                    <br>
+                                    <label for="anunciar-motivo">¿Motivo de la transacción?</label>
+                                    <select name="anunciar-motivo" style="width: 100%;" id="anunciar-motivo" class="minimal" required oninput="this.className = ''"><br>
+                                        <option value="negocio">Negocio</option>
+                                        <option value="mudanza">Mudanza</option>
+                                        <option value="otro-motivo">Otro</option>
+                                    </select>
+                                    <br>
+                                </div>
+
+                                <div class="tab1">
+                                    <p class="text" style="text-align: left; margin-bottom: 2px;color:#0048CD">¿Donde se encuentra tu propiedad?
+                                    <br><b style="font-size: 20px;">Ubicación</b></p>  
+                                    <img src="svg/casa_gps.svg" alt="." class="icon-lp"style="width:40%;">
+                                    <p class="text" style="text-align: left;display: block;">Ubicación en mapa o escribe la dirreción</p>
+                                    <!--Quitar required de ubicacion si ya tenemos coordenadas GPS-->
+                                    <button class="btn-social-login gps-icon" onclick="getLocation()"> Usar Mi Ubicación Actual</button>
+                                    <label for="anunciar-ubicacion">Ciudad</label>
+                                        <select name="anunciar-ubicacion" style="width: 100%;" id="anunciar-ubicacion" class="minimal" required oninput="this.className = ''"><br>
+                                            <option value="tegucigalpa">Tegucigalpa</option>
+                                            <option value="sanpedrosula">San Pedro Sula</option>
+                                            <option value="otro-ciudad">Otro</option>
+                                    </select>
+                                    <br>
+                                    <label for="dirrecion-propiedad">Dirreción de la Propiedad</label>
+                                    <input type="text" placeholder="Dirreción de la propiedad" name="dirrecion-propiedad" id="dirrecion-propiedad" required oninput="this.className = ''">
+                                    <br>
+                                </div>
+
+                                <div class="tab1">
+                                    <p class="text" style="text-align: left; margin-bottom: 2px;color:#0048CD">Compartenos tu
+                                    <br><b style="font-size: 20px;">Información de Contacto</b></p>  
+                                    <img src="svg/contacto_cliente.svg" alt="." class="icon-lp"style="width:50%;">
+                                    <input type="text" placeholder="Nombre y Apellido" name="anunciar-contacto" id="anunciar-contacto" required autofocus oninput="this.className = ''">
+                                    <input type="email" id="anunciar_contacto_email" name="correo" placeholder="Correo Electrónico" required autocomplete="on" oninput="this.className = ''">
+                                    <input type="number" placeholder="Celular de Contacto" name="celular-contacto" 
+                                    id="anunciar-telefono-contacto" minlength="8" autocomplete="on" oninput="this.className = ''">
+                                </div>
+
+                                <div class="tab1">
+                                    <p class="text" style="text-align: center; margin-bottom: 2px;color:#0048CD">Gracias
+                                    <br><b style="font-size: 20px;">¡Haz Clic en Enviar!</b></p>  
+                                    <img src="svg/exito.svg" alt="." class="icon-lp"style="width:50%;">
+                                    <p class="text" style="text-align: center;display: block;"><b>Haz Clic en Enviar para Finalizar</b><br>
+                                    Un Miembro de nuestro equipo te estará contactando para darle seguimiento a tu Solicitud.
+                                    </p>  
+                                </div>
+
+
+                                <div class="flex-container flex-centrar">
+                                      <button type="button" id="prevBtn1" class="submit-boton cr-boton"  onclick="nextPrev1(-1)">Anterior</button>
+                                      <button type="button" id="nextBtn1" class="submit-boton cr-boton" style="margin:auto;" onclick="nextPrev1(1)">Empezar</button>
+                                </div>
+                            </form>
                         </div>
-
-                        <div class="cr-container">
-                            <p class="text" style="padding:10px;">
-                                <b class="subtitles" style="padding-bottom:10px;">Encontramos tu comprador</b>
-                                Conectamos a tu comprador con tu producto con algoritmos de AI . ¿Perfecto no? 
-                            </p>
-                            <img src="svg/house.svg" alt="." style="height: 100px;padding-right: 10px;">
-                        </div>
-                        -->
-
-                        <img src="svg/megafono.svg" alt="." class="icon-lp"style="width:300px;">
-                        <br>
-                        <div class="text" style="text-align: center;">
-                            ¿Porqué Atlas Home?
-                        </div>
-
-                        <br>
-
-                        <a href="" target="_blank">
-                            <button class="boton-landing" style="width: 300px; margin: 20px auto;">Conoce todos los beneficios</button>
-                        </a>
-
-                        <div style="display: flex; justify-content: center; margin: 25px auto;">
-                            <label for="step2" id="continue-step2">
-                                <div class="subtitles" style="font-size: 20px;cursor: pointer;">Empezemos  ❯</div>
-                            </label>
-                        </div>
-
                     </div>
-
-                    <div id="part2" style="position: relative;">
-
-                        <img src="svg/casa_gps.svg" alt="." class="icon-lp"style="width:200px;">
-                        <p class="text" style="text-align: center;display: block;">Cuéntanos un poco sobre tu propiedad</p>
-                        <label for="anunciar-operacion" class="text">Operación</label>
-                        <select name="anunciar-operacion" style="width: 100%;" id="anunciar-operacion" class="minimal" required ><br>
-                            <option value="venta">Venta</option>
-                            <option value="renta">Renta</option>
-                        </select>
-
-                        <br>
-
-                        <label for="anunciar-tipo-propiedad">Tipo de propiedad</label>
-                        <select name="anunciar-tipo-propiedad" style="width: 100%;" id="anunciar-tipo-propiedad" class="minimal" required ><br>
-                            <option value="casa">Casa</option>
-                            <option value="apartamento">Apartamento</option>
-                            <option value="terreno">Terreno</option>
-                            <option value="comercio">Comercio</option>
-                            <option value="proyecto-inmobiliario">Proyecto Inmobiliario</option>
-                        </select>
-
-                        <br>
-
-                        <label for="anunciar-condicion-propiedad">Condición de la propiedad</label>
-                        <select name="anunciar-condicion-propiedad" style="width: 100%;" id="anunciar-condicion-propiedad" class="minimal" required ><br>
-                            <option value="nueva">Nueva sin uso</option>
-                            <option value="usada">Usada</option>
-                            <option value="pre-venta">Pre Venta</option>
-                            <option value="construccion">En Construcción</option>
-                        </select>
-
-                        <br>
-
-                        <label for="anunciar-tipo-vendedor">¿Bajo que figura actúas?</label>
-                        <select name="anunciar-tipo-vendedor" style="width: 100%;" id="anunciar-tipo-vendedor" class="minimal" required oninput="this.className = ''"><br>
-                            <option value="persona-natural">Persona Natural</option>
-                            <option value="constructora">Constructora</option>
-                            <option value="bienes-raices">Bienes Raíces</option>
-                            <option value="otro-vendedor">Otro</option>
-                        </select>
-
-                        <!--
-                        <label for="anunciar-motivo">¿Motivo de la transacción?</label>
-                        <select name="anunciar-motivo" style="width: 100%;" id="anunciar-motivo" class="minimal" required oninput="this.className = ''"><br>
-                            <option value="negocio">Negocio</option>
-                            <option value="mudanza">Mudanza</option>
-                            <option value="otro-motivo">Otro</option>
-                        </select>
-                        -->
-
-
-                        <label for="step2" id="back-step2">
-                            <div style="position: absolute; left:0; top: 0;">
-                                <img src="./svg/flecha-izq.svg" alt="">
-                                <span style="padding-left:10px; font-size: 18px;color: #2680EB;"> Regresar</span> 
-                            </div>
-                          </label>
-                
-                            <div style="display: flex; justify-content: center;">
-                                <label for="step3" id="continue-step3">
-                                    <div class="subtitles" style="font-size: 20px;cursor: pointer;margin: 25px auto;">Continuar  ❯</div>
-                                </label>
-                            </div>
-
-                    </div>
-
-                    <div id="part3" style="position: relative;">
-
-                        <img src="svg/casa_gps.svg" alt="." class="icon-lp"style="width:200px;">
-                        <p class="text" style="text-align: center;display: block;">Ubicación de la propiedad.</p>
-
-                        <!--Quitar required de ubicacion si ya tenemos coordenadas GPS-->
-
-                        <button class="btn-social-login gps-icon" onclick="getLocation()"> Usar Mi Ubicación Actual</button>
-                        <br>
-                        <label for="anunciar-ubicacion">Ciudad</label>
-                        <select name="anunciar-ubicacion" style="width: 100%;" id="anunciar-ubicacion" class="minimal" required ><br>
-                            <option value="tegucigalpa">Tegucigalpa</option>
-                            <option value="sanpedrosula">San Pedro Sula</option>
-                            <option value="otro-ciudad">Otro</option>
-                        </select>
-
-                        <br>
-
-                        <label for="direccion-propiedad">Dirección de la Propiedad</label>
-                        <input type="text" placeholder="Escribe la dirección aquí" name="dirrecion-propiedad" id="dirrecion-propiedad" required>
-
-                        <label for="step3" id="back-step3">
-                            <div style="position: absolute; left:0; top: 0;">
-                                <img src="./svg/flecha-izq.svg" alt="">
-                                <span style="padding-left:10px; font-size: 18px;color: #2680EB;"> Regresar</span> 
-                            </div>
-                          </label>
-                
-                            <div style="display: flex; justify-content: center;">
-                                <label for="step4" id="continue-step4">
-                                    <div class="subtitles" style="font-size: 20px;cursor: pointer;margin: 25px auto;">Continuar  ❯</div>
-                                </label>
-                            </div>
-                    </div>
-
-                    <div id="part4" style="position: relative;">
-
-                        <p class="text" style="text-align: left; margin: 30px auto;color:#0048CD">Compartenos tu
-                            <br>
-                            <b style="font-size: 20px;">Información de Contacto</b>
-                        </p>  
-                        <img src="svg/contacto_cliente.svg" alt="." class="icon-lp"style="width:300px;margin-bottom:30px;">
-
-                        <input type="text" placeholder="Nombre y Apellido" name="anunciar-contacto" id="anunciar-contacto" required autofocus autocomplete="on" >
-                        <input type="email" id="anunciar_contacto_email" name="correo" placeholder="Correo Electrónico" required autocomplete="on" >
-                        <input type="number" placeholder="Celular de Contacto" name="celular-contacto" 
-                        id="anunciar-telefono-contacto" minlength="8" autocomplete="on">
-
-                        <label for="step4" id="back-step3">
-                            <div style="position: absolute; left:0; top: 0;">
-                                <img src="./svg/flecha-izq.svg" alt="">
-                                <span style="padding-left:10px; font-size: 18px;color: #2680EB;"> Regresar</span> 
-                            </div>
-                          </label>
-                
-                            <div style="display: flex; justify-content: center;">
-                                <label for="step5" id="continue-step5">
-                                    <div class="subtitles" style="font-size: 20px;cursor: pointer;padding-top: 25px;">Continuar  ❯</div>
-                                </label>
-                            </div>
-
-                    </div>
-
-                    <div id="part5"  style="position: relative;">
-
-                        <p class="text" style="text-align: center; margin: 30px auto;color:#0048CD">Gracias
-                            <br>
-                            <b style="font-size: 20px;">¡Haz Clic en Enviar!</b>
-                        </p>  
-                        <img src="svg/exito.svg" alt="." class="icon-lp"style="width:300px;">
-
-                        <p class="text" style="text-align: center;display: block;margin: 30px auto">
-                            <b>Haz Clic en Enviar para Finalizar</b>
-                            <br>
-                            Un Miembro de nuestro equipo te estará contactando para darle seguimiento a tu Solicitud.
-                        </p>  
-
-                        <label class="continue">
-                            <button type="submit" class="submit-boton" style="width: 100%; height: 50px;">Enviar Solicitud</button>
-                        </label>
-
-                        <label for="step5" id="back-step4">
-                            <div style="position: absolute; left:0; top: 0;">
-                                <img src="./svg/flecha-izq.svg" alt="">
-                                <span style="padding-left:10px; font-size: 18px;color: #2680EB;"> Regresar</span> 
-                            </div>
-                        </label>
-
-                    </div>
-
-                </form>
-            </div>
-        </div>
-    </div>
+                </div>
 
 
 <!----------------------------------------------------------------------------- INICIO DE LANDING PAGE-------------------------------------------------------------->
@@ -537,7 +454,7 @@
                      Tecnología de recorridos virtuales, acceso a la clientela de la banca, 
                      clientes de calidad, economía, eficiencia, y mucho más beneficios.
                 </p>
-                 <button class="boton-landing"  onclick="modalV()">Vende Con Nosotros</button>
+                 <button class="boton-landing"  onclick="modalV()">Anuncia tú Propiedad</button>
                  <button class="boton-landing" onclick="">Conoce todos los beneficios</button>
             </div>
         </div>

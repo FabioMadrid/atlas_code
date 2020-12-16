@@ -404,8 +404,8 @@ button:active
 /* Styling Parts */
 #part1,
 #part2,
-#part3,
-#part4,
+#part3
+#part4
 #part5 {
   z-index: 2;
   display: block;
@@ -416,40 +416,35 @@ button:active
 
 /* Hidden Parts */
 #part2,
-#part3,
-#part4,
-#part5
- {
+#part3
+#part3
+#part4
+#part5  {
   opacity: 0;
   height: 0;
   overflow: hidden;
 }
 
 /* Show Step 2 & Hide Step 1 */
-#step2:checked ~ #part2 
-{
+#step2:checked ~ #part2 {
   opacity: 1;
   height: auto;
 }
-#step2:checked ~ #part1 
-{
+#step2:checked ~ #part1 {
   opacity: 0;
   height: 0;
   display: none;
 }
 
 /* Show Step 3  & Hide Step 2 */
-#step3:checked ~ #part3 
-{
+#step3:checked ~ #part3 {
   opacity: 1;
   height: auto;
 }
-#step3:checked ~ #part2 
-{
+#step3:checked ~ #part2 {
   opacity: 0;
   width: 0;
   height: 0;
-  display: none;
 }
 
 /* Show Step 4  & Hide Step 3 */
@@ -461,7 +456,6 @@ button:active
     opacity: 0;
     width: 0;
     height: 0;
-    display: none;
   }
 
 /* Show Step 5  & Hide Step 4 */
@@ -473,18 +467,7 @@ button:active
     opacity: 0;
     width: 0;
     height: 0;
-    display: none;
   }
-
-  input[type=checkbox] 
-  {
-  
-    position: absolute;
-    /* Position the checkbox in upper left corner */
-  
-    opacity: 0;
-  }
-
 /* ----- INICIO DE RESPONSIVE DESIGN------*/
 
 /*diseño para ipads*/

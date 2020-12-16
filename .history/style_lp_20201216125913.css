@@ -449,7 +449,6 @@ button:active
   opacity: 0;
   width: 0;
   height: 0;
-  display: none;
 }
 
 /* Show Step 4  & Hide Step 3 */
@@ -461,7 +460,6 @@ button:active
     opacity: 0;
     width: 0;
     height: 0;
-    display: none;
   }
 
 /* Show Step 5  & Hide Step 4 */
@@ -473,7 +471,6 @@ button:active
     opacity: 0;
     width: 0;
     height: 0;
-    display: none;
   }
 
   input[type=checkbox] 

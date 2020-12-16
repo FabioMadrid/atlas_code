@@ -403,10 +403,10 @@ button:active
 
 /* Styling Parts */
 #part1,
-#part2,
-#part3,
-#part4,
-#part5 {
+.part2,
+.part3,
+.part4,
+.part5 {
   z-index: 2;
   display: block;
   height: auto;
@@ -415,65 +415,58 @@ button:active
 }
 
 /* Hidden Parts */
-#part2,
-#part3,
-#part4,
-#part5
- {
+.part2,
+.part3,
+.part3,
+.part4,
+.part5  {
   opacity: 0;
   height: 0;
   overflow: hidden;
 }
 
 /* Show Step 2 & Hide Step 1 */
-#step2:checked ~ #part2 
-{
+.step2:checked ~ .part2 {
   opacity: 1;
   height: auto;
 }
-#step2:checked ~ #part1 
-{
+.step2:checked ~ .part1 {
   opacity: 0;
   height: 0;
   display: none;
 }
 
 /* Show Step 3  & Hide Step 2 */
-#step3:checked ~ #part3 
-{
+.step3:checked ~ .part3 {
   opacity: 1;
   height: auto;
 }
-#step3:checked ~ #part2 
-{
+.step3:checked ~ .part2 {
   opacity: 0;
   width: 0;
   height: 0;
-  display: none;
 }
 
 /* Show Step 4  & Hide Step 3 */
-#step4:checked ~ #part4 {
+.step4:checked ~ .part4 {
     opacity: 1;
     height: auto;
   }
-  #step4:checked ~ #part3 {
+  .step4:checked ~ .part3 {
     opacity: 0;
     width: 0;
     height: 0;
-    display: none;
   }
 
 /* Show Step 5  & Hide Step 4 */
-#step5:checked ~ #part5 {
+.step5:checked ~ .part5 {
     opacity: 1;
     height: auto;
   }
-#step5:checked ~ #part4 {
+.step5:checked ~ .part4 {
     opacity: 0;
     width: 0;
     height: 0;
-    display: none;
   }
 
   input[type=checkbox] 
