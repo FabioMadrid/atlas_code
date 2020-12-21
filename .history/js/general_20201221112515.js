@@ -55,19 +55,15 @@ function modalCITA()
 modalcita.style.display = "block";
 }
 
-// Get the modal
+//Modal busqueda de propiedades//
 var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+function modalPROPIEDADES() 
+{
+modal.style.display = "block";
+}
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-modal.style.display = "block";
-}
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
@@ -220,6 +216,7 @@ function openRegistro(evt, tipoRegistro) {
   
 
   function validateForm1() {
+
     // This function deals with validation of the form fields
     var x, y, i, valid = true;
     x = document.getElementsByClassName("tab1");
