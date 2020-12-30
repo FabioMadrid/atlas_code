@@ -47,6 +47,12 @@ function modalF()
 {
 modalfiltros.style.display = "block";
 }
+//Modal para agendar cita//
+var modalcita = document.getElementById("modal-cita");
+function modalCITA() 
+{
+modalcita.style.display = "block";
+}
 
 
 

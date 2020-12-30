@@ -140,9 +140,6 @@ let width = carousel.offsetWidth;
 window.addEventListener("resize", e => (width = carousel.offsetWidth));
 
 
-//---------------------------------- FUNCION PARA EL STEP FORM DE AGENDAR CITAS --------------------------//
-  // Get the element with id="defaultOpen" and click on it
-
     //----------------------------------------------------------------- FUNCION PARA STEP FORM DE CREDITO -------------------------------------------------------//
   
     var currentTab = 0; // Current tab is set to be the first tab (0)

@@ -22,26 +22,7 @@
         <div class="column-85">
                 <button class="boton-registro" id="boton-registro" onclick="modalR()">Registrarme</button>
                 <button class="boton-ingresar" id="boton-ingresar" onclick="modalI()">Ingresar</button>
-                <!--
-            <div class="dropdown">
-                <button class="dropbtn" onclick="modalCR()">Crédito Hipotecario</button>
-                    
-                    <div class="dropdown-content">
-                        <a href="#credito-vivienda">Compra de Vivienda</a>
-                        <a href="#credito-construccion">Construcción</a>
-                        <a href="#credito-libre-inversion">Libre Inversión</a>
-                        <a href="#credito-compra-cartera">Compra de Cartera</a>
-                        <a href="#credito-remodelaciones">Remodelaciones</a>
-                    </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn" onclick="modalV()">Vender</button>
                 
-                    <div class="dropdown-content">
-                        <a href="#vender-vivienda">Como Persona Natural</a>
-                        <a href="#vender-constructora">Como Constructora</a>
-                        <a href="#vender-inmobiliaria">Como Bienes Raíces</a>
-                    </div>-->
             </div>
             <a href="javascript:void(0);" style="font-size:35px;top: 0; right: 0;" class="icon" onclick="HamburgerFuction()">&#9776;</a>
         </div> 
@@ -380,8 +361,8 @@
 <div class="titulo-inmueble hide-mobile" style="margin-top: 95px;" id="titulo-propiedad">
     <div class="space-between" style="margin-top: 5px;">
         <div>
-            <h2 class="titulo-propiedades" style="display: inline"> Residencial El Hatillo </h2>
-            <h2 class="text-t" style="display: inline;font-size: 20px;">Modelo Jazmín</h2>
+            <h2 class="titulo-propiedades" style="display: inline"> Torre Athenas </h2>
+            <h2 class="text-t" style="display: inline;font-size: 20px;">Modelo 3 Hab</h2>
         </div>
         <div>
             <a href="" style="margin: 0 10px;">
@@ -399,10 +380,9 @@
         <div class="text-t" style="display: inline;"> <span style="color:#0894FE"> Precio de Renta: </span> L.42,000</div>
         <div class="text-t" style="display: inline;"> 
             3 <span style="color:#0894FE"> Habs </span>
-             | 2 <span style="color:#0894FE"> Baños </span> 
-             | 78 <span style="color:#0894FE"> M2 </span>
+             | 2.5 <span style="color:#0894FE"> Baños </span> 
+             | 128 <span style="color:#0894FE"> M2 </span>
         </div>
-        <div class="text-t" style="display: inline;"> Área de lote: <span style="color:#0894FE"> 320m2</span></div>
         
         <div class="text-t" style="display: inline;"> 
             Estado: <span style="color:#0894FE"> Usada</span></div>
@@ -419,7 +399,7 @@
             <div class="proyecto">
                 <img src="./img/logotipo-oak-tree.jpg" alt="logo" class="logo-proyecto">
                 <p class="text" style="display: block;">Propiedad forma parte del proyecto:<br>
-                <span style="color: #0894FE;">Portal de los Pinos</span><br>
+                <span style="color: #0894FE;">Torre Athenas</span><br>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
@@ -431,7 +411,7 @@
         
         <div>
             <p class="text"> Pago Mensual Estimado: <span style="color: #0894FE;"> L.49,548.90</span></p>
-            <button class="boton-credito"> Aplica a un Crédito para esta propiedad</button>
+            <button class="boton-credito"  onclick="modalCR()"> Aplica a un Crédito para esta propiedad</button>
             <button class="boton-cita" onclick="modalCITA()"> Agenda una Cita</button>
         </div>
     </div>
@@ -443,31 +423,31 @@
             <div id="fotos" class="mediacontent">   
         
                 <div class="imgSlides fade">
-                    <img src="./img/vivienda/1.jpg" class="fotos">
+                    <img src="./img/apartamento/1.jpg" class="fotos">
                 </div>
           
                 <div class="imgSlides fade">
-                    <img src="./img/vivienda/2.jpg" class="fotos">
+                    <img src="./img/apartamento/2.jpg" class="fotos">
                 </div>
           
                 <div class="imgSlides fade">
-                    <img src="./img/vivienda/3.jpg" class="fotos">
+                    <img src="./img/apartamento/3.jpg" class="fotos">
                 </div>
 
                 <div class="imgSlides fade">
-                    <img src="./img/vivienda/4.jpg" class="fotos">
+                    <img src="./img/apartamento/4.jpg" class="fotos">
                 </div>
 
                 <div class="imgSlides fade">
-                    <img src="./img/vivienda/5.jpg" class="fotos">
+                    <img src="./img/apartamento/5.jpg" class="fotos">
                 </div>
             
                 <div class="imgSlides fade">
-                    <img src="./img/vivienda/6.jpg" class="fotos">
+                    <img src="./img/apartamento/6.jpg" class="fotos">
                 </div>
 
                 <div class="imgSlides fade">
-                    <img src="./img/vivienda/7.jpg" class="fotos">
+                    <img src="./img/apartamento/7.jpg" class="fotos">
                 </div>
               
                 <!-- Next and previous buttons -->
@@ -488,7 +468,7 @@
             <!--Tour Virtual-->
             <div id="tv" class="mediacontent">
 
-            <iframe class="embed-responsive" src="https://my.matterport.com/show/?m=5V8ZdwUHQPy&play=1&qs=1&tiles=1&vr=0&title=0&help=2&tourcta=2&hlr=2" 
+            <iframe class="embed-responsive" src="https://my.matterport.com/show/?m=o2GRioBA7SX&play=1&qs=1&tiles=1&vr=0&title=0&help=2&tourcta=2&hlr=2" 
             allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" data-hj-allow-iframe="">
             </iframe>
 
@@ -496,7 +476,7 @@
 
             <!--Planos-->
             <div id="planos" class="mediacontent">
-                <img src="./img/vivienda/a1.png" class="fotos">
+                <img src="./img/apartamento/plano_apt.jpg" class="fotos">
             </div>
 
             <!--Mapa-->
@@ -510,7 +490,7 @@
             <!--Google Street View-->
             <div id="stv" class="mediacontent">
                 <iframe class="embed-responsive"  
-                src="https://www.google.com/maps/embed/v1/streetview?key=AIzaSyCyu42Bui8Qnyp8kLOVO4hMJHTd20HTHag&location=4.665099, -74.042736&heading=180" 
+                src="https://www.google.com/maps/embed/v1/streetview?key=AIzaSyCyu42Bui8Qnyp8kLOVO4hMJHTd20HTHag&location=4.697045, -74.028141&heading=180" 
                 allowfullscreen="" aria-hidden="false" tabindex="0">
                 </iframe>
             </div>
@@ -542,19 +522,19 @@
         
         <div class="space-between" style="margin-top: 5px;">
             <div>
-                <h2 class="titulo-propiedades" style="display: inline"> Residencial El Hatillo </h2>       
+                <h2 class="titulo-propiedades" style="display: inline"> Torre Athenas </h2>       
             </div>
             <div>
                 <div class="text-t" style="font-size: 20px;color: #081C33;font-weight: bold;">  L.4,500,000</div>           
             </div>
         </div>
-        <h2 class="text-t" style="display: inline;font-size: 20px;">Modelo Jazmín</h2>
+        <h2 class="text-t" style="display: inline;font-size: 20px;">Modelo 3-Hab</h2>
         <div class="space-between" style="margin-top: 5px;">
                      
             <div class="text-t" style="display: inline;"> 
                 3 <span style="color:#0894FE"> Habs </span>
-                 | 2 <span style="color:#0894FE"> Baños </span> 
-                 | 78 <span style="color:#0894FE"> M2 </span>
+                 | 2.5 <span style="color:#0894FE"> Baños </span> 
+                 | 128 <span style="color:#0894FE"> M2 </span>
             </div>
 
             <div class="text-t" style="display: inline;"> <span style="color:#0894FE"> Precio de Renta: </span> L.42,000</div>
@@ -574,7 +554,7 @@
             <div style="color: #0894FE;"> L.49,548.90</div>   
         </div>
         
-        <button class="boton-credito"> Aplica a un Crédito para esta propiedad</button>
+        <button class="boton-credito"  onclick="modalCR()"> Aplica a un Crédito para esta propiedad</button>
         <button class="boton-credito" style="background-color:#0894FE;margin-top:0 ;" onclick="modalCITA()"> Agenda una Cita</button>
         
 
@@ -582,7 +562,7 @@
             <div class="proyecto" style="justify-content: center;font-size: 18px;">
                 <img src="./img/logotipo-oak-tree.jpg" alt="logo" class="logo-proyecto">
                 <p class="text" style="display: block;">Propiedad forma parte del proyecto:<br>
-                <span style="color: #0894FE;">Portal de los Pinos</span><br>
+                <span style="color: #0894FE;">Torre Athenas</span><br>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
@@ -636,25 +616,25 @@
             </p>
             <p class="text">
             La propiedad se encuentra rodeada de pinos y vegetación. Cada acabado de la propiedad son de lujo, difinitivamente
-            es una casa de sueños. 
+            es un apartamento de sueños. 
             </p>
         </div>
     
         <button class="accordion">Datos de la Propiedad</button>
         <div class="panel">
             <br>
-            <b class="titulo-propiedades" > Residencial El Hatillo </b><br>
-            <div class="text-t" style="padding: 0;">Modelo Jazmín</div>
+            <b class="titulo-propiedades" > Torre Athenas</b><br>
+            <div class="text-t" style="padding: 0;">Modelo 3-Hab</div>
             <p class="text-t" style="margin-top: 5px;">
             <b>
                 3 <span style="color:#0894FE"> Habs </span>
-                | 2 <span style="color:#0894FE"> Baños </span> 
-                | 78 <span style="color:#0894FE"> M2 </span>
+                | 2.5 <span style="color:#0894FE"> Baños </span> 
+                | 128 <span style="color:#0894FE"> M2 </span>
             </b>
             </p>
             <div class="space-between" style="margin: 5px 0 10px 0;">
                 <div class="text">
-                    Categoria de vivienda
+                    Zona de apartamento
                 </div>
                 <div style="color:#0894FE"> 
                  R-1
@@ -663,10 +643,19 @@
 
             <div class="space-between" style="margin: 10px 0 10px 0;">
                 <div class="text">
-                    Tipo de Garage
+                    Tipo de estacionamiento
                 </div>
                 <div style="color:#0894FE">
-                    Techado
+                    Individuales
+                </div>
+            </div>
+
+            <div class="space-between" style="margin: 10px 0 10px 0;">
+                <div class="text">
+                    Estacionamiento
+                </div>
+                <div style="color:#0894FE">
+                    Techados
                 </div>
             </div>
 
@@ -702,16 +691,16 @@
                     Área de Construcción
                 </div>
                 <div style="color:#0894FE">
-                    320M2
+                    128M2
                 </div>
             </div>
 
             <div class="space-between" style="margin: 10px 0 10px 0;">
                 <div class="text">
-                    Área de lote
+                    Bodega Ext. Incluida
                 </div>
                 <div style="color:#0894FE">
-                    640M2
+                    No
                 </div>
             </div>
 
@@ -748,129 +737,147 @@
             </a>
         </div>
 
-        <button class="fake-accordion"  onclick="filtrosEspecificos()"> 
-            Características de la Propiedad
-        </button>
-
-        <!--Falta añadir mas clases, pendiente para v-1.0-->
-        <div id="caracteristicas" style="display: none;" class="caracteristicas">
-            <br>
-                <div class="titulo-propiedades" style="padding-left:18px;">Haz clic en las opciones </div>
-            <button class="child-accordion" >Comodidades</button>
-                <div class="child-panel">
-                    <div  class="checkbox text" style="padding-left: 85px;">Aire Acondicionado
-                        <img src="./svg/filtros/comodidades/ac.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Aire Acondicionado Central
-                        <img src="./svg/filtros/comodidades/aireCentral.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Área Social Propia
-                        <img src="./svg/filtros/comodidades/area_social.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Área de bar
-                        <img src="./svg/filtros/comodidades/bar.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Piscina
-                        <img src="./svg/filtros/comodidades/pisicina.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Gimnasio
-                        <img src="./svg/filtros/comodidades/gym.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Jardin
-                        <img src="./svg/filtros/comodidades/jardin.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Estudio
-                        <img src="./svg/filtros/comodidades/estudio.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Sistema de Sonido
-                        <img src="./svg/filtros/comodidades/sonido_integrado.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Lavanderia Techada
-                        <img src="./svg/filtros/comodidades/lavadora.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Bodega
-                        <img src="./svg/filtros/comodidades/bodega.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Mobiliario Incluido
-                        <img src="./svg/filtros/comodidades/mobiliarioincluido.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Jacuzzi
-                        <img src="./svg/filtros/comodidades/jacuzzi.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Sauna
-                        <img src="./svg/filtros/comodidades/sauna.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Smart Home
-                        <img src="./svg/filtros/comodidades/smarthome.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Sótano
-                        <img src="./svg/filtros/comodidades/sotano.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Sala Cine
-                        <img src="./svg/filtros/comodidades/sala_cine.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Vistas
-                        <img src="./svg/filtros/comodidades/vistas.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Dormitorio Servidumbre
-                        <img src="./svg/filtros/comodidades/dorm_servidumbre.svg" alt="i" class="icono-filtros">
-                    </div>
-                </div>
-
-        
-            <button class="child-accordion">Seguridad</button>
-            <div class="child-panel">
-                <div  class="checkbox text" style="padding-left: 85px;">Circuito Cerrado
-                    <img src="./svg/filtros/seguridad/circuito_cerrado.svg" alt="i" class="icono-filtros">
-                </div>
-                <div  class="checkbox text" style="padding-left: 85px;">Vigilancia
-                    <img src="./svg/filtros/seguridad/vigilancia.svg" alt="i" class="icono-filtros">
-                </div>
-                <div  class="checkbox text" style="padding-left: 85px;">Sistema de Vigilancia
-                    <img src="./svg/filtros/seguridad/sistema_vigilancia.svg" alt="i" class="icono-filtros">
-                </div>
-                <div  class="checkbox text" style="padding-left: 85px;">Muro Perimetral
-                    <img src="./svg/filtros/seguridad/proteccion_perimetral.svg" alt="i" class="icono-filtros">
-                </div>
+        <button class="accordion">Amenidades propias del apartamento </button>
+        <div class="panel">
+            <div  class="checkbox text" style="padding-left: 85px;">Aire acondicionado
+                <img src="./svg/filtros/comodidades/ac.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Aire acondicionado central
+                <img src="./svg/filtros/comodidades/aireCentral.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Walk in closet
+                <img src="./svg/filtros/comodidades/wc.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Área social propia
+                <img src="./svg/filtros/comodidades/area_social.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Bar
+                <img src="./svg/filtros/comodidades/bar.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Balcones
+                <img src="./svg/filtros/comodidades/balcon.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Gimnasio privado
+                <img src="./svg/filtros/comodidades/gym.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Estudio
+                <img src="./svg/filtros/comodidades/estudio.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Sistema de sonido
+                <img src="./svg/filtros/comodidades/sonido_integrado.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Bodega interna
+                <img src="./svg/filtros/comodidades/bodega.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Mobiliario incluido
+                <img src="./svg/filtros/comodidades/mobiliarioincluido.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Jacuzzi propio
+                <img src="./svg/filtros/comodidades/jacuzzi.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Sauna propio
+                <img src="./svg/filtros/comodidades/sauna.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Smart home
+                <img src="./svg/filtros/comodidades/smarthome.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Sala cine privada
+                <img src="./svg/filtros/comodidades/sala_cine.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Vistas
+                <img src="./svg/filtros/comodidades/vistas.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Calentador de agua
+                <img src="./svg/filtros/servicios/calentador.svg" alt="i" class="icono-filtros">
             </div>
 
-            <button class="child-accordion">Servicios</button>
-            <div class="child-panel">
+        </div>
 
-                <div  class="checkbox text" style="padding-left: 85px;">Acceso Pavimentado
-                    <img src="./svg/filtros/servicios/pavimentado.svg" alt="i" class="icono-filtros">
-                </div>
-                <div  class="checkbox text" style="padding-left: 85px;">Alcantarillado
-                    <img src="./svg/filtros/servicios/alcantarillado.svg" alt="i" class="icono-filtros">
-                </div>
-                <div  class="checkbox text" style="padding-left: 85px;">Cisterna
-                    <img src="./svg/filtros/servicios/cisterna.svg" alt="i" class="icono-filtros">
-                </div>
-                <div  class="checkbox text" style="padding-left: 85px;">Generador Eléctrico
-                    <img src="./svg/filtros/servicios/generador_electrico.svg" alt="i" class="icono-filtros">
-                </div>
-                <div  class="checkbox text" style="padding-left: 85px;">Telecomunicaciones
-                    <img src="./svg/filtros/servicios/servicios_telecomunicacion.svg" alt="i" class="icono-filtros">
-                </div>
-                <div  class="checkbox text" style="padding-left: 85px;">Ecológica
-                    <img src="./svg/filtros/servicios/ecologica.svg" alt="i" class="icono-filtros">
-                </div>
-                <div  class="checkbox text" style="padding-left: 85px;">Calentador de Agua
-                    <img src="./svg/filtros/servicios/calentador.svg" alt="i" class="icono-filtros">
-                </div>
-                <div  class="checkbox text" style="padding-left: 85px;">Agua de Pozo
-                    <img src="./svg/filtros/servicios/agua_pozo.svg" alt="i" class="icono-filtros">
-                </div>
-                <div  class="checkbox text" style="padding-left: 85px;">Agua Municipal
-                    <img src="./svg/filtros/servicios/agua_municipal.svg" alt="i" class="icono-filtros">
-                </div>
-                <div  class="checkbox text" style="padding-left: 85px;">Fosa Séptica
-                    <img src="./svg/filtros/servicios/fosa_septica.svg" alt="i" class="icono-filtros">
-                </div>
-                <div  class="checkbox text" style="padding-left: 85px;">Tinaco
-                    <img src="./svg/filtros/servicios/tinaco.svg" alt="i" class="icono-filtros">
-                </div>
-
+        <button class="accordion">Amenidades del proyecto </button>
+        <div class="panel">
+            <div  class="checkbox text" style="padding-left: 85px;">Acceso a discapacitados
+                <img src="./svg/filtros/proyecto/acceso_discapacitados.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Asensor
+                <img src="./svg/filtros/proyecto/asensor.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Parqueo Techado
+                <img src="./svg/filtros/proyecto/parqueo_techado.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Área social común
+                <img src="./svg/filtros/comodidades/area_social.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Área de bar común
+                <img src="./svg/filtros/comodidades/bar.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Piscina común
+                <img src="./svg/filtros/comodidades/pisicina.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Gimnasio común
+                <img src="./svg/filtros/comodidades/gym.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Área de Co-working
+                <img src="./svg/filtros/proyecto/coworking.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Lavandería común
+                <img src="./svg/filtros/comodidades/lavadora.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Bodegas comunes
+                <img src="./svg/filtros/proyecto/bodegas.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Jacuzzi común
+                <img src="./svg/filtros/comodidades/jacuzzi.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Sauna propio
+                <img src="./svg/filtros/comodidades/sauna.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Área de juegos
+                <img src="./svg/filtros/proyecto/area_juegos.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Sala cine común
+                <img src="./svg/filtros/comodidades/sala_cine.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Canchas deportivas
+                <img src="./svg/filtros/proyecto/cancha_deportiva.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Mirador
+                <img src="./svg/filtros/proyecto/mirador.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Área de bosque
+                <img src="./svg/filtros/proyecto/area_bosque.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Área verde
+                <img src="./svg/filtros/proyecto/area_verde.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Salon de eventos
+                <img src="./svg/filtros/proyecto/salon_eventos.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Spa
+                <img src="./svg/filtros/proyecto/spa.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Valet parking
+                <img src="./svg/filtros/proyecto/valet_parking.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Área comercial  
+                <img src="./svg/filtros/proyecto/comercio.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Helipuerto  
+                <img src="./svg/filtros/proyecto/helipuerto.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Vigilancia 24/7  
+                <img src="./svg/filtros/seguridad/vigilancia.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Sistema de vigilancia  
+                <img src="./svg/filtros/seguridad/sistema_vigilancia.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Generador electrico   
+                <img src="./svg/filtros/servicios/generador_electrico.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Agua de pozo  
+                <img src="./svg/filtros/servicios/agua_pozo.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Agua municipal  
+                <img src="./svg/filtros/servicios/agua_municipal.svg" alt="i" class="icono-filtros">
             </div>
         </div>
 
@@ -882,7 +889,7 @@
                     Estado Legal
                 </div>
                 <div style="color:#0894FE"> 
-                    Hipotecada 
+                    Libre de gravamen 
                 </div>
             </div>
             <div class="space-between" style="margin: 5px 0 10px 0;">
@@ -890,7 +897,7 @@
                     Régimen
                 </div>
                 <div style="color:#0894FE"> 
-                    Condominios Horizontal 
+                    Condominio Vertical 
                 </div>
             </div>
             <br>
@@ -1027,9 +1034,9 @@
       <div id="content" class="content">
         
         <div class="atlas-card" style="overflow:none">
-            <a href="./vivienda.html" target="_blank">
+            <a href="./apartamento.html" target="_blank">
             <div class="relative-container">
-                <img src="./img/casa1_3.jpg" alt="imagen" class="image-card">
+                <img src="./img/apartamento/img1.jpg" alt="imagen" class="image-card">
                 <div class="text-number">1 / 3</div>
                 <div class="top-text">
                     Vendedor Particular
@@ -1056,9 +1063,9 @@
         </div>
 
         <div class="atlas-card" style="overflow:none">
-            <a href="./vivienda.html" target="_blank">
+            <a href="./apartamento.html" target="_blank">
             <div class="relative-container">
-                <img src="./img/casa1_3.jpg" alt="imagen" class="image-card">
+                <img src="./img/apartamento/img2.jpg" alt="imagen" class="image-card">
                 <div class="text-number">1 / 3</div>
                 <div class="top-text">
                     Vendedor Particular
@@ -1085,9 +1092,9 @@
         </div>
     
         <div class="atlas-card" style="overflow:none">
-            <a href="./vivienda.html" target="_blank">
+            <a href="./apartamento.html" target="_blank">
             <div class="relative-container">
-                <img src="./img/casa1_4.jpg" alt="imagen" class="image-card">
+                <img src="./img/apartamento/img3.jpg" alt="imagen" class="image-card">
                 <div class="text-number">1 / 3</div>
                 <div class="top-text">
                     Inmobi SAS
@@ -1114,9 +1121,9 @@
         </div>
     
         <div class="atlas-card" style="overflow:none">
-            <a href="./vivienda.html" target="_blank">
+            <a href="./apartamento.html" target="_blank">
             <div class="relative-container">
-                <img src="./img/casa1_5.jpg" alt="imagen" class="image-card">
+                <img src="./img/apartamento/img4.jpg" alt="imagen" class="image-card">
                 <div class="text-number">1 / 3</div>
                 <div class="top-text">
                     Inmobiliaria NX
@@ -1143,9 +1150,9 @@
         </div>
     
         <div class="atlas-card" style="overflow:none">
-            <a href="./vivienda.html" target="_blank">
+            <a href="./apartamento.html" target="_blank">
             <div class="relative-container">
-                <img src="./img/casa1_1.jpg" alt="imagen" class="image-card">
+                <img src="./img/apartamento/img5.jpg" alt="imagen" class="image-card">
                 <div class="text-number">1 / 3</div>
                 <div class="top-text">
                     Realtor SAS
@@ -1172,9 +1179,9 @@
         </div>
     
         <div class="atlas-card" style="overflow:none">
-            <a href="./vivienda.html" target="_blank">
+            <a href="./apartamento.html" target="_blank">
             <div class="relative-container">
-                <img src="./img/casa1_6.jpg" alt="imagen" class="image-card">
+                <img src="./img/apartamento/img6.jpg" alt="imagen" class="image-card">
                 <div class="text-number">1 / 3</div>
                 <div class="top-text">
                     Constructora Comaco
@@ -1201,9 +1208,9 @@
         </div>
     
         <div class="atlas-card" style="overflow:none">
-            <a href="./vivienda.html" target="_blank">
+            <a href="./apartamento.html" target="_blank">
             <div class="relative-container">
-                <img src="./img/casa1_7.jpg" alt="imagen" class="image-card">
+                <img src="./img/apartamento/img7.jpg" alt="imagen" class="image-card">
                 <div class="text-number">1 / 3</div>
                 <div class="top-text">
                     AV ingenieros
