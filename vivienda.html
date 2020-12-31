@@ -729,16 +729,9 @@
             </a>
         </div>
 
-        <button class="fake-accordion"  onclick="filtrosEspecificos()"> 
-            Características de la Propiedad
-        </button>
-
         <!--Falta añadir mas clases, pendiente para v-1.0-->
-        <div id="caracteristicas" style="display: none;" class="caracteristicas">
-            <br>
-                <div class="titulo-propiedades" style="padding-left:18px;">Haz clic en las opciones </div>
-            <button class="child-accordion" >Comodidades</button>
-                <div class="child-panel">
+        <button class="accordion">Amenidades de la vivienda </button>
+            <div class="panel">
                     <div  class="checkbox text" style="padding-left: 85px;">Walk In Closet
                         <img src="./svg/filtros/comodidades/wc.svg" alt="i" class="icono-filtros">
                     </div>
@@ -814,64 +807,91 @@
                     <div  class="checkbox text" style="padding-left: 85px;">Dormitorio Servidumbre
                         <img src="./svg/filtros/comodidades/dorm_servidumbre.svg" alt="i" class="icono-filtros">
                     </div>
-                </div>
-
-        
-            <button class="child-accordion">Seguridad</button>
-            <div class="child-panel">
-                <div  class="checkbox text" style="padding-left: 85px;">Circuito Cerrado
-                    <img src="./svg/filtros/seguridad/circuito_cerrado.svg" alt="i" class="icono-filtros">
-                </div>
-                <div  class="checkbox text" style="padding-left: 85px;">Vigilancia
-                    <img src="./svg/filtros/seguridad/vigilancia.svg" alt="i" class="icono-filtros">
-                </div>
-                <div  class="checkbox text" style="padding-left: 85px;">Sistema de Vigilancia
-                    <img src="./svg/filtros/seguridad/sistema_vigilancia.svg" alt="i" class="icono-filtros">
-                </div>
-                <div  class="checkbox text" style="padding-left: 85px;">Muro Perimetral
-                    <img src="./svg/filtros/seguridad/proteccion_perimetral.svg" alt="i" class="icono-filtros">
-                </div>
+                    <div  class="checkbox text" style="padding-left: 85px;">Cisterna
+                        <img src="./svg/filtros/servicios/cisterna.svg" alt="i" class="icono-filtros">
+                    </div>
+                    <div  class="checkbox text" style="padding-left: 85px;">Generador Eléctrico
+                        <img src="./svg/filtros/servicios/generador_electrico.svg" alt="i" class="icono-filtros">
+                    </div>              
+                    <div  class="checkbox text" style="padding-left: 85px;">Sistema de Vigilancia
+                        <img src="./svg/filtros/seguridad/sistema_vigilancia.svg" alt="i" class="icono-filtros">
+                    </div>
+                    <div  class="checkbox text" style="padding-left: 85px;">Muro Perimetral
+                        <img src="./svg/filtros/seguridad/proteccion_perimetral.svg" alt="i" class="icono-filtros">
+                    </div>
+                    <div  class="checkbox text" style="padding-left: 85px;">Ecológica
+                        <img src="./svg/filtros/servicios/ecologica.svg" alt="i" class="icono-filtros">
+                    </div>
+                    <div  class="checkbox text" style="padding-left: 85px;">Calentador de Agua
+                        <img src="./svg/filtros/servicios/calentador.svg" alt="i" class="icono-filtros">
+                    </div>
+                    <div  class="checkbox text" style="padding-left: 85px;">Tinaco
+                        <img src="./svg/filtros/servicios/tinaco.svg" alt="i" class="icono-filtros">
+                    </div>
+                    <div  class="checkbox text" style="padding-left: 85px;">Fosa Séptica
+                        <img src="./svg/filtros/servicios/fosa_septica.svg" alt="i" class="icono-filtros">
+                    </div>  
             </div>
 
-            <button class="child-accordion">Servicios</button>
-            <div class="child-panel">
+          
+            <button class="accordion">Amenidades de la Urbanización </button>
+            <div class="panel">
 
-                <div  class="checkbox text" style="padding-left: 85px;">Acceso Pavimentado
+                <div  class="checkbox text" style="padding-left: 85px;">Calles Pavimentadas
                     <img src="./svg/filtros/servicios/pavimentado.svg" alt="i" class="icono-filtros">
                 </div>
                 <div  class="checkbox text" style="padding-left: 85px;">Alcantarillado
                     <img src="./svg/filtros/servicios/alcantarillado.svg" alt="i" class="icono-filtros">
                 </div>
-                <div  class="checkbox text" style="padding-left: 85px;">Cisterna
-                    <img src="./svg/filtros/servicios/cisterna.svg" alt="i" class="icono-filtros">
+                <div  class="checkbox text" style="padding-left: 85px;">Circuito Cerrado
+                    <img src="./svg/filtros/seguridad/circuito_cerrado.svg" alt="i" class="icono-filtros">
                 </div>
-                <div  class="checkbox text" style="padding-left: 85px;">Generador Eléctrico
-                    <img src="./svg/filtros/servicios/generador_electrico.svg" alt="i" class="icono-filtros">
+                <div  class="checkbox text" style="padding-left: 85px;">Vigilancia
+                    <img src="./svg/filtros/seguridad/vigilancia.svg" alt="i" class="icono-filtros">
+                </div>     
+                <div  class="checkbox text" style="padding-left: 85px;">Área social común
+                    <img src="./svg/filtros/comodidades/area_social.svg" alt="i" class="icono-filtros">
+                </div>
+                <div  class="checkbox text" style="padding-left: 85px;">Piscina común
+                    <img src="./svg/filtros/comodidades/pisicina.svg" alt="i" class="icono-filtros">
+                </div>
+                <div  class="checkbox text" style="padding-left: 85px;">Gimnasio común
+                    <img src="./svg/filtros/comodidades/gym.svg" alt="i" class="icono-filtros">
+                </div>
+                <div  class="checkbox text" style="padding-left: 85px;">Área de juegos
+                    <img src="./svg/filtros/proyecto/area_juegos.svg" alt="i" class="icono-filtros">
+                </div>
+                <div  class="checkbox text" style="padding-left: 85px;">Canchas deportivas
+                    <img src="./svg/filtros/proyecto/cancha_deportiva.svg" alt="i" class="icono-filtros">
+                </div>
+                <div  class="checkbox text" style="padding-left: 85px;">Mirador
+                    <img src="./svg/filtros/proyecto/mirador.svg" alt="i" class="icono-filtros">
+                </div>
+                <div  class="checkbox text" style="padding-left: 85px;">Área de bosque
+                    <img src="./svg/filtros/proyecto/area_bosque.svg" alt="i" class="icono-filtros">
+                </div>
+                <div  class="checkbox text" style="padding-left: 85px;">Área verde
+                    <img src="./svg/filtros/proyecto/area_verde.svg" alt="i" class="icono-filtros">
+                </div>
+                <div  class="checkbox text" style="padding-left: 85px;">Salon de eventos
+                    <img src="./svg/filtros/proyecto/salon_eventos.svg" alt="i" class="icono-filtros">
+                </div>
+                <div  class="checkbox text" style="padding-left: 85px;">Área Comercial
+                    <img src="./svg/filtros/proyecto/comercio.svg" alt="i" class="icono-filtros">
                 </div>
                 <div  class="checkbox text" style="padding-left: 85px;">Telecomunicaciones
                     <img src="./svg/filtros/servicios/servicios_telecomunicacion.svg" alt="i" class="icono-filtros">
-                </div>
-                <div  class="checkbox text" style="padding-left: 85px;">Ecológica
-                    <img src="./svg/filtros/servicios/ecologica.svg" alt="i" class="icono-filtros">
-                </div>
-                <div  class="checkbox text" style="padding-left: 85px;">Calentador de Agua
-                    <img src="./svg/filtros/servicios/calentador.svg" alt="i" class="icono-filtros">
-                </div>
+                </div>    
                 <div  class="checkbox text" style="padding-left: 85px;">Agua de Pozo
                     <img src="./svg/filtros/servicios/agua_pozo.svg" alt="i" class="icono-filtros">
                 </div>
                 <div  class="checkbox text" style="padding-left: 85px;">Agua Municipal
                     <img src="./svg/filtros/servicios/agua_municipal.svg" alt="i" class="icono-filtros">
                 </div>
-                <div  class="checkbox text" style="padding-left: 85px;">Fosa Séptica
-                    <img src="./svg/filtros/servicios/fosa_septica.svg" alt="i" class="icono-filtros">
-                </div>
-                <div  class="checkbox text" style="padding-left: 85px;">Tinaco
-                    <img src="./svg/filtros/servicios/tinaco.svg" alt="i" class="icono-filtros">
-                </div>
+                   
 
             </div>
-        </div>
+        
 
         <button class="accordion">Datos Legales</button>
         <div class="panel">
