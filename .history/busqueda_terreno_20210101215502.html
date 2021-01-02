@@ -21,28 +21,7 @@
                 <button class="boton-registro" id="boton-registro" onclick="modalR()">Registrarme</button>
                 <button class="boton-ingresar" id="boton-ingresar" onclick="modalI()">Ingresar</button>
 
-            <!--
-            <div class="dropdown">
-                <button class="dropbtn" onclick="modalCR()">Crédito Hipotecario</button>
-                    
-                    <div class="dropdown-content">
-                        <a href="#credito-vivienda">Compra de Vivienda</a>
-                        <a href="#credito-construccion">Construcción</a>
-                        <a href="#credito-libre-inversion">Libre Inversión</a>
-                        <a href="#credito-compra-cartera">Compra de Cartera</a>
-                        <a href="#credito-remodelaciones">Remodelaciones</a>
-                    </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn" onclick="modalV()">Vender</button>
-           
-                    <div class="dropdown-content">
-                        <a href="#vender-vivienda">Como Persona Natural</a>
-                        <a href="#vender-constructora">Como Constructora</a>
-                        <a href="#vender-inmobiliaria">Como Bienes Raíces</a>
-                    </div>
-            </div> -->
-            
+
             <a href="javascript:void(0);" style="font-size:35px;" class="icon" onclick="HamburgerFuction()">&#9776;</a>
         </div> 
     </div>  
@@ -159,7 +138,7 @@
                 <div class="flex-container bcontainer" >
                     <div class="space-between" style="padding-top: 25px;">
                         <div class="hide-mobile">
-                            Filtros Apartamentos
+                            Filtros Terreno
                         </div>
                         <div>
                             <input type="reset" style="text-decoration: underline;font-weight: normal;" value="Borrar">
@@ -179,12 +158,12 @@
                     <span class="checkmark"></span>
                 </label>
 
-            <label for="orden-busqueda" class="subtitles" style="text-align: left; ">¿Cómo te Mostramos los Apartamentos?</label><br>
+            <label for="orden-busqueda" class="subtitles" style="text-align: left; ">¿Cómo te Mostramos los Terrenos?</label><br>
             <select name="filtros-vivienda" id="orden-busqueda" class="minimal" required style="width: 100%;box-shadow: none;">
                 <option value="menor-mayor">Precio : Menor a Mayor</option>
                 <option value="mayor-menor">Precio : Mayor a Menor</option>
-                <option value="const-menor-mayor">Área de Construcción: Menor a Mayor</option>
-                <option value="const-mayor-menor">Área de Construcción: Mayor a Menor</option>
+                <option value="const-menor-mayor">Área de Lote: Menor a Mayor</option>
+                <option value="const-mayor-menor">Área de Lote: Mayor a Menor</option>
             </select>
 
             <div class="slidecontainer" style="margin-top: 30px;">
@@ -193,65 +172,21 @@
                 <input type="range" min="500000" max="10000000" value="5000000" class="slider" id="rango-precio">
               </div><br>
 
-            <label for="busqueda-exacta" class="subtitles" style="text-align: left;">Características Básicas:</label>
-            
-
-            <label class="checkbox">Incluir el dormitorio de servidumbre
-                <input type="checkbox">
-                <span class="checkmark"></span>
-            </label>
-            
-            <div class="flex-container filter-container">
-                <div style="font-size: 18px;">
-                    Habitaciones
-                </div>
-                <div style="margin-right: 30px;">
-                    <button onclick="dec('hab')" class="selectors">-</button>
-                    <input id="habitaciones" class="demo-selector" name="hab" type="text" style="margin: 0 25px 0 25px;" readonly value="1">
-                    <button onclick="inc('hab')" class="selectors">+</button>
-                </div>  
-            </div>
-            
-            <br>
-            <div class="flex-container filter-container">
-                <div style="font-size: 18px;">
-                    Baños
-                </div>
-                <div style="margin-right: 30px;">
-                    <button onclick="dec('banos')" class="selectors">-</button>
-                    <input id ="banos" class="demo-selector" name="banos" type="text" type="text" style="margin: 0 25px 0 25px;" readonly value="1">
-                    <button onclick="inc('banos')" class="selectors">+</button>  
-                </div>  
-            </div>
-            <br>
-
-            <div class="flex-container filter-container">
-                <div style="font-size: 18px;">
-                    Parqueos
-                </div>
-                <div style="margin-right: 30px;">
-                    <button onclick="dec('parqueos')" class="selectors">-</button>
-                    <input id ="parqueos" class="demo-selector" name="parqueos" type="text" type="text" style="margin: 0 25px 0 25px;" readonly value="1">
-                    <button onclick="inc('parqueos')" class="selectors">+</button>  
-                </div>  
-            </div>
-            <br>
-
-            <div class="subtitles" style="text-align: left;">Estado del Apartamento:</div>
+            <div class="subtitles" style="text-align: left;">Topografía</div>
 
             <div class="fcontainer" style="display: flex; justify-content: flex-start;">
-            <label for="nueva" class="checkbox" style="width: 50%;" >Apartamento Nuevo
-                <input type="checkbox" id="nueva" checked="checked" >
+            <label for="plano" class="checkbox" style="width: 50%;" >Plano
+                <input type="checkbox" id="plano" checked="checked" >
                 <span class="checkmark"></span>
             </label>
 
-            <label for="usada" class="checkbox" style="width: 50%;">Apartamento Usado
-                <input type="checkbox" id="usada" checked="checked" >
+            <label for="irregular" class="checkbox" style="width: 50%;">Irregular
+                <input type="checkbox" id="irregular" checked="checked" >
                 <span class="checkmark"></span>
             </label>
 
-            <label for="preventa" class="checkbox" style="width: 50%; margin-top: 0;" > Apartamento en Pre-Venta
-                <input type="checkbox" id="preventa" checked="checked" >
+            <label for="quebrado" class="checkbox" style="width: 50%; margin-top: 0;" > Quebrado
+                <input type="checkbox" id="quebrado" checked="checked" >
                 <span class="checkmark"></span>
             </label>
 
@@ -265,104 +200,8 @@
                     
                     <div id="filtros-especificos" style="display: block; padding: 20px 0 20px 0;">
                        
-                       <button class="accordion" id="amenidades_apartamento">Amenidades propias del apartamento</button>
+                       <button class="accordion" id="amenidades_apartamento">Características del Terreno</button>
                             <div class="panel">
-
-                                <label for="aire-acondicionado" class="checkbox" style="padding-left: 85px;">Aire acondicionado
-                                    <input type="checkbox" id="aire-acondicionado">
-                                    <span class="checkmark"></span>
-                                    <img src="./svg/filtros/comodidades/ac.svg" alt="i" class="icono-filtros">
-                                </label>
-
-                                <label for="walk_in_closet" class="checkbox" style="padding-left: 85px;">Walk in closet
-                                    <input type="checkbox" id="wc">
-                                    <span class="checkmark"></span>
-                                    <img src="./svg/filtros/comodidades/wc.svg" alt="i" class="icono-filtros">
-                                </label>
-
-                                <label for="area-social-propia" class="checkbox" style="padding-left: 85px;">Área social privada
-                                    <input type="checkbox" id="area-social-propia">
-                                    <span class="checkmark"></span>
-                                    <img src="./svg/filtros/comodidades/area_social.svg" alt="i" class="icono-filtros">
-                                </label>
-
-                                <label for="area-bar" class="checkbox" style="padding-left: 85px;">Bar 
-                                    <input type="checkbox" id="area-bar">
-                                    <span class="checkmark"></span>
-                                    <img src="./svg/filtros/comodidades/bar.svg" alt="i" class="icono-filtros">
-                                </label>
-
-                                <label for="balcon" class="checkbox" style="padding-left: 85px;">Balcones 
-                                    <input type="checkbox" id="balcon">
-                                    <span class="checkmark"></span>
-                                    <img src="./svg/filtros/comodidades/balcon.svg" alt="i" class="icono-filtros">
-                                </label>
-
-                                <label for="alacena" class="checkbox" style="padding-left: 85px;">Alacena 
-                                    <input type="checkbox" id="alacena">
-                                    <span class="checkmark"></span>
-                                    <img src="./svg/filtros/comodidades/alacena.svg" alt="i" class="icono-filtros">
-                                </label>
-
-                                <label for="banera" class="checkbox" style="padding-left: 85px;">Bañera 
-                                    <input type="checkbox" id="banera">
-                                    <span class="checkmark"></span>
-                                    <img src="./svg/filtros/comodidades/banera.svg" alt="i" class="icono-filtros">
-                                </label>
-
-                                <label for="gimnasio" class="checkbox" style="padding-left: 85px;">Gimnasio privado
-                                    <input type="checkbox" id="gimnasio">
-                                    <span class="checkmark"></span>
-                                    <img src="./svg/filtros/comodidades/gym.svg" alt="i" class="icono-filtros">
-                                </label>
-
-                                <label for="estudio" class="checkbox" style="padding-left: 85px;">Estudio
-                                    <input type="checkbox" id="estudio">
-                                    <span class="checkmark"></span>
-                                    <img src="./svg/filtros/comodidades/estudio.svg" alt="i" class="icono-filtros">
-                                </label>
-
-                                <label for="sistema-sonido" class="checkbox" style="padding-left: 85px;">Sistema de sonido
-                                    <input type="checkbox" id="sistema-sonido">
-                                    <span class="checkmark"></span>
-                                    <img src="./svg/filtros/comodidades/sonido_integrado.svg" alt="i" class="icono-filtros">
-                                </label>
-
-                                <label for="aire-acondicionado-central" class="checkbox" style="padding-left: 85px;">Aire acondicionado central
-                                    <input type="checkbox" id="aire-acondicionado-central">
-                                    <span class="checkmark"></span>
-                                    <img src="./svg/filtros/comodidades/aireCentral.svg" alt="i" class="icono-filtros">
-                                </label>
-
-                                <label for="mobiliario-incluido" class="checkbox" style="padding-left: 85px;">Mobiliario incluido
-                                    <input type="checkbox" id="mobiliario-incluido">
-                                    <span class="checkmark"></span>
-                                    <img src="./svg/filtros/comodidades/mobiliarioincluido.svg" alt="i" class="icono-filtros">
-                                </label>
-
-                                <label for="jacuzzi" class="checkbox" style="padding-left: 85px;">Jacuzzi propio
-                                    <input type="checkbox" id="jacuzzi">
-                                    <span class="checkmark"></span>
-                                    <img src="./svg/filtros/comodidades/jacuzzi.svg" alt="i" class="icono-filtros">
-                                </label>
-
-                                <label for="sauna" class="checkbox" style="padding-left: 85px;">Sauna propio
-                                    <input type="checkbox" id="sauna">
-                                    <span class="checkmark"></span>
-                                    <img src="./svg/filtros/comodidades/sauna.svg" alt="i" class="icono-filtros">
-                                </label>
-
-                                <label for="smart-home" class="checkbox" style="padding-left: 85px;">Smart home
-                                    <input type="checkbox" id="smart-home">
-                                    <span class="checkmark"></span>
-                                    <img src="./svg/filtros/comodidades/smarthome.svg" alt="i" class="icono-filtros">
-                                </label>
-
-                                <label for="sala_cine" class="checkbox" style="padding-left: 85px;">Sala de cine privada
-                                    <input type="checkbox" id="sala_cine">
-                                    <span class="checkmark"></span>
-                                    <img src="./svg/filtros/comodidades/sala_cine.svg" alt="i" class="icono-filtros">
-                                </label>
 
                                 <label for="vistas" class="checkbox" style="padding-left: 85px;">Vistas
                                     <input type="checkbox" id="vistas">
@@ -370,51 +209,45 @@
                                     <img src="./svg/filtros/comodidades/vistas.svg" alt="i" class="icono-filtros">
                                 </label>
 
-                                <label for="bodega_interna" class="checkbox" style="padding-left: 85px;">Bodega interna
-                                    <input type="checkbox" id="bodega_interna">
+                                <label for="terreno_natural" class="checkbox" style="padding-left: 85px;">Terreno natural / sin relleno
+                                    <input type="checkbox" id="terreno_natural">
                                     <span class="checkmark"></span>
-                                    <img src="./svg/filtros/comodidades/bodega.svg" alt="i" class="icono-filtros">
+                                    <img src="./svg/filtros/terreno/terreno_natural.svg" alt="i" class="icono-filtros">
                                 </label>
-                                
-                                <label for="calentador-agua" class="checkbox" style="padding-left: 85px;">Calentador de agua
-                                    <input type="checkbox" id="calentador-agua">
+
+                                <label for="terreno_rellenado" class="checkbox" style="padding-left: 85px;">Terreno rellenado
+                                    <input type="checkbox" id="terreno_rellenado">
                                     <span class="checkmark"></span>
-                                    <img src="./svg/filtros/servicios/calentador.svg" alt="i" class="icono-filtros">
+                                    <img src="./svg/filtros/terreno/terreno_rellenado.svg" alt="i" class="icono-filtros">
+                                </label>
+
+                                <label for="muro_perimetral_existente" class="checkbox" style="padding-left: 85px;">Muro perimetral existente
+                                    <input type="checkbox" id="muro_perimetral_existente">
+                                    <span class="checkmark"></span>
+                                    <img src="./svg/filtros/terreno/muro_perimetral_existente.svg" alt="i" class="icono-filtros">
+                                </label>
+
+                                <label for="terreno_esquina" class="checkbox" style="padding-left: 85px;">Terreno de esquina
+                                    <input type="checkbox" id="terreno_esquina">
+                                    <span class="checkmark"></span>
+                                    <img src="./svg/filtros/terreno/terreno_esquina.svg" alt="i" class="icono-filtros">
+                                </label>
+
+                                <label for="muro_contencion" class="checkbox" style="padding-left: 85px;">Sin muros de contención
+                                    <input type="checkbox" id="muro_contencion">
+                                    <span class="checkmark"></span>
+                                    <img src="./svg/filtros/terreno/muro_contencion.svg" alt="i" class="icono-filtros">
                                 </label>
 
                             </div>
 
-                        <button class="accordion" id="amenidades_complejo">Amenidades del Complejo</button>
+                        <button class="accordion" id="amenidades_complejo">Amenidades de la Urbanización</button>
                             <div class="panel">
-
-                                <label for="acceso_discapacitados" class="checkbox" style="padding-left: 85px;">Acceso a discapacitados
-                                    <input type="checkbox" id="acceso_discapacitados">
-                                    <span class="checkmark"></span>
-                                    <img src="./svg/filtros/proyecto/acceso_discapacitados.svg" alt="i" class="icono-filtros">
-                                </label>
-
-                                <label for="asensor" class="checkbox" style="padding-left: 85px;">Asensor
-                                    <input type="checkbox" id="asensor">
-                                    <span class="checkmark"></span>
-                                    <img src="./svg/filtros/proyecto/asensor.svg" alt="i" class="icono-filtros">
-                                </label>
-
-                                <label for="parqueo_techado" class="checkbox" style="padding-left: 85px;">Parqueo techado
-                                    <input type="checkbox" id="parqueo_techado">
-                                    <span class="checkmark"></span>
-                                    <img src="./svg/filtros/proyecto/parqueo_techado.svg" alt="i" class="icono-filtros">
-                                </label>
 
                                 <label for="area-social-conjunto" class="checkbox" style="padding-left: 85px;">Área social común
                                     <input type="checkbox" id="area-social-conjunto">
                                     <span class="checkmark"></span>
                                     <img src="./svg/filtros/comodidades/area_social.svg" alt="i" class="icono-filtros">
-                                </label>
-
-                                <label for="area-bar-conjunto" class="checkbox" style="padding-left: 85px;">Área de bar común
-                                    <input type="checkbox" id="area-bar-conjunto">
-                                    <span class="checkmark"></span>
-                                    <img src="./svg/filtros/comodidades/bar.svg" alt="i" class="icono-filtros">
                                 </label>
 
                                 <label for="piscina-conjunto" class="checkbox" style="padding-left: 85px;">Piscina común
@@ -427,42 +260,6 @@
                                     <input type="checkbox" id="gimnasio-conjunto">
                                     <span class="checkmark"></span>
                                     <img src="./svg/filtros/comodidades/gym.svg" alt="i" class="icono-filtros">
-                                </label>
-
-                                <label for="coworking" class="checkbox" style="padding-left: 85px;">Área de co-working
-                                    <input type="checkbox" id="coworking">
-                                    <span class="checkmark"></span>
-                                    <img src="./svg/filtros/proyecto/coworking.svg" alt="i" class="icono-filtros">
-                                </label>
-
-                                <label for="lavanderia-conjunto" class="checkbox" style="padding-left: 85px;">Lavandería común
-                                    <input type="checkbox" id="lavanderia-conjunto">
-                                    <span class="checkmark"></span>
-                                    <img src="./svg/filtros/comodidades/lavadora.svg" alt="i" class="icono-filtros">
-                                </label>
-
-                                <label for="bodegas-conjunto" class="checkbox" style="padding-left: 85px;">Bodegas comunes
-                                    <input type="checkbox" id="bodegas-conjunto">
-                                    <span class="checkmark"></span>
-                                    <img src="./svg/filtros/proyecto/bodegas.svg" alt="i" class="icono-filtros">
-                                </label>
-
-                                <label for="jacuzzi_comun" class="checkbox" style="padding-left: 85px;">Jacuzzi común
-                                    <input type="checkbox" id="jacuzzi_comun">
-                                    <span class="checkmark"></span>
-                                    <img src="./svg/filtros/comodidades/jacuzzi.svg" alt="i" class="icono-filtros">
-                                </label>
-
-                                <label for="sauna_comun" class="checkbox" style="padding-left: 85px;">Sauna común
-                                    <input type="checkbox" id="sauna_comun">
-                                    <span class="checkmark"></span>
-                                    <img src="./svg/filtros/comodidades/sauna.svg" alt="i" class="icono-filtros">
-                                </label>
-
-                                <label for="sala_cine_comun" class="checkbox" style="padding-left: 85px;">Sala de cine común
-                                    <input type="checkbox" id="sala_cine_comun">
-                                    <span class="checkmark"></span>
-                                    <img src="./svg/filtros/comodidades/sala_cine.svg" alt="i" class="icono-filtros">
                                 </label>
 
                                 <label for="area_juegos" class="checkbox" style="padding-left: 85px;">Área de juegos
@@ -495,28 +292,10 @@
                                     <img src="./svg/filtros/proyecto/area_verde.svg" alt="i" class="icono-filtros">
                                 </label>
 
-                                <label for="parqueo_techado_comun" class="checkbox" style="padding-left: 85px;">Parqueo techado
-                                    <input type="checkbox" id="parqueo_techado_comun">
-                                    <span class="checkmark"></span>
-                                    <img src="./svg/filtros/proyecto/parqueo_techado.svg" alt="i" class="icono-filtros">
-                                </label>
-
                                 <label for="salon_eventos" class="checkbox" style="padding-left: 85px;">Salón de eventos
                                     <input type="checkbox" id="salon_eventos">
                                     <span class="checkmark"></span>
                                     <img src="./svg/filtros/proyecto/salon_eventos.svg" alt="i" class="icono-filtros">
-                                </label>
-
-                                <label for="spa" class="checkbox" style="padding-left: 85px;">Spa
-                                    <input type="checkbox" id="spa">
-                                    <span class="checkmark"></span>
-                                    <img src="./svg/filtros/proyecto/spa.svg" alt="i" class="icono-filtros">
-                                </label>
-
-                                <label for="valet_parking" class="checkbox" style="padding-left: 85px;">Valet parking
-                                    <input type="checkbox" id="valet_parking">
-                                    <span class="checkmark"></span>
-                                    <img src="./svg/filtros/proyecto/valet_parking.svg" alt="i" class="icono-filtros">
                                 </label>
 
                                 <label for="area_comercial" class="checkbox" style="padding-left: 85px;">Área comercial
@@ -535,18 +314,6 @@
                                     <input type="checkbox" id="vigilancia-conjunto">
                                     <span class="checkmark"></span>
                                     <img src="./svg/filtros/seguridad/vigilancia.svg" alt="i" class="icono-filtros">
-                                </label>
-
-                                <label for="sistema-vigilancia" class="checkbox" style="padding-left: 85px;">Sistema de vigilancia
-                                    <input type="checkbox" id="sistema-vigilancia">
-                                    <span class="checkmark"></span>
-                                    <img src="./svg/filtros/seguridad/sistema_vigilancia.svg" alt="i" class="icono-filtros">
-                                </label>
-
-                                <label for="generador-electrico" class="checkbox" style="padding-left: 85px;">Generador eléctrico
-                                    <input type="checkbox" id="generador-electrico">
-                                    <span class="checkmark"></span>
-                                    <img src="./svg/filtros/servicios/generador_electrico.svg" alt="i" class="icono-filtros">
                                 </label>
 
                                 <label for="agua-pozo" class="checkbox" style="padding-left: 85px;">Agua de pozo
@@ -574,6 +341,8 @@
 </div>
 
 <!---------------------------------------------------------------INICIO DEL CONTENIDO-------------------------------------------------------------------->
+
+<!--Formula para pasar de metros cuadrados a Varas Cuadrades es=    X = 1.434266  , multiplicamos m2*X para pasar de m2 a vrs2,dividimos VRS/x para m2 -->
 <section id="busquedainmueble" style="margin-top:100px;">
 
     <form action="" method="GET" style="margin: 0 10%;" class="relative-container">
@@ -589,23 +358,23 @@
 
 <div class="card-container" style="margin-bottom:100px;">
 
-    <a href="./apartamento.html" target="_blank">
+    <a href="./terreno.html" target="_blank">
         <div class="atlas-card">
              <div class="relative-container">
                 <div class="slideshow-container">
 
                     <div class="mySlides fade">
-                      <img src="./img/apartamento/img1.jpg" alt="imagen" class="image-card">
+                      <img src="./img/terrenos/img1.png" alt="imagen" class="image-card">
                       <div class="text-number">1 / 3</div>
                     </div>
                     
                     <div class="mySlides fade">
-                      <img src="./img/apartamento/2.jpg" alt="imagen" class="image-card">
+                      <img src="./img/terrenos/img2.png" alt="imagen" class="image-card">
                       <div class="text-number">2 / 3</div>
                     </div>
                     
                     <div class="mySlides fade">
-                      <img src="./img/apartamento/3.jpg" alt="imagen" class="image-card">
+                      <img src="./img/terrenos/img3.png" alt="imagen" class="image-card">
                       <div class="text-number">3 / 3</div>
                     </div>
                     
@@ -616,7 +385,7 @@
                     <br>
     
                 <div class="top-text">
-                    Constructora Bolivar
+                    AyX Ingenieros
                 </div>
                 <div>
                     <img src="./svg/share_icon.svg" alt="c" class="share-right ">
@@ -624,39 +393,43 @@
                 </div>
             </div>
             <div style="padding:0 15px 0 15px;">
-                <div class="titulo-propiedades"> Villas del Olimpo</div>
                 
                 <div class="space-between" style="margin-top: 5px;">
-                    <div class="text" style="display: inline;"> Modelo 2-A</div>
-                    <div class="text" style="font-size: 12px;display: inline;"> 2 Habs | 2.5 Baño | 78m2</div>
+                    <div class="titulo-propiedades"> Loma Verde</div>
+                    <div class="text" style="font-size: 12px;display: inline;"> Área: <span style="color:#0894FE"> 120M2 / 172.11VR2 </span></div>
                     
                 </div>
                 <div class="space-between" style="margin-top: 5px;">
-                    <div class="text" style="display: inline;"> L. 2,800,000</div>
+                    <div class="text" style="display: inline;"> Bloque C Lote - #16</div>
+                    <div class="text" style="font-size: 12px;display: inline;"> Topografía: <span style="color:#0894FE"> Plana</span></div>
+                    
+                </div>
+                <div class="space-between" style="margin-top: 5px;">
+                    <div class="text" style="display: inline;"> L. 1,200,000</div>
                     <div class="text" style="font-size: 12px;display: inline;"> 
-                        Estado: <span style="color:#0894FE"> Pre-Venta</span></div>
+                        Categoría: <span style="color:#0894FE"> R-3</span></div>
                 </div>
             </div>
         </div>
     </a>
         
-    <a href="./apartamento.html" target="_blank">
+    <a href="./terreno.html" target="_blank">
         <div class="atlas-card" >
              <div class="relative-container">
                 <div class="slideshow-container">
 
                     <div class="mySlides1 fade">
-                      <img src="./img/apartamento/img2.jpg" alt="imagen" class="image-card">
+                      <img src="./img/terrenos/img2.png" alt="imagen" class="image-card">
                       <div class="text-number">1 / 3</div>
                     </div>
                     
                     <div class="mySlides1 fade">
-                      <img src="./img/apartamento/4.jpg" alt="imagen" class="image-card">
+                      <img src="./img/terrenos/img3.png" alt="imagen" class="image-card">
                       <div class="text-number">2 / 3</div>
                     </div>
                     
                     <div class="mySlides1 fade">
-                      <img src="./img/apartamento/5.jpg" alt="imagen" class="image-card">
+                      <img src="./img/terrenos/img4.png" alt="imagen" class="image-card">
                       <div class="text-number">3 / 3</div>
                     </div>
                     
@@ -667,7 +440,7 @@
                     <br>
     
                 <div class="top-text">
-                    Urbanizadora Laurel
+                    Vendedor Particular
                 </div>
                 <div>
                     <img src="./svg/share_icon.svg" alt="c" class="share-right ">
@@ -675,17 +448,20 @@
                 </div>
             </div>
             <div style="padding:0 15px 0 15px;">
-                <div class="titulo-propiedades"> Torre Buenos Aires </div>
-                
                 <div class="space-between" style="margin-top: 5px;">
-                    <div class="text" style="display: inline;"> Modelo 3 Hab</div>
-                    <div class="text" style="font-size: 12px;display: inline;"> 3 Habs | 2.5 Baño | 115m2</div>
+                    <div class="titulo-propiedades"> Colonia Tepeyac</div>
+                    <div class="text" style="font-size: 12px;display: inline;"> Área: <span style="color:#0894FE"> 154M2 / 220.87VR2</span></div>
                     
                 </div>
                 <div class="space-between" style="margin-top: 5px;">
-                    <div class="text" style="display: inline;"> L. 3,200,000</div>
+                    <div class="text" style="display: inline;"> Bloque A Lote - #35</div>
+                    <div class="text" style="font-size: 12px;display: inline;"> Topografía: <span style="color:#0894FE"> Plana</span></div>
+                    
+                </div>
+                <div class="space-between" style="margin-top: 5px;">
+                    <div class="text" style="display: inline;"> L. 1,450,000</div>
                     <div class="text" style="font-size: 12px;display: inline;"> 
-                        Estado: <span style="color:#0894FE"> Usada</span></div>
+                        Categoría: <span style="color:#0894FE"> R-2</span></div>
                 </div>
             </div>
         </div>
@@ -693,9 +469,9 @@
      
     
     <div class="atlas-card" style="overflow:none">
-        <a href="./apartamento.html" target="_blank">
+        <a href="./terreno.html" target="_blank">
         <div class="relative-container">
-            <img src="./img/apartamento/img3.jpg" alt="imagen" class="image-card">
+            <img src="./img/terrenos/img3.png" alt="imagen" class="image-card">
             <div class="text-number">1 / 3</div>
             <div class="top-text">
                 Hitos Urbanos
@@ -707,28 +483,32 @@
         </div>
         </a>
         <div style="padding:20px 15px 0 15px;">
-            <div class="titulo-propiedades"> Torre Athenas </div>
-            
             <div class="space-between" style="margin-top: 5px;">
-                <div class="text" style="display: inline;"> Modelo 3 Hab</div>
-                <div class="text" style="font-size: 12px;display: inline;"> 3 Habs | 2.5 Baños | 128m2</div>
+                <div class="titulo-propiedades"> Lomas Del Guijarro II</div>
+                <div class="text" style="font-size: 12px;display: inline;"> Área: <span style="color:#0894FE"> 1720M2 / 246.70VR2</span></div>
                 
             </div>
             <div class="space-between" style="margin-top: 5px;">
-                <div class="text" style="display: inline;"> L. 3,700,000</div>
-                <div class="text" style="font-size: 12px;display: inline;"> 
-                    Estado: <span style="color:#0894FE"> Nueva</span></div>
+                <div class="text" style="display: inline;"> Bloque E Lote - #4</div>
+                <div class="text" style="font-size: 12px;display: inline;"> Topografía: <span style="color:#0894FE"> Plana</span></div>
+                
             </div>
+            <div class="space-between" style="margin-top: 5px;">
+                <div class="text" style="display: inline;"> L. 1,740,000</div>
+                <div class="text" style="font-size: 12px;display: inline;"> 
+                    Categoría: <span style="color:#0894FE"> R-1</span></div>
+            </div>
+            
         </div>
     </div>
 
     <div class="atlas-card" style="overflow:none">
-        <a href="./apartamento.html" target="_blank">
+        <a href="./terreno.html" target="_blank">
         <div class="relative-container">
-            <img src="./img/apartamento/img4.jpg" alt="imagen" class="image-card">
+            <img src="./img/terrenos/img4.png" alt="imagen" class="image-card">
             <div class="text-number">1 / 3</div>
             <div class="top-text">
-                Vendedor Particular
+                Inmobiliaria UTIX
             </div>
             <div>
                 <img src="./svg/share_icon.svg" alt="c" class="share-right ">
@@ -737,25 +517,28 @@
         </div>
         </a>
         <div style="padding:20px 15px 0 15px;">
-            <div class="titulo-propiedades"> Nivo </div>
-            
             <div class="space-between" style="margin-top: 5px;">
-                <div class="text" style="display: inline;"> Modelo 3 Hab</div>
-                <div class="text" style="font-size: 12px;display: inline;"> 3 Habs | 2.5 Baños | 135m2</div>
+                <div class="titulo-propiedades"> Res. La Hacienda</div>
+                <div class="text" style="font-size: 12px;display: inline;"> Área: <span style="color:#0894FE"> 240M2 / 344.22VR2</span></div>
                 
             </div>
             <div class="space-between" style="margin-top: 5px;">
-                <div class="text" style="display: inline;"> L. 3,800,000</div>
+                <div class="text" style="display: inline;"> Bloque C Lote - #15</div>
+                <div class="text" style="font-size: 12px;display: inline;"> Topografía: <span style="color:#0894FE"> Irregular</span></div>
+                
+            </div>
+            <div class="space-between" style="margin-top: 5px;">
+                <div class="text" style="display: inline;"> L. 2,000,000</div>
                 <div class="text" style="font-size: 12px;display: inline;"> 
-                    Estado: <span style="color:#0894FE"> Usada</span></div>
+                    Categoría: <span style="color:#0894FE"> R-2</span></div>
             </div>
         </div>
     </div>
 
     <div class="atlas-card" style="overflow:none">
-        <a href="./apartamento.html" target="_blank">
+        <a href="./terreno.html" target="_blank">
         <div class="relative-container">
-            <img src="./img/apartamento/img5.jpg" alt="imagen" class="image-card">
+            <img src="./img/terrenos/img5.png" alt="imagen" class="image-card">
             <div class="text-number">1 / 3</div>
             <div class="top-text">
                 Desarrolladora MBD
@@ -767,25 +550,28 @@
         </div>
         </a>
         <div style="padding:20px 15px 0 15px;">
-            <div class="titulo-propiedades"> Rezidenza </div>
-            
             <div class="space-between" style="margin-top: 5px;">
-                <div class="text" style="display: inline;"> Pent House</div>
-                <div class="text" style="font-size: 12px;display: inline;"> 4 Habs | 4.5 Baño | 195m2</div>
+                <div class="titulo-propiedades"> Residencial Manantial</div>
+                <div class="text" style="font-size: 12px;display: inline;"> Área: <span style="color:#0894FE"> 200M2 / 286.85VR2</span></div>
                 
             </div>
             <div class="space-between" style="margin-top: 5px;">
-                <div class="text" style="display: inline;"> L. 4,800,000</div>
+                <div class="text" style="display: inline;"> Bloque B Lote - #11</div>
+                <div class="text" style="font-size: 12px;display: inline;"> Topografía: <span style="color:#0894FE"> Plana</span></div>
+                
+            </div>
+            <div class="space-between" style="margin-top: 5px;">
+                <div class="text" style="display: inline;"> L. 2,100,000</div>
                 <div class="text" style="font-size: 12px;display: inline;"> 
-                    Estado: <span style="color:#0894FE"> Nueva</span></div>
+                    Categoría: <span style="color:#0894FE"> R-3</span></div>
             </div>
         </div>
     </div>
 
     <div class="atlas-card" style="overflow:none">
-        <a href="./apartamento.html" target="_blank">
+        <a href="./terreno.html" target="_blank">
         <div class="relative-container">
-            <img src="./img/apartamento/img6.jpg" alt="imagen" class="image-card">
+            <img src="./img/terrenos/img6.png" alt="imagen" class="image-card">
             <div class="text-number">1 / 3</div>
             <div class="top-text">
                Constructora LiquidR
@@ -797,25 +583,28 @@
         </div>
         </a>
         <div style="padding:20px 15px 0 15px;">
-            <div class="titulo-propiedades"> Edificio BonAire </div>
-            
             <div class="space-between" style="margin-top: 5px;">
-                <div class="text" style="display: inline;">PentHouse</div>
-                <div class="text" style="font-size: 12px;display: inline;"> 4 Habs | 4.5 Baño | 230m2</div>
-               
+                <div class="titulo-propiedades"> Res. Buenos Aires</div>
+                <div class="text" style="font-size: 12px;display: inline;"> Área: <span style="color:#0894FE"> 254M2 / 364.30VR2</span></div>
+                
             </div>
             <div class="space-between" style="margin-top: 5px;">
-                <div class="text" style="display: inline;"> L. 5,800,000</div>
+                <div class="text" style="display: inline;"> Bloque C Lote - #14</div>
+                <div class="text" style="font-size: 12px;display: inline;"> Topografía: <span style="color:#0894FE"> Plana</span></div>
+                
+            </div>
+            <div class="space-between" style="margin-top: 5px;">
+                <div class="text" style="display: inline;"> L. 2,540,000</div>
                 <div class="text" style="font-size: 12px;display: inline;"> 
-                    Estado: <span style="color:#0894FE"> Nueva</span></div>
+                    Categoría: <span style="color:#0894FE"> R-2</span></div>
             </div>
         </div>
     </div>
 
     <div class="atlas-card" style="overflow:none">
-        <a href="./apartamento.html" target="_blank">
+        <a href="./terreno.html" target="_blank">
         <div class="relative-container">
-            <img src="./img/apartamento/img7.jpg" alt="imagen" class="image-card">
+            <img src="./img/terrenos/img7.png" alt="imagen" class="image-card">
             <div class="text-number">1 / 3</div>
             <div class="top-text">
                 Constructora Comaco
@@ -827,28 +616,31 @@
         </div>
         </a>
         <div style="padding:20px 15px 0 15px;">
-            <div class="titulo-propiedades"> Torre Pegaso </div>
-            
             <div class="space-between" style="margin-top: 5px;">
-                <div class="text" style="display: inline;"> Modelo Lila</div>
-                <div class="text" style="font-size: 12px;display: inline;"> 4 Habs | 4.5 Baños | 410m2</div>
+                <div class="titulo-propiedades"> Ciudad Nueva Etapa II</div>
+                <div class="text" style="font-size: 12px;display: inline;"> Área: <span style="color:#0894FE"> 320M2 / 458.95VR2</span></div>
                 
             </div>
             <div class="space-between" style="margin-top: 5px;">
-                <div class="text" style="display: inline;"> L. 8,500,000</div>
+                <div class="text" style="display: inline;"> Bloque C Lote - #11</div>
+                <div class="text" style="font-size: 12px;display: inline;"> Topografía: <span style="color:#0894FE"> Plana</span></div>
+                
+            </div>
+            <div class="space-between" style="margin-top: 5px;">
+                <div class="text" style="display: inline;"> L. 2,740,000</div>
                 <div class="text" style="font-size: 12px;display: inline;"> 
-                    Estado: <span style="color:#0894FE"> Nueva</span></div>
+                    Categoría: <span style="color:#0894FE"> R-1</span></div>
             </div>
         </div>
     </div>
 
     <div class="atlas-card" style="overflow:none">
-        <a href="./apartamento.html" target="_blank">
+        <a href="./terreno.html" target="_blank">
         <div class="relative-container">
-            <img src="./img/apartamento/img8.jpg" alt="imagen" class="image-card">
+            <img src="./img/terrenos/img8.png" alt="imagen" class="image-card">
             <div class="text-number">1 / 3</div>
             <div class="top-text">
-                AV ingenieros
+                Constructora CyG
             </div>
             <div>
                 <img src="./svg/share_icon.svg" alt="c" class="share-right ">
@@ -857,20 +649,25 @@
         </div>
         </a>
         <div style="padding:20px 15px 0 15px;">
-            <div class="titulo-propiedades"> Lomas del Guijarro </div>
-            
             <div class="space-between" style="margin-top: 5px;">
-                <div class="text" style="display: inline;"> Pent House</div>
-                <div class="text" style="font-size: 12px;display: inline;"> 5 Habs | 6 Baños | 410m2</div>
-               
+                <div class="titulo-propiedades"> Residencial Las Uvas</div>
+                <div class="text" style="font-size: 12px;display: inline;"> Área: <span style="color:#0894FE"> 400M2 / 573.70VR2</span></div>
+                
             </div>
             <div class="space-between" style="margin-top: 5px;">
-                <div class="text" style="display: inline;"> L. 10,900,000</div>
+                <div class="text" style="display: inline;"> Bloque H Lote - #21</div>
+                <div class="text" style="font-size: 12px;display: inline;"> Topografía: <span style="color:#0894FE"> Plana</span></div>
+                
+            </div>
+            <div class="space-between" style="margin-top: 5px;">
+                <div class="text" style="display: inline;"> L. 3,240,000</div>
                 <div class="text" style="font-size: 12px;display: inline;"> 
-                    Estado: <span style="color:#0894FE"> Nueva</span></div>
+                    Categoría: <span style="color:#0894FE"> R-1</span></div>
             </div>
         </div>
     </div>
+
+    
 </div>
 </section>
 
