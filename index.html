@@ -22,24 +22,12 @@
                 <button class="boton-ingresar" id="boton-ingresar" onclick="modalI()">Ingresar</button>
             <div class="dropdown">
                 <button class="dropbtn" onclick="modalCR()">Crédito Hipotecario</button>
-                    <!--
-                    <div class="dropdown-content">
-                        <a href="#credito-vivienda">Compra de Vivienda</a>
-                        <a href="#credito-construccion">Construcción</a>
-                        <a href="#credito-libre-inversion">Libre Inversión</a>
-                        <a href="#credito-compra-cartera">Compra de Cartera</a>
-                        <a href="#credito-remodelaciones">Remodelaciones</a>
-                    </div>-->
+                   
             </div>
 
             <div class="dropdown">
                 <button class="dropbtn" onclick="modalV()">Vender</button>
-                <!--
-                    <div class="dropdown-content">
-                        <a href="#vender-vivienda">Como Persona Natural</a>
-                        <a href="#vender-constructora">Como Constructora</a>
-                        <a href="#vender-inmobiliaria">Como Bienes Raíces</a>
-                    </div>-->
+              
             </div>
             <a href="javascript:void(0);" style="font-size:35px;" class="icon" onclick="HamburgerFuction()">&#9776;</a>
         </div> 
@@ -76,7 +64,7 @@
                         <p class="text" style="text-align: left;clear: both;padding-top: 25px;">Crea una cuenta Empresarial.</p> 
                         <p style="display: block; text-align:left;" class="text">
                             ¿Ya tienes cuenta empresarial?   <a href="#" style="color: #0894FE;">  Ingresa Aquí</a></p>
-                        <form action="" method="POST"> 
+                        <form action="./perfil_vendedor.html" method="POST"> 
                             <input type="text" placeholder="Nombre de Empresa" name="nombre-empresa" id="nombre-empresa-registro" required title="Nombre Comercial">
                             <input type="email" placeholder="Correo Electrónico Empresarial" name="email-empresa" id="email-empresa-registro" required title="Correo de Contacto">
                             <input type="password" placeholder="Introduce tu Contraseña" name="psw-empresa" id="psw-empresa-registro" required 
@@ -127,7 +115,7 @@
                 </div>
 
                 <div id="ingreso_empresa" class="tabcontent">
-                    <form action="" method="POST">
+                    <form action="/perfil_vendedor.html" method="POST">
                         <p class="text" style="text-align: left;clear: both; padding-top: 25px;">Ingresa a tú perfil Empresarial.</p>   
                         <p style="display: block; text-align:left;" class="text">
                             ¿No tienes cuenta empresarial?   <a href="#" style="color: #0894FE;">  Registrate Aquí</a></p>              
@@ -252,24 +240,7 @@
                                         <p class="text">
                                             Ocuparemos los datos de tu co-deudor:
                                         </p>
-                                        <!--
-                                        <input type="text"  placeholder="Nombres y Apellido" name="nombre-apellido-usuario2-credito" id="nombre-apellido-usuario2-credito" autocomplete="on">
-
-                                        <input type="email" placeholder="Tu Correo Electrónico" name="email-usuario-credito2" id="email-usuario-credito2" autocomplete="on">
-
-                                        <input type="number" style="margin-top: 10px;" placeholder="Celular de Contacto" name="celular-usuario-credito2" 
-                                        id="celular-usuario-credito2"  minlength="8" >
                                         
-                                        <label for="documento_tipo" class="subtitles" style="margin-bottom:10px;">Tipo de Identidad</label>
-                                        <select name="documento_tipo_codeudor" style="width: 100%;" id="documento_tipo_codeudor" class="minimal" >
-                                            <br>
-                                            <option value="identidad_nacional">Identidad Nacional</option>
-                                            <option value="pasaporte">Pasaporte</option>
-                                            <option value="carnet_residencia">Carnet de Residencia</option>
-                                        </select>
-
-                                        <input type="number"  placeholder="Número de documento" name="identidad_usuario2" id="identidad_usuario2" style="margin-top: 10px;" autocomplete="on">
-                                        -->
 
                                     </div>
 
