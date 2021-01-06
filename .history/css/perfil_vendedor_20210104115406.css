@@ -1,0 +1,11 @@
+.titulo-inmueble
+{
+    min-height: 80px;
+    width: 90%;
+    margin: auto;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 10px 20px 10px 30px;
+    overflow: hidden;
+    border: 1px solid #0894FE;
+}
