@@ -454,7 +454,7 @@
                 </div>
 
 
-            
+            <!-- RENDERIZACiON CUANDO UNA CITA SE ENCUENTRA EN ESTADO: SIN CONFIRMAR--------------------------->
                 <div class="columna_modal_cita">
 
                     <div style="font-weight: bold;font-size: 18px;">Detalles:</div><br>
@@ -474,11 +474,6 @@
                             <div>
                                 Tipo:
                             </div>
-                            
-                            <div>
-                                Atiende:
-                            </div>
-
                             <div>
                                 Estado:
                             </div>
@@ -497,12 +492,7 @@
                             <div >
                                     Virtual
                             </div>
-
-                            <div >
-                                Juan Lopez
-                            </div>
-
-                            <div style="color: #FC9500;"> <!--cambio de color segun estado de cita-->
+                            <div style="color: #FC9500;">
                                     Sin Confirmar
                             </div>
                         </div>
@@ -559,7 +549,6 @@
 
             </div>
 
-        <!--informacion a renderizar cuando no se ha confirmado la cita aun--- Estado: Sin Confirmar-->
             <form action="">
 
                 <input id="step2" type="checkbox">
@@ -578,19 +567,19 @@
                     </div>
                 </div>
 
-                <div id="part2" style="position: relative;">
+                <div id="part2" style="position: relative;margin-bottom: 50px;">
                     
-                    <div class="text" style="text-align: center;">
+                    <div class="text">
                     ¿Estas seguro que deseas cancelar la cita?
                     </div> 
 
                     <div style="display: flex; justify-content: center;flex-flow: row wrap;">
-                        <input type="submit" class="boton_azul" value="Si, Cancelar" style="color:#CC5F54;border-color: #CC5F54;">
+                        <input type="submit" class="boton_azul" value="Cancelar">
 
                         </input>
 
                         <label for="step2" id="continue-step2" style="width: 40%;cursor: pointer;">
-                            <div class="boton_azul" style="width: 100%;padding-top: 9px;">
+                            <div class="boton_azul" style="color:#CC5F54; border-color: #CC5F54;width: 100%;padding-top: 9px;">
                                 Regresar
                             </div>
                         </label>
@@ -599,34 +588,17 @@
                 </div>
 
             </form>
-        
-        <!--Renderiza cuando el estado de la cita fue Cancelada
 
-            <div class="text" style="text-align: left;">
-               Cita Cancelada por : <span id="">El Cliente</span>
-            </div> 
 
-        <!--Renderiza cuando la cita ya fue confirmada
 
-        <div class="text" style="text-align: left;">
-            Cita ha sido confirmada con éxito por ambas partes, favor revisa tu correo y contacta al cliente 
-            para su coordinación.
-         </div> 
 
-         <!--Renderiza cuando la cita ya se vencio y nunca la confirmo el vendedor
 
-        <div class="text" style="text-align: left;">
-            Cita ha vencido porque no has dado una respuesta, esto daña tu scrore y reputación de tu empresa dentro 
-            de nuestra plataforma, porfavor estar pendiente para la próxima vez.
-         </div> 
 
-         <!--Renderiza cuando la cita se efectuo satisfacoriamente
 
-        <div class="text" style="text-align: left;">
-            Cita realizada satisfactoriamente, favor has el seguimiento de venta correspondiente. Atlas Home 
-            lleva el seguimiento financiero del cliente, contactanos cualquier duda o consulta.
-         </div> 
-        -->
+
+
+
+
 
 
 

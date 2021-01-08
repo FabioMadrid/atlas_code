@@ -153,7 +153,7 @@
                         <div >
                                 Virtual
                         </div>
-                        <div style="color: #FC9500;" >
+                        <div >
                                 Sin Confirmar
                         </div>
                     </div>
@@ -228,8 +228,8 @@
                         <div >
                                 Virtual
                         </div>
-                        <div style="color: #CC5F54">
-                                Cancelada
+                        <div>
+                                Confirmada
                         </div>
                     </div>
 
@@ -301,7 +301,7 @@
                         <div >
                                 Virtual
                         </div>
-                        <div style="color: #1FC26B;">
+                        <div>
                                 Confirmada
                         </div>
                     </div>
@@ -368,7 +368,7 @@
                     <td >Juan Perez</td>
                     <td >10 Enero 2021, 10:00am</td>
                     <td >Torre Ventu - Modelo 3Hab</td> <!--Titulo (+) - (+) subtitulo -->
-                    <td > Aprobado por buró</td>
+                    <td > Verificación Pendiente</td>
                     <td >Virtual</td>
                     <td > <span style="color: #CC5F54;">Vencida</span></td>  
                 </tr>
@@ -380,7 +380,7 @@
                     <td >Torre Ventu - Modelo 3Hab</td> <!--Titulo (+) - (+) subtitulo -->
                     <td > Verificación Pendiente</td>
                     <td >Virtual</td>
-                    <td > <span style="color: #CC5F54;">Cancelada</span></td>  
+                    <td > <span style="color: #CC5F54;">Vencida</span></td>  
                 </tr>
 
                 <tr onclick="modalINFOCITA()" >
@@ -390,7 +390,7 @@
                     <td >Torre Ventu - Modelo 3Hab</td> <!--Titulo (+) - (+) subtitulo -->
                     <td > Aprobado</td>
                     <td >Virtual</td>
-                    <td > <span style="color: #1FC26B;">Confirmada</span></td>   
+                    <td > <span style="color: #1FC26B;">Realizada</span></td>   
                 </tr>
 
                 <tr onclick="modalINFOCITA()" >
@@ -422,13 +422,13 @@
 
 <div id="modal_info_cita" class="modal">
     <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
-        <div class="modal-content overflow relative-container">
+        <div class="modal-content overflow">
 
             <div class="text" style="text-align: center; font-size: 18px;">
                 <img src="./svg/icon_calendario.svg" alt="" style="width: 25px;height:25px;">
                 <span style="padding-left: 10px;">Solicitud de Cita</span> 
             </div>
-    
+
             <div class="contenedor_x">
 
 
@@ -454,7 +454,7 @@
                 </div>
 
 
-            
+
                 <div class="columna_modal_cita">
 
                     <div style="font-weight: bold;font-size: 18px;">Detalles:</div><br>
@@ -465,20 +465,17 @@
     
                             <div >
                                 Fecha:
+    
                             </div>
     
                             <div>
                                 Hora:
+      
                             </div>
     
                             <div>
                                 Tipo:
                             </div>
-                            
-                            <div>
-                                Atiende:
-                            </div>
-
                             <div>
                                 Estado:
                             </div>
@@ -497,20 +494,15 @@
                             <div >
                                     Virtual
                             </div>
-
-                            <div >
-                                Juan Lopez
-                            </div>
-
-                            <div style="color: #FC9500;"> <!--cambio de color segun estado de cita-->
-                                    Sin Confirmar
+                            <div>
+                                    Confirmada
                             </div>
                         </div>
     
                     </div>
 
                     <br>
-                    <div style="font-weight: bold;font-size: 18px;">info Cliente:</div><br>
+                    <div style="font-weight: bold;font-size: 18px;">informacion del Cliente:</div><br>
                     
                     <div style="display: flex; justify-content: space-between;flex-flow: row nowrap;">
 
@@ -528,7 +520,7 @@
                             </div>
     
                             <div >
-                                Cédula:
+                                Identidad:
     
                             </div>
 
@@ -536,7 +528,7 @@
     
                         <div style="width: 66%;" class="text" >
                             <div >                      
-                                    Felipe Madrid
+                                    Fredy Montoya
                             </div>
 
                             <div >                      
@@ -544,89 +536,41 @@
                             </div>
 
                             <div >                      
-                                    Pre-Aprobado
+                                    Pre-Aprovado
                             </div>
     
                             <div >
-                                    1503-1993-01546     
+                                    1503199301546     
                             </div>
 
                         </div>
     
                     </div>
 
-                </div>
+            </div>
+
+            <div style="display: flex; justify-content: center;flex-flow: row wrap;">
+
+                <button class="boton_azul">
+                    Confirmar Cita
+                </button>
+
+                <button class="boton_azul" style="color:#CC5F54; border-color: #CC5F54;">
+                    Denegar Cita
+                </button>
 
             </div>
 
-        <!--informacion a renderizar cuando no se ha confirmado la cita aun--- Estado: Sin Confirmar-->
-            <form action="">
 
-                <input id="step2" type="checkbox">
 
-                <div id="part1">
-                    <div style="display: flex; justify-content: center;flex-flow: row wrap;">
-                        <input type="submit" class="boton_azul" value="Confirmar Cita">
 
-                        </input>
 
-                        <label for="step2" id="continue-step2" style="width: 40%;cursor: pointer;">
-                            <div class="boton_azul" style="color:#CC5F54; border-color: #CC5F54;width: 100%;padding-top: 9px;">
-                                Denegar Cita
-                            </div>
-                        </label>
-                    </div>
-                </div>
 
-                <div id="part2" style="position: relative;">
-                    
-                    <div class="text" style="text-align: center;">
-                    ¿Estas seguro que deseas cancelar la cita?
-                    </div> 
 
-                    <div style="display: flex; justify-content: center;flex-flow: row wrap;">
-                        <input type="submit" class="boton_azul" value="Si, Cancelar" style="color:#CC5F54;border-color: #CC5F54;">
 
-                        </input>
 
-                        <label for="step2" id="continue-step2" style="width: 40%;cursor: pointer;">
-                            <div class="boton_azul" style="width: 100%;padding-top: 9px;">
-                                Regresar
-                            </div>
-                        </label>
-                    </div>
 
-                </div>
 
-            </form>
-        
-        <!--Renderiza cuando el estado de la cita fue Cancelada
-
-            <div class="text" style="text-align: left;">
-               Cita Cancelada por : <span id="">El Cliente</span>
-            </div> 
-
-        <!--Renderiza cuando la cita ya fue confirmada
-
-        <div class="text" style="text-align: left;">
-            Cita ha sido confirmada con éxito por ambas partes, favor revisa tu correo y contacta al cliente 
-            para su coordinación.
-         </div> 
-
-         <!--Renderiza cuando la cita ya se vencio y nunca la confirmo el vendedor
-
-        <div class="text" style="text-align: left;">
-            Cita ha vencido porque no has dado una respuesta, esto daña tu scrore y reputación de tu empresa dentro 
-            de nuestra plataforma, porfavor estar pendiente para la próxima vez.
-         </div> 
-
-         <!--Renderiza cuando la cita se efectuo satisfacoriamente
-
-        <div class="text" style="text-align: left;">
-            Cita realizada satisfactoriamente, favor has el seguimiento de venta correspondiente. Atlas Home 
-            lleva el seguimiento financiero del cliente, contactanos cualquier duda o consulta.
-         </div> 
-        -->
 
 
 

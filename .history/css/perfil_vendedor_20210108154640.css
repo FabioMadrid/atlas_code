@@ -350,8 +350,7 @@
     transition: background-color 0.4s;
     outline: none;
     margin: 8px 10px;
-    text-align: center;
-    min-width: 120px;
+    float: left;
 }
 
 /*------------Step form en modal de citas -------*/
