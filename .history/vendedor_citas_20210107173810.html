@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/8bf4511c4b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/perfil_vendedor.css">
+    <link rel="stylesheet" href="https://atlas-home-colombia.s3.amazonaws.com/fonts/fonts.css">
+    <title>Atlas Home</title>
+</head>
+<body>
+    
+    <div class="topnav" id="myTopnav">
+        <div class="column-25" style="left: 0;">
+            <a href="./perfil_vendedor.html">
+
+                <div style="position: absolute; left:0; top: 0;margin: 25px;">
+
+                    <span style="padding-left:10px; font-size: 18px;color: #2680EB;">❮ Regresar</span> 
+                </div>
+                
+            </a>
+        </div>
+        <div class="column-85">
+
+                <button class="boton-ingresar" id="boton-ingresar" onclick="">Cerrar Sesión</button>
+           
+            <a href="javascript:void(0);" style="font-size:35px;" class="icon" onclick="HamburgerFuction()">&#9776;</a>
+        </div> 
+    </div> 
+
+
+
+    <div class="titulo-inmueble hide-mobile" style="margin-top: 95px;" id="titulo-propiedad">
+        <div class="space-between" style="margin-top: 5px;">
+
+            <div class="text">
+                <span id="">Atlas Home</span>,
+                <br>
+                <b style="font-size: 22px;display:block">Gestiona tus citas</b> 
+                <br>
+
+                Gestiona y visualiza todas las citas que recibes en tus propiedades.
+                
+            </div>
+
+            <div class="relative-container">
+
+                    <img src="./svg/calendario_mujer.svg" alt="Logo Atlas" class="dibujo">
+
+            </div>
+
+        </div>
+    </div>
+    <p class="text text-align" style="margin-left: 5%;">
+        ¿Buscas asignar las citas recibidas a tu Colaboradores? 
+        <br>
+        <a href="#" style="color: #0894FE;">
+             Hazlo Aquí
+        </a>
+    </p>
+
+    
+
+<section style="margin: 0 5% 100px">
+
+    <div class="space-between" style="margin: 0 0 25px 0; flex-flow: row nowrap; justify-content: flex-start;">
+
+        <input type="radio" id="citas_pendientes2" name="cita_tipo" value="citaspendientes" checked>
+        <label for="citaspendientes" class="b-tipo-cita tablinks"  onclick="openRegistro(event, 'citas_pendientes')">Citas Pendientes</label>
+
+        <input type="radio" id="historial_citas2" name="cita_tipo" value="historialcitas">
+        <label for="historialcitas" class="b-tipo-cita tablinks" onclick="openRegistro(event, 'historial_citas')">Historial de Citas</label>
+      
+    </div>
+
+    <div id="citas_pendientes" class="tabcontent" style="display: block;">
+
+        <!-- Esta parte renderiza cuando el usuario no tiene citas pendientes    
+            <p class="text">
+                Actualmente no tienes citas pendientes.
+            </p>
+            <div>
+                <img src="./svg/calendario_hombre.svg" alt="" class="dibujo">
+            </div>
+        -->
+        
+        <div class="contenedor-beneficios" style="width: 100%;">
+            
+            <div class="cita-card" onclick="modalINFOCITA()">
+
+                <div class="text">
+                    <img src="./svg/icon_calendario.svg" alt="" style="width: 25px;height:25px;">
+                     Solicitud de Cita
+                </div>
+                <br>
+                <div style="display: flex;justify-content: flex-start;flex-flow: row nowrap;">
+
+                    <div>
+                        <img src="./img/vivienda/1.jpg" alt="" class="thumbnail">
+                    </div>
+
+                    <div style="margin-left: 15px;" >
+                        <b>Residencial Las Cascadas</b> 
+                        <br>
+                        <span class="text">Modelo Laurel</span>
+                    </div>   
+
+                </div>
+
+                <br>
+
+                <div style="display: flex; justify-content: space-between;flex-flow: row nowrap;">
+
+                    <div style="width: 33%;color: #2680EB;">
+                        <div >
+                            Cliente:
+                        </div>
+
+                        <div >
+                            Fecha:
+
+                        </div>
+
+                        <div>
+                            Hora:
+  
+                        </div>
+
+                        <div>
+                            Tipo:
+                        </div>
+                        <div>
+                            Estado:
+                        </div>
+                    </div>
+
+                    <div style="width: 66%;" class="text" >
+                        <div >                      
+                                Fredy Montoya
+                        </div>
+
+                        <div >
+                                10 enero 2021       
+                        </div>
+
+                        <div >
+                                10:00am
+                        </div>
+
+                        <div >
+                                Virtual
+                        </div>
+                        <div >
+                                Sin Confirmar
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+ 
+            <div class="cita-card" onclick="modalINFOCITA()">
+
+                <div class="text">
+                    <img src="./svg/icon_calendario.svg" alt="" style="width: 25px;height:25px;">
+                     Solicitud de Cita
+                </div>
+                <br>
+                <div style="display: flex;justify-content: flex-start;flex-flow: row nowrap;">
+
+                    <div>
+                        <img src="./img/apartamento/1.jpg" alt="" class="thumbnail">
+                    </div>
+
+                    <div style="margin-left: 15px;" >
+                        <b>Torre Athenas</b> 
+                        <br>
+                        <span class="text">Modelo 3hab</span>
+                    </div>   
+
+                </div>
+
+                <br>
+
+                <div style="display: flex; justify-content: space-between;flex-flow: row nowrap;">
+
+                    <div style="width: 33%;color: #2680EB;">
+                        <div >
+                            Cliente:
+                        </div>
+
+                        <div >
+                            Fecha:
+
+                        </div>
+
+                        <div>
+                            Hora:
+  
+                        </div>
+
+                        <div>
+                            Tipo:
+                        </div>
+                        <div>
+                            Estado:
+                        </div>
+                    </div>
+
+                    <div style="width: 66%;" class="text" >
+                        <div >                      
+                                Fredy Montoya
+                        </div>
+
+                        <div >
+                                10 enero 2021       
+                        </div>
+
+                        <div >
+                                10:00am
+                        </div>
+
+                        <div >
+                                Virtual
+                        </div>
+                        <div>
+                                Confirmada
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="cita-card" onclick="modalINFOCITA()">
+
+                <div class="text">
+                    <img src="./svg/icon_calendario.svg" alt="" style="width: 25px;height:25px;">
+                     Solicitud de Cita
+                </div>
+                <br>
+                <div style="display: flex;justify-content: flex-start;flex-flow: row nowrap;">
+
+                    <div>
+                        <img src="./img/vivienda/2.jpg" alt="" class="thumbnail">
+                    </div>
+
+                    <div style="margin-left: 15px;" >
+                        <b>Residencial Las Uvas</b> 
+                        <br>
+                        <span class="text">Modelo Laureal</span>
+                    </div>   
+
+                </div>
+
+                <br>
+
+                <div style="display: flex; justify-content: space-between;flex-flow: row nowrap;">
+
+                    <div style="width: 33%;color: #2680EB;">
+                        <div >
+                            Cliente:
+                        </div>
+
+                        <div >
+                            Fecha:
+
+                        </div>
+
+                        <div>
+                            Hora:
+  
+                        </div>
+
+                        <div>
+                            Tipo:
+                        </div>
+                        <div>
+                            Estado:
+                        </div>
+                    </div>
+
+                    <div style="width: 66%;" class="text" >
+                        <div >                      
+                                Fredy Montoya
+                        </div>
+
+                        <div >
+                                10 enero 2021       
+                        </div>
+
+                        <div >
+                                10:00am
+                        </div>
+
+                        <div >
+                                Virtual
+                        </div>
+                        <div>
+                                Confirmada
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        
+        </div>
+
+                    
+                
+
+
+
+
+    </div>
+
+    <div id="historial_citas" class="tabcontent">
+
+        <!-- Esta parte renderiza cuando el nunca ha recibido una cita
+            <p class="text">
+                No has recibido citas hasta este momento.
+            </p>
+            <div>
+                <img src="./svg/calendario_hombre.svg" alt="" class="dibujo">
+            </div>
+        -->
+
+        <div style="overflow: auto;"> 
+            <table class="citas">
+                <tr>
+                    <th>Cliente</th>
+                    <th>Asiganada </th>
+                    <th>Fecha y Hora</th>
+                    <th>Inmueble</th>
+                    <th>Estado Crédito Cliente</th>
+                    <th>Tipo de Cita</th>
+                    <th>Estado</th>
+                </tr>
+
+                <tr onclick="modalINFOCITA()" >
+                    <td id="nombre_cliente">Roger Santos</td>
+                    <td id="nombre_colaborador">Felipe Madrid</td>
+                    <td id="fecha_hora_cita">10 Marzo 2021, 1:00pm</td>
+                    <td id="id_propiedad">Residencial El Sauce - Modelo Jeranios</td> <!--Titulo (+) - (+) subtitulo -->
+                    <td id="estado_credito_cliente"> Pre-aprobado</td>
+                    <td id="tipo_cita">Virtual</td>
+                    <td id="estado_cita"> <span style="color: #FC9500;">Sin Confirmar</span></td>  
+                </tr>
+
+                <tr onclick="modalINFOCITA()" >
+                    <td >Juan Lopez</td>
+                    <td >Felipe Madrid</td>
+                    <td >12 Enero 2021, 3:00pm</td>
+                    <td >Residencial Roble Oeste - Modelo Laurel</td> <!--Titulo (+) - (+) subtitulo -->
+                    <td > Aprobado</td>
+                    <td >Presencial</td>
+                    <td > <span style="color: #1FC26B;">Realizada</span></td>  
+                </tr>
+
+                <tr onclick="modalINFOCITA()" >
+                    <td >Francisco Morazán</td>
+                    <td >Juan Perez</td>
+                    <td >10 Enero 2021, 10:00am</td>
+                    <td >Torre Ventu - Modelo 3Hab</td> <!--Titulo (+) - (+) subtitulo -->
+                    <td > Verificación Pendiente</td>
+                    <td >Virtual</td>
+                    <td > <span style="color: #CC5F54;">Vencida</span></td>  
+                </tr>
+
+                <tr onclick="modalINFOCITA()" >
+                    <td >Francisco Morazán</td>
+                    <td >Juan Perez</td>
+                    <td >10 Enero 2021, 10:00am</td>
+                    <td >Torre Ventu - Modelo 3Hab</td> <!--Titulo (+) - (+) subtitulo -->
+                    <td > Verificación Pendiente</td>
+                    <td >Virtual</td>
+                    <td > <span style="color: #CC5F54;">Vencida</span></td>  
+                </tr>
+
+                <tr onclick="modalINFOCITA()" >
+                    <td >Francisco Morazán</td>
+                    <td >Juan Perez</td>
+                    <td >10 Enero 2021, 10:00am</td>
+                    <td >Torre Ventu - Modelo 3Hab</td> <!--Titulo (+) - (+) subtitulo -->
+                    <td > Aprobado</td>
+                    <td >Virtual</td>
+                    <td > <span style="color: #1FC26B;">Realizada</span></td>   
+                </tr>
+
+                <tr onclick="modalINFOCITA()" >
+                    <td >Francisco Morazán</td>
+                    <td >Juan Perez</td>
+                    <td >10 Enero 2021, 10:00am</td>
+                    <td >Torre Ventu - Modelo 3Hab</td> <!--Titulo (+) - (+) subtitulo -->
+                    <td > Pre-aprobado</td>
+                    <td >Virtual</td>
+                    <td > <span style="color: #1FC26B;">Realizada</span></td> 
+                </tr>
+
+            </table>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+</section>
+
+
+<!------------------------Modal de mostrar informacion de citas----------->
+
+<div id="modal_info_cita" class="modal">
+    <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+        <div class="modal-content overflow">
+
+            <div class="text">
+                <img src="./svg/icon_calendario.svg" alt="" style="width: 25px;height:25px;">
+                <span style="padding-left: 10px;text-align: center;">Solicitud de Cita</span> 
+            </div>
+
+            <div style="display: flex; justify-content: space-between; flex-flow: row wrap;">
+
+
+                <div class="atlas-card" style="overflow:none">
+                    <a href="./vivienda.html" target="_blank">
+                            <div class="relative-container">
+                                <img src="./img/casa1_3.jpg" alt="imagen" class="image-card">            
+                            </div>
+                        <div style="padding:20px 15px 0 15px;">
+                            <div class="titulo-propiedades"> Valle de Angeles </div>
+                            <div class="text" style="display: inline;"> Modelo 3 Hab</div>
+                            <div class="space-between" style="margin-top: 5px;">
+                                <div class="text" style="font-size: 12px;display: inline;"> 3 Habs | 2.5 Baños | 278m2</div>
+                                <div class="text" style="font-size: 12px;display: inline;"> Área de lote: <span style="color:#0894FE"> 328m2</span></div>
+                            </div>
+                            <div class="space-between" style="margin-top: 5px;">
+                                <div class="text" style="display: inline;"> L. 4,800,000</div>
+                                <div class="text" style="font-size: 12px;display: inline;"> 
+                                    Estado: <span style="color:#0894FE"> Nueva</span></div>
+                            </div>
+                        </div>
+                    </a>    
+                </div>
+
+
+
+                <div>
+                    holis
+                </div>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./js/vendedor.js"></script>
+    <script src="js/general.js"></script>
+
+</body>
+</html>
