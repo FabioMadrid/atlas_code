@@ -61,7 +61,15 @@
 
 <section style="margin: 0 5% 100px">
 
-  <!--Pendiente para v2.0-->
+    <div class="space-between" style="margin: 0 0 25px 0; flex-flow: row nowrap; justify-content: flex-start;">
+
+        <input type="radio" id="citas_pendientes2" name="cita_tipo" value="citaspendientes" checked>
+        <label for="citaspendientes" class="b-tipo-cita tablinks"  onclick="openRegistro(event, 'citas_pendientes')">Citas Pendientes</label>
+
+        <input type="radio" id="historial_citas2" name="cita_tipo" value="historialcitas">
+        <label for="historialcitas" class="b-tipo-cita tablinks" onclick="openRegistro(event, 'historial_citas')">Historial de Citas</label>
+      
+    </div>
 
 </section>
 
