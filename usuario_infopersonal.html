@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/8bf4511c4b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/perfil_vendedor.css">
+    <link rel="stylesheet" href="https://atlas-home-colombia.s3.amazonaws.com/fonts/fonts.css">
+    <title>Atlas Home</title>
+</head>
+<body>
+
+    <div class="topnav" id="myTopnav">
+        <div class="column-25" style="left: 0;">
+            <a href="./perfil_usuario.html">
+
+                <div style="position: absolute; left:0; top: 0;margin: 25px;">
+
+                    <span style="padding-left:10px; font-size: 18px;color: #2680EB;">❮ Regresar</span> 
+                </div>
+                
+            </a>
+        </div>
+        <div class="column-85">
+
+                <button class="boton-ingresar" id="boton-ingresar" onclick="">Cerrar Sesión</button>
+               
+            <a href="javascript:void(0);" style="font-size:35px;" class="icon" onclick="HamburgerFuction()">&#9776;</a>
+        </div> 
+    </div> 
+
+
+
+    <div class="titulo-inmueble hide-mobile" style="margin-top: 95px;" id="titulo-propiedad">
+        <div class="space-between" style="margin-top: 5px;">
+
+            <div class="text">
+                <span id="">Fabio Madrid</span>,
+                <br>
+                <b style="font-size: 22px;display:block">Centraliza tu Información Personal</b> 
+                <br>
+
+                Verificamos tu identidad por tu seguridad, de los vendedores inmobiliarios y
+                para realizar todos los trámites bancarios de compra-venta bancarios.
+                <br> Tu información se encuentra encriptada y segura.
+                
+            </div>
+
+            <div class="relative-container">
+
+                    <img src="./svg/hombre_cyberseguridad.svg" alt="Logo Atlas" class="dibujo">
+                      
+            </div>
+
+        </div>
+    </div>
+
+    
+
+<section style="margin: 0 5% 100px">
+
+    
+    <p class="title text-align" style="font-size: 20px;">Información Personal:</p>
+        
+    <div class="text text-align">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span id="">3/3</span>
+        Completados
+    </div>
+    <br>
+                                
+    <button class="accordion">
+            
+        <b class="text_blue">Documento de Identificación</b>
+    <br>
+    <span id="identidad_usuario_legal_show"> 1503199301546</span>
+
+    </button>
+    <div class="panel">
+
+        <br>
+        <form action="" >
+
+            <label for="documento_tipo_usuario_legal" class="text">Tipo de Documento:</label>
+            <select name="documento_tipo_usuario_legal" id="documento_tipo_usuario_legal" class="minimal" required style="width: 100%;">
+                <option value="tarjeta_identidad">Tarjeta de Identidad  (Honduras)</option>
+                <option value="carnet_residencia">Carnet de Residencia</option>
+                <option value="pasaporte">Pasaporte</option>
+            </select>
+            <br>
+            <label for="identidad_usuario_legal" class="text">Número de Documento R. Legal </label>
+            <input type="text" id="identidad_usuario_legal" placeholder="Digita el número de documento" required>
+
+            <br>
+                <div style="display: flex; justify-content: center;">
+                    <label for="upload_documento_usuario_legal">
+                        <img src="./svg/icon_add.svg" alt="+" class="">
+                    </label>
+                    <input type="file" id="upload_documento_usuario_legal" class="upload_boton" >
+                    <br> 
+                </div>
+                    <br>
+                    <div class="text" style="text-align: center;">
+                        Adjunta PDF, JPG o PNG de tu documento Legal.
+                    </div>
+                    <br>
+
+            <input type="submit" value="Guardar" class="submit-boton" style="width: 150px;">
+        </form>
+
+        <br>
+        
+    </div>
+
+    <button class="accordion">
+        
+        <b class="text_blue">RTN Personal </b>
+    <br>
+    <span id="rtn_usuario_show"> 15031993015464</span>
+
+    </button>
+    <div class="panel">
+
+            <br>
+                <form action="" >
+
+                    <label for="rtn_usuario" class="text">Registro Tributario Nacional:</label>
+                    <input type="number" id="rtn_usuario" placeholder="RTN Personal, 14 caracteres" required>
+                    <br>
+                    <div style="display: flex; justify-content: center;">
+                        <label for="upload_rtn_usuario">
+                            <img src="./svg/icon_add.svg" alt="+" class="">
+                        </label>
+                        <input type="file" id="upload_rtn_usuario" class="upload_boton" required>
+                        <br> 
+                    </div>
+                        <br>
+                        <div class="text" style="text-align: center;">
+                            Adjunta PDF, JPG o PNG del tu RTN.
+                        </div>
+                        <br>
+                    <input type="submit" value="Guardar" class="submit-boton" style="width: 150px;">
+                </form>
+
+            <br>
+        
+    </div>
+
+    <button class="accordion">
+        
+        <b class="text_blue">Fecha de Nacimiento</b>
+    <br>
+    <span id="nacimiento_usuario_show"> 18 Febrero 1993</span>
+
+    </button>
+
+    <div class="panel">
+
+        <br>
+        <form action="">
+            <div style="display: flex; flex-flow: row wrap;justify-content: flex-start;">
+
+                <div style="width: 25%;min-width: 140px;">
+                    <select name="dia_nacimiento_usuario" id="dia_nacimiento_usuario" class="minimal" required >
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                    </select>
+                </div>
+
+                <div style="width: 25%;min-width: 140px;">
+                    <select name="mes_nacimiento_usuario" id="mes_nacimiento_usuario" class="minimal" required >
+                        <option value="enero">Enero</option>
+                        <option value="febrero">Febrero</option>
+                        <option value="marzo">Marzo</option>
+                        <option value="abril">Abril</option>
+                        <option value="mayo">Mayo</option>
+                        <option value="junio">Junio</option>
+                        <option value="julio">Julio</option>
+                        <option value="agosto">Agosto</option>
+                        <option value="septiembre">Septiembre</option>
+                        <option value="octubre">Octubre</option>
+                        <option value="noviembre">Noviembre</option>
+                        <option value="diciembre">Diciembre</option>
+                    </select>
+                </div>
+
+                <div style="width: 25%;min-width: 100px;">
+                    <input type="number" name="ano_nacimiento_usuario" id="ano_nacimiento_usuario" placeholder="Año"
+                    style="margin:0;padding:7px;" required>
+                </div>    
+            </div>
+            <br>
+            <input type="submit" value="Guardar" class="submit-boton" style="width: 150px;">
+
+        </form>
+        <br>
+
+    </div>
+    <!--
+        <p class="title text-align" style="font-size: 20px;">Información Laboral:</p>
+    -->
+           
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./js/vendedor.js"></script>
+    <script src="js/general.js"></script>
+
+</body>
+</html>
