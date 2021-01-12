@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/8bf4511c4b.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./general.css">
-    <link rel="stylesheet" href="./vivienda.css">
+    <link rel="stylesheet" href="./calendario/style_calendar.css">
+    <link rel="stylesheet" href="./calendario/vanilla-calendar.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/vivienda.css">
     <link rel="stylesheet" href="https://atlas-home-colombia.s3.amazonaws.com/fonts/fonts.css">
     <title>Atlas Home</title>
 </head>
@@ -21,27 +23,9 @@
         <div class="column-85">
                 <button class="boton-registro" id="boton-registro" onclick="modalR()">Registrarme</button>
                 <button class="boton-ingresar" id="boton-ingresar" onclick="modalI()">Ingresar</button>
-            <div class="dropdown">
-                <button class="dropbtn" onclick="modalCR()">Crédito Hipotecario</button>
-                    <!--
-                    <div class="dropdown-content">
-                        <a href="#credito-vivienda">Compra de Vivienda</a>
-                        <a href="#credito-construccion">Construcción</a>
-                        <a href="#credito-libre-inversion">Libre Inversión</a>
-                        <a href="#credito-compra-cartera">Compra de Cartera</a>
-                        <a href="#credito-remodelaciones">Remodelaciones</a>
-                    </div>-->
+        
             </div>
-            <div class="dropdown">
-                <button class="dropbtn" onclick="modalV()">Vender</button>
-                <!--
-                    <div class="dropdown-content">
-                        <a href="#vender-vivienda">Como Persona Natural</a>
-                        <a href="#vender-constructora">Como Constructora</a>
-                        <a href="#vender-inmobiliaria">Como Bienes Raíces</a>
-                    </div>-->
-            </div>
-            <a href="javascript:void(0);" style="font-size:35px;" class="icon" onclick="HamburgerFuction()">&#9776;</a>
+            <a href="javascript:void(0);" style="font-size:35px;top: 0; right: 0;" class="icon" onclick="HamburgerFuction()">&#9776;</a>
         </div> 
     </div> 
     
@@ -60,7 +44,11 @@
             <div id="registro_usuario" class="tabcontent">
             <p class="text" style="text-align: left;clear: both;padding-top: 25px;">Crea una cuenta personal.</p> 
             <p style="display: block; text-align:left;" class="text">
-                ¿Ya tienes cuenta personal?   <a href="#" style="color: #0894FE;">  Ingresa Aquí</a></p>
+
+                ¿Ya tienes cuenta personal?   
+                <span  style="color: #0894FE;" onclick="">  Ingresa Aquí</span>
+            
+            </p>
             <form action="" method="POST"> 
                 <input type="text" placeholder="Tu Nombre y Apellido" name="registro-usuario" id="nombre-apellido-usuario-registro" required>
                 <input type="email" placeholder="Tu Correo Electrónico" name="registro-usuario" id="email-usuario-registro" required>
@@ -76,8 +64,11 @@
             <div id="registro_empresa" class="tabcontent">
                 <p class="text" style="text-align: left;clear: both;padding-top: 25px;">Crea una cuenta Empresarial.</p> 
                 <p style="display: block; text-align:left;" class="text">
-                    ¿Ya tienes cuenta empresarial?   <a href="#" style="color: #0894FE;">  Ingresa Aquí</a></p>
-                <form action="" method="POST"> 
+                    ¿Ya tienes cuenta empresarial?   
+                    <span style="color: #0894FE;" onclick="">  Ingresa Aquí</span>
+
+                </p>
+                <form action="./perfil_vendedor.html" method="POST"> 
                     <input type="text" placeholder="Nombre de Empresa" name="nombre-empresa" id="nombre-empresa-registro" required title="Nombre Comercial">
                     <input type="email" placeholder="Correo Electrónico Empresarial" name="email-empresa" id="email-empresa-registro" required title="Correo de Contacto">
                     <input type="password" placeholder="Introduce tu Contraseña" name="psw-empresa" id="psw-empresa-registro" required 
@@ -85,10 +76,9 @@
                     <input type="number" placeholder="Registro Tributario Empresa" name="rtn-empresa" id="rtn-empresa-registro" 
                     title="RTN debe contener 14 números" required pattern=".{8,}">
                     <select name="tipo-empresa-registro" id="tipo-empresa" class="minimal" required style="width: 100%;">
-                        <option value="constructora">Constructora</option>
-                        <option value="bienes-raices">Bienes Raices</option>
-                        <option value="independiente">Independiente</option>
-                        <option value="otro">Otro</option>
+                        <option value="desarollador_inmobiliario">Desarollador Inmobiliario / Constructora</option>
+                        <option value="bienes_raices">Bienes Raices</option>
+                        <option value="propetario_vendedor">Propetario Vendedor</option>
                     </select>
                     <input type="tel" style="margin-top: 10px;" placeholder="Celular de Contacto" name="celular-empresa-registro" 
                     id="telefono-empresa-registro" required minlength="8">
@@ -128,7 +118,7 @@
         </div>
 
         <div id="ingreso_empresa" class="tabcontent">
-            <form action="" method="POST">
+            <form action="./perfil_vendedor.html" method="POST">
                 <p class="text" style="text-align: left;clear: both; padding-top: 25px;">Ingresa a tú perfil Empresarial.</p>   
                 <p style="display: block; text-align:left;" class="text">
                     ¿No tienes cuenta empresarial?   <a href="#" style="color: #0894FE;">  Registrate Aquí</a></p>              
@@ -148,15 +138,16 @@
 
 <div id="modal-cita" class="modal">
     <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
-    <div class="modal-content overflow" style="min-height: 600px;">
+    <div class="modal-content overflow" style="min-height: 600px;" >
 
-            <div class="show-mobile-2 correcion-cita" style="background-color:rgba(156, 156, 156, 0.219); height: 1px;"></div>
-            <h3 class="titulo-modal subtitles ">Agenda tú cita con el vendedor</h3>
-            <form action="" method="POST">
+            <div class="show-mobile-2 correcion-cita"></div>
+            
+            <form action="" method="POST" >
                 <input id="step2" type="checkbox">
                 <input id="step3" type="checkbox">
 
                 <div id="part1">
+                    <h3 class="titulo-modal subtitles ">Agenda tú cita</h3>
                     <p class="text" style="padding: 0 10%;text-align: center;font-size: 14px;">
                     Te conectamos directamente con el vendedor 
                     de la propiedad. Te puede atender de forma 
@@ -165,19 +156,17 @@
 
                     <p class="subtitles" style="padding-left:20px;">Selecciona tipo de cita:</p>
 
+                    <div class="space-between" style="margin: 0 0 25px 0; flex-flow: row nowrap;">
 
-
-                    <div class="space-between" style="margin: 0 0 25px 0;">
-
-                        <input type="radio" id="citapresencial" name="cita_tipo" value="citapresencial" checked required>
-                        <label for="citapresencial" class="b-tipo-cita tablinks" onclick="openRegistro(event, 'cita_presencial')" id="defaultOpen">Presencial</label>
+                        <input type="radio" id="citapresencial" name="cita_tipo" value="citapresencial" required checked>
+                        <label for="citapresencial" class="b-tipo-cita tablinks"  onclick="openRegistro(event, 'cita_presencial')">Presencial</label>
 
                         <input type="radio" id="citavirtual" name="cita_tipo" value="citavirtual" required>
                         <label for="citavirtual" class="b-tipo-cita tablinks" onclick="openRegistro(event, 'cita_virtual')">Video Llamada</label>
-
+                      
                     </div>
 
-                    <div id="cita_presencial" class="tabcontent">
+                    <div id="cita_presencial" class="tabcontent" style="display: block;">
                         <div style="display: flex;justify-content: center;">
                             <img src="./svg/pareja_tapabocas.svg" alt="." style="height: 210px;">
                         </div>
@@ -188,7 +177,7 @@
                         </p>
                         <div style="display: flex; justify-content: center;">
                             <label for="step2" id="continue-step2">
-                                <div class="subtitles" style="font-size: 20px;cursor: pointer;">Continuar</div>
+                                <div class="subtitles" style="font-size: 20px;cursor: pointer;">Continuar  ❯</div>
                             </label>
                         </div>
                     </div>
@@ -206,52 +195,138 @@
                         </p>
                         <div style="display: flex; justify-content: center;">
                             <label for="step2" id="continue-step2">
-                                <div class="subtitles" style="font-size: 20px;cursor: pointer;">Continuar</div>
+                                <div class="subtitles" style="font-size: 20px;cursor: pointer;">Continuar  ❯</div>
                             </label>
                         </div>
                     </div>
 
                 </div>
 
-                <div id="part2">
-                    <p class="subtitles" style="padding-left:20px;">Selecciona la Fecha:</p>
+                <div id="part2" style="position: relative;">
+
+                    <p class="subtitles" style="margin-top: 50px;">Selecciona la Fecha:</p>
+                        <!--<div style="display: flex;justify-content: center;">
+                            <img src="./svg/Calendario.svg" alt="" style="cursor: pointer;" onclick="">
+                        </div>-->
+                        
+                                <div class="content_calendar">
+                                    <div id="myCalendar" class="vanilla-calendar" style="margin-bottom: 20px"></div>
+                                </div>
+                          
+
+                    <p class="subtitles" style="margin-bottom: 0;">Selecciona la Hora:</p>
+                    <div class="text">Desliza para escoger una hora:</div>
+                         
+                    <div class="wrapper">
+                        <div class="carousel-tabs" >
+                            <div class="content-tabs" style="height: 60px;">
+                              
+                                    
+                                    <input type="radio" name="hora_cita" id="8:00am" value="8:00am" required>
+                                    <label for="8:00am" class="boton-horas">8:00AM</label>
+                  
+                                    <input type="radio" name="hora_cita" id="9:00am" value="9:00am" required>
+                                    <label for="9:00am" class="boton-horas">9:00AM</label>
+  
+                                    <input type="radio" name="hora_cita" id="10:00am" value="10:00am" required checked>
+                                    <label for="10:00am" class="boton-horas">10:00AM</label>
+                                    
+                                    <input type="radio" name="hora_cita" id="11:00am" value="11:00am" required>
+                                    <label for="11:00am" class="boton-horas">11:00AM</label>
+
+                                    <input type="radio" name="hora_cita" id="12:00am" value="12:00am" required>
+                                    <label for="12:00am" class="boton-horas">12:00AM</label>
+ 
+                                    <input type="radio" name="hora_cita" id="1:00pm" value="1:00pm" required>
+                                    <label for="1:00pm" class="boton-horas">1:00PM</label>   
+         
+                                    <input type="radio" name="hora_cita" id="2:00pm" value="2:00pm" required>
+                                    <label for="2:00pm" class="boton-horas">2:00PM</label>
+
+                                    <input type="radio" name="hora_cita" id="3:00pm" value="3:00pm" required>
+                                    <label for="3:00pm" class="boton-horas">3:00PM</label>
+   
+                                    <input type="radio" name="hora_cita" id="4:00pm" value="4:00pm" required>
+                                    <label for="4:00pm" class="boton-horas">4:00PM</label>
+                                    
+                                    <input type="radio" name="hora_cita" id="5:00pm" value="5:00pm" required>
+                                    <label for="5:00pm" class="boton-horas">5:00PM </label>
+                                    
+                                    <input type="radio" name="hora_cita" id="6:00pm" value="6:00pm" required>
+                                    <label for="6:00pm" class="boton-horas">6:00PM </label>
+
+                            </div>
+                        </div>
+                    </div>
 
 
-
-                    <p class="subtitles" style="padding-left:20px;">Selecciona la Hora:</p>
-                         <input type="radio">
-
-
-
-
-
-
-
-
-                    <label for='step2' id="back-step2" class="back">
-                        <div class="btn btn-default btn-primary btn-lg" role="button">Back</div>
+                    <label for='step2' id="back-step2">
+                        <div style="position: absolute; left:0; top: 0;">
+                            <img src="./svg/flecha-izq.svg" alt="">
+                            <span style="padding-left:10px; font-size: 18px;color: #2680EB;"> Regresar</span> 
+                        </div>
                       </label>
             
-            
-                      <label for='step3' id="continue-step3" class="continue">
-                        <div class="btn btn-default btn-success btn-lg" role="button">Continue</div>
-                      </label>
+                      <div style="display: flex; justify-content: center;">
+                        <label for='step3' id="continue-step3">
+                            <div class="subtitles" style="font-size: 20px;cursor: pointer;padding-top: 25px;">Continuar  ❯</div>
+                        </label>
+                    </div>
                 </div>
 
-                <div id="part3">
-                    Hola soy parte 3
-                    <label for='step3' id="back-step3" class="back">
-                        <div class="btn btn-default btn-primary btn-lg">Back</div>
+                <div id="part3"  style="position: relative;">
+                    <div style="margin-top: 50px;"></div>
+                    <label for="nombres_cliente" class="subtitles">Tu Nombre y Apellidos</label>
+                    <input type="text" name="nombres" id="nombres_cliente" placeholder=" Ejemplo: Juan Perez" required autocomplete="on">
+
+                    <label for="correo_cliente" class="subtitles">Correo Electrónico</label>
+                    <input type="email" name="email" id="correo_cliente" placeholder="Ejemplo: correo@gmail.com" required autocomplete="on">
+
+                    <label for="identidad_cliente" class="subtitles">Número de cédula / Identidad</label>
+                    <input type="number" name="identidad" id="identidad_cliente" placeholder="Ejemplo: 0801199001546" required autocomplete="on">
+
+                    <label for="celular_cliente" class="subtitles">Celular</label>
+                    <input type="number" name="nombres" id="celular_cliente" placeholder="Ejemplo: 9441-3447" required autocomplete="on">
+
+                    <label for="tyc" class="checkbox" style="font-weight: bold;">Acepto Condiciones
+                        <input type="checkbox" checked required id="tyc">
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="continue">
+                        <button type="submit" class="submit-boton" style="width: 100%; height: 50px;">¡ Agendar Mi Cita !</button>
                       </label>
-                      <label class="continue">
-                        <button type="submit" class="btn btn-default btn-success btn-lg">Submit</button>
-                      </label>
+
+                    <p style="font-size:14px;text-align: center;" class="text">
+                        Al agendar visita acepto crear mi cuenta en Atlas Home.
+                        Caso contrario almacenar tu cita en tu historial.
+                        Autorizo a Atlas Home a revisar mi buró financiero para proveer 
+                        un mejor servicio financiero y conectarte con la entidad bancaria 
+                        que mas se adapte a tí. Atlas Home y sus afiliados pueden contactarte 
+                        por los medios antes descritos para darle seguimiento a tu solicitud.
+                    </p>
+
+                    <p style="font-size:14px; text-align: center;" class="text">
+                        Ver <a href="" style="color: #0894FE;" target="_blank">Términos</a> Y 
+                        <a href="" style="color: #0894FE;" target="_blank">Condiciones</a> de Atlas Home. 
+                    </p>
+
+
+                    <label for='step3' id="back-step3">
+                        <div style="position: absolute; left:0; top: 0;">
+                            <img src="./svg/flecha-izq.svg" alt="">
+                            <span style="padding-left:10px; font-size: 18px;color: #2680EB;"> Regresar</span> 
+                        </div>
+                    </label>
+
                 </div>
 
             </form>
     
     </div>
 </div>
+
+
 
 <!--------------------------------------------------INICIA CONTENIDO PRINCIPAL-------------------------------------------------------------->
 
@@ -309,7 +384,7 @@
         
         <div>
             <p class="text"> Pago Mensual Estimado: <span style="color: #0894FE;"> L.49,548.90</span></p>
-            <button class="boton-credito"> Solicita tú Crédito</button>
+            <button class="boton-credito"  onclick="modalCR()"> Aplica a un Crédito para esta propiedad</button>
             <button class="boton-cita" onclick="modalCITA()"> Agenda una Cita</button>
         </div>
     </div>
@@ -452,7 +527,7 @@
             <div style="color: #0894FE;"> L.49,548.90</div>   
         </div>
         
-        <button class="boton-credito"> Solicita tú Crédito</button>
+        <button class="boton-credito"  onclick="modalCR()"> Aplica a un Crédito para esta propiedad</button>
         <button class="boton-credito" style="background-color:#0894FE;margin-top:0 ;" onclick="modalCITA()"> Agenda una Cita</button>
         
 
@@ -518,7 +593,7 @@
             </p>
         </div>
     
-        <button class="accordion">Datos de la Propiedad</button>
+        <button class="accordion">Datos de la Vivienda</button>
         <div class="panel">
             <br>
             <b class="titulo-propiedades" > Residencial El Hatillo </b><br>
@@ -532,7 +607,7 @@
             </p>
             <div class="space-between" style="margin: 5px 0 10px 0;">
                 <div class="text">
-                    Categoria de vivienda
+                    Categoria de Zona
                 </div>
                 <div style="color:#0894FE"> 
                  R-1
@@ -589,7 +664,7 @@
                     Área de lote
                 </div>
                 <div style="color:#0894FE">
-                    640M2
+                    5000M2 / 717.30VRS2
                 </div>
             </div>
 
@@ -626,22 +701,37 @@
             </a>
         </div>
 
-        <button class="fake-accordion"  onclick="filtrosEspecificos()"> 
-            Características de la Propiedad
-        </button>
-
-        <div id="caracteristicas" style="display: none;" class="caracteristicas">
-            <br>
-                <div class="titulo-propiedades" style="padding-left:18px;">Haz clic en las opciones </div>
-            <button class="child-accordion" >Comodidades</button>
-                <div class="child-panel">
+        <!--Falta añadir mas clases, pendiente para v-1.0-->
+        <button class="accordion">Amenidades de la Vivienda </button>
+            <div class="panel">
+                    <div  class="checkbox text" style="padding-left: 85px;">Walk In Closet
+                        <img src="./svg/filtros/comodidades/wc.svg" alt="i" class="icono-filtros">
+                    </div>
+                    <div  class="checkbox text" style="padding-left: 85px;">Balcones
+                        <img src="./svg/filtros/comodidades/balcon.svg" alt="i" class="icono-filtros">
+                    </div>
+                    <div  class="checkbox text" style="padding-left: 85px;">Alacena 
+                        <img src="./svg/filtros/comodidades/alacena.svg" alt="i" class="icono-filtros">
+                    </div>
+                    <div  class="checkbox text" style="padding-left: 85px;">Parqueo Techado
+                        <img src="./svg/filtros/proyecto/parqueo_techado.svg" alt="i" class="icono-filtros">
+                    </div>
+                    <div  class="checkbox text" style="padding-left: 85px;"> Bañera
+                        <img src="./svg/filtros/comodidades/banera.svg" alt="i" class="icono-filtros">
+                    </div>
+                    <div  class="checkbox text" style="padding-left: 85px;"> Acesso a discapacitados
+                        <img src="./svg/filtros/proyecto/acceso_discapacitados.svg" alt="i" class="icono-filtros">
+                    </div>
                     <div  class="checkbox text" style="padding-left: 85px;">Aire Acondicionado
                         <img src="./svg/filtros/comodidades/ac.svg" alt="i" class="icono-filtros">
                     </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Area Social Propia
+                    <div  class="checkbox text" style="padding-left: 85px;">Aire Acondicionado Central
+                        <img src="./svg/filtros/comodidades/aireCentral.svg" alt="i" class="icono-filtros">
+                    </div>
+                    <div  class="checkbox text" style="padding-left: 85px;">Área Social Propia
                         <img src="./svg/filtros/comodidades/area_social.svg" alt="i" class="icono-filtros">
                     </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Area de bar
+                    <div  class="checkbox text" style="padding-left: 85px;">Área de bar
                         <img src="./svg/filtros/comodidades/bar.svg" alt="i" class="icono-filtros">
                     </div>
                     <div  class="checkbox text" style="padding-left: 85px;">Piscina
@@ -659,45 +749,121 @@
                     <div  class="checkbox text" style="padding-left: 85px;">Sistema de Sonido
                         <img src="./svg/filtros/comodidades/sonido_integrado.svg" alt="i" class="icono-filtros">
                     </div>
-                </div>
-        
-            <button class="child-accordion">Seguridad</button>
-            <div class="child-panel">
-                <div  class="checkbox text" style="padding-left: 85px;">Circuito Cerrado
-                    <img src="./svg/filtros/seguridad/circuito_cerrado.svg" alt="i" class="icono-filtros">
-                </div>
-                <div  class="checkbox text" style="padding-left: 85px;">Vigilancia
-                    <img src="./svg/filtros/seguridad/vigilancia.svg" alt="i" class="icono-filtros">
-                </div>
-                <div  class="checkbox text" style="padding-left: 85px;">Sistema de Vigilancia
-                    <img src="./svg/filtros/seguridad/sistema_vigilancia.svg" alt="i" class="icono-filtros">
-                </div>
-                <div  class="checkbox text" style="padding-left: 85px;">Muro Perimetral
-                    <img src="./svg/filtros/seguridad/proteccion_perimetral.svg" alt="i" class="icono-filtros">
-                </div>
+                    <div  class="checkbox text" style="padding-left: 85px;">Lavanderia Techada
+                        <img src="./svg/filtros/comodidades/lavadora.svg" alt="i" class="icono-filtros">
+                    </div>
+                    <div  class="checkbox text" style="padding-left: 85px;">Bodega
+                        <img src="./svg/filtros/comodidades/bodega.svg" alt="i" class="icono-filtros">
+                    </div>
+                    <div  class="checkbox text" style="padding-left: 85px;">Mobiliario Incluido
+                        <img src="./svg/filtros/comodidades/mobiliarioincluido.svg" alt="i" class="icono-filtros">
+                    </div>
+                    <div  class="checkbox text" style="padding-left: 85px;">Jacuzzi
+                        <img src="./svg/filtros/comodidades/jacuzzi.svg" alt="i" class="icono-filtros">
+                    </div>
+                    <div  class="checkbox text" style="padding-left: 85px;">Sauna
+                        <img src="./svg/filtros/comodidades/sauna.svg" alt="i" class="icono-filtros">
+                    </div>
+                    <div  class="checkbox text" style="padding-left: 85px;">Smart Home
+                        <img src="./svg/filtros/comodidades/smarthome.svg" alt="i" class="icono-filtros">
+                    </div>
+                    <div  class="checkbox text" style="padding-left: 85px;">Sótano
+                        <img src="./svg/filtros/comodidades/sotano.svg" alt="i" class="icono-filtros">
+                    </div>
+                    <div  class="checkbox text" style="padding-left: 85px;">Sala Cine
+                        <img src="./svg/filtros/comodidades/sala_cine.svg" alt="i" class="icono-filtros">
+                    </div>
+                    <div  class="checkbox text" style="padding-left: 85px;">Vistas
+                        <img src="./svg/filtros/comodidades/vistas.svg" alt="i" class="icono-filtros">
+                    </div>
+                    <div  class="checkbox text" style="padding-left: 85px;">Dormitorio Servidumbre
+                        <img src="./svg/filtros/comodidades/dorm_servidumbre.svg" alt="i" class="icono-filtros">
+                    </div>
+                    <div  class="checkbox text" style="padding-left: 85px;">Cisterna
+                        <img src="./svg/filtros/servicios/cisterna.svg" alt="i" class="icono-filtros">
+                    </div>
+                    <div  class="checkbox text" style="padding-left: 85px;">Generador Eléctrico
+                        <img src="./svg/filtros/servicios/generador_electrico.svg" alt="i" class="icono-filtros">
+                    </div>              
+                    <div  class="checkbox text" style="padding-left: 85px;">Sistema de Vigilancia
+                        <img src="./svg/filtros/seguridad/sistema_vigilancia.svg" alt="i" class="icono-filtros">
+                    </div>
+                    <div  class="checkbox text" style="padding-left: 85px;">Muro Perimetral
+                        <img src="./svg/filtros/seguridad/proteccion_perimetral.svg" alt="i" class="icono-filtros">
+                    </div>
+                    <div  class="checkbox text" style="padding-left: 85px;">Ecológica
+                        <img src="./svg/filtros/servicios/ecologica.svg" alt="i" class="icono-filtros">
+                    </div>
+                    <div  class="checkbox text" style="padding-left: 85px;">Calentador de Agua
+                        <img src="./svg/filtros/servicios/calentador.svg" alt="i" class="icono-filtros">
+                    </div>
+                    <div  class="checkbox text" style="padding-left: 85px;">Tinaco
+                        <img src="./svg/filtros/servicios/tinaco.svg" alt="i" class="icono-filtros">
+                    </div>
+                    <div  class="checkbox text" style="padding-left: 85px;">Fosa Séptica
+                        <img src="./svg/filtros/servicios/fosa_septica.svg" alt="i" class="icono-filtros">
+                    </div>  
             </div>
 
-            <button class="child-accordion">Servicios</button>
-            <div class="child-panel">
-            
-                <div  class="checkbox text" style="padding-left: 85px;">Acceso Pavimentado
+          
+            <button class="accordion">Amenidades de la Urbanización </button>
+            <div class="panel">
+
+                <div  class="checkbox text" style="padding-left: 85px;">Calles Pavimentadas
                     <img src="./svg/filtros/servicios/pavimentado.svg" alt="i" class="icono-filtros">
                 </div>
                 <div  class="checkbox text" style="padding-left: 85px;">Alcantarillado
                     <img src="./svg/filtros/servicios/alcantarillado.svg" alt="i" class="icono-filtros">
                 </div>
-                <div  class="checkbox text" style="padding-left: 85px;">Cisterna
-                    <img src="./svg/filtros/servicios/cisterna.svg" alt="i" class="icono-filtros">
+                <div  class="checkbox text" style="padding-left: 85px;">Circuito Cerrado
+                    <img src="./svg/filtros/seguridad/circuito_cerrado.svg" alt="i" class="icono-filtros">
                 </div>
-                <div  class="checkbox text" style="padding-left: 85px;">Generador Eléctrico
-                    <img src="./svg/filtros/servicios/generador_electrico.svg" alt="i" class="icono-filtros">
+                <div  class="checkbox text" style="padding-left: 85px;">Vigilancia
+                    <img src="./svg/filtros/seguridad/vigilancia.svg" alt="i" class="icono-filtros">
+                </div>     
+                <div  class="checkbox text" style="padding-left: 85px;">Área social común
+                    <img src="./svg/filtros/comodidades/area_social.svg" alt="i" class="icono-filtros">
+                </div>
+                <div  class="checkbox text" style="padding-left: 85px;">Piscina común
+                    <img src="./svg/filtros/comodidades/pisicina.svg" alt="i" class="icono-filtros">
+                </div>
+                <div  class="checkbox text" style="padding-left: 85px;">Gimnasio común
+                    <img src="./svg/filtros/comodidades/gym.svg" alt="i" class="icono-filtros">
+                </div>
+                <div  class="checkbox text" style="padding-left: 85px;">Área de juegos
+                    <img src="./svg/filtros/proyecto/area_juegos.svg" alt="i" class="icono-filtros">
+                </div>
+                <div  class="checkbox text" style="padding-left: 85px;">Canchas deportivas
+                    <img src="./svg/filtros/proyecto/cancha_deportiva.svg" alt="i" class="icono-filtros">
+                </div>
+                <div  class="checkbox text" style="padding-left: 85px;">Mirador
+                    <img src="./svg/filtros/proyecto/mirador.svg" alt="i" class="icono-filtros">
+                </div>
+                <div  class="checkbox text" style="padding-left: 85px;">Área de bosque
+                    <img src="./svg/filtros/proyecto/area_bosque.svg" alt="i" class="icono-filtros">
+                </div>
+                <div  class="checkbox text" style="padding-left: 85px;">Área verde
+                    <img src="./svg/filtros/proyecto/area_verde.svg" alt="i" class="icono-filtros">
+                </div>
+                <div  class="checkbox text" style="padding-left: 85px;">Salon de eventos
+                    <img src="./svg/filtros/proyecto/salon_eventos.svg" alt="i" class="icono-filtros">
+                </div>
+                <div  class="checkbox text" style="padding-left: 85px;">Área Comercial
+                    <img src="./svg/filtros/proyecto/comercio.svg" alt="i" class="icono-filtros">
                 </div>
                 <div  class="checkbox text" style="padding-left: 85px;">Telecomunicaciones
                     <img src="./svg/filtros/servicios/servicios_telecomunicacion.svg" alt="i" class="icono-filtros">
+                </div>    
+                <div  class="checkbox text" style="padding-left: 85px;">Agua de Pozo
+                    <img src="./svg/filtros/servicios/agua_pozo.svg" alt="i" class="icono-filtros">
                 </div>
+                <div  class="checkbox text" style="padding-left: 85px;">Agua Municipal
+                    <img src="./svg/filtros/servicios/agua_municipal.svg" alt="i" class="icono-filtros">
+                </div>
+                   
 
             </div>
-        </div>
+        
 
         <button class="accordion">Datos Legales</button>
         <div class="panel">
@@ -796,7 +962,7 @@
         <div id="map" class=" mapa"></div>
     </div>
     
-    <div class="right-column" >
+    <div class="right-column">
 
         <div style="display: flex; justify-content: flex-start; margin: 25px 0;">
             <div class="burbuja" style="background-color: #3ecfaf;">
@@ -1056,7 +1222,7 @@
 
       </div>
     </div>
-    <button id="prev">
+    <button id="prev" class="prev">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -1067,7 +1233,7 @@
         <path d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z" />
       </svg>
     </button>
-    <button id="next">
+    <button id="next" class="next">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -1101,10 +1267,39 @@
 
 
 
-<script src="./general.js"></script>
-<script src="./vivienda.js"></script>
+<script src="js/general.js"></script>
+<script src="js/vivienda.js"></script>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyu42Bui8Qnyp8kLOVO4hMJHTd20HTHag"></script>
 <script src="./mapas/whitemap.js"></script>
+<script src="./calendario/vanilla-calendar.js"></script>
+<script>
+    let pastDates = false, availableDates = false, availableWeekDays = false
+    
+    let calendar = new VanillaCalendar({
+        selector: "#myCalendar",
+        shortWeekday: ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'],
+        onSelect: (data, elem) => {
+            console.log(data)
+            //convertir formato de fecha a uno distinto
+            data = new Date()
+            let fechaSeleccionada = data.getDate() + "-" + (data.getMonth() + 1) + "-" + data.getFullYear()
+            console.log(fechaSeleccionada)
+        }
+    })
+    //desabilitar fechas pasadas a hoy
+    calendar.set({pastDates: pastDates})
+    //desabilitar fechas y solo dejar fechas especificas
+    calendar.set({availableDates: [
+        //{date: '2021-01-12'},
+        //{date: '2021-01-13'}
+    ], datesFilter: false})
+    //desabilitar dias distintos a los ingresados
+    calendar.set({availableWeekDays: [
+        {day: 'lunes'},
+        {day: 'miercoles'},
+        {day: 'martes'},
+    ], datesFilter: false})
+</script>
 
 </body>
 

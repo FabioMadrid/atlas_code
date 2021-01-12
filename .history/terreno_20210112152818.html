@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/8bf4511c4b.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./general.css">
-    <link rel="stylesheet" href="./vivienda.css">
+    <link rel="stylesheet" href="./calendario/style_calendar.css">
+    <link rel="stylesheet" href="./calendario/vanilla-calendar.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/vivienda.css">
     <link rel="stylesheet" href="https://atlas-home-colombia.s3.amazonaws.com/fonts/fonts.css">
     <title>Atlas Home</title>
 </head>
@@ -21,27 +23,9 @@
         <div class="column-85">
                 <button class="boton-registro" id="boton-registro" onclick="modalR()">Registrarme</button>
                 <button class="boton-ingresar" id="boton-ingresar" onclick="modalI()">Ingresar</button>
-            <div class="dropdown">
-                <button class="dropbtn" onclick="modalCR()">Crédito Hipotecario</button>
-                    <!--
-                    <div class="dropdown-content">
-                        <a href="#credito-vivienda">Compra de Vivienda</a>
-                        <a href="#credito-construccion">Construcción</a>
-                        <a href="#credito-libre-inversion">Libre Inversión</a>
-                        <a href="#credito-compra-cartera">Compra de Cartera</a>
-                        <a href="#credito-remodelaciones">Remodelaciones</a>
-                    </div>-->
+                
             </div>
-            <div class="dropdown">
-                <button class="dropbtn" onclick="modalV()">Vender</button>
-                <!--
-                    <div class="dropdown-content">
-                        <a href="#vender-vivienda">Como Persona Natural</a>
-                        <a href="#vender-constructora">Como Constructora</a>
-                        <a href="#vender-inmobiliaria">Como Bienes Raíces</a>
-                    </div>-->
-            </div>
-            <a href="javascript:void(0);" style="font-size:35px;" class="icon" onclick="HamburgerFuction()">&#9776;</a>
+            <a href="javascript:void(0);" style="font-size:35px;top: 0; right: 0;" class="icon" onclick="HamburgerFuction()">&#9776;</a>
         </div> 
     </div> 
     
@@ -60,7 +44,11 @@
             <div id="registro_usuario" class="tabcontent">
             <p class="text" style="text-align: left;clear: both;padding-top: 25px;">Crea una cuenta personal.</p> 
             <p style="display: block; text-align:left;" class="text">
-                ¿Ya tienes cuenta personal?   <a href="#" style="color: #0894FE;">  Ingresa Aquí</a></p>
+
+                ¿Ya tienes cuenta personal?   
+                <span  style="color: #0894FE;" onclick="">  Ingresa Aquí</span>
+            
+            </p>
             <form action="" method="POST"> 
                 <input type="text" placeholder="Tu Nombre y Apellido" name="registro-usuario" id="nombre-apellido-usuario-registro" required>
                 <input type="email" placeholder="Tu Correo Electrónico" name="registro-usuario" id="email-usuario-registro" required>
@@ -76,8 +64,11 @@
             <div id="registro_empresa" class="tabcontent">
                 <p class="text" style="text-align: left;clear: both;padding-top: 25px;">Crea una cuenta Empresarial.</p> 
                 <p style="display: block; text-align:left;" class="text">
-                    ¿Ya tienes cuenta empresarial?   <a href="#" style="color: #0894FE;">  Ingresa Aquí</a></p>
-                <form action="" method="POST"> 
+                    ¿Ya tienes cuenta empresarial?   
+                    <span style="color: #0894FE;" onclick="">  Ingresa Aquí</span>
+
+                </p>
+                <form action="./perfil_vendedor.html" method="POST"> 
                     <input type="text" placeholder="Nombre de Empresa" name="nombre-empresa" id="nombre-empresa-registro" required title="Nombre Comercial">
                     <input type="email" placeholder="Correo Electrónico Empresarial" name="email-empresa" id="email-empresa-registro" required title="Correo de Contacto">
                     <input type="password" placeholder="Introduce tu Contraseña" name="psw-empresa" id="psw-empresa-registro" required 
@@ -85,10 +76,9 @@
                     <input type="number" placeholder="Registro Tributario Empresa" name="rtn-empresa" id="rtn-empresa-registro" 
                     title="RTN debe contener 14 números" required pattern=".{8,}">
                     <select name="tipo-empresa-registro" id="tipo-empresa" class="minimal" required style="width: 100%;">
-                        <option value="constructora">Constructora</option>
-                        <option value="bienes-raices">Bienes Raices</option>
-                        <option value="independiente">Independiente</option>
-                        <option value="otro">Otro</option>
+                        <option value="desarollador_inmobiliario">Desarollador Inmobiliario / Constructora</option>
+                        <option value="bienes_raices">Bienes Raices</option>
+                        <option value="propetario_vendedor">Propetario Vendedor</option>
                     </select>
                     <input type="tel" style="margin-top: 10px;" placeholder="Celular de Contacto" name="celular-empresa-registro" 
                     id="telefono-empresa-registro" required minlength="8">
@@ -128,7 +118,7 @@
         </div>
 
         <div id="ingreso_empresa" class="tabcontent">
-            <form action="" method="POST">
+            <form action="./perfil_vendedor.html" method="POST">
                 <p class="text" style="text-align: left;clear: both; padding-top: 25px;">Ingresa a tú perfil Empresarial.</p>   
                 <p style="display: block; text-align:left;" class="text">
                     ¿No tienes cuenta empresarial?   <a href="#" style="color: #0894FE;">  Registrate Aquí</a></p>              
@@ -148,15 +138,16 @@
 
 <div id="modal-cita" class="modal">
     <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
-    <div class="modal-content overflow" style="min-height: 600px;">
+    <div class="modal-content overflow" style="min-height: 600px;" >
 
-            <div class="show-mobile-2 correcion-cita" style="background-color:rgba(156, 156, 156, 0.219); height: 1px;"></div>
-            <h3 class="titulo-modal subtitles ">Agenda tú cita con el vendedor</h3>
-            <form action="" method="POST">
+            <div class="show-mobile-2 correcion-cita"></div>
+            
+            <form action="" method="POST" >
                 <input id="step2" type="checkbox">
                 <input id="step3" type="checkbox">
 
                 <div id="part1">
+                    <h3 class="titulo-modal subtitles ">Agenda tú cita</h3>
                     <p class="text" style="padding: 0 10%;text-align: center;font-size: 14px;">
                     Te conectamos directamente con el vendedor 
                     de la propiedad. Te puede atender de forma 
@@ -165,19 +156,17 @@
 
                     <p class="subtitles" style="padding-left:20px;">Selecciona tipo de cita:</p>
 
+                    <div class="space-between" style="margin: 0 0 25px 0; flex-flow: row nowrap;">
 
+                        <input type="radio" id="citapresencial" name="cita_tipo" value="citapresencial" required checked>
+                        <label for="citapresencial" class="b-tipo-cita tablinks"  onclick="openRegistro(event, 'cita_presencial')">Presencial</label>
 
-                    <div class="space-between" style="margin: 0 0 25px 0;">
-
-                        <input type="radio" id="citapresencial" name="cita_tipo" value="citapresencial" checked>
-                        <label for="citapresencial" class="b-tipo-cita tablinks" onclick="openRegistro(event, 'cita_presencial')" id="defaultOpen">Presencial</label>
-
-                        <input type="radio" id="citavirtual" name="cita_tipo" value="citavirtual">
+                        <input type="radio" id="citavirtual" name="cita_tipo" value="citavirtual" required>
                         <label for="citavirtual" class="b-tipo-cita tablinks" onclick="openRegistro(event, 'cita_virtual')">Video Llamada</label>
-
+                      
                     </div>
 
-                    <div id="cita_presencial" class="tabcontent">
+                    <div id="cita_presencial" class="tabcontent" style="display: block;">
                         <div style="display: flex;justify-content: center;">
                             <img src="./svg/pareja_tapabocas.svg" alt="." style="height: 210px;">
                         </div>
@@ -188,7 +177,7 @@
                         </p>
                         <div style="display: flex; justify-content: center;">
                             <label for="step2" id="continue-step2">
-                                <div class="subtitles" style="font-size: 20px;cursor: pointer;">Continuar</div>
+                                <div class="subtitles" style="font-size: 20px;cursor: pointer;">Continuar  ❯</div>
                             </label>
                         </div>
                     </div>
@@ -206,46 +195,128 @@
                         </p>
                         <div style="display: flex; justify-content: center;">
                             <label for="step2" id="continue-step2">
-                                <div class="subtitles" style="font-size: 20px;cursor: pointer;">Continuar</div>
+                                <div class="subtitles" style="font-size: 20px;cursor: pointer;">Continuar  ❯</div>
                             </label>
                         </div>
                     </div>
 
                 </div>
 
-                <div id="part2">
-                    <p class="subtitles" style="padding-left:20px;">Selecciona la Fecha:</p>
+                <div id="part2" style="position: relative;">
+
+                    <p class="subtitles" style="margin-top: 50px;">Selecciona la Fecha:</p>
+                        <!--<div style="display: flex;justify-content: center;">
+                            <img src="./svg/Calendario.svg" alt="" style="cursor: pointer;" onclick="">
+                        </div>-->
+                        <div class="content">
+                            <div id="myCalendar" class="vanilla-calendar" style="margin-bottom: 20px"></div>
+                        </div>
+
+                    <p class="subtitles" style="margin-bottom: 0;">Selecciona la Hora:</p>
+                    <div class="text">Desliza para escoger una hora:</div>
+                         
+                    <div class="wrapper">
+                        <div class="carousel-tabs" >
+                            <div class="content-tabs" style="height: 60px;">
+                              
+                                    
+                                    <input type="radio" name="hora_cita" id="8:00am" value="8:00am" required>
+                                    <label for="8:00am" class="boton-horas">8:00AM</label>
+                  
+                                    <input type="radio" name="hora_cita" id="9:00am" value="9:00am" required>
+                                    <label for="9:00am" class="boton-horas">9:00AM</label>
+  
+                                    <input type="radio" name="hora_cita" id="10:00am" value="10:00am" required checked>
+                                    <label for="10:00am" class="boton-horas">10:00AM</label>
+                                    
+                                    <input type="radio" name="hora_cita" id="11:00am" value="11:00am" required>
+                                    <label for="11:00am" class="boton-horas">11:00AM</label>
+
+                                    <input type="radio" name="hora_cita" id="12:00am" value="12:00am" required>
+                                    <label for="12:00am" class="boton-horas">12:00AM</label>
+ 
+                                    <input type="radio" name="hora_cita" id="1:00pm" value="1:00pm" required>
+                                    <label for="1:00pm" class="boton-horas">1:00PM</label>   
+         
+                                    <input type="radio" name="hora_cita" id="2:00pm" value="2:00pm" required>
+                                    <label for="2:00pm" class="boton-horas">2:00PM</label>
+
+                                    <input type="radio" name="hora_cita" id="3:00pm" value="3:00pm" required>
+                                    <label for="3:00pm" class="boton-horas">3:00PM</label>
+   
+                                    <input type="radio" name="hora_cita" id="4:00pm" value="4:00pm" required>
+                                    <label for="4:00pm" class="boton-horas">4:00PM</label>
+                                    
+                                    <input type="radio" name="hora_cita" id="5:00pm" value="5:00pm" required>
+                                    <label for="5:00pm" class="boton-horas">5:00PM </label>
+                                    
+                                    <input type="radio" name="hora_cita" id="6:00pm" value="6:00pm" required>
+                                    <label for="6:00pm" class="boton-horas">6:00PM </label>
+
+                            </div>
+                        </div>
+                    </div>
 
 
-
-                    <p class="subtitles" style="padding-left:20px;">Selecciona la Hora:</p>
-                         <input type="radio">
-
-
-
-
-
-
-
-
-                    <label for='step2' id="back-step2" class="back">
-                        <div class="btn btn-default btn-primary btn-lg" role="button">Back</div>
+                    <label for='step2' id="back-step2">
+                        <div style="position: absolute; left:0; top: 0;">
+                            <img src="./svg/flecha-izq.svg" alt="">
+                            <span style="padding-left:10px; font-size: 18px;color: #2680EB;"> Regresar</span> 
+                        </div>
                       </label>
             
-            
-                      <label for='step3' id="continue-step3" class="continue">
-                        <div class="btn btn-default btn-success btn-lg" role="button">Continue</div>
-                      </label>
+                      <div style="display: flex; justify-content: center;">
+                        <label for='step3' id="continue-step3">
+                            <div class="subtitles" style="font-size: 20px;cursor: pointer;padding-top: 25px;">Continuar  ❯</div>
+                        </label>
+                    </div>
                 </div>
 
-                <div id="part3">
-                    Hola soy parte 3
-                    <label for='step3' id="back-step3" class="back">
-                        <div class="btn btn-default btn-primary btn-lg">Back</div>
+                <div id="part3"  style="position: relative;">
+                    <div style="margin-top: 50px;"></div>
+                    <label for="nombres_cliente" class="subtitles">Tu Nombre y Apellidos</label>
+                    <input type="text" name="nombres" id="nombres_cliente" placeholder=" Ejemplo: Juan Perez" required autocomplete="on">
+
+                    <label for="correo_cliente" class="subtitles">Correo Electrónico</label>
+                    <input type="email" name="email" id="correo_cliente" placeholder="Ejemplo: correo@gmail.com" required autocomplete="on">
+
+                    <label for="identidad_cliente" class="subtitles">Número de cédula / Identidad</label>
+                    <input type="number" name="identidad" id="identidad_cliente" placeholder="Ejemplo: 0801199001546" required autocomplete="on">
+
+                    <label for="celular_cliente" class="subtitles">Celular</label>
+                    <input type="number" name="nombres" id="celular_cliente" placeholder="Ejemplo: 9441-3447" required autocomplete="on">
+
+                    <label for="tyc" class="checkbox" style="font-weight: bold;">Acepto Condiciones
+                        <input type="checkbox" checked required id="tyc">
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="continue">
+                        <button type="submit" class="submit-boton" style="width: 100%; height: 50px;">¡ Agendar Mi Cita !</button>
                       </label>
-                      <label class="continue">
-                        <button type="submit" class="btn btn-default btn-success btn-lg">Submit</button>
-                      </label>
+
+                    <p style="font-size:14px;text-align: center;" class="text">
+                        Al agendar visita acepto crear mi cuenta en Atlas Home.
+                        Caso contrario almacenar tu cita en tu historial.
+                        Autorizo a Atlas Home a revisar mi buró financiero para proveer 
+                        un mejor servicio financiero y conectarte con la entidad bancaria 
+                        que mas se adapte a tí. Atlas Home y sus afiliados pueden contactarte 
+                        por los medios antes descritos para darle seguimiento a tu solicitud.
+                    </p>
+
+                    <p style="font-size:14px; text-align: center;" class="text">
+                        Ver <a href="" style="color: #0894FE;" target="_blank">Términos</a> Y 
+                        <a href="" style="color: #0894FE;" target="_blank">Condiciones</a> de Atlas Home. 
+                    </p>
+
+
+                    <label for='step3' id="back-step3">
+                        <div style="position: absolute; left:0; top: 0;">
+                            <img src="./svg/flecha-izq.svg" alt="">
+                            <span style="padding-left:10px; font-size: 18px;color: #2680EB;"> Regresar</span> 
+                        </div>
+                    </label>
+
                 </div>
 
             </form>
@@ -253,13 +324,15 @@
     </div>
 </div>
 
+
+
 <!--------------------------------------------------INICIA CONTENIDO PRINCIPAL-------------------------------------------------------------->
 
 <div class="titulo-inmueble hide-mobile" style="margin-top: 95px;" id="titulo-propiedad">
     <div class="space-between" style="margin-top: 5px;">
         <div>
-            <h2 class="titulo-propiedades" style="display: inline"> Residencial El Hatillo </h2>
-            <h2 class="text-t" style="display: inline;font-size: 20px;">Modelo Jazmín</h2>
+            <h2 class="titulo-propiedades" style="display: inline"> El Sauce </h2>
+            <h2 class="text-t" style="display: inline;font-size: 20px;">Los Nopales</h2>
         </div>
         <div>
             <a href="" style="margin: 0 10px;">
@@ -273,17 +346,22 @@
         </div>
     </div>
     <div class="space-between" style="margin-top: 5px;">
-        <div class="text-t" style="display: inline;"> <span style="color:#0894FE"> Precio de Venta: </span> L.4,500,000</div>
-        <div class="text-t" style="display: inline;"> <span style="color:#0894FE"> Precio de Renta: </span> L.42,000</div>
-        <div class="text-t" style="display: inline;"> 
-            3 <span style="color:#0894FE"> Habs </span>
-             | 2 <span style="color:#0894FE"> Baños </span> 
-             | 78 <span style="color:#0894FE"> M2 </span>
-        </div>
-        <div class="text-t" style="display: inline;"> Área de lote: <span style="color:#0894FE"> 320m2</span></div>
+        <div class="text-t" style="display: inline;"> <span style="color:#0894FE"> Precio de Venta: </span> L.1,300,000</div>
+    <!--<div class="text-t" style="display: inline;"> <span style="color:#0894FE"> Precio de Renta: </span> L.42,000</div>-->
         
         <div class="text-t" style="display: inline;"> 
-            Estado: <span style="color:#0894FE"> Usada</span></div>
+            Área: <span style="color:#0894FE"> 170M2 / 246.70VR2</span>
+        </div>
+
+        <div class="text-t" style="display: inline;"> 
+            Topografía: <span style="color:#0894FE"> Plana</span>
+        </div>
+
+        <div class="text-t" style="display: inline;"> 
+            Categoría: <span style="color:#0894FE"> R-1</span>
+        </div>
+
+
     </div>
 </div>
 
@@ -297,19 +375,19 @@
             <div class="proyecto">
                 <img src="./img/logotipo-oak-tree.jpg" alt="logo" class="logo-proyecto">
                 <p class="text" style="display: block;">Propiedad forma parte del proyecto:<br>
-                <span style="color: #0894FE;">Portal de los Pinos</span><br>
+                <span style="color: #0894FE;">Los Nopales</span><br>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
+                <span class="fa fa-star checked"></span>
                 </p>
             </div>
         </a>
         
         <div>
             <p class="text"> Pago Mensual Estimado: <span style="color: #0894FE;"> L.49,548.90</span></p>
-            <button class="boton-credito"> Solicita tú Crédito</button>
+            <button class="boton-credito"  onclick="modalCR()"> Aplica a un Crédito para esta propiedad</button>
             <button class="boton-cita" onclick="modalCITA()"> Agenda una Cita</button>
         </div>
     </div>
@@ -321,31 +399,31 @@
             <div id="fotos" class="mediacontent">   
         
                 <div class="imgSlides fade">
-                    <img src="./img/vivienda/1.jpg" class="fotos">
+                    <img src="./img/terrenos/1.jpg" class="fotos">
                 </div>
           
                 <div class="imgSlides fade">
-                    <img src="./img/vivienda/2.jpg" class="fotos">
+                    <img src="./img/terrenos/2.jpg" class="fotos">
                 </div>
           
                 <div class="imgSlides fade">
-                    <img src="./img/vivienda/3.jpg" class="fotos">
+                    <img src="./img/terrenos/3.jpg" class="fotos">
                 </div>
 
                 <div class="imgSlides fade">
-                    <img src="./img/vivienda/4.jpg" class="fotos">
+                    <img src="./img/terrenos/4.jpg" class="fotos">
                 </div>
 
                 <div class="imgSlides fade">
-                    <img src="./img/vivienda/5.jpg" class="fotos">
+                    <img src="./img/terrenos/5.jpg" class="fotos">
                 </div>
             
                 <div class="imgSlides fade">
-                    <img src="./img/vivienda/6.jpg" class="fotos">
+                    <img src="./img/terrenos/6.png" class="fotos">
                 </div>
 
                 <div class="imgSlides fade">
-                    <img src="./img/vivienda/7.jpg" class="fotos">
+                    <img src="./img/terrenos/7.jpg" class="fotos">
                 </div>
               
                 <!-- Next and previous buttons -->
@@ -363,10 +441,10 @@
                 </div>
             </div>
       
-            <!--Tour Virtual-->
-            <div id="tv" class="mediacontent">
+            <!--Video con Drone-->
+            <div id="video" class="mediacontent">
 
-            <iframe class="embed-responsive" src="https://my.matterport.com/show/?m=5V8ZdwUHQPy&play=1&qs=1&tiles=1&vr=0&title=0&help=2&tourcta=2&hlr=2" 
+            <iframe class="embed-responsive" src="https://www.youtube.com/embed/y_X7yK_ArgM" 
             allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" data-hj-allow-iframe="">
             </iframe>
 
@@ -374,7 +452,7 @@
 
             <!--Planos-->
             <div id="planos" class="mediacontent">
-                <img src="./img/vivienda/a1.png" class="fotos">
+                <img src="./img/terrenos/poligono.jpg" class="fotos">
             </div>
 
             <!--Mapa-->
@@ -388,7 +466,7 @@
             <!--Google Street View-->
             <div id="stv" class="mediacontent">
                 <iframe class="embed-responsive"  
-                src="https://www.google.com/maps/embed/v1/streetview?key=AIzaSyCyu42Bui8Qnyp8kLOVO4hMJHTd20HTHag&location=4.665099, -74.042736&heading=180" 
+                src="https://www.google.com/maps/embed/v1/streetview?key=AIzaSyCyu42Bui8Qnyp8kLOVO4hMJHTd20HTHag&location=4.697045, -74.028141&heading=180" 
                 allowfullscreen="" aria-hidden="false" tabindex="0">
                 </iframe>
             </div>
@@ -402,7 +480,7 @@
             <div class="carousel-tabs">
                 <div class="content-tabs" >
                     <button class="medialink" onclick="showMedia(event,'fotos')" id="open" style="margin-left: 0;">Fotos</button>
-                    <button class="medialink" onclick="showMedia(event,'tv')" >Tour Virtual</button>
+                    <button class="medialink" onclick="showMedia(event,'video')" >Video</button>
                     <button class="medialink" onclick="showMedia(event,'planos')">Planos</button>
                     <button class="medialink" onclick="showMedia(event,'mapa')">Mapa</button>
                     <button class="medialink" onclick="showMedia(event,'stv')" style="margin-right: 0;">G. Street View</button>
@@ -420,27 +498,27 @@
         
         <div class="space-between" style="margin-top: 5px;">
             <div>
-                <h2 class="titulo-propiedades" style="display: inline"> Residencial El Hatillo </h2>       
+                <h2 class="titulo-propiedades" style="display: inline"> El Sauce</h2>       
             </div>
             <div>
-                <div class="text-t" style="font-size: 20px;color: #081C33;font-weight: bold;">  L.4,500,000</div>           
+                <div class="text-t" style="font-size: 20px;color: #081C33;font-weight: bold;">  L.1,300,000</div>           
             </div>
         </div>
-        <h2 class="text-t" style="display: inline;font-size: 20px;">Modelo Jazmín</h2>
+        <h2 class="text-t" style="display: inline;font-size: 20px;">Los Nopales</h2>
         <div class="space-between" style="margin-top: 5px;">
-                     
-            <div class="text-t" style="display: inline;"> 
-                3 <span style="color:#0894FE"> Habs </span>
-                 | 2 <span style="color:#0894FE"> Baños </span> 
-                 | 78 <span style="color:#0894FE"> M2 </span>
-            </div>
+                   
+        <div class="text-t" style="display: inline;"> 
+            Área: <span style="color:#0894FE"> 170M2 / 246.70VR2</span>
+        </div>
 
-            <div class="text-t" style="display: inline;"> <span style="color:#0894FE"> Precio de Renta: </span> L.42,000</div>
+        <div class="text-t" style="display: inline;"> 
+            Topografía: <span style="color:#0894FE"> Plana</span>
+        </div>
 
-            <div class="text-t" style="display: inline;"> Área de lote: <span style="color:#0894FE"> 320m2</span></div>
-            
-            <div class="text-t" style="display: inline;"> 
-                Estado: <span style="color:#0894FE"> Usada</span></div>
+        <div class="text-t" style="display: inline;"> 
+            Categoría: <span style="color:#0894FE"> R-1</span>
+        </div>
+
         </div>
     </div>
     
@@ -449,10 +527,10 @@
 
         <div style="font-size: 18px;" class="space-between">
             <div class="text"> Pago Mensual Estimado: </div>
-            <div style="color: #0894FE;"> L.49,548.90</div>   
+            <div style="color: #0894FE;"> L.12,548.90</div>   
         </div>
         
-        <button class="boton-credito"> Solicita tú Crédito</button>
+        <button class="boton-credito"  onclick="modalCR()"> Aplica a un Crédito para esta propiedad</button>
         <button class="boton-credito" style="background-color:#0894FE;margin-top:0 ;" onclick="modalCITA()"> Agenda una Cita</button>
         
 
@@ -460,12 +538,12 @@
             <div class="proyecto" style="justify-content: center;font-size: 18px;">
                 <img src="./img/logotipo-oak-tree.jpg" alt="logo" class="logo-proyecto">
                 <p class="text" style="display: block;">Propiedad forma parte del proyecto:<br>
-                <span style="color: #0894FE;">Portal de los Pinos</span><br>
+                <span style="color: #0894FE;">Los Nopales</span><br>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
+                <span class="fa fa-star checked"></span>
                 </p>
             </div>
             <br>
@@ -509,30 +587,26 @@
         <button class="accordion">Descripción</button>
         <div class="panel">
             <p class="text">
-            Propiedad ubicada en una de las zonas mas exclusivas dela ciudad. Diseñada y Construida por la reconocida firma
-            Hitos urbanos, la propiedad cuenta con un estilo moderno, mucha luz y detalles de madera. 
+            Propiedad ubicada en una de las zonas mas exclusivas de la ciudad. 
             </p>
             <p class="text">
-            La propiedad se encuentra rodeada de pinos y vegetación. Cada acabado de la propiedad son de lujo, difinitivamente
-            es una casa de sueños. 
+            La propiedad se encuentra en un conjunto residencial llamado los nopales, con exelente seguridad y áreas sociales. 
             </p>
         </div>
     
-        <button class="accordion">Datos de la Propiedad</button>
+        <button class="accordion">Datos del Terreno</button>
         <div class="panel">
             <br>
-            <b class="titulo-propiedades" > Residencial El Hatillo </b><br>
-            <div class="text-t" style="padding: 0;">Modelo Jazmín</div>
-            <p class="text-t" style="margin-top: 5px;">
-            <b>
-                3 <span style="color:#0894FE"> Habs </span>
-                | 2 <span style="color:#0894FE"> Baños </span> 
-                | 78 <span style="color:#0894FE"> M2 </span>
-            </b>
-            </p>
+            <b class="titulo-propiedades" > El Sauce</b><br>
+            <div class="text-t" style="padding: 0;">
+                <b>
+                    Los Nopales
+                </b> 
+            </div>
+            
             <div class="space-between" style="margin: 5px 0 10px 0;">
                 <div class="text">
-                    Categoria de vivienda
+                    Categoría del terreno
                 </div>
                 <div style="color:#0894FE"> 
                  R-1
@@ -541,64 +615,73 @@
 
             <div class="space-between" style="margin: 10px 0 10px 0;">
                 <div class="text">
-                    Tipo de Garage
+                    Topografía
                 </div>
                 <div style="color:#0894FE">
-                    Techado
+                    Plano
                 </div>
             </div>
 
             <div class="space-between" style="margin: 10px 0 10px 0;">
                 <div class="text">
-                    Estado
+                    Área
                 </div>
                 <div style="color:#0894FE">
-                    Usada 
+                    170M2 / 246.70VR2
                 </div>
             </div>
 
             <div class="space-between" style="margin: 10px 0 10px 0;">
                 <div class="text">
-                    Operación
+                    Terreno Rellenado
                 </div>
                 <div style="color:#0894FE">
-                    Venta 
+                    Si 
                 </div>
             </div>
 
             <div class="space-between" style="margin: 10px 0 10px 0;">
                 <div class="text">
-                    Zona
+                    Muros de contención
                 </div>
                 <div style="color:#0894FE">
-                    El Hatillo 
-            </div>
-            </div>
-
-            <div class="space-between" style="margin: 10px 0 10px 0;">
-                <div class="text">
-                    Área de Construcción
-                </div>
-                <div style="color:#0894FE">
-                    320M2
+                    No 
                 </div>
             </div>
 
             <div class="space-between" style="margin: 10px 0 10px 0;">
                 <div class="text">
-                    Área de lote
+                    Fuente de agua
                 </div>
                 <div style="color:#0894FE">
-                    640M2
+                    Municipal 
+            </div>
+            </div>
+
+            <div class="space-between" style="margin: 10px 0 10px 0;">
+                <div class="text">
+                    Bloque
+                </div>
+                <div style="color:#0894FE">
+                    A
                 </div>
             </div>
 
             <div class="space-between" style="margin: 10px 0 10px 0;">
                 <div class="text">
-                    Año de Construcción:
+                    Número de Lote
                 </div>
                 <div style="color:#0894FE">
-                    2019
+                    #16
+                </div>
+            </div>
+
+            <div class="space-between" style="margin: 10px 0 10px 0;">
+                <div class="text">
+                    Precio por VR2:
+                </div>
+                <div style="color:#0894FE">
+                    L.5,270
                 </div>
             </div>
             <br>
@@ -626,76 +709,94 @@
             </a>
         </div>
 
-        <button class="fake-accordion"  onclick="filtrosEspecificos()"> 
-            Características de la Propiedad
-        </button>
-
-        <div id="caracteristicas" style="display: none;" class="caracteristicas">
-            <br>
-                <div class="titulo-propiedades" style="padding-left:18px;">Haz clic en las opciones </div>
-            <button class="child-accordion" >Comodidades</button>
-                <div class="child-panel">
-                    <div  class="checkbox text" style="padding-left: 85px;">Aire Acondicionado
-                        <img src="./svg/filtros/comodidades/ac.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Area Social Propia
-                        <img src="./svg/filtros/comodidades/area_social.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Area de bar
-                        <img src="./svg/filtros/comodidades/bar.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Piscina
-                        <img src="./svg/filtros/comodidades/pisicina.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Gimnasio
-                        <img src="./svg/filtros/comodidades/gym.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Jardin
-                        <img src="./svg/filtros/comodidades/jardin.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Estudio
-                        <img src="./svg/filtros/comodidades/estudio.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Sistema de Sonido
-                        <img src="./svg/filtros/comodidades/sonido_integrado.svg" alt="i" class="icono-filtros">
-                    </div>
-                </div>
-        
-            <button class="child-accordion">Seguridad</button>
-            <div class="child-panel">
-                <div  class="checkbox text" style="padding-left: 85px;">Circuito Cerrado
-                    <img src="./svg/filtros/seguridad/circuito_cerrado.svg" alt="i" class="icono-filtros">
-                </div>
-                <div  class="checkbox text" style="padding-left: 85px;">Vigilancia
-                    <img src="./svg/filtros/seguridad/vigilancia.svg" alt="i" class="icono-filtros">
-                </div>
-                <div  class="checkbox text" style="padding-left: 85px;">Sistema de Vigilancia
-                    <img src="./svg/filtros/seguridad/sistema_vigilancia.svg" alt="i" class="icono-filtros">
-                </div>
-                <div  class="checkbox text" style="padding-left: 85px;">Muro Perimetral
-                    <img src="./svg/filtros/seguridad/proteccion_perimetral.svg" alt="i" class="icono-filtros">
-                </div>
+        <button class="accordion">Características del terreno </button>
+        <div class="panel">
+ 
+            <div  class="checkbox text" style="padding-left: 85px;">Vistas
+                <img src="./svg/filtros/comodidades/vistas.svg" alt="i" class="icono-filtros">
             </div>
 
-            <button class="child-accordion">Servicios</button>
-            <div class="child-panel">
-            
-                <div  class="checkbox text" style="padding-left: 85px;">Acceso Pavimentado
-                    <img src="./svg/filtros/servicios/pavimentado.svg" alt="i" class="icono-filtros">
-                </div>
-                <div  class="checkbox text" style="padding-left: 85px;">Alcantarillado
-                    <img src="./svg/filtros/servicios/alcantarillado.svg" alt="i" class="icono-filtros">
-                </div>
-                <div  class="checkbox text" style="padding-left: 85px;">Cisterna
-                    <img src="./svg/filtros/servicios/cisterna.svg" alt="i" class="icono-filtros">
-                </div>
-                <div  class="checkbox text" style="padding-left: 85px;">Generador Eléctrico
-                    <img src="./svg/filtros/servicios/generador_electrico.svg" alt="i" class="icono-filtros">
-                </div>
-                <div  class="checkbox text" style="padding-left: 85px;">Telecomunicaciones
-                    <img src="./svg/filtros/servicios/servicios_telecomunicacion.svg" alt="i" class="icono-filtros">
-                </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Terreno Natural / Sin rellenos
+                <img src="./svg/filtros/terreno/terreno_natural.svg" alt="i" class="icono-filtros">
+            </div>
 
+            <div  class="checkbox text" style="padding-left: 85px;">Terreno Rellenado
+                <img src="./svg/filtros/terreno/terreno_rellenado.svg" alt="i" class="icono-filtros">
+            </div>
+
+            <div  class="checkbox text" style="padding-left: 85px;">Muros perimetrales existentes
+                <img src="./svg/filtros/terreno/muro_perimetral_existente.svg" alt="i" class="icono-filtros">
+            </div>
+
+            <div  class="checkbox text" style="padding-left: 85px;">Terreno de esquina
+                <img src="./svg/filtros/terreno/terreno_esquina.svg" alt="i" class="icono-filtros">
+            </div>
+
+            <div  class="checkbox text" style="padding-left: 85px;">Sin muros de contención
+                <img src="./svg/filtros/terreno/muro_contencion.svg" alt="i" class="icono-filtros">
+            </div>
+
+
+        </div>
+
+        <button class="accordion">Amenidades del proyecto </button>
+        <div class="panel">
+            <div  class="checkbox text" style="padding-left: 85px;">Calles Pavimentadas
+                <img src="./svg/filtros/servicios/pavimentado.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Alcantarillado
+                <img src="./svg/filtros/servicios/alcantarillado.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Circuito Cerrado
+                <img src="./svg/filtros/seguridad/circuito_cerrado.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Cableado Sub-Terraneo 
+                <img src="./svg/filtros/terreno/cableado_subterraneo.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Área social común
+                <img src="./svg/filtros/comodidades/area_social.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Área de bar común
+                <img src="./svg/filtros/comodidades/bar.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Piscina común
+                <img src="./svg/filtros/comodidades/pisicina.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Gimnasio común
+                <img src="./svg/filtros/comodidades/gym.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Área de juegos
+                <img src="./svg/filtros/proyecto/area_juegos.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Canchas deportivas
+                <img src="./svg/filtros/proyecto/cancha_deportiva.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Mirador
+                <img src="./svg/filtros/proyecto/mirador.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Área de bosque
+                <img src="./svg/filtros/proyecto/area_bosque.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Área verde
+                <img src="./svg/filtros/proyecto/area_verde.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Salon de eventos
+                <img src="./svg/filtros/proyecto/salon_eventos.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Área comercial  
+                <img src="./svg/filtros/proyecto/comercio.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Helipuerto  
+                <img src="./svg/filtros/proyecto/helipuerto.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Vigilancia 24/7  
+                <img src="./svg/filtros/seguridad/vigilancia.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Agua de pozo  
+                <img src="./svg/filtros/servicios/agua_pozo.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Agua municipal  
+                <img src="./svg/filtros/servicios/agua_municipal.svg" alt="i" class="icono-filtros">
             </div>
         </div>
 
@@ -707,7 +808,7 @@
                     Estado Legal
                 </div>
                 <div style="color:#0894FE"> 
-                    Hipotecada 
+                    Libre de gravamen 
                 </div>
             </div>
             <div class="space-between" style="margin: 5px 0 10px 0;">
@@ -715,7 +816,7 @@
                     Régimen
                 </div>
                 <div style="color:#0894FE"> 
-                    Condominios Horizontal 
+                    Condominio Horizontal 
                 </div>
             </div>
             <br>
@@ -730,7 +831,7 @@
                     Promedio Cuota Mensual
                 </div>
                 <div style="color:#0894FE"> 
-                    L.49,548.88
+                    L.12,548.88
                 </div>
             </div>
 
@@ -739,7 +840,7 @@
                     Promedio Gastos de cierre
                 </div>
                 <div style="color:#0894FE"> 
-                    L.67,500
+                    L.37,500
                 </div>
             </div>
 
@@ -748,7 +849,7 @@
                     Cuota / prima Inicial
                 </div>
                 <div style="color:#0894FE"> 
-                    L.450,000
+                    L.130,000
                 </div>
             </div>
 
@@ -768,7 +869,7 @@
                     Cuota de Mantenimiento
                 </div>
                 <div style="color:#0894FE"> 
-                    L.5,600
+                    L.1,600
                 </div>
             </div>
 
@@ -796,15 +897,15 @@
         <div id="map" class=" mapa"></div>
     </div>
     
-    <div class="right-column" >
+    <div class="right-column">
 
         <div style="display: flex; justify-content: flex-start; margin: 25px 0;">
             <div class="burbuja" style="background-color: #3ecfaf;">
                 <img src="./svg/mercado.svg" alt="Mercado" style="width:20px; height:20px; " >
             </div>
             <div style="margin-left: 30px;">
-                <b> Super Mercado La Colonia </b> <br>
-                <span class="text">5 km</span>
+                <b> PriceSmart </b> <br>
+                <span class="text">0.2 km</span>
             </div>
         </div>
 
@@ -813,7 +914,7 @@
                 <img src="./svg/restaurantes.svg" alt="Mercado" style="width:20px; height:20px; " >
             </div>
             <div style="margin-left: 30px;">
-                <b> NiFu-NiFa Restaurante </b> <br>
+                <b> Rioras Restaurante </b> <br>
                 <span class="text">2.5 km</span>
             </div>
         </div>
@@ -852,9 +953,9 @@
       <div id="content" class="content">
         
         <div class="atlas-card" style="overflow:none">
-            <a href="./vivienda.html" target="_blank">
+            <a href="./terreno.html" target="_blank">
             <div class="relative-container">
-                <img src="./img/casa1_3.jpg" alt="imagen" class="image-card">
+                <img src="./img/terrenos/img1.png" alt="imagen" class="image-card">
                 <div class="text-number">1 / 3</div>
                 <div class="top-text">
                     Vendedor Particular
@@ -866,24 +967,28 @@
             </div>
             </a>
             <div style="padding:20px 15px 0 15px;">
-                <div class="titulo-propiedades"> Valle de Angeles </div>
-                <div class="text" style="display: inline;"> Modelo 3 Hab</div>
                 <div class="space-between" style="margin-top: 5px;">
-                    <div class="text" style="font-size: 12px;display: inline;"> 3 Habs | 2.5 Baños | 278m2</div>
-                    <div class="text" style="font-size: 12px;display: inline;"> Área de lote: <span style="color:#0894FE"> 328m2</span></div>
+                    <div class="titulo-propiedades"> Lomas Del Guijarro II</div>
+                    <div class="text" style="font-size: 12px;display: inline;"> Área: <span style="color:#0894FE"> 1720M2 / 246.70VR2</span></div>
+                    
                 </div>
                 <div class="space-between" style="margin-top: 5px;">
-                    <div class="text" style="display: inline;"> L. 4,800,000</div>
+                    <div class="text" style="display: inline;"> Bloque E Lote - #4</div>
+                    <div class="text" style="font-size: 12px;display: inline;"> Topografía: <span style="color:#0894FE"> Plana</span></div>
+                    
+                </div>
+                <div class="space-between" style="margin-top: 5px;">
+                    <div class="text" style="display: inline;"> L. 1,740,000</div>
                     <div class="text" style="font-size: 12px;display: inline;"> 
-                        Estado: <span style="color:#0894FE"> Nueva</span></div>
+                        Categoría: <span style="color:#0894FE"> R-1</span></div>
                 </div>
             </div>
         </div>
 
         <div class="atlas-card" style="overflow:none">
-            <a href="./vivienda.html" target="_blank">
+            <a href="./terreno.html" target="_blank">
             <div class="relative-container">
-                <img src="./img/casa1_3.jpg" alt="imagen" class="image-card">
+                <img src="./img/terrenos/img2.png" alt="imagen" class="image-card">
                 <div class="text-number">1 / 3</div>
                 <div class="top-text">
                     Vendedor Particular
@@ -895,24 +1000,28 @@
             </div>
             </a>
             <div style="padding:20px 15px 0 15px;">
-                <div class="titulo-propiedades"> Valle de Angeles </div>
-                <div class="text" style="display: inline;"> Modelo 3 Hab</div>
                 <div class="space-between" style="margin-top: 5px;">
-                    <div class="text" style="font-size: 12px;display: inline;"> 3 Habs | 2.5 Baños | 278m2</div>
-                    <div class="text" style="font-size: 12px;display: inline;"> Área de lote: <span style="color:#0894FE"> 328m2</span></div>
+                    <div class="titulo-propiedades"> Lomas Del Guijarro II</div>
+                    <div class="text" style="font-size: 12px;display: inline;"> Área: <span style="color:#0894FE"> 1720M2 / 246.70VR2</span></div>
+                    
                 </div>
                 <div class="space-between" style="margin-top: 5px;">
-                    <div class="text" style="display: inline;"> L. 4,800,000</div>
+                    <div class="text" style="display: inline;"> Bloque E Lote - #4</div>
+                    <div class="text" style="font-size: 12px;display: inline;"> Topografía: <span style="color:#0894FE"> Plana</span></div>
+                    
+                </div>
+                <div class="space-between" style="margin-top: 5px;">
+                    <div class="text" style="display: inline;"> L. 1,740,000</div>
                     <div class="text" style="font-size: 12px;display: inline;"> 
-                        Estado: <span style="color:#0894FE"> Nueva</span></div>
+                        Categoría: <span style="color:#0894FE"> R-1</span></div>
                 </div>
             </div>
         </div>
     
         <div class="atlas-card" style="overflow:none">
-            <a href="./vivienda.html" target="_blank">
+            <a href="./terreno.html" target="_blank">
             <div class="relative-container">
-                <img src="./img/casa1_4.jpg" alt="imagen" class="image-card">
+                <img src="./img/terrenos/img3.png" alt="imagen" class="image-card">
                 <div class="text-number">1 / 3</div>
                 <div class="top-text">
                     Inmobi SAS
@@ -924,24 +1033,28 @@
             </div>
             </a>
             <div style="padding:20px 15px 0 15px;">
-                <div class="titulo-propiedades"> Residencial Entre Pinos </div>
-                <div class="text" style="display: inline;"> Modelo 3 Hab</div>
                 <div class="space-between" style="margin-top: 5px;">
-                    <div class="text" style="font-size: 12px;display: inline;"> 5 Habs | 3.5 Baños | 382m2</div>
-                    <div class="text" style="font-size: 12px;display: inline;"> Área de lote: <span style="color:#0894FE"> 250m2</span></div>
+                    <div class="titulo-propiedades"> Lomas Del Guijarro II</div>
+                    <div class="text" style="font-size: 12px;display: inline;"> Área: <span style="color:#0894FE"> 1720M2 / 246.70VR2</span></div>
+                    
                 </div>
                 <div class="space-between" style="margin-top: 5px;">
-                    <div class="text" style="display: inline;"> L. 7,800,000</div>
+                    <div class="text" style="display: inline;"> Bloque E Lote - #4</div>
+                    <div class="text" style="font-size: 12px;display: inline;"> Topografía: <span style="color:#0894FE"> Plana</span></div>
+                    
+                </div>
+                <div class="space-between" style="margin-top: 5px;">
+                    <div class="text" style="display: inline;"> L. 1,740,000</div>
                     <div class="text" style="font-size: 12px;display: inline;"> 
-                        Estado: <span style="color:#0894FE"> Usada</span></div>
+                        Categoría: <span style="color:#0894FE"> R-1</span></div>
                 </div>
             </div>
         </div>
     
         <div class="atlas-card" style="overflow:none">
-            <a href="./vivienda.html" target="_blank">
+            <a href="./terreno.html" target="_blank">
             <div class="relative-container">
-                <img src="./img/casa1_5.jpg" alt="imagen" class="image-card">
+                <img src="./img/terrenos/img4.png" alt="imagen" class="image-card">
                 <div class="text-number">1 / 3</div>
                 <div class="top-text">
                     Inmobiliaria NX
@@ -953,24 +1066,28 @@
             </div>
             </a>
             <div style="padding:20px 15px 0 15px;">
-                <div class="titulo-propiedades"> Residencial Ciudad Nueva </div>
-                <div class="text" style="display: inline;"> Casa de habitación</div>
                 <div class="space-between" style="margin-top: 5px;">
-                    <div class="text" style="font-size: 12px;display: inline;"> 6 Habs | 6.5 Baño | 420m2</div>
-                    <div class="text" style="font-size: 12px;display: inline;"> Área de lote: <span style="color:#0894FE"> 1000m2</span></div>
+                    <div class="titulo-propiedades"> Lomas Del Guijarro II</div>
+                    <div class="text" style="font-size: 12px;display: inline;"> Área: <span style="color:#0894FE"> 1720M2 / 246.70VR2</span></div>
+                    
                 </div>
                 <div class="space-between" style="margin-top: 5px;">
-                    <div class="text" style="display: inline;"> L. 9,800,000</div>
+                    <div class="text" style="display: inline;"> Bloque E Lote - #4</div>
+                    <div class="text" style="font-size: 12px;display: inline;"> Topografía: <span style="color:#0894FE"> Plana</span></div>
+                    
+                </div>
+                <div class="space-between" style="margin-top: 5px;">
+                    <div class="text" style="display: inline;"> L. 1,740,000</div>
                     <div class="text" style="font-size: 12px;display: inline;"> 
-                        Estado: <span style="color:#0894FE"> Usada</span></div>
+                        Categoría: <span style="color:#0894FE"> R-1</span></div>
                 </div>
             </div>
         </div>
     
         <div class="atlas-card" style="overflow:none">
-            <a href="./vivienda.html" target="_blank">
+            <a href="./terreno.html" target="_blank">
             <div class="relative-container">
-                <img src="./img/casa1_1.jpg" alt="imagen" class="image-card">
+                <img src="./img/terrenos/img5.png" alt="imagen" class="image-card">
                 <div class="text-number">1 / 3</div>
                 <div class="top-text">
                     Realtor SAS
@@ -982,24 +1099,28 @@
             </div>
             </a>
             <div style="padding:20px 15px 0 15px;">
-                <div class="titulo-propiedades"> Tatumbla </div>
-                <div class="text" style="display: inline;"> Modelo 3 Hab</div>
                 <div class="space-between" style="margin-top: 5px;">
-                    <div class="text" style="font-size: 12px;display: inline;"> 3 Habs | 2 Baño | 110m2</div>
-                    <div class="text" style="font-size: 12px;display: inline;"> Área de lote: <span style="color:#0894FE"> 250m2</span></div>
+                    <div class="titulo-propiedades"> Lomas Del Guijarro II</div>
+                    <div class="text" style="font-size: 12px;display: inline;"> Área: <span style="color:#0894FE"> 1720M2 / 246.70VR2</span></div>
+                    
                 </div>
                 <div class="space-between" style="margin-top: 5px;">
-                    <div class="text" style="display: inline;"> L. 1,800,000</div>
+                    <div class="text" style="display: inline;"> Bloque E Lote - #4</div>
+                    <div class="text" style="font-size: 12px;display: inline;"> Topografía: <span style="color:#0894FE"> Plana</span></div>
+                    
+                </div>
+                <div class="space-between" style="margin-top: 5px;">
+                    <div class="text" style="display: inline;"> L. 1,740,000</div>
                     <div class="text" style="font-size: 12px;display: inline;"> 
-                        Estado: <span style="color:#0894FE"> Pre-Venta</span></div>
+                        Categoría: <span style="color:#0894FE"> R-1</span></div>
                 </div>
             </div>
         </div>
     
         <div class="atlas-card" style="overflow:none">
-            <a href="./vivienda.html" target="_blank">
+            <a href="./terreno.html" target="_blank">
             <div class="relative-container">
-                <img src="./img/casa1_6.jpg" alt="imagen" class="image-card">
+                <img src="./img/terrenos/img6.png" alt="imagen" class="image-card">
                 <div class="text-number">1 / 3</div>
                 <div class="top-text">
                     Constructora Comaco
@@ -1011,24 +1132,28 @@
             </div>
             </a>
             <div style="padding:20px 15px 0 15px;">
-                <div class="titulo-propiedades"> Santa Lucía </div>
-                <div class="text" style="display: inline;"> Modelo Lila</div>
                 <div class="space-between" style="margin-top: 5px;">
-                    <div class="text" style="font-size: 12px;display: inline;"> 4 Habs | 4.5 Baños | 410m2</div>
-                    <div class="text" style="font-size: 12px;display: inline;"> Área de lote: <span style="color:#0894FE"> 629.45m2</span></div>
+                    <div class="titulo-propiedades"> Lomas Del Guijarro II</div>
+                    <div class="text" style="font-size: 12px;display: inline;"> Área: <span style="color:#0894FE"> 1720M2 / 246.70VR2</span></div>
+                    
                 </div>
                 <div class="space-between" style="margin-top: 5px;">
-                    <div class="text" style="display: inline;"> L. 8,500,000</div>
+                    <div class="text" style="display: inline;"> Bloque E Lote - #4</div>
+                    <div class="text" style="font-size: 12px;display: inline;"> Topografía: <span style="color:#0894FE"> Plana</span></div>
+                    
+                </div>
+                <div class="space-between" style="margin-top: 5px;">
+                    <div class="text" style="display: inline;"> L. 1,740,000</div>
                     <div class="text" style="font-size: 12px;display: inline;"> 
-                        Estado: <span style="color:#0894FE"> Nueva</span></div>
+                        Categoría: <span style="color:#0894FE"> R-1</span></div>
                 </div>
             </div>
         </div>
     
         <div class="atlas-card" style="overflow:none">
-            <a href="./vivienda.html" target="_blank">
+            <a href="./terreno.html" target="_blank">
             <div class="relative-container">
-                <img src="./img/casa1_7.jpg" alt="imagen" class="image-card">
+                <img src="./img/terrenos/img7.png" alt="imagen" class="image-card">
                 <div class="text-number">1 / 3</div>
                 <div class="top-text">
                     AV ingenieros
@@ -1040,23 +1165,27 @@
             </div>
             </a>
             <div style="padding:20px 15px 0 15px;">
-                <div class="titulo-propiedades"> Lomas del Guijarro </div>
-                <div class="text" style="display: inline;"> Casa de habitación</div>
                 <div class="space-between" style="margin-top: 5px;">
-                    <div class="text" style="font-size: 12px;display: inline;"> 5 Habs | 6 Baños | 410m2</div>
-                    <div class="text" style="font-size: 12px;display: inline;"> Área de lote: <span style="color:#0894FE"> 450m2</span></div>
+                    <div class="titulo-propiedades"> Lomas Del Guijarro II</div>
+                    <div class="text" style="font-size: 12px;display: inline;"> Área: <span style="color:#0894FE"> 1720M2 / 246.70VR2</span></div>
+                    
                 </div>
                 <div class="space-between" style="margin-top: 5px;">
-                    <div class="text" style="display: inline;"> L. 10,900,000</div>
+                    <div class="text" style="display: inline;"> Bloque E Lote - #4</div>
+                    <div class="text" style="font-size: 12px;display: inline;"> Topografía: <span style="color:#0894FE"> Plana</span></div>
+                    
+                </div>
+                <div class="space-between" style="margin-top: 5px;">
+                    <div class="text" style="display: inline;"> L. 1,740,000</div>
                     <div class="text" style="font-size: 12px;display: inline;"> 
-                        Estado: <span style="color:#0894FE"> Nueva</span></div>
+                        Categoría: <span style="color:#0894FE"> R-1</span></div>
                 </div>
             </div>
         </div>
 
       </div>
     </div>
-    <button id="prev">
+    <button id="prev" class="prev">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -1067,7 +1196,7 @@
         <path d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z" />
       </svg>
     </button>
-    <button id="next">
+    <button id="next" class="next">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -1101,10 +1230,39 @@
 
 
 
-<script src="./general.js"></script>
-<script src="./vivienda.js"></script>
+<script src="js/general.js"></script>
+<script src="js/vivienda.js"></script>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyu42Bui8Qnyp8kLOVO4hMJHTd20HTHag"></script>
 <script src="./mapas/whitemap.js"></script>
+<script src="./calendario/vanilla-calendar.js"></script>
+<script>
+    let pastDates = false, availableDates = false, availableWeekDays = false
+    
+    let calendar = new VanillaCalendar({
+        selector: "#myCalendar",
+        shortWeekday: ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'],
+        onSelect: (data, elem) => {
+            console.log(data)
+            //convertir formato de fecha a uno distinto
+            data = new Date()
+            let fechaSeleccionada = data.getDate() + "-" + (data.getMonth() + 1) + "-" + data.getFullYear()
+            console.log(fechaSeleccionada)
+        }
+    })
+    //desabilitar fechas pasadas a hoy
+    calendar.set({pastDates: pastDates})
+    //desabilitar fechas y solo dejar fechas especificas
+    calendar.set({availableDates: [
+        //{date: '2021-01-12'},
+        //{date: '2021-01-13'}
+    ], datesFilter: false})
+    //desabilitar dias distintos a los ingresados
+    calendar.set({availableWeekDays: [
+        {day: 'lunes'},
+        {day: 'miercoles'},
+        {day: 'martes'},
+    ], datesFilter: false})
+</script>
 
 </body>
 
