@@ -23,7 +23,7 @@
         <div class="column-85">
                 <button class="boton-registro" id="boton-registro" onclick="modalR()">Registrarme</button>
                 <button class="boton-ingresar" id="boton-ingresar" onclick="modalI()">Ingresar</button>
-        
+                
             </div>
             <a href="javascript:void(0);" style="font-size:35px;top: 0; right: 0;" class="icon" onclick="HamburgerFuction()">&#9776;</a>
         </div> 
@@ -105,7 +105,7 @@
             <form action="" method="POST">
                 <p class="text" style="text-align: left;clear: both;padding-top: 25px;">Ingresa a tú perfil personal.</p>   
                 <p style="display: block; text-align:left;" class="text">
-                    ¿No tienes cuenta personal?   <a href="#" style="color: #0894FE;">  Regístrate Aquí</a></p>              
+                    ¿No tienes cuenta personal?   <a href="#" style="color: #0894FE;">  Registrate Aquí</a></p>              
                 <input type="email" placeholder="Correo Electrónico" name="email" id="email-usuario-ingreso" required autocomplete="email">
                 <input type="password" placeholder="Introduce tu Contraseña" name="psw" id="psw-usuario-ingreso" required autocomplete="current-password">
                 <input type="submit" value="Ingresar" class="submit-boton" style="margin: 30px auto; width: 100%;">
@@ -119,7 +119,7 @@
 
         <div id="ingreso_empresa" class="tabcontent">
             <form action="./perfil_vendedor.html" method="POST">
-                <p class="text" style="text-align: left;clear: both; padding-top: 25px;">Ingresa a tu perfil Empresarial.</p>   
+                <p class="text" style="text-align: left;clear: both; padding-top: 25px;">Ingresa a tú perfil Empresarial.</p>   
                 <p style="display: block; text-align:left;" class="text">
                     ¿No tienes cuenta empresarial?   <a href="#" style="color: #0894FE;">  Registrate Aquí</a></p>              
                 <input type="email" placeholder="Correo Electrónico" name="email" id="email-empresa-ingreso" required autocomplete="email">
@@ -205,14 +205,10 @@
                 <div id="part2" style="position: relative;">
 
                     <p class="subtitles" style="margin-top: 50px;">Selecciona la Fecha:</p>
-                        <!--<div style="display: flex;justify-content: center;">
-                            <img src="./svg/Calendario.svg" alt="" style="cursor: pointer;" onclick="">
-                        </div>-->
                         
-                                <div class="content_calendar">
-                                    <div id="myCalendar" class="vanilla-calendar" style="margin-bottom: 20px"></div>
-                                </div>
-                          
+                        <div class="content_calendar">
+                            <div id="myCalendar" class="vanilla-calendar" style="margin-bottom: 20px"></div>
+                        </div>
 
                     <p class="subtitles" style="margin-bottom: 0;">Selecciona la Hora:</p>
                     <div class="text">Desliza para escoger una hora:</div>
@@ -307,7 +303,7 @@
                     </p>
 
                     <p style="font-size:14px; text-align: center;" class="text">
-                        Ver <a href="terminos_condiciones.html" style="color: #0894FE;" target="_blank">Términos</a> Y 
+                        Ver <a href="terminos_condiciones.html" target="_blank" style="color: #0894FE;" target="_blank">Términos</a> Y 
                         <a href="terminos_condiciones.html" style="color: #0894FE;" target="_blank">Condiciones</a> de Atlas Home. 
                     </p>
 
@@ -333,8 +329,8 @@
 <div class="titulo-inmueble hide-mobile" style="margin-top: 95px;" id="titulo-propiedad">
     <div class="space-between" style="margin-top: 5px;">
         <div>
-            <h2 class="titulo-propiedades" style="display: inline"> Residencial El Hatillo </h2>
-            <h2 class="text-t" style="display: inline;font-size: 20px;">Modelo Jazmín</h2>
+            <h2 class="titulo-propiedades" style="display: inline"> El Sauce </h2>
+            <h2 class="text-t" style="display: inline;font-size: 20px;">Los Nopales</h2>
         </div>
         <div>
             <a href="" style="margin: 0 10px;">
@@ -348,17 +344,22 @@
         </div>
     </div>
     <div class="space-between" style="margin-top: 5px;">
-        <div class="text-t" style="display: inline;"> <span style="color:#0894FE"> Precio de Venta: </span> L.4,500,000</div>
-        <div class="text-t" style="display: inline;"> <span style="color:#0894FE"> Precio de Renta: </span> L.42,000</div>
-        <div class="text-t" style="display: inline;"> 
-            3 <span style="color:#0894FE"> Habs </span>
-             | 2 <span style="color:#0894FE"> Baños </span> 
-             | 78 <span style="color:#0894FE"> M2 </span>
-        </div>
-        <div class="text-t" style="display: inline;"> Área de lote: <span style="color:#0894FE"> 320m2</span></div>
+        <div class="text-t" style="display: inline;"> <span style="color:#0894FE"> Precio de Venta: </span> L.1,300,000</div>
+    <!--<div class="text-t" style="display: inline;"> <span style="color:#0894FE"> Precio de Renta: </span> L.42,000</div>-->
         
         <div class="text-t" style="display: inline;"> 
-            Estado: <span style="color:#0894FE"> Usada</span></div>
+            Área: <span style="color:#0894FE"> 170M2 / 246.70VR2</span>
+        </div>
+
+        <div class="text-t" style="display: inline;"> 
+            Topografía: <span style="color:#0894FE"> Plana</span>
+        </div>
+
+        <div class="text-t" style="display: inline;"> 
+            Categoría: <span style="color:#0894FE"> R-1</span>
+        </div>
+
+
     </div>
 </div>
 
@@ -372,12 +373,12 @@
             <div class="proyecto">
                 <img src="./img/logotipo-oak-tree.jpg" alt="logo" class="logo-proyecto">
                 <p class="text" style="display: block;">Propiedad forma parte del proyecto:<br>
-                <span style="color: #0894FE;">Portal de los Pinos</span><br>
+                <span style="color: #0894FE;">Los Nopales</span><br>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
+                <span class="fa fa-star checked"></span>
                 </p>
             </div>
         </a>
@@ -396,31 +397,31 @@
             <div id="fotos" class="mediacontent">   
         
                 <div class="imgSlides fade">
-                    <img src="./img/vivienda/1.jpg" class="fotos">
+                    <img src="./img/terrenos/1.jpg" class="fotos">
                 </div>
           
                 <div class="imgSlides fade">
-                    <img src="./img/vivienda/2.jpg" class="fotos">
+                    <img src="./img/terrenos/2.jpg" class="fotos">
                 </div>
           
                 <div class="imgSlides fade">
-                    <img src="./img/vivienda/3.jpg" class="fotos">
+                    <img src="./img/terrenos/3.jpg" class="fotos">
                 </div>
 
                 <div class="imgSlides fade">
-                    <img src="./img/vivienda/4.jpg" class="fotos">
+                    <img src="./img/terrenos/4.jpg" class="fotos">
                 </div>
 
                 <div class="imgSlides fade">
-                    <img src="./img/vivienda/5.jpg" class="fotos">
+                    <img src="./img/terrenos/5.jpg" class="fotos">
                 </div>
             
                 <div class="imgSlides fade">
-                    <img src="./img/vivienda/6.jpg" class="fotos">
+                    <img src="./img/terrenos/6.png" class="fotos">
                 </div>
 
                 <div class="imgSlides fade">
-                    <img src="./img/vivienda/7.jpg" class="fotos">
+                    <img src="./img/terrenos/7.jpg" class="fotos">
                 </div>
               
                 <!-- Next and previous buttons -->
@@ -438,10 +439,10 @@
                 </div>
             </div>
       
-            <!--Tour Virtual-->
-            <div id="tv" class="mediacontent">
+            <!--Video con Drone-->
+            <div id="video" class="mediacontent">
 
-            <iframe class="embed-responsive" src="https://my.matterport.com/show/?m=5V8ZdwUHQPy&play=1&qs=1&tiles=1&vr=0&title=0&help=2&tourcta=2&hlr=2" 
+            <iframe class="embed-responsive" src="https://www.youtube.com/embed/y_X7yK_ArgM" 
             allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" data-hj-allow-iframe="">
             </iframe>
 
@@ -449,7 +450,7 @@
 
             <!--Planos-->
             <div id="planos" class="mediacontent">
-                <img src="./img/vivienda/a1.png" class="fotos">
+                <img src="./img/terrenos/poligono.jpg" class="fotos">
             </div>
 
             <!--Mapa-->
@@ -463,7 +464,7 @@
             <!--Google Street View-->
             <div id="stv" class="mediacontent">
                 <iframe class="embed-responsive"  
-                src="https://www.google.com/maps/embed/v1/streetview?key=AIzaSyCyu42Bui8Qnyp8kLOVO4hMJHTd20HTHag&location=4.665099, -74.042736&heading=180" 
+                src="https://www.google.com/maps/embed/v1/streetview?key=AIzaSyCyu42Bui8Qnyp8kLOVO4hMJHTd20HTHag&location=4.697045, -74.028141&heading=180" 
                 allowfullscreen="" aria-hidden="false" tabindex="0">
                 </iframe>
             </div>
@@ -477,7 +478,7 @@
             <div class="carousel-tabs">
                 <div class="content-tabs" >
                     <button class="medialink" onclick="showMedia(event,'fotos')" id="open" style="margin-left: 0;">Fotos</button>
-                    <button class="medialink" onclick="showMedia(event,'tv')" >Tour Virtual</button>
+                    <button class="medialink" onclick="showMedia(event,'video')" >Video</button>
                     <button class="medialink" onclick="showMedia(event,'planos')">Planos</button>
                     <button class="medialink" onclick="showMedia(event,'mapa')">Mapa</button>
                     <button class="medialink" onclick="showMedia(event,'stv')" style="margin-right: 0;">G. Street View</button>
@@ -495,27 +496,27 @@
         
         <div class="space-between" style="margin-top: 5px;">
             <div>
-                <h2 class="titulo-propiedades" style="display: inline"> Residencial El Hatillo </h2>       
+                <h2 class="titulo-propiedades" style="display: inline"> El Sauce</h2>       
             </div>
             <div>
-                <div class="text-t" style="font-size: 20px;color: #081C33;font-weight: bold;">  L.4,500,000</div>           
+                <div class="text-t" style="font-size: 20px;color: #081C33;font-weight: bold;">  L.1,300,000</div>           
             </div>
         </div>
-        <h2 class="text-t" style="display: inline;font-size: 20px;">Modelo Jazmín</h2>
+        <h2 class="text-t" style="display: inline;font-size: 20px;">Los Nopales</h2>
         <div class="space-between" style="margin-top: 5px;">
-                     
-            <div class="text-t" style="display: inline;"> 
-                3 <span style="color:#0894FE"> Habs </span>
-                 | 2 <span style="color:#0894FE"> Baños </span> 
-                 | 78 <span style="color:#0894FE"> M2 </span>
-            </div>
+                   
+        <div class="text-t" style="display: inline;"> 
+            Área: <span style="color:#0894FE"> 170M2 / 246.70VR2</span>
+        </div>
 
-            <div class="text-t" style="display: inline;"> <span style="color:#0894FE"> Precio de Renta: </span> L.42,000</div>
+        <div class="text-t" style="display: inline;"> 
+            Topografía: <span style="color:#0894FE"> Plana</span>
+        </div>
 
-            <div class="text-t" style="display: inline;"> Área de lote: <span style="color:#0894FE"> 320m2</span></div>
-            
-            <div class="text-t" style="display: inline;"> 
-                Estado: <span style="color:#0894FE"> Usada</span></div>
+        <div class="text-t" style="display: inline;"> 
+            Categoría: <span style="color:#0894FE"> R-1</span>
+        </div>
+
         </div>
     </div>
     
@@ -524,7 +525,7 @@
 
         <div style="font-size: 18px;" class="space-between">
             <div class="text"> Pago Mensual Estimado: </div>
-            <div style="color: #0894FE;"> L.49,548.90</div>   
+            <div style="color: #0894FE;"> L.12,548.90</div>   
         </div>
         
         <button class="boton-credito"  onclick="modalCR()"> Aplica a un Crédito para esta propiedad</button>
@@ -535,12 +536,12 @@
             <div class="proyecto" style="justify-content: center;font-size: 18px;">
                 <img src="./img/logotipo-oak-tree.jpg" alt="logo" class="logo-proyecto">
                 <p class="text" style="display: block;">Propiedad forma parte del proyecto:<br>
-                <span style="color: #0894FE;">Portal de los Pinos</span><br>
+                <span style="color: #0894FE;">Los Nopales</span><br>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
+                <span class="fa fa-star checked"></span>
                 </p>
             </div>
             <br>
@@ -584,30 +585,26 @@
         <button class="accordion">Descripción</button>
         <div class="panel">
             <p class="text">
-            Propiedad ubicada en una de las zonas mas exclusivas dela ciudad. Diseñada y Construida por la reconocida firma
-            Hitos urbanos, la propiedad cuenta con un estilo moderno, mucha luz y detalles de madera. 
+            Propiedad ubicada en una de las zonas mas exclusivas de la ciudad. 
             </p>
             <p class="text">
-            La propiedad se encuentra rodeada de pinos y vegetación. Cada acabado de la propiedad son de lujo, definitivamente
-            es una casa de sueños. 
+            La propiedad se encuentra en un conjunto residencial llamado los nopales, con excelente seguridad y áreas sociales. 
             </p>
         </div>
     
-        <button class="accordion">Datos de la Vivienda</button>
+        <button class="accordion">Datos del Terreno</button>
         <div class="panel">
             <br>
-            <b class="titulo-propiedades" > Residencial El Hatillo </b><br>
-            <div class="text-t" style="padding: 0;">Modelo Jazmín</div>
-            <p class="text-t" style="margin-top: 5px;">
-            <b>
-                3 <span style="color:#0894FE"> Habs </span>
-                | 2 <span style="color:#0894FE"> Baños </span> 
-                | 78 <span style="color:#0894FE"> M2 </span>
-            </b>
-            </p>
+            <b class="titulo-propiedades" > El Sauce</b><br>
+            <div class="text-t" style="padding: 0;">
+                <b>
+                    Los Nopales
+                </b> 
+            </div>
+            
             <div class="space-between" style="margin: 5px 0 10px 0;">
                 <div class="text">
-                    Categoría de Zona
+                    Categoría del terreno
                 </div>
                 <div style="color:#0894FE"> 
                  R-1
@@ -616,64 +613,73 @@
 
             <div class="space-between" style="margin: 10px 0 10px 0;">
                 <div class="text">
-                    Tipo de Garaje
+                    Topografía
                 </div>
                 <div style="color:#0894FE">
-                    Techado
+                    Plano
                 </div>
             </div>
 
             <div class="space-between" style="margin: 10px 0 10px 0;">
                 <div class="text">
-                    Estado
+                    Área
                 </div>
                 <div style="color:#0894FE">
-                    Usada 
+                    170M2 / 246.70VR2
                 </div>
             </div>
 
             <div class="space-between" style="margin: 10px 0 10px 0;">
                 <div class="text">
-                    Operación
+                    Terreno Rellenado
                 </div>
                 <div style="color:#0894FE">
-                    Venta 
+                    Si 
                 </div>
             </div>
 
             <div class="space-between" style="margin: 10px 0 10px 0;">
                 <div class="text">
-                    Zona
+                    Muros de contención
                 </div>
                 <div style="color:#0894FE">
-                    El Hatillo 
-            </div>
-            </div>
-
-            <div class="space-between" style="margin: 10px 0 10px 0;">
-                <div class="text">
-                    Área de Construcción
-                </div>
-                <div style="color:#0894FE">
-                    320M2
+                    No 
                 </div>
             </div>
 
             <div class="space-between" style="margin: 10px 0 10px 0;">
                 <div class="text">
-                    Área de lote
+                    Fuente de agua
                 </div>
                 <div style="color:#0894FE">
-                    5000M2 / 717.30VRS2
+                    Municipal 
+            </div>
+            </div>
+
+            <div class="space-between" style="margin: 10px 0 10px 0;">
+                <div class="text">
+                    Bloque
+                </div>
+                <div style="color:#0894FE">
+                    A
                 </div>
             </div>
 
             <div class="space-between" style="margin: 10px 0 10px 0;">
                 <div class="text">
-                    Año de Construcción:
+                    Número de Lote
                 </div>
                 <div style="color:#0894FE">
-                    2019
+                    #16
+                </div>
+            </div>
+
+            <div class="space-between" style="margin: 10px 0 10px 0;">
+                <div class="text">
+                    Precio por VR2:
+                </div>
+                <div style="color:#0894FE">
+                    L.5,270
                 </div>
             </div>
             <br>
@@ -701,169 +707,96 @@
             </a>
         </div>
 
-        <!--Falta añadir mas clases, pendiente para v-1.0-->
-        <button class="accordion">Amenidades de la Vivienda </button>
-            <div class="panel">
-                    <div  class="checkbox text" style="padding-left: 85px;">Walk In Closet
-                        <img src="./svg/filtros/comodidades/wc.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Balcones
-                        <img src="./svg/filtros/comodidades/balcon.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Alacena 
-                        <img src="./svg/filtros/comodidades/alacena.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Parqueo Techado
-                        <img src="./svg/filtros/proyecto/parqueo_techado.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;"> Bañera
-                        <img src="./svg/filtros/comodidades/banera.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;"> Acceso a discapacitados
-                        <img src="./svg/filtros/proyecto/acceso_discapacitados.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Aire Acondicionado
-                        <img src="./svg/filtros/comodidades/ac.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Aire Acondicionado Central
-                        <img src="./svg/filtros/comodidades/aireCentral.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Área Social Propia
-                        <img src="./svg/filtros/comodidades/area_social.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Área de bar
-                        <img src="./svg/filtros/comodidades/bar.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Piscina
-                        <img src="./svg/filtros/comodidades/pisicina.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Gimnasio
-                        <img src="./svg/filtros/comodidades/gym.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Jardín
-                        <img src="./svg/filtros/comodidades/jardin.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Estudio
-                        <img src="./svg/filtros/comodidades/estudio.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Sistema de Sonido
-                        <img src="./svg/filtros/comodidades/sonido_integrado.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Lavandería Techada
-                        <img src="./svg/filtros/comodidades/lavadora.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Bodega
-                        <img src="./svg/filtros/comodidades/bodega.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Mobiliario Incluido
-                        <img src="./svg/filtros/comodidades/mobiliarioincluido.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Jacuzzi
-                        <img src="./svg/filtros/comodidades/jacuzzi.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Sauna
-                        <img src="./svg/filtros/comodidades/sauna.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Smart Home
-                        <img src="./svg/filtros/comodidades/smarthome.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Sótano
-                        <img src="./svg/filtros/comodidades/sotano.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Sala Cine
-                        <img src="./svg/filtros/comodidades/sala_cine.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Vistas
-                        <img src="./svg/filtros/comodidades/vistas.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Dormitorio Servidumbre
-                        <img src="./svg/filtros/comodidades/dorm_servidumbre.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Cisterna
-                        <img src="./svg/filtros/servicios/cisterna.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Generador Eléctrico
-                        <img src="./svg/filtros/servicios/generador_electrico.svg" alt="i" class="icono-filtros">
-                    </div>              
-                    <div  class="checkbox text" style="padding-left: 85px;">Sistema de Vigilancia
-                        <img src="./svg/filtros/seguridad/sistema_vigilancia.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Muro Perimetral
-                        <img src="./svg/filtros/seguridad/proteccion_perimetral.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Ecológica
-                        <img src="./svg/filtros/servicios/ecologica.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Calentador de Agua
-                        <img src="./svg/filtros/servicios/calentador.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Tinaco
-                        <img src="./svg/filtros/servicios/tinaco.svg" alt="i" class="icono-filtros">
-                    </div>
-                    <div  class="checkbox text" style="padding-left: 85px;">Fosa Séptica
-                        <img src="./svg/filtros/servicios/fosa_septica.svg" alt="i" class="icono-filtros">
-                    </div>  
+        <button class="accordion">Características del terreno </button>
+        <div class="panel">
+ 
+            <div  class="checkbox text" style="padding-left: 85px;">Vistas
+                <img src="./svg/filtros/comodidades/vistas.svg" alt="i" class="icono-filtros">
             </div>
 
-          
-            <button class="accordion">Amenidades de la Urbanización </button>
-            <div class="panel">
-
-                <div  class="checkbox text" style="padding-left: 85px;">Calles Pavimentadas
-                    <img src="./svg/filtros/servicios/pavimentado.svg" alt="i" class="icono-filtros">
-                </div>
-                <div  class="checkbox text" style="padding-left: 85px;">Alcantarillado
-                    <img src="./svg/filtros/servicios/alcantarillado.svg" alt="i" class="icono-filtros">
-                </div>
-                <div  class="checkbox text" style="padding-left: 85px;">Circuito Cerrado
-                    <img src="./svg/filtros/seguridad/circuito_cerrado.svg" alt="i" class="icono-filtros">
-                </div>
-                <div  class="checkbox text" style="padding-left: 85px;">Vigilancia
-                    <img src="./svg/filtros/seguridad/vigilancia.svg" alt="i" class="icono-filtros">
-                </div>     
-                <div  class="checkbox text" style="padding-left: 85px;">Área social común
-                    <img src="./svg/filtros/comodidades/area_social.svg" alt="i" class="icono-filtros">
-                </div>
-                <div  class="checkbox text" style="padding-left: 85px;">Piscina común
-                    <img src="./svg/filtros/comodidades/pisicina.svg" alt="i" class="icono-filtros">
-                </div>
-                <div  class="checkbox text" style="padding-left: 85px;">Gimnasio común
-                    <img src="./svg/filtros/comodidades/gym.svg" alt="i" class="icono-filtros">
-                </div>
-                <div  class="checkbox text" style="padding-left: 85px;">Área de juegos
-                    <img src="./svg/filtros/proyecto/area_juegos.svg" alt="i" class="icono-filtros">
-                </div>
-                <div  class="checkbox text" style="padding-left: 85px;">Canchas deportivas
-                    <img src="./svg/filtros/proyecto/cancha_deportiva.svg" alt="i" class="icono-filtros">
-                </div>
-                <div  class="checkbox text" style="padding-left: 85px;">Mirador
-                    <img src="./svg/filtros/proyecto/mirador.svg" alt="i" class="icono-filtros">
-                </div>
-                <div  class="checkbox text" style="padding-left: 85px;">Área de bosque
-                    <img src="./svg/filtros/proyecto/area_bosque.svg" alt="i" class="icono-filtros">
-                </div>
-                <div  class="checkbox text" style="padding-left: 85px;">Área verde
-                    <img src="./svg/filtros/proyecto/area_verde.svg" alt="i" class="icono-filtros">
-                </div>
-                <div  class="checkbox text" style="padding-left: 85px;">Salón de eventos
-                    <img src="./svg/filtros/proyecto/salon_eventos.svg" alt="i" class="icono-filtros">
-                </div>
-                <div  class="checkbox text" style="padding-left: 85px;">Área Comercial
-                    <img src="./svg/filtros/proyecto/comercio.svg" alt="i" class="icono-filtros">
-                </div>
-                <div  class="checkbox text" style="padding-left: 85px;">Telecomunicaciones
-                    <img src="./svg/filtros/servicios/servicios_telecomunicacion.svg" alt="i" class="icono-filtros">
-                </div>    
-                <div  class="checkbox text" style="padding-left: 85px;">Agua de Pozo
-                    <img src="./svg/filtros/servicios/agua_pozo.svg" alt="i" class="icono-filtros">
-                </div>
-                <div  class="checkbox text" style="padding-left: 85px;">Agua Municipal
-                    <img src="./svg/filtros/servicios/agua_municipal.svg" alt="i" class="icono-filtros">
-                </div>
-                   
-
+            <div  class="checkbox text" style="padding-left: 85px;">Terreno Natural / Sin rellenos
+                <img src="./svg/filtros/terreno/terreno_natural.svg" alt="i" class="icono-filtros">
             </div>
-        
+
+            <div  class="checkbox text" style="padding-left: 85px;">Terreno Rellenado
+                <img src="./svg/filtros/terreno/terreno_rellenado.svg" alt="i" class="icono-filtros">
+            </div>
+
+            <div  class="checkbox text" style="padding-left: 85px;">Muros perimetrales existentes
+                <img src="./svg/filtros/terreno/muro_perimetral_existente.svg" alt="i" class="icono-filtros">
+            </div>
+
+            <div  class="checkbox text" style="padding-left: 85px;">Terreno de esquina
+                <img src="./svg/filtros/terreno/terreno_esquina.svg" alt="i" class="icono-filtros">
+            </div>
+
+            <div  class="checkbox text" style="padding-left: 85px;">Sin muros de contención
+                <img src="./svg/filtros/terreno/muro_contencion.svg" alt="i" class="icono-filtros">
+            </div>
+
+
+        </div>
+
+        <button class="accordion">Amenidades del proyecto </button>
+        <div class="panel">
+            <div  class="checkbox text" style="padding-left: 85px;">Calles Pavimentadas
+                <img src="./svg/filtros/servicios/pavimentado.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Alcantarillado
+                <img src="./svg/filtros/servicios/alcantarillado.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Circuito Cerrado
+                <img src="./svg/filtros/seguridad/circuito_cerrado.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Cableado Sub-Terraneo 
+                <img src="./svg/filtros/terreno/cableado_subterraneo.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Área social común
+                <img src="./svg/filtros/comodidades/area_social.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Área de bar común
+                <img src="./svg/filtros/comodidades/bar.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Piscina común
+                <img src="./svg/filtros/comodidades/pisicina.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Gimnasio común
+                <img src="./svg/filtros/comodidades/gym.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Área de juegos
+                <img src="./svg/filtros/proyecto/area_juegos.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Canchas deportivas
+                <img src="./svg/filtros/proyecto/cancha_deportiva.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Mirador
+                <img src="./svg/filtros/proyecto/mirador.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Área de bosque
+                <img src="./svg/filtros/proyecto/area_bosque.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Área verde
+                <img src="./svg/filtros/proyecto/area_verde.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Salon de eventos
+                <img src="./svg/filtros/proyecto/salon_eventos.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Área comercial  
+                <img src="./svg/filtros/proyecto/comercio.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Helipuerto  
+                <img src="./svg/filtros/proyecto/helipuerto.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Vigilancia 24/7  
+                <img src="./svg/filtros/seguridad/vigilancia.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Agua de pozo  
+                <img src="./svg/filtros/servicios/agua_pozo.svg" alt="i" class="icono-filtros">
+            </div>
+            <div  class="checkbox text" style="padding-left: 85px;">Agua municipal  
+                <img src="./svg/filtros/servicios/agua_municipal.svg" alt="i" class="icono-filtros">
+            </div>
+        </div>
 
         <button class="accordion">Datos Legales</button>
         <div class="panel">
@@ -873,7 +806,7 @@
                     Estado Legal
                 </div>
                 <div style="color:#0894FE"> 
-                    Hipotecada 
+                    Libre de gravamen 
                 </div>
             </div>
             <div class="space-between" style="margin: 5px 0 10px 0;">
@@ -881,7 +814,7 @@
                     Régimen
                 </div>
                 <div style="color:#0894FE"> 
-                    Condominios Horizontal 
+                    Condominio Horizontal 
                 </div>
             </div>
             <br>
@@ -896,7 +829,7 @@
                     Promedio Cuota Mensual
                 </div>
                 <div style="color:#0894FE"> 
-                    L.49,548.88
+                    L.12,548.88
                 </div>
             </div>
 
@@ -905,7 +838,7 @@
                     Promedio Gastos de cierre
                 </div>
                 <div style="color:#0894FE"> 
-                    L.67,500
+                    L.37,500
                 </div>
             </div>
 
@@ -914,7 +847,7 @@
                     Cuota / prima Inicial
                 </div>
                 <div style="color:#0894FE"> 
-                    L.450,000
+                    L.130,000
                 </div>
             </div>
 
@@ -934,7 +867,7 @@
                     Cuota de Mantenimiento
                 </div>
                 <div style="color:#0894FE"> 
-                    L.5,600
+                    L.1,600
                 </div>
             </div>
 
@@ -969,8 +902,8 @@
                 <img src="./svg/mercado.svg" alt="Mercado" style="width:20px; height:20px; " >
             </div>
             <div style="margin-left: 30px;">
-                <b> Super Mercado La Colonia </b> <br>
-                <span class="text">5 km</span>
+                <b> PriceSmart </b> <br>
+                <span class="text">0.2 km</span>
             </div>
         </div>
 
@@ -979,7 +912,7 @@
                 <img src="./svg/restaurantes.svg" alt="Mercado" style="width:20px; height:20px; " >
             </div>
             <div style="margin-left: 30px;">
-                <b> NiFu-NiFa Restaurante </b> <br>
+                <b> Rioras Restaurante </b> <br>
                 <span class="text">2.5 km</span>
             </div>
         </div>
@@ -1018,9 +951,9 @@
       <div id="content" class="content">
         
         <div class="atlas-card" style="overflow:none">
-            <a href="./vivienda.html" target="_blank">
+            <a href="./terreno.html" target="_blank">
             <div class="relative-container">
-                <img src="./img/casa1_3.jpg" alt="imagen" class="image-card">
+                <img src="./img/terrenos/img1.png" alt="imagen" class="image-card">
                 <div class="text-number">1 / 3</div>
                 <div class="top-text">
                     Vendedor Particular
@@ -1032,24 +965,28 @@
             </div>
             </a>
             <div style="padding:20px 15px 0 15px;">
-                <div class="titulo-propiedades"> Valle de ángeles </div>
-                <div class="text" style="display: inline;"> Modelo 3 Hab</div>
                 <div class="space-between" style="margin-top: 5px;">
-                    <div class="text" style="font-size: 12px;display: inline;"> 3 Habs | 2.5 Baños | 278m2</div>
-                    <div class="text" style="font-size: 12px;display: inline;"> Área de lote: <span style="color:#0894FE"> 328m2</span></div>
+                    <div class="titulo-propiedades"> Lomas Del Guijarro II</div>
+                    <div class="text" style="font-size: 12px;display: inline;"> Área: <span style="color:#0894FE"> 1720M2 / 246.70VR2</span></div>
+                    
                 </div>
                 <div class="space-between" style="margin-top: 5px;">
-                    <div class="text" style="display: inline;"> L. 4,800,000</div>
+                    <div class="text" style="display: inline;"> Bloque E Lote - #4</div>
+                    <div class="text" style="font-size: 12px;display: inline;"> Topografía: <span style="color:#0894FE"> Plana</span></div>
+                    
+                </div>
+                <div class="space-between" style="margin-top: 5px;">
+                    <div class="text" style="display: inline;"> L. 1,740,000</div>
                     <div class="text" style="font-size: 12px;display: inline;"> 
-                        Estado: <span style="color:#0894FE"> Nueva</span></div>
+                        Categoría: <span style="color:#0894FE"> R-1</span></div>
                 </div>
             </div>
         </div>
 
         <div class="atlas-card" style="overflow:none">
-            <a href="./vivienda.html" target="_blank">
+            <a href="./terreno.html" target="_blank">
             <div class="relative-container">
-                <img src="./img/casa1_3.jpg" alt="imagen" class="image-card">
+                <img src="./img/terrenos/img2.png" alt="imagen" class="image-card">
                 <div class="text-number">1 / 3</div>
                 <div class="top-text">
                     Vendedor Particular
@@ -1061,24 +998,28 @@
             </div>
             </a>
             <div style="padding:20px 15px 0 15px;">
-                <div class="titulo-propiedades"> Valle de ángeles </div>
-                <div class="text" style="display: inline;"> Modelo 3 Hab</div>
                 <div class="space-between" style="margin-top: 5px;">
-                    <div class="text" style="font-size: 12px;display: inline;"> 3 Habs | 2.5 Baños | 278m2</div>
-                    <div class="text" style="font-size: 12px;display: inline;"> Área de lote: <span style="color:#0894FE"> 328m2</span></div>
+                    <div class="titulo-propiedades"> Lomas Del Guijarro II</div>
+                    <div class="text" style="font-size: 12px;display: inline;"> Área: <span style="color:#0894FE"> 1720M2 / 246.70VR2</span></div>
+                    
                 </div>
                 <div class="space-between" style="margin-top: 5px;">
-                    <div class="text" style="display: inline;"> L. 4,800,000</div>
+                    <div class="text" style="display: inline;"> Bloque E Lote - #4</div>
+                    <div class="text" style="font-size: 12px;display: inline;"> Topografía: <span style="color:#0894FE"> Plana</span></div>
+                    
+                </div>
+                <div class="space-between" style="margin-top: 5px;">
+                    <div class="text" style="display: inline;"> L. 1,740,000</div>
                     <div class="text" style="font-size: 12px;display: inline;"> 
-                        Estado: <span style="color:#0894FE"> Nueva</span></div>
+                        Categoría: <span style="color:#0894FE"> R-1</span></div>
                 </div>
             </div>
         </div>
     
         <div class="atlas-card" style="overflow:none">
-            <a href="./vivienda.html" target="_blank">
+            <a href="./terreno.html" target="_blank">
             <div class="relative-container">
-                <img src="./img/casa1_4.jpg" alt="imagen" class="image-card">
+                <img src="./img/terrenos/img3.png" alt="imagen" class="image-card">
                 <div class="text-number">1 / 3</div>
                 <div class="top-text">
                     Inmobi SAS
@@ -1090,24 +1031,28 @@
             </div>
             </a>
             <div style="padding:20px 15px 0 15px;">
-                <div class="titulo-propiedades"> Residencial Entre Pinos </div>
-                <div class="text" style="display: inline;"> Modelo 3 Hab</div>
                 <div class="space-between" style="margin-top: 5px;">
-                    <div class="text" style="font-size: 12px;display: inline;"> 5 Habs | 3.5 Baños | 382m2</div>
-                    <div class="text" style="font-size: 12px;display: inline;"> Área de lote: <span style="color:#0894FE"> 250m2</span></div>
+                    <div class="titulo-propiedades"> Lomas Del Guijarro II</div>
+                    <div class="text" style="font-size: 12px;display: inline;"> Área: <span style="color:#0894FE"> 1720M2 / 246.70VR2</span></div>
+                    
                 </div>
                 <div class="space-between" style="margin-top: 5px;">
-                    <div class="text" style="display: inline;"> L. 7,800,000</div>
+                    <div class="text" style="display: inline;"> Bloque E Lote - #4</div>
+                    <div class="text" style="font-size: 12px;display: inline;"> Topografía: <span style="color:#0894FE"> Plana</span></div>
+                    
+                </div>
+                <div class="space-between" style="margin-top: 5px;">
+                    <div class="text" style="display: inline;"> L. 1,740,000</div>
                     <div class="text" style="font-size: 12px;display: inline;"> 
-                        Estado: <span style="color:#0894FE"> Usada</span></div>
+                        Categoría: <span style="color:#0894FE"> R-1</span></div>
                 </div>
             </div>
         </div>
     
         <div class="atlas-card" style="overflow:none">
-            <a href="./vivienda.html" target="_blank">
+            <a href="./terreno.html" target="_blank">
             <div class="relative-container">
-                <img src="./img/casa1_5.jpg" alt="imagen" class="image-card">
+                <img src="./img/terrenos/img4.png" alt="imagen" class="image-card">
                 <div class="text-number">1 / 3</div>
                 <div class="top-text">
                     Inmobiliaria NX
@@ -1119,24 +1064,28 @@
             </div>
             </a>
             <div style="padding:20px 15px 0 15px;">
-                <div class="titulo-propiedades"> Residencial Ciudad Nueva </div>
-                <div class="text" style="display: inline;"> Casa de habitación</div>
                 <div class="space-between" style="margin-top: 5px;">
-                    <div class="text" style="font-size: 12px;display: inline;"> 6 Habs | 6.5 Baño | 420m2</div>
-                    <div class="text" style="font-size: 12px;display: inline;"> Área de lote: <span style="color:#0894FE"> 1000m2</span></div>
+                    <div class="titulo-propiedades"> Lomas Del Guijarro II</div>
+                    <div class="text" style="font-size: 12px;display: inline;"> Área: <span style="color:#0894FE"> 1720M2 / 246.70VR2</span></div>
+                    
                 </div>
                 <div class="space-between" style="margin-top: 5px;">
-                    <div class="text" style="display: inline;"> L. 9,800,000</div>
+                    <div class="text" style="display: inline;"> Bloque E Lote - #4</div>
+                    <div class="text" style="font-size: 12px;display: inline;"> Topografía: <span style="color:#0894FE"> Plana</span></div>
+                    
+                </div>
+                <div class="space-between" style="margin-top: 5px;">
+                    <div class="text" style="display: inline;"> L. 1,740,000</div>
                     <div class="text" style="font-size: 12px;display: inline;"> 
-                        Estado: <span style="color:#0894FE"> Usada</span></div>
+                        Categoría: <span style="color:#0894FE"> R-1</span></div>
                 </div>
             </div>
         </div>
     
         <div class="atlas-card" style="overflow:none">
-            <a href="./vivienda.html" target="_blank">
+            <a href="./terreno.html" target="_blank">
             <div class="relative-container">
-                <img src="./img/casa1_1.jpg" alt="imagen" class="image-card">
+                <img src="./img/terrenos/img5.png" alt="imagen" class="image-card">
                 <div class="text-number">1 / 3</div>
                 <div class="top-text">
                     Realtor SAS
@@ -1148,24 +1097,28 @@
             </div>
             </a>
             <div style="padding:20px 15px 0 15px;">
-                <div class="titulo-propiedades"> Tatumbla </div>
-                <div class="text" style="display: inline;"> Modelo 3 Hab</div>
                 <div class="space-between" style="margin-top: 5px;">
-                    <div class="text" style="font-size: 12px;display: inline;"> 3 Habs | 2 Baño | 110m2</div>
-                    <div class="text" style="font-size: 12px;display: inline;"> Área de lote: <span style="color:#0894FE"> 250m2</span></div>
+                    <div class="titulo-propiedades"> Lomas Del Guijarro II</div>
+                    <div class="text" style="font-size: 12px;display: inline;"> Área: <span style="color:#0894FE"> 1720M2 / 246.70VR2</span></div>
+                    
                 </div>
                 <div class="space-between" style="margin-top: 5px;">
-                    <div class="text" style="display: inline;"> L. 1,800,000</div>
+                    <div class="text" style="display: inline;"> Bloque E Lote - #4</div>
+                    <div class="text" style="font-size: 12px;display: inline;"> Topografía: <span style="color:#0894FE"> Plana</span></div>
+                    
+                </div>
+                <div class="space-between" style="margin-top: 5px;">
+                    <div class="text" style="display: inline;"> L. 1,740,000</div>
                     <div class="text" style="font-size: 12px;display: inline;"> 
-                        Estado: <span style="color:#0894FE"> Pre-Venta</span></div>
+                        Categoría: <span style="color:#0894FE"> R-1</span></div>
                 </div>
             </div>
         </div>
     
         <div class="atlas-card" style="overflow:none">
-            <a href="./vivienda.html" target="_blank">
+            <a href="./terreno.html" target="_blank">
             <div class="relative-container">
-                <img src="./img/casa1_6.jpg" alt="imagen" class="image-card">
+                <img src="./img/terrenos/img6.png" alt="imagen" class="image-card">
                 <div class="text-number">1 / 3</div>
                 <div class="top-text">
                     Constructora Comaco
@@ -1177,24 +1130,28 @@
             </div>
             </a>
             <div style="padding:20px 15px 0 15px;">
-                <div class="titulo-propiedades"> Santa Lucía </div>
-                <div class="text" style="display: inline;"> Modelo Lila</div>
                 <div class="space-between" style="margin-top: 5px;">
-                    <div class="text" style="font-size: 12px;display: inline;"> 4 Habs | 4.5 Baños | 410m2</div>
-                    <div class="text" style="font-size: 12px;display: inline;"> Área de lote: <span style="color:#0894FE"> 629.45m2</span></div>
+                    <div class="titulo-propiedades"> Lomas Del Guijarro II</div>
+                    <div class="text" style="font-size: 12px;display: inline;"> Área: <span style="color:#0894FE"> 1720M2 / 246.70VR2</span></div>
+                    
                 </div>
                 <div class="space-between" style="margin-top: 5px;">
-                    <div class="text" style="display: inline;"> L. 8,500,000</div>
+                    <div class="text" style="display: inline;"> Bloque E Lote - #4</div>
+                    <div class="text" style="font-size: 12px;display: inline;"> Topografía: <span style="color:#0894FE"> Plana</span></div>
+                    
+                </div>
+                <div class="space-between" style="margin-top: 5px;">
+                    <div class="text" style="display: inline;"> L. 1,740,000</div>
                     <div class="text" style="font-size: 12px;display: inline;"> 
-                        Estado: <span style="color:#0894FE"> Nueva</span></div>
+                        Categoría: <span style="color:#0894FE"> R-1</span></div>
                 </div>
             </div>
         </div>
     
         <div class="atlas-card" style="overflow:none">
-            <a href="./vivienda.html" target="_blank">
+            <a href="./terreno.html" target="_blank">
             <div class="relative-container">
-                <img src="./img/casa1_7.jpg" alt="imagen" class="image-card">
+                <img src="./img/terrenos/img7.png" alt="imagen" class="image-card">
                 <div class="text-number">1 / 3</div>
                 <div class="top-text">
                     AV ingenieros
@@ -1206,16 +1163,20 @@
             </div>
             </a>
             <div style="padding:20px 15px 0 15px;">
-                <div class="titulo-propiedades"> Lomas del Guijarro </div>
-                <div class="text" style="display: inline;"> Casa de habitación</div>
                 <div class="space-between" style="margin-top: 5px;">
-                    <div class="text" style="font-size: 12px;display: inline;"> 5 Habs | 6 Baños | 410m2</div>
-                    <div class="text" style="font-size: 12px;display: inline;"> Área de lote: <span style="color:#0894FE"> 450m2</span></div>
+                    <div class="titulo-propiedades"> Lomas Del Guijarro II</div>
+                    <div class="text" style="font-size: 12px;display: inline;"> Área: <span style="color:#0894FE"> 1720M2 / 246.70VR2</span></div>
+                    
                 </div>
                 <div class="space-between" style="margin-top: 5px;">
-                    <div class="text" style="display: inline;"> L. 10,900,000</div>
+                    <div class="text" style="display: inline;"> Bloque E Lote - #4</div>
+                    <div class="text" style="font-size: 12px;display: inline;"> Topografía: <span style="color:#0894FE"> Plana</span></div>
+                    
+                </div>
+                <div class="space-between" style="margin-top: 5px;">
+                    <div class="text" style="display: inline;"> L. 1,740,000</div>
                     <div class="text" style="font-size: 12px;display: inline;"> 
-                        Estado: <span style="color:#0894FE"> Nueva</span></div>
+                        Categoría: <span style="color:#0894FE"> R-1</span></div>
                 </div>
             </div>
         </div>
