@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/8bf4511c4b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/perfil_vendedor.css">
+    <link rel="stylesheet" href="https://atlas-home-colombia.s3.amazonaws.com/fonts/fonts.css">
+    <style>
+        table, th, td {
+          border: none;
+          border-collapse: collapse;
+        }
+        th, td {
+          padding: 10px;
+          text-align: left;
+        }
+        td
+        {
+            color: #6F7A88;
+        }
+        .order
+        {
+            display: flex;
+            justify-content: flex-start;
+            flex-flow: row wrap;
+        }
+        .correcion-columnas
+        {
+            margin-left: 80px;
+        }
+        </style>
+    <title>Atlas Home</title>
+</head>
+<body>
+    
+    <div class="topnav" id="myTopnav">
+        <div class="column-25" style="left: 0;">
+            <a href="./index.html">
+
+                 <img src="./svg/logo_alargado_azul.svg" alt="Logo Atlas" id="logo-navbar">
+                
+            </a>
+        </div>
+        <div class="column-85">
+           
+            
+        </div> 
+    </div> 
+
+
+
+    <div class="titulo-inmueble hide-mobile" style="margin-top: 95px;" id="titulo-propiedad">
+        <div class="space-between" style="margin-top: 5px;">
+
+            <div class="text">
+                <span id="">Fabio Madrid</span>,
+                <br>
+                <b style="font-size: 22px;display:block">Solicitud de cita exitósa</b> 
+                <br>
+
+                Tu solicitud de cita ha sido enviada al vendedor, puedes contactarlo con los datos proporcionados.
+                
+            </div>
+
+            <div class="relative-container">
+
+                    <img src="./svg/calendario_hombre.svg" alt="Logo Atlas" class="dibujo">
+
+            </div>
+
+        </div>
+    </div>
+    
+    <section style="margin: 50px 5% 100px">
+
+        <div class="order">
+        
+
+            <div>
+                <h3 class="subtitles">Detalles de cita:</h3>
+                <table>
+                    <tr>
+                        <th>Inmueble</th>
+                        <td id="inmueble">Eco Vivienda</td> 
+                    </tr>
+                    <tr>
+                        <th>Fecha</th>
+                        <td id="fecha">10 febrero 2020</td>
+                    </tr>
+                    <tr>
+                        <th>Hora</th>
+                        <td id="hora">10:00am</td>
+                    </tr>
+                    <tr>
+                        <th>Tipo</th>
+                        <td id="cita_tipo">Virtual</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="correcion-columnas">
+                <img src="./svg/video_llamada.svg" alt="">
+            </div>
+
+            <div class="correcion-columnas" >
+                <h3 class="subtitles">Información del vendedor</h3>
+
+                <table>
+                    <tr>
+                        <th>Vendedor</th>
+                        <td id="nombre_vendedor">Coinka</td> 
+                    </tr>
+                    <tr>
+                        <th>Teléfono</th>
+                        <td id="telefono_vendedor">	
+                            <a href="tel:+50494413447" style="text-decoration:underline;color:#0894FE;">
+                                9441-3447
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Tipo</th>
+                        <td id="tipo_vendedor">Constructora</td>
+                    </tr>
+                    <tr>
+                        <th>Tipo</th>
+                        <td id="cita_tipo">Virtual</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="correcion-columnas">
+                <img src="./svg/rating_usuarios.svg" alt="" style="">
+            </div>
+
+        </div>
+
+        
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+<script src="./js/vendedor.js"></script>
+<script src="js/general.js"></script>
+
+</body>
+</html>
