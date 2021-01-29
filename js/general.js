@@ -265,3 +265,279 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
+
+
+///////////////////////////////// Inicio de codigo Juank ///////////////////////////////////////
+/* ****************************** Inicio de codigo Juank ************************************ */
+
+function prevCredito(next) {
+  //obtenemos todas las tabs ordenadas en un arreglo
+  var tabsCredito = document.getElementsByClassName("tab");
+  //obtenemos los valores seleccionables de actividad laboral
+  let empleado = document.getElementById("empleado").checked;
+  let independiente = document.getElementById("independiente").checked;
+  let socio = document.getElementById("socio").checked;
+  let jubilado = document.getElementById("jubilado").checked;
+  let otro = document.getElementById("otro").checked;
+  //obtenemos respuesta de ingresos extra
+  let ingresoSi = document.getElementById("ingresoSi").checked;
+  let ingresoNo = document.getElementById("ingresoNo").checked;
+  //obtenemos respuesta de mancomunado
+  let creditoIndividual = document.getElementById("credito_individual").checked;
+  let creditoMancomunado = document.getElementById("credito_mancomunado").checked;
+  //obtenemos boton de siguiente
+  let botonSiguiente = document.getElementById("nextBtn");
+  let botonAnterior = document.getElementById("prevBtn");
+
+  //verificamos si se esta mostrando la tab de bienvenida
+  if (tabsCredito[0].style.display == "block") {
+    //si es correcto ocultamos esta tab
+    ocultarTab(0);
+    //luego mostramos la siguiente tab
+    mostrarTab(1);
+  }
+  //verificamos si se esta mostrando la tab de datos personales
+  if (tabsCredito[1].style.display == "block") {
+    //si es correcto ocultamos esta tab
+    ocultarTab(1);
+    //luego mostramos la siguiente tab
+    mostrarTab(0);
+    botonAnterior.style.display = 'none';
+  }
+  //verificamos si se esta mostrando la tab de actividad laboral
+  if (tabsCredito[2].style.display == "block") {
+    //si es correcto ocultamos esta tab
+    ocultarTab(2);
+    //luego mostramos la siguiente tab
+    mostrarTab(1);
+  }
+  //verificamos si se esta mostrando la tab de empleado
+  if (tabsCredito[3].style.display == "block") {
+    //si es correcto ocultamos esta tab
+    ocultarTab(3);
+    //luego mostramos la siguiente tab
+    mostrarTab(2);
+  }
+  //verificamos si se esta mostrando la tab de independiente
+  if (tabsCredito[4].style.display == "block") {
+    //si es correcto ocultamos esta tab
+    ocultarTab(4);
+    //luego mostramos la siguiente tab
+    mostrarTab(2);
+  }
+  //verificamos si se esta mostrando la tab de Socio de empreso
+  if (tabsCredito[5].style.display == "block") {
+    //si es correcto ocultamos esta tab
+    ocultarTab(5);
+    //luego mostramos la siguiente tab
+    mostrarTab(2);
+  }
+  //verificamos si se esta mostrando la tab de Socio de Jubilado
+  if (tabsCredito[6].style.display == "block") {
+    //si es correcto ocultamos esta tab
+    ocultarTab(6);
+    //luego mostramos la siguiente tab
+    mostrarTab(2);
+  }
+   //verificamos si se esta mostrando la tab de Socio de otro
+  if (tabsCredito[7].style.display == "block") {
+    //si es correcto ocultamos esta tab
+    ocultarTab(7);
+    //luego mostramos la siguiente tab
+    mostrarTab(2);
+  }
+  //verificamos si se esta mostrando la tab de ingreso extra
+  if (tabsCredito[8].style.display == "block") {
+    //si es correcto ocultamos esta tab
+    ocultarTab(8);
+    //luego mostramos la siguiente tab
+    mostrarTab(2);
+  }
+  //verificamos si se esta mostrando la tab de ingreso extra
+  if (tabsCredito[9].style.display == "block") {
+    //si es correcto ocultamos esta tab
+    ocultarTab(9);
+    //luego mostramos la siguiente tab
+    mostrarTab(8);
+  }
+  //verificamos si se esta mostrando la tab de mancomunado
+  if (tabsCredito[10].style.display == "block") {
+    //si es correcto ocultamos esta tab
+    ocultarTab(10);
+    //luego mostramos la siguiente tab
+    mostrarTab(8);
+  }
+  //verificamos si se esta mostrando la tab de datos del codeudor
+  if (tabsCredito[11].style.display == "block") {
+    //si es correcto ocultamos esta tab
+    ocultarTab(11);
+    //luego mostramos la siguiente tab
+    mostrarTab(10);
+  }
+  //verificamos si se esta mostrando la tab final
+  if (tabsCredito[12].style.display == "block") {
+    //si es correcto ocultamos esta tab
+    ocultarTab(12);
+    //luego mostramos la siguiente tab
+    mostrarTab(10);
+    botonSiguiente.firstChild.data = "Siguiente"
+  }
+  
+}
+
+function nextCredito(next) {
+  //obtenemos todas las tabs ordenadas en un arreglo
+  var tabsCredito = document.getElementsByClassName("tab");
+  //obtenemos los valores seleccionables de actividad laboral
+  let empleado = document.getElementById("empleado").checked;
+  let independiente = document.getElementById("independiente").checked;
+  let socio = document.getElementById("socio").checked;
+  let jubilado = document.getElementById("jubilado").checked;
+  let otro = document.getElementById("otro").checked;
+  //obtenemos respuesta de ingresos extra
+  let ingresoSi = document.getElementById("ingresoSi").checked;
+  let ingresoNo = document.getElementById("ingresoNo").checked;
+  //obtenemos respuesta de mancomunado
+  let creditoIndividual = document.getElementById("credito_individual").checked;
+  let creditoMancomunado = document.getElementById("credito_mancomunado").checked;
+  //obtenemos boton de siguiente
+  let botonSiguiente = document.getElementById("nextBtn");
+  let botonAnterior = document.getElementById("prevBtn");
+
+  //verificamos si estamos en la pantalla final de datos
+  if (tabsCredito[12].style.display == "block") {
+    //si es correcto cambiamos el boton de siguiente a submit
+    // ... the form gets submitted:
+    document.getElementById("regForm").submit();
+  }
+  //verificamos si estamos en la pantalla de datos del codeudor mancomunado
+  if (tabsCredito[11].style.display == "block") {
+    //si es correcto ocultamos esta tab
+    ocultarTab(11);
+    //luego mostramos la tab siguiente y final
+    mostrarTab(12);
+    botonSiguiente.firstChild.data = "Enviar"
+  }
+  //verificamos si estamos en la pantalla de mancomunado
+  if (tabsCredito[10].style.display == "block") {
+    //si es correcto ocultamos esta tab
+    ocultarTab(10);
+    //Confirmamos la eleccion del usuario
+    if (creditoIndividual==true) {
+      mostrarTab(12);
+    botonSiguiente.firstChild.data = "Enviar"
+    }
+    if (creditoMancomunado==true) {
+      mostrarTab(11);
+    }
+  }
+  //verificamos si estamos en la pantalla de los ingresos extra
+  if (tabsCredito[9].style.display == "block") {
+    //si es correcto ocultamos esta tab
+    ocultarTab(9);
+    mostrarTab(10);
+  }
+  //verificamos si esta en la pantalla de ingresos extra
+  if (tabsCredito[8].style.display == "block") {
+    //si es correcto ocultamos esta tab
+    ocultarTab(8);
+    //analisamos la seleccion del cliente
+    if (ingresoSi == true) {
+      mostrarTab(9);
+    }
+    if (ingresoNo == true) {
+      mostrarTab(10);
+    }
+  }
+  //verificamos si esta en la pantalla de otro
+  if (tabsCredito[7].style.display == "block") {
+    //si es correcto ocultamos esta tab
+    ocultarTab(7);
+    //mostramos la tab de ingresos extra
+    mostrarTab(8);
+  }
+  //verificamos si esta en la pantalla de jubilado
+  if (tabsCredito[6].style.display == "block") {
+    //si es correcto ocultamos esta tab
+    ocultarTab(6);
+    //mostramos la tab de ingresos extra
+    mostrarTab(8);
+  }
+  //verificamos si esta en la pantalla de Socio
+  if (tabsCredito[5].style.display == "block") {
+    //si es correcto ocultamos esta tab
+    ocultarTab(5);
+    //mostramos la tab de ingresos extra
+    mostrarTab(8);
+  }
+  //verificamos si esta en la pantalla de independiente
+  if (tabsCredito[4].style.display == "block") {
+    //si es correcto ocultamos esta tab
+    ocultarTab(4);
+    //mostramos la tab de ingresos extra
+    mostrarTab(8);
+  }
+  //verificamos si esta en la pantalla de empleados
+  if (tabsCredito[3].style.display == "block") {
+    //si es correcto ocultamos esta tab
+    ocultarTab(3);
+    //mostramos la tab de ingresos extra
+    mostrarTab(8);
+  }
+  //verificamos si se esta mostrando la tab de actividad laboral
+  if (tabsCredito[2].style.display == "block") {
+    //si es correcto ocultamos esta tab
+    ocultarTab(2);
+    //luego mostramos la siguiente tab,
+    //para lograrlo debemos analizar que ha actividad laboral ha seleccionado el cliente
+    if (empleado == true) {
+      mostrarTab(3);
+    }
+    if (independiente == true) {
+      mostrarTab(4);
+    }
+    if (socio == true) {
+      mostrarTab(5);
+    }
+    if (jubilado == true) {
+      mostrarTab(6);
+    }
+    if (otro == true) {
+      mostrarTab(7);
+    }
+  }
+  //verificamos si se esta mostrando la tab de datos personales
+  if (tabsCredito[1].style.display == "block") {
+    //si es correcto ocultamos esta tab
+    ocultarTab(1);
+    //luego mostramos la siguiente tab
+    mostrarTab(2);
+  }
+  //verificamos si se esta mostrando la tab de bienvenida
+  if (tabsCredito[0].style.display == "block") {
+    //si es correcto ocultamos esta tab
+    ocultarTab(0);
+    //luego mostramos la siguiente tab
+    mostrarTab(1);
+    botonAnterior.style.display = 'block';
+  }
+}
+
+//Esta funcion nos ayudara a ocultar las tabs
+function ocultarTab(tabNumero) {
+  //obtenemos las tabs y sus valores
+  var tabsCredito = document.getElementsByClassName("tab");
+  //si es correcto ocultamos esta tab
+  tabsCredito[tabNumero].style.display = "none";
+}
+
+//Esta funcion nos ayudara a mostrar las tabs
+function mostrarTab(tabNumero) {
+  //obtenemos las tabs y sus valores
+  var tabsCredito = document.getElementsByClassName("tab");
+  //si es correcto ocultamos esta tab
+  tabsCredito[tabNumero].style.display = "block";
+}
+
+///////////////////////////////// Fin de codigo Juank ///////////////////////////////////////
+/* ****************************** Fin de codigo Juank ************************************ */
