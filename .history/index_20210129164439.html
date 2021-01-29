@@ -159,9 +159,9 @@
                     </div>
 
                     <div class="tab"> <!-- tab numero 2 -->
-                        <h3 class="subtitles" style="text-align: left;margin-top: 10px;">
+                        <p class="subtitles" style="text-align: left;margin-top: 10px;">
                             Tus datos personales:
-                        </h3>
+                        </p>
 
                         <p class="text" >
                             Necesitamos tus datos personales para darte una respuesta certera.
@@ -186,13 +186,7 @@
 
                             <input type="text" oninput="this.className = ''" placeholder="Número de documento" name="identidad_usuario" id="identidad_usuario" required style="margin-top: 10px;" autocomplete="on">
 
-                            <label for="ubicacion_usuario" class="subtitles">¿En que ciudad comprarías tu propiedad?</label>
-                            <select name="ubicacion_usuario" style="width: 100%;" id="ubicacion_usuario" class="minimal" required ><br>
-                                <option value="tegucigalpa">Tegucigalpa</option>
-                                <option value="sanpedrosula">San Pedro Sula</option>
-                                <option value="otro_ciudad">Otro</option>
-                            </select>
-
+                            <br>
                             <!--
                             <p style="clear: both; display: block; text-align: center;" class="text">Al continuar aceptas nuestras<br>
                             <a href="#" target="_blank" style="color: #0894FE;">Politicas de Privacidad </a> & <a href="" target="_blank" style="color: #0894FE;"> Términos y Condiciones</a></p>
@@ -576,7 +570,7 @@
                         <h3 class="subtitles" style="padding-left:20px;">¿Como harías tu Solicitud?</h3>
 
                         <div class="space-between" style="display: flex; margin: 0 0 25px 0; flex-flow: row nowrap;">
-                            <input type="radio" id="credito_individual" name="credito-forma" value="creditoindividual" required checked="checked">
+                            <input type="radio" id="credito_individual" name="credito-forma" value="creditoindividual" required checked>
                             <label for="credito_individual" class="b-tipo-cita tablinks"  onclick="openRegistro(event, 'creditoindividual')">Individual</label>
                             <input type="radio" id="credito_mancomunado" name="credito-forma" value="creditomancomunado" required>
                             <label for="credito_mancomunado" class="b-tipo-cita tablinks" onclick="openRegistro(event, 'creditomancomunado')">Mancomunado</label>
@@ -645,8 +639,8 @@
                             <img src="./svg/asesores_profesionales.svg" alt="." style="height: 210px;">
                         </div>
                         <p class="text" style="padding: 0 10%;text-align: center;font-size: 14px;">
-                           <b>PULSA ENVIAR </b>  para terminar tu solicitud de crédito. Un Asesor financiero se contactará contigo
-                            para darte el resultado de tu análisis crediticio. 
+                            Pulsa enviar para terminar tu solicitud de crédito. Un Asesor financiero se contactará contigo
+                            para darte el resultado de tu análisis. 
                         </p>
 
                         

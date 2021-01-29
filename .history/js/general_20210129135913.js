@@ -80,9 +80,25 @@ function openRegistro(evt, tipoRegistro) {
     evt.currentTarget.className += " active";
   }
   
+  //-----------Funcion para los accordions de la vista inmueble ---//
+var acc = document.getElementsByClassName("accordion");
+var ix;
 
-  /* --------ESTE ERA EL ANTIGUO VALIDADOR, FALTA INTEGRARLO AL NUEVO STEP FORM------
+for (ix = 0; ix < acc.length; ix++) {
+  acc[ix].addEventListener("click", function() {
+    this.classList.toggle("active-accordion");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
 
+
+  //----------------------------------------------------------------- FUNCION PARA STEP FORM DE CREDITO -------------------------------------------------------//
+  
   var currentTab = 0; // Current tab is set to be the first tab (0)
   showTab(currentTab); // Display the current tab
   
@@ -108,54 +124,13 @@ function openRegistro(evt, tipoRegistro) {
       document.getElementsByClassName("step")[currentTab].className += " finish";
     } 
     return true; // return the valid status
-  }*/
+  }
 
   
-//-----------Funcion para los accordions de la vista inmueble ---//
-var acc = document.getElementsByClassName("accordion");
-var ix;
-
-for (ix = 0; ix < acc.length; ix++) {
-  acc[ix].addEventListener("click", function() {
-    this.classList.toggle("active-accordion");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    } 
-  });
-}
-
-  //----------------------------------------------------------------- FUNCION PARA STEP FORM DE CREDITO -------------------------------------------------------//
-
-var currentTab = 0; // Current tab is set to be the first tab (0)
-showTab(currentTab); // Display the current tab
-
-function showTab(n) {
-  // This function will display the specified tab of the form...
-  var x = document.getElementsByClassName("tab");
-  x[n].style.display = "block";
-  //... and fix the Previous/Next buttons:
-  if (n == 0) {
-    document.getElementById("prevBtn").style.display = "none";
-  } else {
-    document.getElementById("prevBtn").style.display = "inline";
-  }
-  if (n == (x.length - 1)) {
-    document.getElementById("nextBtn").innerHTML = "Enviar";
-  } else {
-    document.getElementById("nextBtn").innerHTML = "Siguiente";
-  }
-  //... and run a function that will display the correct step indicator:
-  //fixStepIndicator(n)
-}
 
 
 ///////////////////////////////// Inicio de codigo Juank ///////////////////////////////////////
 /* ****************************** Inicio de codigo Juank ************************************ */
-
-
 
 function prevCredito(next) {
   //obtenemos todas las tabs ordenadas en un arreglo
@@ -428,20 +403,3 @@ function mostrarTab(tabNumero) {
 
 ///////////////////////////////// Fin de codigo Juank ///////////////////////////////////////
 /* ****************************** Fin de codigo Juank ************************************ */
-
-
-// ----------------------------------------------------------FUNCION PARA GEOLOCALIZACION-----------------------------------------//
-//-- Solo funciona una ves que tiene el HTTPS--///
-function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else { 
-    x.innerHTML = "Geolocation is not supported by this browser.";
-  }
-}
-// Esta funcion toca enviarla a la base de datos o en submit, no debe mostrarle la coord al cliente//
-function showPosition(position) {
-  //x.innerHTML = //
-  "Latitude: " + position.coords.latitude + 
-  "<br>Longitude: " + position.coords.longitude;
-}

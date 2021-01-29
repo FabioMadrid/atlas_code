@@ -7,7 +7,6 @@
     <script src="https://kit.fontawesome.com/8bf4511c4b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/style_lp.css">
-    <link rel="stylesheet" href="css/busquedainmueble.css">
     <link rel="stylesheet" href="https://atlas-home-colombia.s3.amazonaws.com/fonts/fonts.css">
     <title>Atlas Home</title>
 </head>
@@ -159,9 +158,9 @@
                     </div>
 
                     <div class="tab"> <!-- tab numero 2 -->
-                        <h3 class="subtitles" style="text-align: left;margin-top: 10px;">
+                        <p class="subtitles" style="text-align: left;margin-top: 10px;">
                             Tus datos personales:
-                        </h3>
+                        </p>
 
                         <p class="text" >
                             Necesitamos tus datos personales para darte una respuesta certera.
@@ -186,13 +185,7 @@
 
                             <input type="text" oninput="this.className = ''" placeholder="Número de documento" name="identidad_usuario" id="identidad_usuario" required style="margin-top: 10px;" autocomplete="on">
 
-                            <label for="ubicacion_usuario" class="subtitles">¿En que ciudad comprarías tu propiedad?</label>
-                            <select name="ubicacion_usuario" style="width: 100%;" id="ubicacion_usuario" class="minimal" required ><br>
-                                <option value="tegucigalpa">Tegucigalpa</option>
-                                <option value="sanpedrosula">San Pedro Sula</option>
-                                <option value="otro_ciudad">Otro</option>
-                            </select>
-
+                            <br>
                             <!--
                             <p style="clear: both; display: block; text-align: center;" class="text">Al continuar aceptas nuestras<br>
                             <a href="#" target="_blank" style="color: #0894FE;">Politicas de Privacidad </a> & <a href="" target="_blank" style="color: #0894FE;"> Términos y Condiciones</a></p>
@@ -202,7 +195,7 @@
                     </div>
 
                     <div class="tab"><!-- tab numero 4 -->
-                        <h3 class="subtitles">
+                        <h3>
                             ¿Cual es tu actividad Laboral?
                         </h3>
 
@@ -265,38 +258,24 @@
 
                         </div>
 
-                        <div >
-                            
+                        <div class="space-between" style="margin: 0 0 25px 0; flex-flow: row nowrap;">
+                        
+                        <div style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);padding: 12px;">
+                            <input type="radio" id="empleado" name="actividadLaboral" value="empleado" required checked="checked">
+                            <label for="empleado"  onclick="openRegistro(event, 'empleado_show')" style="text-decoration: none;">Empleado</label><br>`
+                        </div>
 
-                            <label for="empleado" onclick="openRegistro(event, 'empleado_show')" class="checkbox" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);padding:16px; text-indent:35px;">
-                                 Empleado
-                                <input type="radio" id="empleado" name="actividadLaboral" value="empleado" required checked="checked">
-                                <span class="checkmark" style="left:12px"></span>
-                            </label>
+                            <input type="radio" id="independiente" name="actividadLaboral" value="independiente" required>
+                            <label for="independiente" onclick="openRegistro(event, 'independiente_show')">independiente</label><br>
 
-                            <label for="independiente" onclick="openRegistro(event, 'independiente_show')" class="checkbox" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);padding:16px; text-indent:35px;" > 
-                                Independiente
-                                <input type="radio" id="independiente" value="independiente" name="actividadLaboral" required>
-                                <span class="checkmark" style="left:12px"></span>
-                            </label>
+                            <input type="radio" id="socio" name="actividadLaboral" value="socio">
+                            <label for="socio" onclick="openRegistro(event, 'socio_show')">Socio Empresa</label><br>
 
-                            <label for="socio" onclick="openRegistro(event, 'socio_show')" class="checkbox" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);padding:16px; text-indent:35px;" > 
-                                Socio Empresa
-                                <input type="radio" id="socio" value="socio" name="actividadLaboral" required>
-                                <span class="checkmark" style="left:12px"></span>
-                            </label>
+                            <input type="radio" id="jubilado" name="actividadLaboral" value="jubilado">
+                            <label for="jubilado" onclick="openRegistro(event, 'jubilado_show')">Jubilado</label><br>
 
-                            <label for="jubilado" onclick="openRegistro(event, 'jubilado_show')" class="checkbox" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);padding:16px; text-indent:35px;">
-                                 Jubilado
-                                <input type="radio" id="jubilado" value="jubilado" name="actividadLaboral" required >
-                                <span class="checkmark" style="left:12px"></span>
-                            </label>
-
-                            <label for="otro" onclick="openRegistro(event, 'otro_show')" class="checkbox" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);padding:16px; text-indent:35px;"> Otro
-                                <input type="radio" id="otro" value="otro" name="actividadLaboral" required >
-                                <span class="checkmark" style="left:12px"></span>
-                            </label>
-
+                            <input type="radio" id="otro" name="actividadLaboral" value="otro">
+                            <label for="otro" onclick="openRegistro(event, 'otro_show')">Otro</label><br>
 
                         </div>
 
@@ -429,10 +408,10 @@
                             <input type="number" name="porcentaje_accionario_socio" id="porcentaje_accionario_socio" required placeholder="¿Qué Porcentaje de la empresa posees">
 
                             <label for="salario_bruto_socio_empresa" >Salario Bruto Mensual para tí</label>
-                            <input type="number" name="salario_socio_empresa" id="salario_bruto_socio_empresa" required placeholder="L.35,000">
+                            <input type="number" name="salario_socio_empresa" id="salario_socio_empresa" required placeholder="L.35,000">
                             
                             <label for="salario_neto_socio_empresa" >Salario Neto (Con deducciones)</label>
-                            <input type="number" name="salario_neto_socio_empresa" id="salario_neto_socio_empresa" required placeholder="L.35,000">
+                            <input type="number" name="salario_socio_empresa" id="salario_socio_empresa" required placeholder="L.35,000">
 
                             <label for="sector_economico_empresa_del_socio" >Sector Económico de tu empresa</label>
                                 <select name="sector_economico_empresa_del_socio" id="sector_economico_empresa_del_socio" required>
@@ -524,59 +503,27 @@
                     </div>
                     
                     <div class="tab"><!-- tab numero 8 -->
-                        <h3 class="subtitles">Ingresos Extra</h3>
-                        <div style="display: flex;justify-content: center;">
-                            <img src="./svg/ingresos.svg" alt="." style="height: 210px;">
-                        </div>
-                        <p class="text" style="padding: 0 10%;text-align: center;font-size: 14px;">
-                            ¿Cuentas con algún ingreso extra?
+                        <h1>Ingresos Extra?</h1>
+                        <p class="text" style="text-align: center; padding-bottom: 15px;">
+                            <input type="radio" id="ingresoSi" name="ingresosExtra" value="si">
+                            <label for="ingresoSi">SI</label><br>
+                            <input type="radio" id="ingresoNo" name="ingresosExtra" value="no" checked="checked">
+                            <label for="ingresoNo">NO</label><br>
                         </p>
-
-                        <label for="ingresoSi" class="checkbox" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);padding:16px; text-indent:35px;">
-                            Si, Cuento con ingresos extra
-                           <input type="radio" id="ingresoSi" name="ingresosExtra" value="si" required checked="checked">
-                           <span class="checkmark" style="left:12px"></span>
-                       </label>
-
-                       <label for="ingresoNo" class="checkbox" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);padding:16px; text-indent:35px;">
-                            No, Solamente los que ya declaré
-                            <input type="radio" id="ingresoNo" name="ingresosExtra" value="si" required checked="checked">
-                            <span class="checkmark" style="left:12px"></span>
-                        </label>
-                        <br>
                     </div>
                     
                     <div class="tab"><!-- tab numero 9 -->
-                        <h3 class="subtitles">Ingresos Extra</h3>
-                        <div style="display: flex;justify-content: center;">
-                            <img src="./svg/ingresos.svg" alt="." style="height: 210px;">
-                        </div>
-                        <p class="text" style="padding: 0 10%;text-align: center;font-size: 14px;">
-                            Favor justifica los ingresos extras que tengas, en los campos que aplique tu caso.
+                        <h1>Seleccion de los Ingresos Extra</h1>
+                        <p class="text" style="text-align: center; padding-bottom: 15px;">
+                            :D
                         </p>
-
-                        <label for="remesas">Remesas:</label>
-                        <input type="number" id="remesas" placeholder="Ejemplo: L.10,000" min="1" autocomplete="off">
-
-                        <label for="alquileres">Alquileres:</label>
-                        <input type="number" id="alquileres" placeholder="Ejemplo: L.10,000" min="1" autocomplete="off">
-
-                        <label for="horas_extra">Horas Extra:</label>
-                        <input type="number" id="horas_extra" placeholder="Ejemplo: L.10,000" min="1" autocomplete="off">
-
-                        <label for="comisiones">Comisiones:</label>
-                        <input type="number" id="comisiones" placeholder="Ejemplo: L.10,000" min="1" autocomplete="off">
-
-                        <label for="otros_honorarios">Otros Honorarios:</label>
-                        <input type="number" id="otros_honorarios" placeholder="Ejemplo: L.10,000" min="1" autocomplete="off">
-
                     </div>
 
                     <div class="tab"><!-- tab numero 10 -->
-                        <h3 class="subtitles" style="padding-left:20px;">¿Como harías tu Solicitud?</h3>
+                        <p class="subtitles" style="padding-left:20px;">¿Como harías tu Solicitud?</p>
 
                         <div class="space-between" style="display: flex; margin: 0 0 25px 0; flex-flow: row nowrap;">
-                            <input type="radio" id="credito_individual" name="credito-forma" value="creditoindividual" required checked="checked">
+                            <input type="radio" id="credito_individual" name="credito-forma" value="creditoindividual" required checked>
                             <label for="credito_individual" class="b-tipo-cita tablinks"  onclick="openRegistro(event, 'creditoindividual')">Individual</label>
                             <input type="radio" id="credito_mancomunado" name="credito-forma" value="creditomancomunado" required>
                             <label for="credito_mancomunado" class="b-tipo-cita tablinks" onclick="openRegistro(event, 'creditomancomunado')">Mancomunado</label>
@@ -606,50 +553,16 @@
                     </div>
 
                     <div class="tab"><!-- tab numero 11 -->
-
-                        <h3 class="subtitles" style="text-align: left;margin-top: 10px;">
-                            Datos del Co-deudor
-                        </h3>
-
-                        <p class="text" >
-                            Necesitamos los datos personales de la persona con quien deseas mancomunar.
-                            <br>
-                            <b style="color: #081C33;">
-                                Descuida, encriptamos todos tús datos y los enviamos directo a la banca.
-                            </b>
+                        <h1>Datos Del Codeudor</h1>
+                        <p class="text" style="text-align: center; padding-bottom: 15px;">
+                            Seleccionaste Datos Del Codeudor.
                         </p>
-
-                            <input type="text"  placeholder="Nombre y Apellido" name="nombre_apellido_usuario_mancomunado_credito" id="nombre_apellido_usuario_mancomunado_credito" required autocomplete="off">
-
-                            <input type="email"  placeholder="Correo Electrónico" name="email_usuario_mancomunado_credito" id="email_usuario_mancomunado_credito" required autocomplete="off">
-
-                            <input type="number" style="margin-top: 10px;" placeholder="Celular de Contacto" name="celular_usuario_mancomunado_credito" 
-                            id="celular-usuario-credito" required 
-                            >
-                            <label for="documento_tipo_mancomunado" class="subtitles" style="margin-bottom:10px;">Tipo de Identificación del Co-deudor</label>
-                            <select name="documento_tipo_mancomunado" style="width: 100%;" id="documento_tipo_mancomunado" class="minimal" required ><br>
-                                <option value="identidad_nacional_mancomunado">Identidad Nacional</option>
-                                <option value="pasaporte_mancomunado">Pasaporte</option>
-                                <option value="carnet_residencia_mancomunado">Carnet de Residencia</option>
-                            </select>
-
-                            <input type="text" placeholder="Número de documento Co-deudor" name="identidad_mancomunado" id="identidad_mancomunado" required style="margin-top: 10px;" autocomplete="off">
-
-                            <br>
                     </div>
 
                     <div class="tab"><!-- tab numero 12 -->
 
-                        <h3 class="subtitles">¡Genial, eso es todo por ahora!</h3>
-                        <div style="display: flex;justify-content: center;">
-                            <img src="./svg/asesores_profesionales.svg" alt="." style="height: 210px;">
-                        </div>
-                        <p class="text" style="padding: 0 10%;text-align: center;font-size: 14px;">
-                           <b>PULSA ENVIAR </b>  para terminar tu solicitud de crédito. Un Asesor financiero se contactará contigo
-                            para darte el resultado de tu análisis crediticio. 
-                        </p>
-
-                        
+                        <p class="subtitles" style="padding-left:20px;">¿Fin?</p>
+                        numero 14
                     </div>
 
                     <div class="flex-container flex-centrar">

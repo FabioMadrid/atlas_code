@@ -45,10 +45,8 @@ modal.style.display = "none";
 }
 }
 
-var ing_reg = document.getElementsByClassName("modal");
+  //----------------------------------------------------------------- FUNCION PARA STEP FORM DE CREDITO -------------------------------------------------------//
+  
 
-function jumpto()
-{
-  ing_reg.style.display = "none";
-  modalI;
-}
+  
+  

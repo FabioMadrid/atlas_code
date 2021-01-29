@@ -159,9 +159,9 @@
                     </div>
 
                     <div class="tab"> <!-- tab numero 2 -->
-                        <h3 class="subtitles" style="text-align: left;margin-top: 10px;">
+                        <p class="subtitles" style="text-align: left;margin-top: 10px;">
                             Tus datos personales:
-                        </h3>
+                        </p>
 
                         <p class="text" >
                             Necesitamos tus datos personales para darte una respuesta certera.
@@ -186,13 +186,7 @@
 
                             <input type="text" oninput="this.className = ''" placeholder="Número de documento" name="identidad_usuario" id="identidad_usuario" required style="margin-top: 10px;" autocomplete="on">
 
-                            <label for="ubicacion_usuario" class="subtitles">¿En que ciudad comprarías tu propiedad?</label>
-                            <select name="ubicacion_usuario" style="width: 100%;" id="ubicacion_usuario" class="minimal" required ><br>
-                                <option value="tegucigalpa">Tegucigalpa</option>
-                                <option value="sanpedrosula">San Pedro Sula</option>
-                                <option value="otro_ciudad">Otro</option>
-                            </select>
-
+                            <br>
                             <!--
                             <p style="clear: both; display: block; text-align: center;" class="text">Al continuar aceptas nuestras<br>
                             <a href="#" target="_blank" style="color: #0894FE;">Politicas de Privacidad </a> & <a href="" target="_blank" style="color: #0894FE;"> Términos y Condiciones</a></p>
@@ -576,7 +570,7 @@
                         <h3 class="subtitles" style="padding-left:20px;">¿Como harías tu Solicitud?</h3>
 
                         <div class="space-between" style="display: flex; margin: 0 0 25px 0; flex-flow: row nowrap;">
-                            <input type="radio" id="credito_individual" name="credito-forma" value="creditoindividual" required checked="checked">
+                            <input type="radio" id="credito_individual" name="credito-forma" value="creditoindividual" required checked>
                             <label for="credito_individual" class="b-tipo-cita tablinks"  onclick="openRegistro(event, 'creditoindividual')">Individual</label>
                             <input type="radio" id="credito_mancomunado" name="credito-forma" value="creditomancomunado" required>
                             <label for="credito_mancomunado" class="b-tipo-cita tablinks" onclick="openRegistro(event, 'creditomancomunado')">Mancomunado</label>
@@ -606,50 +600,16 @@
                     </div>
 
                     <div class="tab"><!-- tab numero 11 -->
-
-                        <h3 class="subtitles" style="text-align: left;margin-top: 10px;">
-                            Datos del Co-deudor
-                        </h3>
-
-                        <p class="text" >
-                            Necesitamos los datos personales de la persona con quien deseas mancomunar.
-                            <br>
-                            <b style="color: #081C33;">
-                                Descuida, encriptamos todos tús datos y los enviamos directo a la banca.
-                            </b>
+                        <h1>Datos Del Codeudor</h1>
+                        <p class="text" style="text-align: center; padding-bottom: 15px;">
+                            Seleccionaste Datos Del Codeudor.
                         </p>
-
-                            <input type="text"  placeholder="Nombre y Apellido" name="nombre_apellido_usuario_mancomunado_credito" id="nombre_apellido_usuario_mancomunado_credito" required autocomplete="off">
-
-                            <input type="email"  placeholder="Correo Electrónico" name="email_usuario_mancomunado_credito" id="email_usuario_mancomunado_credito" required autocomplete="off">
-
-                            <input type="number" style="margin-top: 10px;" placeholder="Celular de Contacto" name="celular_usuario_mancomunado_credito" 
-                            id="celular-usuario-credito" required 
-                            >
-                            <label for="documento_tipo_mancomunado" class="subtitles" style="margin-bottom:10px;">Tipo de Identificación del Co-deudor</label>
-                            <select name="documento_tipo_mancomunado" style="width: 100%;" id="documento_tipo_mancomunado" class="minimal" required ><br>
-                                <option value="identidad_nacional_mancomunado">Identidad Nacional</option>
-                                <option value="pasaporte_mancomunado">Pasaporte</option>
-                                <option value="carnet_residencia_mancomunado">Carnet de Residencia</option>
-                            </select>
-
-                            <input type="text" placeholder="Número de documento Co-deudor" name="identidad_mancomunado" id="identidad_mancomunado" required style="margin-top: 10px;" autocomplete="off">
-
-                            <br>
                     </div>
 
                     <div class="tab"><!-- tab numero 12 -->
 
-                        <h3 class="subtitles">¡Genial, eso es todo por ahora!</h3>
-                        <div style="display: flex;justify-content: center;">
-                            <img src="./svg/asesores_profesionales.svg" alt="." style="height: 210px;">
-                        </div>
-                        <p class="text" style="padding: 0 10%;text-align: center;font-size: 14px;">
-                           <b>PULSA ENVIAR </b>  para terminar tu solicitud de crédito. Un Asesor financiero se contactará contigo
-                            para darte el resultado de tu análisis crediticio. 
-                        </p>
-
-                        
+                        <p class="subtitles" style="padding-left:20px;">¿Fin?</p>
+                        numero 14
                     </div>
 
                     <div class="flex-container flex-centrar">
