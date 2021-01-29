@@ -61,6 +61,8 @@ function modalINFOCITA()
 infocita.style.display = "block";
 }
 
+  
+
 
 
 
@@ -110,22 +112,6 @@ function openRegistro(evt, tipoRegistro) {
     return true; // return the valid status
   }*/
 
-  
-//-----------Funcion para los accordions de la vista inmueble ---//
-var acc = document.getElementsByClassName("accordion");
-var ix;
-
-for (ix = 0; ix < acc.length; ix++) {
-  acc[ix].addEventListener("click", function() {
-    this.classList.toggle("active-accordion");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    } 
-  });
-}
 
   //----------------------------------------------------------------- FUNCION PARA STEP FORM DE CREDITO -------------------------------------------------------//
 
@@ -151,6 +137,21 @@ function showTab(n) {
   //fixStepIndicator(n)
 }
 
+//-----------Funcion para los accordions de la vista inmueble ---//
+var acc = document.getElementsByClassName("accordion");
+var ix;
+
+for (ix = 0; ix < acc.length; ix++) {
+  acc[ix].addEventListener("click", function() {
+    this.classList.toggle("active-accordion");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
 
 ///////////////////////////////// Inicio de codigo Juank ///////////////////////////////////////
 /* ****************************** Inicio de codigo Juank ************************************ */
