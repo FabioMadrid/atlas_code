@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/8bf4511c4b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/perfil_vendedor.css">
+    <link rel="stylesheet" href="https://atlas-home-colombia.s3.amazonaws.com/fonts/fonts.css">
+    <title>Atlas Home</title>
+</head>
+<body>
+    
+    <div class="topnav" id="myTopnav">
+        <div class="column-25" style="left: 0;">
+            <a href="/">
+
+                <div style="position: absolute; left:0; top: 0;margin: 25px;">
+
+                    <span style="padding-left:10px; font-size: 18px;color: #2680EB;">❮ Inicio</span> 
+                </div>
+                
+            </a>
+        </div>
+        
+    </div> 
+
+
+<section style="margin: 120px auto 100px; max-width: 650px;">
+
+
+    <div class="show-mobile-2 correcion-cita"></div>
+            
+                <form action="/venderPropiedad" method="POST" >
+                    <input id="step2"  type="checkbox">
+                    <input id="step3"  type="checkbox">
+                    <input id="step4"  type="checkbox">
+                    <input id="step5"  type="checkbox">
+
+                    <input id="posicion-coordenada" name="coordenadas" style="display: none;" />
+
+                    <div id="part1">
+                        <p class="text" style="text-align: left; margin: 2px auto;color:#0048CD">Vende o alquila
+                        <br><b style="font-size: 20px;">Con Atlas Home</b></p>                                       
+
+                        <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/step-forms/megafono.svg" alt="." class="icon-lp"style="width:300px;">
+                        <br>
+                        <div class="text" style="text-align: center;">
+                            ¿Porqué Atlas Home?
+                        </div>
+
+                        <br>
+
+                        <a href="/beneficios" target="_blank">
+                            <button class="boton-landing" style="width: 300px; margin: 20px auto;">Conoce todos los beneficios</button>
+                        </a>
+
+                        <div style="display: flex; justify-content: center; margin: 25px auto;">
+                            <label for="step2" id="continue-step2">
+                                <div class="subtitles" style="font-size: 20px;cursor: pointer;">Empezemos  ❯</div>
+                            </label>
+                        </div>
+
+                    </div>
+
+                    <div id="part2" style="position: relative;">
+
+                        <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/step-forms/casa_gps.svg" alt="." class="icon-lp"style="width:200px;">
+                        <p class="text" style="text-align: center;display: block;">Cuéntanos un poco sobre tu propiedad</p>
+                        <label for="anunciar-operacion" class="text">Operación</label>
+                        <select name="tipo_operacion" style="width: 100%;" id="anunciar-operacion" class="minimal" required ><br>
+                            <option value="venta">Venta</option>
+                            <option value="renta">Renta</option>
+                        </select>
+
+                        <br>
+
+                        <label for="anunciar-tipo-propiedad">Tipo de propiedad</label>
+                        <select name="tipo_propiedad" style="width: 100%;" id="anunciar-tipo-propiedad" class="minimal" required ><br>
+                            <option value="casa">Casa</option>
+                            <option value="apartamento">Apartamento</option>
+                            <option value="terreno">Terreno</option>
+                            <option value="comercio">Comercio</option>
+                            <option value="proyecto-inmobiliario">Proyecto Inmobiliario</option>
+                        </select>
+
+                        <br>
+
+                        <label for="anunciar-condicion-propiedad">Condición de la propiedad</label>
+                        <select name="condicion" style="width: 100%;" id="anunciar-condicion-propiedad" class="minimal" required ><br>
+                            <option value="nueva">Nueva sin uso</option>
+                            <option value="usada">Usada</option>
+                            <option value="pre-venta">Pre Venta</option>
+                            <option value="construccion">En Construcción</option>
+                        </select>
+
+                        <br>
+
+                        <label for="anunciar-tipo-vendedor">¿Bajo que figura actúas?</label>
+                        <select name="tipo_vendedor" style="width: 100%;" id="anunciar-tipo-vendedor" class="minimal" required oninput="this.className = ''"><br>
+                            <option value="desarrollador_inmobiliario">Desarrollador Inmobiliario / Constructora</option>
+                            <option value="bienes_raices">Bienes Raíces</option>
+                            <option value="propietario_vendedor">Propietario Vendedor</option>
+                        </select>
+
+                        <!--
+                        <label for="anunciar-motivo">¿Motivo de la transacción?</label>
+                        <select name="anunciar-motivo" style="width: 100%;" id="anunciar-motivo" class="minimal" required oninput="this.className = ''"><br>
+                            <option value="negocio">Negocio</option>
+                            <option value="mudanza">Mudanza</option>
+                            <option value="otro-motivo">Otro</option>
+                        </select>
+                        -->
+
+
+                        <label for="step2" id="back-step2">
+                            <div style="position: absolute; left:0; top: 0;">
+                                <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/step-forms/flecha-izq.svg" alt="">
+                                <span style="padding-left:10px; font-size: 18px;color: #2680EB;"> Regresar</span> 
+                            </div>
+                          </label>
+                
+                            <div style="display: flex; justify-content: center;">
+                                <label for="step3" id="continue-step3">
+                                    <div class="subtitles" style="font-size: 20px;cursor: pointer;margin: 25px auto;">Continuar  ❯</div>
+                                </label>
+                            </div>
+
+                    </div>
+
+                    <div id="part3" style="position: relative;">
+
+                        <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/step-forms/casa_gps.svg" alt="." class="icon-lp"style="width:200px;">
+                        <p class="text" style="text-align: center;display: block;">Ubicación de la propiedad.</p>
+
+                        <!--Quitar required de ubicacion si ya tenemos coordenadas GPS-->
+
+                        <button class="btn-social-login gps-icon" onclick="getLocation()"> Usar Mi Ubicación Actual</button>
+                        <br>
+                        <label for="anunciar-ubicacion">Ciudad</label>
+                        <select name="ubicacion" style="width: 100%;" id="anunciar-ubicacion" class="minimal" required ><br>
+                            <option value="tegucigalpa">Tegucigalpa</option>
+                            <option value="sanpedrosula">San Pedro Sula</option>
+                            <option value="otra_ciudad">Otro</option>
+                        </select>
+
+                        <br>
+
+                        <label for="direccion-propiedad">Dirección de la Propiedad</label>
+                        <input type="text" placeholder="Escribe la dirección aquí" name="direccion_propiedad" id="dirrecion-propiedad" required>
+
+                        <label for="step3" id="back-step3">
+                            <div style="position: absolute; left:0; top: 0;">
+                                <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/step-forms/flecha-izq.svg" alt="">
+                                <span style="padding-left:10px; font-size: 18px;color: #2680EB;"> Regresar</span> 
+                            </div>
+                          </label>
+                
+                            <div style="display: flex; justify-content: center;">
+                                <label for="step4" id="continue-step4">
+                                    <div class="subtitles" style="font-size: 20px;cursor: pointer;margin: 25px auto;">Continuar  ❯</div>
+                                </label>
+                            </div>
+                    </div>
+
+                    <div id="part4" style="position: relative;">
+
+                        <p class="text" style="text-align: left; margin: 30px auto;color:#0048CD">Compartenos tu
+                            <br>
+                            <b style="font-size: 20px;">Información de Contacto</b>
+                        </p>  
+                        <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/step-forms/contacto_cliente.svg" alt="." class="icon-lp"style="width:300px;margin-bottom:30px;">
+
+                        <input type="text" placeholder="Nombre y Apellido" name="nombres" id="anunciar-contacto" required autofocus autocomplete="on" >
+                        <input type="email" id="contacto_email" name="correo" placeholder="Correo Electrónico" required autocomplete="on" >
+                        <input type="number" placeholder="Celular de Contacto" name="telefono" 
+                        id="anunciar-telefono-contacto" minlength="8" autocomplete="on">
+
+                        <label for="step4" id="back-step3">
+                            <div style="position: absolute; left:0; top: 0;">
+                                <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/step-forms/flecha-izq.svg" alt="">
+                                <span style="padding-left:10px; font-size: 18px;color: #2680EB;"> Regresar</span> 
+                            </div>
+                          </label>
+                
+                            <div style="display: flex; justify-content: center;">
+                                <label for="step5" id="continue-step5">
+                                    <div class="subtitles" style="font-size: 20px;cursor: pointer;padding-top: 25px;">Continuar  ❯</div>
+                                </label>
+                            </div>
+
+                    </div>
+
+                    <div id="part5"  style="position: relative;">
+
+                        <p class="text" style="text-align: center; margin: 30px auto;color:#0048CD">Gracias
+                            <br>
+                            <b style="font-size: 20px;">¡Haz Clic en Enviar!</b>
+                        </p>  
+                        <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/step-forms/exito.svg" alt="." class="icon-lp"style="width:300px;">
+
+                        <p class="text" style="text-align: center;display: block;margin: 30px auto">
+                            <b>Haz Clic en Enviar para Finalizar</b>
+                            <br>
+                            Un Miembro de nuestro equipo te estará contactando para darle seguimiento a tu Solicitud.
+                        </p>  
+
+                        <label class="continue">
+                            <button type="submit" class="submit-boton" style="width: 100%; height: 50px;">Enviar Solicitud</button>
+                        </label>
+
+                        <label for="step5" id="back-step4">
+                            <div style="position: absolute; left:0; top: 0;">
+                                <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/step-forms/flecha-izq.svg" alt="">
+                                <span style="padding-left:10px; font-size: 18px;color: #2680EB;"> Regresar</span> 
+                            </div>
+                        </label>
+
+                    </div>
+
+                </form>
+            </div>
+
+
+
+
+</section>
+
+
+
+    <script src="./js/vendedor.js"></script>
+    <script src="js/general.js"></script>
+
+</body>
+</html>

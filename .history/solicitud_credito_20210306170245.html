@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/8bf4511c4b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/perfil_vendedor.css">
+    <link rel="stylesheet" href="https://atlas-home-colombia.s3.amazonaws.com/fonts/fonts.css">
+    <title>Atlas Home</title>
+</head>
+<body>
+    
+    <div class="topnav" id="myTopnav">
+        <div class="column-25" style="left: 0;">
+            <a href="./perfil_vendedor.html">
+
+                <div style="position: absolute; left:0; top: 0;margin: 25px;">
+
+                    <span style="padding-left:10px; font-size: 18px;color: #2680EB;">❮ Regresar</span> 
+                </div>
+                
+            </a>
+        </div>
+        <div class="column-85">
+
+                <button class="boton-ingresar" id="boton-ingresar" onclick="">Cerrar Sesión</button>
+           
+            <a href="javascript:void(0);" style="font-size:35px;" class="icon" onclick="HamburgerFuction()">&#9776;</a>
+        </div> 
+    </div> 
+
+
+<section style="margin: 50px 5% 100px">
+
+
+    <div class="cr-titulo">
+        <div> <h3 style="margin: 0px auto 0px;">Solicitud de Crédito Hipotecario</h3>
+            
+            
+        </div>
+    </div>
+
+        <form id="regForm" action="/solicitudCredito" method="POST" enctype="multipart/form-data">
+
+            <div class="tab"> <!-- tab numero 1 -->
+                <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/form-credito/step_form.svg" alt="." class="icon-lp"style="width:270px; margin-top:20px;margin:auto;">
+                <p class="text" style="text-align: center; padding-bottom: 15px;">
+                Te ayudaremos a encontrar la entidad financiera que más se adapta a tí. <br>
+                Te tomará de 8 a 10 minutos.
+                </p>
+
+            </div>
+
+            <div class="tab"> <!-- tab numero 2 -->
+                <h3 class="subtitles" style="text-align: left;margin-top: 10px;">
+                    Tus datos personales:
+                </h3>
+
+                <p class="text" >
+                    Necesitamos tus datos personales para darte una respuesta certera.
+                    <br>
+                    <b style="color: #081C33;">
+                        Descuida, encriptamos todos tús datos y los enviamos directo a la banca.
+                    </b>
+                </p>
+
+                    <input type="text" oninput="this.className = ''" placeholder="Nombres y Apellido" name="nombres" id="nombre-apellido-usuario-credito" required autocomplete="on">
+
+                    <input type="email" oninput="this.className = ''" placeholder="Tu Correo Electrónico" name="email" id="email-usuario-credito" required autocomplete="on">
+
+                    <input type="number" style="margin-top: 10px;" placeholder="Celular de Contacto" name="celular" 
+                    id="celular-usuario-credito" required minlength="8" oninput="this.className = ''">
+                    <label for="documento_tipo" class="subtitles" style="margin-bottom:10px;">Tipo de Identificación</label>
+                    <select name="documento_tipo" style="width: 100%;" id="documento_tipo" class="minimal" required oninput="this.className = ''"><br>
+                        <option value="identidad_nacional">Identidad Nacional</option>
+                        <option value="pasaporte">Pasaporte</option>
+                        <option value="carnet_residencia">Carnet de Residencia</option>
+                    </select>
+
+                    <input type="text" oninput="this.className = ''" placeholder="Número de documento" name="identidad_usuario" id="identidad_usuario" required style="margin-top: 10px;" autocomplete="on">
+
+                    <label for="ubicacion_usuario" class="subtitles">¿En que ciudad comprarías tu propiedad?</label>
+                    <select name="ubicacion_usuario" style="width: 100%;" id="ubicacion_usuario" class="minimal" required ><br>
+                        <option value="tegucigalpa">Tegucigalpa</option>
+                        <option value="sanpedrosula">San Pedro Sula</option>
+                        <option value="otro_ciudad">Otro</option>
+                    </select>
+
+                    <!--
+                    <p style="clear: both; display: block; text-align: center;" class="text">Al continuar aceptas nuestras<br>
+                    <a href="#" target="_blank" style="color: #0894FE;">Politicas de Privacidad </a> & <a href="" target="_blank" style="color: #0894FE;"> Términos y Condiciones</a></p>
+                        -->
+
+
+            </div>
+
+            <div class="tab"><!-- tab numero 4 -->
+                <h3 class="subtitles">
+                    ¿Cual es tu actividad Laboral?
+                </h3>
+
+                <!--Muestra los dibujos con una explicacion de actividad laboral-->
+
+                <div id="empleado_show" class="tabcontent" style="display: block;">
+                    <div style="display: flex;justify-content: center;">
+                        <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/form-credito/empleados.svg" alt="." style="height: 210px;">
+                    </div>
+                    <p class="text" style="padding: 0 10%;text-align: center;font-size: 14px;">
+                        Aplica si trabajas bajo un Salario para una Empresa
+                        Privada o Institución Gubernamental, etc...
+                    </p>
+                </div>
+
+                <div id="independiente_show" class="tabcontent">
+
+                    <div style="display: flex;justify-content: center;">
+                        <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/form-credito/doctores.svg" alt="." style="height: 210px;">
+                    </div>
+                    <p class="text" style="padding: 0 10%;text-align: center;font-size: 14px;">
+                        Independiente aplica si eres alguien que se auto-emplea.
+                        Por ejemplo Doctor, abogado, comerciante individual,etc. 
+                    </p>
+
+                </div>
+
+                <div id="socio_show" class="tabcontent">
+
+                    <div style="display: flex;justify-content: center;">
+                        <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/form-credito/empresario.svg" alt="." style="height: 210px;">
+                    </div>
+                    <p class="text" style="padding: 0 10%;text-align: center;font-size: 14px;">
+                        Aplica si tu ingresos provienen de ser socio o dueño de
+                        alguna empresa.
+                    </p>
+
+                </div>
+
+                <div id="jubilado_show" class="tabcontent">
+
+                    <div style="display: flex;justify-content: center;">
+                        <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/form-credito/jubilado.svg" alt="." style="height: 210px;">
+                    </div>
+                    <p class="text" style="padding: 0 10%;text-align: center;font-size: 14px;">
+                        Aplica si ya estas retirado y recibes mensualmente un 
+                        pago de alguna fondo privado o público.
+                    </p>
+
+                </div>
+
+                <div id="otro_show" class="tabcontent">
+
+                    <div style="display: flex;justify-content: center;">
+                        <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/form-credito/otro.svg" alt="." style="height: 210px;">
+                    </div>
+                    <p class="text" style="padding: 0 10%;text-align: center;font-size: 14px;">
+                        Si tu ingreso principal se deriva de otra actividad.
+                    </p>
+
+                </div>
+
+                <div >
+                    
+
+                    <label for="empleado" onclick="openRegistro(event, 'empleado_show')" class="checkbox" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);padding:16px; text-indent:35px;">
+                            Empleado
+                        <input type="radio" id="empleado" name="actividad_laboral" value="empleado" required checked="checked">
+                        <span class="checkmark" style="left:12px"></span>
+                    </label>
+
+                    <label for="independiente" onclick="openRegistro(event, 'independiente_show')" class="checkbox" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);padding:16px; text-indent:35px;" > 
+                        Independiente
+                        <input type="radio" id="independiente" value="independiente" name="actividad_laboral" required>
+                        <span class="checkmark" style="left:12px"></span>
+                    </label>
+
+                    <label for="socio" onclick="openRegistro(event, 'socio_show')" class="checkbox" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);padding:16px; text-indent:35px;" > 
+                        Socio Empresa
+                        <input type="radio" id="socio" value="socio" name="actividad_laboral" required>
+                        <span class="checkmark" style="left:12px"></span>
+                    </label>
+
+                    <label for="jubilado" onclick="openRegistro(event, 'jubilado_show')" class="checkbox" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);padding:16px; text-indent:35px;">
+                            Jubilado
+                        <input type="radio" id="jubilado" value="jubilado" name="actividad_laboral" required >
+                        <span class="checkmark" style="left:12px"></span>
+                    </label>
+
+                    <label for="otro" onclick="openRegistro(event, 'otro_show')" class="checkbox" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);padding:16px; text-indent:35px;"> Otro
+                        <input type="radio" id="otro" value="otro" name="actividad_laboral" required >
+                        <span class="checkmark" style="left:12px"></span>
+                    </label>
+
+
+                </div>
+
+
+            </div>
+
+            <div class="tab"><!-- tab numero 3 -->
+                <h3 class="subtitles">
+                    Requisitos como Empleado
+                </h3>
+    
+                    <div style="display: flex;justify-content: center;">
+                        <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/form-credito/empleados.svg" alt="." style="height: 210px;">
+                    </div>
+                    <p class="text">
+                        Ocupamos la siguiente información
+                        para proceder con tu solicitud de crédito.
+                    </p>
+
+                <label for="tipo_empresa_empleado" >Tipo de Empresa:</label>
+                <select name="tipo_empresa_empleado" id="tipo_empresa_empleado" required >
+                    <option value="empresa_privada">Empresa Privada</option>
+                    <option value="gobierno">Gobierno</option>
+                    <option value="ong">(ONG) Organización sin fines de lucro</option>
+                    <option value="otra">Otra</option>
+                </select>
+
+                <label for="nombre_empresa_empleado" >Nombre de Empresa:</label>
+                <input type="text" name="nombre_empresa_empleado" id="nombre_empresa_empleado" required placeholder="Nombre de la empresa">
+
+                <label for="cargo_empresa_empleado" >Cargo:</label>
+                <input type="text" name="cargo_empresa_empleado" id="cargo_empresa_empleado" placeholder="Ejemplo: Gerente de planta" required>
+
+                <label for="salario_bruto_empleado" >Salario Bruto (Sin deducciones)</label>
+                <input type="number" name="salario_bruto_empleado" id="salario_bruto_empleado" required placeholder="L.35,000">
+
+                <label for="salario_neto_empleado" >Salario Neto (Ya con deducciones)</label>
+                <input type="number" name="salario_neto_empleado" id="salario_neto_empleado" required placeholder="L.28,000">
+
+                <label for="antiguedad_laboral_empleado" >Antigüedad en la Empresa</label>
+                    <select name="antiguedad_laboral_empleado" id="antiguedad_laboral_empleado" required >
+                        <option value="-6meses">Menos de 6 Meses</option>
+                        <option value="+12meses">Más de 1 año</option>
+                        <option value="+24meses">Más de 2 años</option>
+                    </select>   
+
+                <label for="tipo_contrato_empleado" >Tipo de Contrato con la Empresa</label>
+                    <select name="tipo_contrato_empleado" id="tipo_contrato_empleado" required>
+                        <option value="contrato_permanente">Contrato Permanente</option>
+                        <option value="contrato_temporal">Contrato Temporal</option>
+                    </select>
+
+                    <label for="cotiza_rap_empleado" >¿Cotizas en RAP? (Régimen de aportaciones privadas)</label>
+                    <select name="cotiza_rap_empleado" id="cotiza_rap_empleado" required>
+                        <option value="no_cotiza_rap">No</option>
+                        <option value="si_cotiza_rap">Si </option>
+                    </select>
+                    <br>
+            </div>
+
+            <div class="tab"><!-- tab numero 4 -->
+                <h3 class="subtitles">
+                    Requisitos como Independiente
+                </h3>
+        
+                        <div style="display: flex;justify-content: center;">
+                            <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/form-credito/doctores.svg" alt="." style="height: 210px;">
+                        </div>
+                        <p class="text">
+                            Ocupamos la siguiente información
+                            para proceder con tu solicitud de crédito.
+                        </p>
+
+                    <label for="profesion_independiente" >Profesión:</label>
+                    <input type="text" name="profesion_independiente" id="profesion_independiente" required placeholder="Ejemplo: Doctor , Abogado, etc..">
+                    
+                    <label for="numero_colegiacion_independiente" >Número de colegiación (Si Aplicase):</label>
+                    <input type="text" name="numero_colegiacion_independiente" id="numero_colegiacion_independiente" placeholder="Escribe tu número de colegiación">
+                        
+                    <label for="ingreso_promedio_independiente" >Ingreso Mensual Promedio:</label>
+                    <input type="number" name="ingreso_promedio_independiente" id="ingreso_promedio_independiente" required placeholder="L.35,000">
+                    
+                    <label for="sector_economico_independiente" >Sector Económico</label>
+                        <select name="sector_economico_independiente" id="sector_economico_independiente" required>
+                            <option value="salud">Salud</option>
+                            <option value="agropecuario">Agropecuario</option>
+                            <option value="minería">Minería</option>
+                            <option value="construccion">Construcción</option>
+                            <option value="comercio">Comercio</option>
+                            <option value="turismo">Turismo</option>
+                            <option value="hoteleria">Hotelería</option>
+                            <option value="restaurantes">Restaurantes</option>
+                            <option value="transporte">Transporte</option>
+                            <option value="finanzas">Finanzas</option>
+                            <option value="exportacion">Exportación</option>
+                            <option value="educacion">Educación</option>
+                            <option value="servicios">Servicios</option>
+                            <option value="otro">Otro</option>
+                        </select>
+
+                    <label for="sector_economico_independiente_justificar">Justifica en caso de otro</label>
+                    <input type="text" name="sector_economico_independiente_justificar" id="sector_economico_independiente_justificar" placeholder="Escribe tu sector económico">
+
+
+                    <br>
+            </div>
+
+            <div class="tab"><!-- tab numero 5-->
+
+                <h3 class="subtitles">
+                    Requisitos Socio de Empresa
+                </h3>
+        
+                <div style="display: flex;justify-content: center;">
+                    <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/form-credito/empresario.svg" alt="." style="height: 210px;">
+                </div>
+
+                <p class="text">
+                    Ocupamos la siguiente información
+                    para proceder con tu solicitud de crédito.
+                </p>
+
+                <label for="nombre_empresa_del_socio" >Nombre de Empresa:</label>
+                    <input type="text" name="nombre_empresa_del_socio" id="nombre_empresa_del_socio" required placeholder="Atlas Home Technologies SA de CV">
+                    
+                    <label for="registro_tributario_empresa" >RTN empresa (Registro Tributario Nacional)</label>
+                    <input type="number" name="registro_tributario_empresa" id="registro_tributario_empresa"required placeholder="0801-901-802-5850">
+                        
+                    <label for="porcentaje_accionario_socio" >Porcentaje % accionario que posees</label>
+                    <input type="number" name="porcentaje_accionario_socio" id="porcentaje_accionario_socio" required placeholder="¿Qué Porcentaje de la empresa posees">
+
+                    <label for="salario_bruto_socio_empresa" >Salario Bruto Mensual para tí</label>
+                    <input type="number" name="salario_socio_empresa" id="salario_bruto_socio_empresa" required placeholder="L.35,000">
+                    
+                    <label for="salario_neto_socio_empresa" >Salario Neto (Con deducciones)</label>
+                    <input type="number" name="salario_neto_socio_empresa" id="salario_neto_socio_empresa" required placeholder="L.35,000">
+
+                    <label for="sector_economico_empresa_del_socio" >Sector Económico de tu empresa</label>
+                        <select name="sector_economico_empresa_del_socio" id="sector_economico_empresa_del_socio" required>
+                            <option value="salud">Salud</option>
+                            <option value="agropecuario">Agropecuario</option>
+                            <option value="minería">Minería</option>
+                            <option value="construccion">Construcción</option>
+                            <option value="comercio">Comercio</option>
+                            <option value="turismo">Turismo</option>
+                            <option value="hoteleria">Hotelería</option>
+                            <option value="restaurantes">Restaurantes</option>
+                            <option value="transporte">Transporte</option>
+                            <option value="finanzas">Finanzas</option>
+                            <option value="exportacion">Exportación</option>
+                            <option value="educacion">Educación</option>
+                            <option value="servicios">Servicios</option>
+                            <option value="otro">Otro</option>
+                        </select>
+
+                    <label for="sector_economico_empresa_del_socio_justificar">Justifica en caso de otro</label>
+                    <input type="text" name="sector_economico_empresa_del_socio_justificar" id="sector_economico_empresa_del_socio_justificar" placeholder="Escribe el sector económico">
+
+                    <br>
+
+            </div>
+
+            <div class="tab"><!-- tab numero 6 -->
+
+                <h3 class="subtitles">
+                    Requisitos como Jubilado
+                </h3>
+                
+                <div style="display: flex;justify-content: center;">
+                    <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/form-credito/jubilado.svg" alt="." style="height: 210px;">
+                </div>
+                <p class="text">
+                    Ocupamos la siguiente información
+                    para proceder con tu solicitud de crédito.
+                </p>
+
+                <label for="tipo_fondo_jubilacion">Tipo de Fondo que te pensiona</label>
+                <select name="tipo_fondo_jubilacion" id="tipo_fondo_jubilacion">
+                    <option value="fondo_privado_jubilado">Fondo Privado</option>
+                    <option value="fondo_gubernamental_jubilado">Institución Gubernamental</option>
+                </select>
+
+                <label for="nombre_fondo_jubilado">Nombre de la Institución</label>
+                <input type="text" name="nombre_fondo_jubilado" id="nombre_fondo_jubilado" placeholder="Ejemplo: IMPREMA">
+
+                <label for="pension_bruta_mensual">Pensión Mensual Bruta</label>
+                <input type="text" name="pension_bruta_mensual" id="pension_bruta_mensual" placeholder="L.40,000">
+
+                <label for="pension_neta_mensual">Pensión Mensual Neta (Con deducciones)</label>
+                <input type="text" name="pension_neta_mensual" id="pension_neta_mensual" placeholder="L.30,000">
+                <br>
+                        
+            </div>
+
+            <div class="tab"><!-- tab numero 7 -->
+
+                <h3 class="subtitles">
+                    Requisitos Como "Otra Actividad Laboral"
+                </h3>
+                
+                <div style="display: flex;justify-content: center;">
+                    <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/form-credito/otro.svg" alt="." style="height: 210px;">
+                </div>
+
+                <p class="text">
+                    Ocupamos la siguiente información
+                    para proceder con tu solicitud de crédito.
+                </p>
+                
+                <label for="actividad_laboral_otro_justificar">Justifica tu Activdad Laboral</label>
+                <input type="text" name="actividad_laboral_otro_justificar" id="actividad_laboral_otro_justificar" placeholder="Escribe como recibes tus ingresos" >
+
+                <label for="otro_ingresos_mensuales" >Ingreso Promedio Mensual</label>
+                <input type="number" name="otro_ingresos_mensuales" id="otro_ingresos_mensuales" required placeholder="L.35,000">
+
+                <label for="antiguedad_laboral_otro" >Antigüedad en la Actividad</label>
+                    <select name="antiguedad_laboral_otro" id="antiguedad_laboral_otro" required >
+                        <option value="-6meses">Menos de 6 Meses</option>
+                        <option value="+12meses">Más de 1 año</option>
+                        <option value="+24meses">Más de 2 años</option>
+                    </select>   
+
+                <br>
+                
+            </div>
+            
+            <div class="tab"><!-- tab numero 8 -->
+                <h3 class="subtitles">Ingresos Extra</h3>
+                <div style="display: flex;justify-content: center;">
+                    <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/form-credito/ingresos.svg" alt="." style="height: 210px;">
+                </div>
+                <p class="text" style="padding: 0 10%;text-align: center;font-size: 14px;">
+                    ¿Cuentas con algún ingreso extra?
+                </p>
+
+                <label for="ingresoSi" class="checkbox" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);padding:16px; text-indent:35px;">
+                    Si, Cuento con ingresos extra
+                    <input type="radio" id="ingresoSi" name="ingresos_extra" value="si" required checked="checked">
+                    <span class="checkmark" style="left:12px"></span>
+                </label>
+
+                <label for="ingresoNo" class="checkbox" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);padding:16px; text-indent:35px;">
+                    No, Solamente los que ya declaré
+                    <input type="radio" id="ingresoNo" name="ingresos_extra" value="si" required checked="checked">
+                    <span class="checkmark" style="left:12px"></span>
+                </label>
+                <br>
+            </div>
+            
+            <div class="tab"><!-- tab numero 9 -->
+                <h3 class="subtitles">Ingresos Extra</h3>
+                <div style="display: flex;justify-content: center;">
+                    <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/form-credito/ingresos.svg" alt="." style="height: 210px;">
+                </div>
+                <p class="text" style="padding: 0 10%;text-align: center;font-size: 14px;">
+                    Favor justifica los ingresos extras que tengas, en los campos que aplique tu caso.
+                </p>
+
+                <label for="remesas">Remesas:</label>
+                <input type="number" id="remesas" placeholder="Ejemplo: L.10,000" min="1" autocomplete="off">
+
+                <label for="alquileres">Alquileres:</label>
+                <input type="number" id="alquileres" placeholder="Ejemplo: L.10,000" min="1" autocomplete="off">
+
+                <label for="horas_extra">Horas Extra:</label>
+                <input type="number" id="horas_extra" placeholder="Ejemplo: L.10,000" min="1" autocomplete="off">
+
+                <label for="comisiones">Comisiones:</label>
+                <input type="number" id="comisiones" placeholder="Ejemplo: L.10,000" min="1" autocomplete="off">
+
+                <label for="otros_honorarios">Otros Honorarios:</label>
+                <input type="number" id="otros_honorarios" placeholder="Ejemplo: L.10,000" min="1" autocomplete="off">
+
+            </div>
+
+            <div class="tab"><!-- tab numero 10 -->
+
+                <h3 class="subtitles" style="padding-left:20px;">¿Como harías tu Solicitud?</h3>
+
+                <div id="creditoindividual" class="tabcontent" style="display: block;">
+                    <div style="display: flex;justify-content: center;">
+                        <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/form-credito/mujer_cafe.svg" alt="." style="height: 210px;">
+                    </div>
+                    <p class="text" style="padding: 0 10%;text-align: center;font-size: 14px;">
+                        Cuando aplicas a un crédito de forma individual solo tú figuras como único titular.
+                    </p>
+
+                </div>
+
+                <div id="creditomancomunado" class="tabcontent">
+                    <div style="display: flex;justify-content: center;">
+                        <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/form-credito/mancomunado.svg" alt="." style="height: 210px;">
+                    </div>
+                    <p class="text" style="padding: 0 10%;text-align: center;font-size: 14px;">
+                        Cuando aplicas a un crédito de forma Mancomunada tú y otra persona más aplican como titulares.
+                        Ten en cuenta que solo se puede mancomunar con tu pareja o familiares de primer lazo sanguíneo. 
+                    </p>
+                    <p class="text">
+                        Ocuparemos los datos de tu co-deudor:
+                    </p>
+                </div>
+
+                <label for="credito_individual" onclick="openRegistro(event, 'creditoindividual')" class="checkbox" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);padding:16px; text-indent:35px;">
+                        Individual
+                       <input type="radio" id="credito_individual" name="credito_forma" value="credito_individual" required checked="checked">
+                       <span class="checkmark" style="left:12px"></span>
+                   </label>
+
+                   <label for="credito_mancomunado" onclick="openRegistro(event, 'creditomancomunado')" class="checkbox" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);padding:16px; text-indent:35px;" > 
+                        Mancomunado
+                       <input type="radio" id="credito_mancomunado" value="credito_mancomunado" name="credito_forma" required>
+                       <span class="checkmark" style="left:12px"></span>
+                   </label>
+
+            </div>
+
+            <div class="tab"><!-- tab numero 11 -->
+
+                <h3 class="subtitles" style="text-align: left;margin-top: 10px;">
+                    Datos del Co-deudor
+                </h3>
+
+                <p class="text" >
+                    Necesitamos los datos personales de la persona con quien deseas mancomunar.
+                    <br>
+                    <b style="color: #081C33;">
+                        Descuida, encriptamos todos tús datos y los enviamos directo a la banca.
+                    </b>
+                </p>
+
+                    <input type="text"  placeholder="Nombre y Apellido" name="nombre_apellido_usuario_mancomunado_credito" id="nombre_apellido_usuario_mancomunado_credito" required autocomplete="off">
+
+                    <input type="email"  placeholder="Correo Electrónico" name="email_usuario_mancomunado_credito" id="email_usuario_mancomunado_credito" required autocomplete="off">
+
+                    <input type="number" style="margin-top: 10px;" placeholder="Celular de Contacto" name="celular_usuario_mancomunado_credito" 
+                    id="celular_usuario_mancomunado_credito" required 
+                    >
+                    <label for="documento_tipo_mancomunado" class="subtitles" style="margin-bottom:10px;">Tipo de Identificación del Co-deudor</label>
+                    <select name="documento_tipo_mancomunado" style="width: 100%;" id="documento_tipo_mancomunado" class="minimal" required ><br>
+                        <option value="identidad_nacional_mancomunado">Identidad Nacional</option>
+                        <option value="pasaporte_mancomunado">Pasaporte</option>
+                        <option value="carnet_residencia_mancomunado">Carnet de Residencia</option>
+                    </select>
+
+                    <input type="text" placeholder="Número de documento Co-deudor" name="identidad_mancomunado" id="identidad_mancomunado" required style="margin-top: 10px;" autocomplete="off">
+
+                    <br>
+            </div>
+
+            <div class="tab"><!-- tab numero 12 -->
+
+                <h3 class="subtitles">¡Genial, eso es todo por ahora!</h3>
+                <div style="display: flex;justify-content: center;">
+                    <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/form-credito/asesores_profesionales.svg" alt="." style="height: 210px;">
+                </div>
+                <p class="text" style="padding: 0 10%;text-align: center;font-size: 14px;">
+                    <b>PULSA ENVIAR </b>  para terminar tu solicitud de crédito. Un Asesor financiero se contactará contigo
+                    para darte el resultado de tu análisis crediticio. 
+                </p>
+
+                
+            </div>
+
+            <div class="flex-container flex-centrar" style="margin: 1em">
+                <button type="button" id="prevBtn" class="submit-boton cr-boton"  onclick="prevCredito(false)">Anterior</button>
+                <button type="button" id="nextBtn" class="submit-boton cr-boton" style="margin:auto;" onclick="nextCredito(true)">Empezar</button>
+            </div>
+        </form>
+
+
+
+
+
+</section>
+
+
+
+    <script src="./js/vendedor.js"></script>
+    <script src="js/general.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<title>Admin Atlas Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="./dashboard.css">
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif;}
+</style>
+<body style="background-color: #f9fafb!important;">
+
+<!-- Top container -->
+<div class="w3-bar w3-top w3-white w3-large" style="z-index:4">
+  <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i></button>
+  <img class="w3-bar-item w3-right" src="/svg/logo_alargado_azul.svg" style="height:60px;">
+</div>
+
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+    <div class="w3-container w3-row">
+      <div class="w3-col s4">
+        <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/icons/logo_circular_azul.svg" class="w3-circle w3-margin-right" style="width:66px">
+      </div>
+      <div class="w3-col s8 w3-bar">
+        <span>Bienvenido, <br> <strong>Atlas Home</strong></span><br>
+        <!--
+        <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
+        <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
+        <a href="#" class="w3-bar-item w3-button"><i class="fa fa-cog"></i></a>
+        -->
+      </div>
+    </div>
+    <hr>
+    <div class="w3-container">
+      <h5 style="color:#0894FE; font-weight: bold;">Panel de Control</h5>
+    </div>
+    <div class="w3-bar-block">
+      <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Cerrar Menú</a>
+      <a href="./perfilVendedor.html" class="w3-bar-item w3-button w3-padding "> Tablero General</a>
+      <a href="./perfil.html" class="w3-bar-item w3-button w3-padding ">Mi Perfil</a>
+      <button class="accordion w3-bar-item w3-button w3-padding ">Administrar Mis Citas</button>
+      <div class="panel" style="min-height: 80px;">
+          <a href="./citas_pendientes.html" class="w3-bar-item w3-button w3-padding">
+          Citas Pendientes 
+          </a>
+          <a href="#" class="w3-bar-item w3-button w3-padding w3-blue">
+          Historial de Citas
+          </a>
+      </div>
+      
+      <a href="./anunciar_propiedad.html" class="w3-bar-item w3-button w3-padding ">Anunciar Nueva Propiedad</a>
+      <a href="./reportar_problema.html" class="w3-bar-item w3-button w3-padding ">Reportar Un Problema</a>
+  
+    </div>
+  </nav>
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px;margin-top:43px;" >
+
+    <section style="margin: 30px 30px; padding: 16px; background-color: #ffffff; border-radius: 8px;">
+
+        Contenido de historial de Citas
+        
+    </section>
+  
+  
+</div>
+<!-- End page content -->
+
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+
+<script src="./dashboard.js"></script>
+
+
+
+</body>
+</html>
