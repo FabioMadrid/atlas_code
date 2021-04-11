@@ -424,11 +424,6 @@
   {
     width: 100%;
   }
-  .estadisticas_card
-    {
-      width: 100%;
-      height: auto;
-    }
     
 }
 
@@ -448,7 +443,11 @@
     {
         width: 100%;
     }
-    
+    .estadisticas_card
+    {
+      width: 100%;
+      min-height: 250px;
+    }
     .card-container
     {
         flex-flow: row wrap;

@@ -78,8 +78,8 @@
      border-radius: 8px;
      padding: none;
      overflow: hidden;
-     padding: 20px;
-     width:45.5%;
+     padding: 10px;
+     width:48%;
      display: inline-block; 
      height: 250px;
  }
@@ -424,11 +424,6 @@
   {
     width: 100%;
   }
-  .estadisticas_card
-    {
-      width: 100%;
-      height: auto;
-    }
     
 }
 
@@ -448,7 +443,10 @@
     {
         width: 100%;
     }
-    
+    .estadisticas_card
+    {
+      width: 100%;
+    }
     .card-container
     {
         flex-flow: row wrap;
