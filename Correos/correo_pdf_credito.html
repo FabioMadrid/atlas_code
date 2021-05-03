@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Cotización</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <style>
+    .line {
+      border: 1px solid #d0d0d0;
+    }
+  </style>
+  <style>
+    hr {
+      page-break-after: always;
+      border: none;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+
+  <body class="antialiased" style="padding: 0; border: hidden">
+    <table class="table" style="border: hidden">
+      <tbody>
+        <tr>
+         
+          <td style="font-size: 20px; color: #767676; width: 60%">
+            COTIZACIÓN<br />
+            <span style="font-size: 22px; color: #E30909; font-weight: bold"
+              >CREDITO HIPOTECARIO</span
+            >
+          </td>
+        
+
+          <td style="text-align: start; width: 15%; padding: 30px 0 0 0">
+            <img
+              src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/logo_alargado_azul.svg"
+              style="width: 100px"
+            />
+          </td>
+          <td style="text-align: end; width: 15%; padding: 30px 0 0 0">
+            <img
+              src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/logosbancos/Logo_Banco-Atlantida_2017.png"
+              alt=""
+              style="width: 110px"
+            />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="table" style="border: hidden">
+      <tbody>
+        <tr>
+          <td
+            style="
+              font-size: 12px;
+              background-color: rgba(192, 192, 192, 0.1);
+              width: 20%;
+              text-transform: uppercase;
+            "
+          >
+            NOMBRE: {{$nombre['nombre']}}
+          </td>
+          <td style="width: 5%"></td>
+          <td
+            style="
+              font-size: 12px;
+              background-color: rgba(192, 192, 192, 0.1);
+              width: 20%;
+            "
+          >
+            COTIZACIÓN: #000{{$token['token']}}
+          </td>
+          <td style="width: 5%"></td>
+          <td
+            style="
+              font-size: 12px;
+              background-color: rgba(192, 192, 192, 0.1);
+              width: 20%;
+              text-transform: uppercase;
+            "
+          >
+            FECHA: {{ date('d - F - Y') }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="table" style="border: hidden">
+      <tbody>
+        <tr>
+          <td style="font-size: 12px; width: 100%; text-align: center">
+            Esta cotización es válida para compra únicamente a través de
+            <b>Atlas Home Technologies</b>, e incluye asesoría especializada de
+            <b>Asesores Financieros</b>. <br />Nuestro Compromiso es ayudarte a encontrar tu hogar soñado.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="table" style="border: hidden">
+      <tbody>
+
+        <tr>
+          <td
+            colspan="5"
+            style="font-size: 20px; color: #404040; font-weight: bold"
+          >
+            Datos Generales<br /><span
+              style="font-size: 14px; color: #393e43; font-weight: 400"
+            >
+              {{$nombre['nombre']}}, estos son los datos Generales que proporcionaste.
+               </span
+            >
+          </td>
+        </tr>
+
+        <tr>
+          
+          <td style="font-size: 12px; width: 15%; padding: 0 10">
+            <b>Nombre:</b> {{$nombre['nombre']}}
+          </td>
+          <td style="width: 5%; padding: 0"></td>
+          <td style="font-size: 12px; width: 15%; padding: 0 10">
+            <b>Identidad:</b> {{$identidad['identidad']}}
+          </td>
+          <td style="width: 5%; padding: 0"></td>
+          <td style="font-size: 12px; width: 15%; padding: 0 10">
+            <b>Ciudad :</b> {{$ciudad['ciudad']}}
+          </td>
+        </tr>
+        
+        <tr>
+          <td
+            style="font-size: 12px; width: 20%; border: hidden; padding: 0 10"
+          >
+            <b>Celular: </b>{{$celular['celular']}}
+          </td>
+          <td style="width: 5%; border: hidden; padding: 0 10"></td>
+          <td
+            style="font-size: 12px; width: 20%; border: hidden; padding: 0 10"
+          >
+            <b>Tipo Solicitud: </b>
+            {{$tipo_solicitud['tipo_solicitud']}}
+          </td>
+          <td style="width: 5%; border: hidden; padding: 0 10"></td>
+          <td
+            style="font-size: 12px; width: 20%; border: hidden; padding: 0 10"
+          >
+            <b>Correo Electrónico: </b>{{$correo['correo']}}
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <table class="table" style="border: hidden">
+      <tbody>
+        @switch($tipo['tipo']) @case("empleado")
+        <tr>
+          <td
+            colspan="5"
+            style="font-size: 20px; color: #404040; font-weight: bold"
+          >
+            TUS DATOS - Actividad Laboral : "Empleado"<br /><span
+              style="font-size: 14px; color: #393e43; font-weight: 400"
+            >
+              {{$nombre['nombre']}}, estos son los datos que nos proporcionaste
+              para tu solicitud de Crédito Hipotecario. </span
+            >
+          </td>
+        </tr>
+        <tr>
+          <td style="font-size: 12px; width: 15%; padding: 0 10">
+            <b>Tipo de Empresa:</b> {{$tipoEmpresa['tipoEmpresa']}}
+          </td>
+          <td style="width: 5%; padding: 0"></td>
+          <td style="font-size: 12px; width: 15%; padding: 0 10">
+            <b>Cargo:</b> {{$cargo['cargo']}}
+          </td>
+          <td style="width: 5%; padding: 0"></td>
+          <td style="font-size: 12px; width: 15%; padding: 0 10">
+            <b>Antigüedad Laboral:</b> {{$antiguedad['antiguedad']}}
+          </td>
+        </tr>
+        <tr>
+          <td
+            style="font-size: 12px; width: 20%; border: hidden; padding: 0 10"
+          >
+            <b>Salario Bruto: </b>L.{{$salarioBruto['salarioBruto']}}
+          </td>
+          <td style="width: 5%; border: hidden; padding: 0 10"></td>
+          <td
+            style="font-size: 12px; width: 20%; border: hidden; padding: 0 10"
+          >
+            <b>Salario Neto: </b>L.
+            {{$salarioNeto['salarioNeto']}}
+          </td>
+          <td style="width: 5%; border: hidden; padding: 0 10"></td>
+          <td
+            style="font-size: 12px; width: 20%; border: hidden; padding: 0 10"
+          >
+            <b>Tipo de Contrato: </b>{{$tipo_contrato['tipo_contrato']}}
+          </td>
+        </tr>
+        <tr>
+         
+          <td
+            style="font-size: 12px; width: 20%; border: hidden; padding: 0 10"
+          >
+            <b>¿Cotizas en RAP?: </b>{{$cotizaRap['cotizaRap']}}
+          </td>
+          
+        </tr>
+        @break @case("independiente")
+        <tr>
+          <td
+            colspan="5"
+            style="font-size: 20px; color: #404040; font-weight: bold"
+          >
+            TUS DATOS - Actividad Laboral : "Independiente"<br /><span
+              style="font-size: 14px; color: #393e43; font-weight: 400"
+            >
+              {{$nombre['nombre']}}, estos son los datos que nos proporcionaste
+              para tu solitictud de Crédito Hipotecario.</span
+            >
+          </td>
+        </tr>
+
+        <tr>
+          <td style="font-size: 12px; width: 15%; padding: 0 10">
+            <b>Profesión:</b> {{$profesion['profesion']}}
+          </td>
+          <td style="width: 5%; padding: 0"></td>
+          <td style="font-size: 12px; width: 15%; padding: 0 10">
+            <b>Número de Colegación:</b> {{$numero_colegiacion['numero_colegiacion']}}
+          </td>
+          <td style="width: 5%; padding: 0"></td>
+          <td style="font-size: 12px; width: 15%; padding: 0 10">
+            <b>Ingreso Mensual Promedio:</b> L. {{$ingreso_mensual['ingreso_mensual']}}
+          </td>
+        </tr>
+
+        <tr>
+          <td style="font-size: 12px; width: 15%; padding: 0 10">
+            <b>Sector Económico:</b> {{$sector_economico['sector_economico']}}
+          </td>
+          <td style="width: 5%; padding: 0"></td>
+          <td style="font-size: 12px; width: 15%; padding: 0 10">
+            <b>Otro Sector:</b> {{$otro['otro']}}
+          </td>
+          <td style="width: 5%; padding: 0"></td>
+          <td style="font-size: 12px; width: 15%; padding: 0 10">
+            <b>Antigüedad como Independiente:</b> {{$antiguedad_independiente['antiguedad_independiente']}}
+          </td>
+        </tr>
+
+        @break @case("socio_empresa")
+        <tr>
+          <td
+            colspan="5"
+            style="font-size: 20px; color: #404040; font-weight: bold"
+          >
+            TUS DATOS - Actividad Laboral : "Socio Empresa"<br /><span
+              style="font-size: 14px; color: #393e43; font-weight: 400"
+            >
+              {{$nombre['nombre']}}, estos son los datos que nos proporcionaste
+              para tu solicitud de Crédito Hipotecario.</span
+            >
+          </td>
+        </tr>
+        
+        <tr>
+          <td style="font-size: 12px; width: 15%; padding: 0 10">
+            <b>Nombre de Empresa:</b> {{$nombreEmpresa['nombreEmpresa']}}
+          </td>
+          <td style="width: 5%; padding: 0"></td>
+          <td style="font-size: 12px; width: 15%; padding: 0 10">
+            <b>RTN Empresa:</b> {{$rtn_empresa['rtn_empresa']}}
+          </td>
+          <td style="width: 5%; padding: 0"></td>
+          <td style="font-size: 12px; width: 15%; padding: 0 10">
+            <b>% Accionario:</b> {{$porcentaje_accionario['porcentaje_accionario']}}
+          </td>
+        </tr>
+
+        <tr>
+          <td
+            style="font-size: 12px; width: 20%; border: hidden; padding: 0 10"
+          >
+            <b>Salario Bruto: </b>L.{{$salarioBruto_socioEmpresa['salarioBruto_socioEmpresa']}}
+          </td>
+          <td style="width: 5%; border: hidden; padding: 0 10"></td>
+          <td
+            style="font-size: 12px; width: 20%; border: hidden; padding: 0 10"
+          >
+            <b>Salario Neto: </b>L.{{$salarioNeto_socioEmpresa['salarioNeto_socioEmpresa']}}
+          </td>
+          <td style="width: 5%; border: hidden; padding: 0 10"></td>
+          <td
+            style="font-size: 12px; width: 20%; border: hidden; padding: 0 10"
+          >
+            <b>Sector Económico: </b>{{$sectorEconomico_empresa['sectorEconomico_empresa']}}
+          </td>
+        </tr>
+        <tr>
+         
+          <td
+            style="font-size: 12px; width: 20%; border: hidden; padding: 0 10"
+          >
+            <b>Otro Sector: </b>{{$otro_sectorEconomico['otro_sectorEconomico']}}
+          </td>
+          
+        </tr>
+
+        @break @case("jubilado")
+        <tr>
+          <td
+            colspan="5"
+            style="font-size: 20px; color: #404040; font-weight: bold"
+          >
+            TUS DATOS - Actividad Laboral : "Jubilado"<br /><span
+              style="font-size: 14px; color: #393e43; font-weight: 400"
+            >
+              {{$nombre['nombre']}}, estos son los datos que nos proporcionaste
+              para tu solicitud de Crédito Hipotecario.</span
+            >
+          </td>
+        </tr>
+
+        
+        <tr>
+          <td
+            style="font-size: 12px; width: 20%; border: hidden; padding: 0 10"
+          >
+            <b>Tipo de Fondo: </b>{{$tipoFondo_jubilado['tipoFondo_jubilado']}}
+          </td>
+          <td style="width: 5%; border: hidden; padding: 0 10"></td>
+          <td
+            style="font-size: 12px; width: 20%; border: hidden; padding: 0 10"
+          >
+            <b>Nombre Institución: </b>{{$nombreInstitucion_jubilado['nombreInstitucion_jubilado']}}
+          </td>
+          <td style="width: 5%; border: hidden; padding: 0 10"></td>
+          <td
+            style="font-size: 12px; width: 20%; border: hidden; padding: 0 10"
+          >
+            <b>Pensión Mensual Bruta: </b>L.{{$pensionMensual_jubilado['pensionMensual_jubilado']}}
+          </td>
+        </tr>
+        <tr>
+         
+          <td
+            style="font-size: 12px; width: 20%; border: hidden; padding: 0 10"
+          >
+            <b>Pensión Mensual Neta: </b>{{$pensionMensual_neta['pensionMensual_neta']}}
+          </td>
+          
+        </tr>
+
+        @break @case("otro")
+        <tr>
+          <td
+            colspan="5"
+            style="font-size: 20px; color: #404040; font-weight: bold"
+          >
+            TUS DATOS - Actividad Laboral : "Otro"<br /><span
+              style="font-size: 14px; color: #393e43; font-weight: 400"
+            >
+              {{$nombre['nombre']}}, estos son los datos que nos proporcionaste
+              para tu solicitud de Crédito Hipotecario.</span
+            >
+          </td>
+        </tr>
+
+        <tr>
+          <td
+            style="font-size: 12px; width: 20%; border: hidden; padding: 0 10"
+          >
+            <b>Actividad Laboral: </b>{{$actividadLaboral_otro['actividadLaboral_otro']}}
+          </td>
+          <td style="width: 5%; border: hidden; padding: 0 10"></td>
+          <td
+            style="font-size: 12px; width: 20%; border: hidden; padding: 0 10"
+          >
+            <b>Ingreso Mensual Bruto: </b>{{$ingresoMensualBruto_otro['ingresoMensualBruto_otro']}}
+          </td>
+          <td style="width: 5%; border: hidden; padding: 0 10"></td>
+          <td
+            style="font-size: 12px; width: 20%; border: hidden; padding: 0 10"
+          >
+            <b>Antigüedad en la Actividad: </b>L.{{$antiguedad_otro['antiguedad_otro']}}
+          </td>
+        </tr>
+        <tr>
+
+        @break @endswitch
+      </tbody>
+    </table>
+    <p style="display: none">{{$cont=0}}</p>
+
+    <table class="table" style="border: hidden">
+      <tbody>
+        <tr>
+          <td
+            colspan="5"
+            style="font-size: 20px; color: #E30909; font-weight: bold"
+          >
+            RESULTADO DE COTIZACIÓN <br /><span
+              style="font-size: 14px; color: #393e43; font-weight: 400"
+            >
+              {{$nombre['nombre']}}, este es el resumen de tu
+              cotización.</span
+            >
+          </td>
+        </tr>
+        
+        <tr class="line">
+          
+          <td style="font-size: 12px">
+            <p style="display: none">{{++$cont}}</p>
+            <img
+              src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/logosbancos/Logo_Banco-Atlantida_2017.png"
+              style="width: 130px"
+            />
+          </td>
+          <td style="padding: 0">
+            
+            <br /><span
+              style="
+                color: #d90016;
+                font-size: 18px;
+                font-weight: bold;
+                padding: 0 15px;
+              "
+              >$ {{$monto_aprobado}}
+            </span>
+            <br /><span
+              style="
+                color: #2b2f34;
+                font-size: 12px;
+                letter-spacing: 2px;
+                font-weight: 400;
+              "
+              >MONTO PRE-APROBADO</span
+            >
+           
+            <br /><span
+              style="color: #d90016; font-size: 18px; font-weight: bold"
+              >L. {{$cuota_mensual}}
+            </span>
+            <br /><span
+              style="
+                color: #2b2f34;
+                font-size: 12px;
+                letter-spacing: 2px;
+                font-weight: 400;
+              "
+              >CUOTA MENSUAL</span
+            >
+           
+          </td>
+          
+         
+        </tr>
+        
+      </tbody>
+    </table>
+
+    <table class="table" style="border: hidden">
+      <tbody>
+
+        <tr>
+          <td
+            colspan="5"
+            style="font-size: 20px; color: #d90016; font-weight: bold"
+          >
+            Detalles de Cotización<br /><span
+              style="font-size: 14px; color: #393e43; font-weight: 400"
+            >
+              {{$nombre['nombre']}}, estos son los detalles de tú cotización.
+               </span
+            >
+          </td>
+        </tr>
+
+        <tr>
+          
+          <td style="font-size: 12px; width: 15%; padding: 0 10">
+            <b>Monto Aprobado:</b> {{$monto_aprobado['monto_aprobado']}}
+          </td>
+          <td style="width: 5%; padding: 0"></td>
+          <td style="font-size: 12px; width: 15%; padding: 0 10">
+            <b>Cuota Mensual:</b> {{$cuota_mensual['cuota_mensual']}}
+          </td>
+          <td style="width: 5%; padding: 0"></td>
+          <td style="font-size: 12px; width: 15%; padding: 0 10">
+            <b>Plazo :</b> {{$plazo['plazo']}}
+          </td>
+        </tr>
+        
+        <tr>
+          <td
+            style="font-size: 12px; width: 20%; border: hidden; padding: 0 10"
+          >
+            <b>Tipo Fondo: </b>{{$tipo_fondo['tipo_fondo']}}
+          </td>
+          <td style="width: 5%; border: hidden; padding: 0 10"></td>
+          <td
+            style="font-size: 12px; width: 20%; border: hidden; padding: 0 10"
+          >
+            <b>Tasa de Interés: </b>
+            {{$tasa_interes['tasa_interes']}}
+          </td>
+          <td style="width: 5%; border: hidden; padding: 0 10"></td>
+          <td
+            style="font-size: 12px; width: 20%; border: hidden; padding: 0 10"
+          >
+            <b>Asesor Asignado : </b>{{$asesor['asesor']}}
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <table class="table">
+      <tbody>
+        <tr>
+          <td style="font-size: 12px; width: 100%; text-align: center">
+            <i>
+              Esta cotización constituye una estimación de precios para
+              tu Crédito Hipotecario <br />
+              por lo tanto este puede ser cambiante segun el tipo de propiedad y fondo que elijas al final. <br />
+              Un asesor de crédito hipotecario certificado se contactará contigo para el debido seguimiento.</i
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="table">
+      <tbody>
+        
+        <tr>
+          <td style="font-size: 12px; width: 100%; text-align: center">
+            Contáctanos: <a href="mailto:atlashomehn@gmail.com">Escribir Correo</a> <br />Todos los Derechos Reservados
+            Atlas Home Technologies SA de CV <br />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+    
+  </body>
+</html>

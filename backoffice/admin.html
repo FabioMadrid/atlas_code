@@ -7,6 +7,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="./admin.css">
+<link rel="stylesheet" href="/css/general.css">
+<link rel="stylesheet" href="/css/perfil_vendedor.css">
 <style>
 html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 </style>
@@ -64,31 +66,12 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
         Terrenos
         </a>
     </div>
-    <!--
-    <a href="#" class="w3-bar-item w3-button w3-padding "><img src="/svg/icon_2personas.svg" alt="."class="iconos-admin"> Equipo Atlas Home</a>
-    -->
-    <button class="accordion w3-bar-item w3-button w3-padding ">Usuarios</button>
-    <div class="panel">
-        <a href="#" class="w3-bar-item w3-button w3-padding ">
-        Usuarios Compradores 
-        </a>
-        <a href="#" class="w3-bar-item w3-button w3-padding ">
-        Usuarios Vendedores
-        </a>
-    </div>
+
+    <a href="#" class="w3-bar-item w3-button w3-padding ">Citas</a>
     <a href="#" class="w3-bar-item w3-button w3-padding ">Solicitudes de crédito</a>
     <a href="#" class="w3-bar-item w3-button w3-padding ">Solicitudes de Venta</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding ">Citas</a>
-    <button class="accordion w3-bar-item w3-button w3-padding ">Estadísticas</button>
-    <div class="panel">
-        <a href="#" class="w3-bar-item w3-button w3-padding ">
-        Estadísticas Financieras
-        </a>
-        <a href="#" class="w3-bar-item w3-button w3-padding ">
-        Estadísticas Propiedades
-        </a>
-    </div>
-    <a href="#" class="w3-bar-item w3-button w3-padding ">Configuración</a><br><br>
+    <a href="http://crm.atlashome.hn/" target="_blank" class="w3-bar-item w3-button w3-padding ">Ir al CRM</a>
+    
   </div>
 </nav>
 
@@ -99,226 +82,144 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 <!-- !PAGE CONTENT! -->
 <div class="w3-main" style="margin-left:300px;margin-top:43px;" >
 
-  <!-- Header -->
-  <header class="w3-container" style="padding-top:22px">
-    <h5><b><i class="fa fa-dashboard"></i> Un Tablero Mera Verga</b></h5>
-  </header>
+   <!-- Este Div sirve para dar un padding al Contenido  -->
+   <div style="padding-top: 60px;"></div>
+   <!-- Termina -->
+ 
+   <section style="margin: 0 5% 100px">
+ 
+       <h5 class="subtitles"><b> Accesos Rápidos</b></h5>
+ 
+       <section style="display: flex; flex-direction: row wrap;overflow: auto;">
+         
+         <a href="/">
+           <div class="info-card">
+               <div style="display: flex;justify-content: center;">
+                   <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/icons/icon_citas.svg" alt="" class="icons">
+               </div>
+               
+               <p class="text" style="text-align: center;">
+                   Citas
+               </p>  
+           </div>
+       </a>
+ 
+       <a href="/">
+           <div class="info-card">
+               <div style="display: flex;justify-content: center;">
+                   <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/icons/icon_facturacion.svg" alt="" class="icons">
+               </div>
+                   
+               <p class="text" style="text-align: center;">
+                   Solicitudes de crédito
+               </p>      
+           </div>
+       </a>
+ 
+       <a href="/">
+         <div class="info-card">
+             <div style="display: flex;justify-content: center;">
+                 <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/icons/icon_house.svg" alt="" class="icons">
+             </div>
+         
+             <p class="text" style="text-align: center;">
+                 Solicitudes de venta
+             </p>
+         </div>
+       </a>
+ 
+       
+ 
+       </section>
+ 
+       <h5 class="subtitles"><b>Estadísticas Generales</b></h5>
+      
+       <section id="estadisticas_vendedor">
+ 
+         <div class="estadisticas_card">
+           <b class="text"> Precio Promedio Propiedades: </b>
+           <h1 class="title" style="text-align: center;">L.1,895,310</h1>
+           
+           <div class="text">Este dato da una idea del segmento de mercado el cual estamos atendiendo.</div>
+            
+         </div>
+ 
+         <div class="estadisticas_card">
+           <b class="text">Propiedades alojadas en Atlas Home:</b>
+             
+ 
+             <div style="display: flex; justify-content: space-evenly; flex-flow: wrap;">
+ 
+               <div style="display: inline-block;">
+                 <span class="title" style="text-align: center;">3</span>
+                 <span class="text">Viviendas</span> 
+               </div>
+ 
+               <div style="display: inline-block;">
+                 <span class="title" style="text-align: center;">12</span>
+                 <span class="text">Apartamentos</span> 
+               </div>
+ 
+               <div style="display: inline-block;">
+                 <span class="title" style="text-align: center;">4</span>
+                 <span class="text">Terrenos</span> 
+               </div>
+ 
+             </div>
+ 
+             <p>
+             Total de propiedades: <span class="subtitles" style="display: inline-block;"> 19</span>
+             </p>
+ 
+         </div>
+ 
+         <div class="estadisticas_card" style="min-height: 400px;">
+           <b class="text">Citas Semana Actual:</b>
+ 
+             <div id="citas_diarias">
+             </div>
+ 
+         </div>
+ 
+         <div class="estadisticas_card" style="min-height: 400px;">
+           <b class="text">Citas recibidas por Mes:</b>
+             <br>
+             <div id="citas_mes">
+             </div>
+ 
+         </div>
+ 
+         
+ 
+         <div class="estadisticas_card" style="min-height: 400px;">
+           <b class="text">Distribución tipo de citas recibidas: (Mes Actual)</b>
+ 
+           <div id="tipo_cita" style="height: 100px;">
+ 
+           </div>
+ 
+         </div>
+ 
+         <div class="estadisticas_card" style="min-height: 400px;">
+           <b class="text">Clientes cerrados por Mes:</b>
+             <br>
+             <div id="clientes_cerrados">
+             </div>
+ 
+         </div>
+ 
+ 
+ 
+       </section>
+         
+ 
+ 
+       
+ 
+ 
+   </section>
+   <!-- End page content -->
 
-  <div class="w3-row-padding w3-margin-bottom">
-    <div class="w3-quarter">
-      <div class="w3-container w3-red w3-padding-16">
-        <div class="w3-left"><i class="fa fa-comment w3-xxxlarge"></i></div>
-        <div class="w3-right">
-          <h3>52</h3>
-        </div>
-        <div class="w3-clear"></div>
-        <h4>Messages</h4>
-      </div>
-    </div>
-    <div class="w3-quarter">
-      <div class="w3-container w3-blue w3-padding-16">
-        <div class="w3-left"><i class="fa fa-eye w3-xxxlarge"></i></div>
-        <div class="w3-right">
-          <h3>99</h3>
-        </div>
-        <div class="w3-clear"></div>
-        <h4>Views</h4>
-      </div>
-    </div>
-    <div class="w3-quarter">
-      <div class="w3-container w3-teal w3-padding-16">
-        <div class="w3-left"><i class="fa fa-share-alt w3-xxxlarge"></i></div>
-        <div class="w3-right">
-          <h3>23</h3>
-        </div>
-        <div class="w3-clear"></div>
-        <h4>Shares</h4>
-      </div>
-    </div>
-    <div class="w3-quarter">
-      <div class="w3-container w3-orange w3-text-white w3-padding-16">
-        <div class="w3-left"><i class="fa fa-users w3-xxxlarge"></i></div>
-        <div class="w3-right">
-          <h3>50</h3>
-        </div>
-        <div class="w3-clear"></div>
-        <h4>Users</h4>
-      </div>
-    </div>
-  </div>
-
-  <div class="w3-panel">
-    <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-third">
-        <h5>Regions</h5>
-        <img src="/w3images/region.jpg" style="width:100%" alt="Google Regional Map">
-      </div>
-      <div class="w3-twothird">
-        <h5>Feeds</h5>
-        <table class="w3-table w3-striped w3-white">
-          <tr>
-            <td><i class="fa fa-user w3-text-blue w3-large"></i></td>
-            <td>New record, over 90 views.</td>
-            <td><i>10 mins</i></td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-bell w3-text-red w3-large"></i></td>
-            <td>Database error.</td>
-            <td><i>15 mins</i></td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-users w3-text-yellow w3-large"></i></td>
-            <td>New record, over 40 users.</td>
-            <td><i>17 mins</i></td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-comment w3-text-red w3-large"></i></td>
-            <td>New comments.</td>
-            <td><i>25 mins</i></td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-bookmark w3-text-blue w3-large"></i></td>
-            <td>Check transactions.</td>
-            <td><i>28 mins</i></td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-laptop w3-text-red w3-large"></i></td>
-            <td>CPU overload.</td>
-            <td><i>35 mins</i></td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-share-alt w3-text-green w3-large"></i></td>
-            <td>New shares.</td>
-            <td><i>39 mins</i></td>
-          </tr>
-        </table>
-      </div>
-    </div>
-  </div>
-  <hr>
-  <div class="w3-container">
-    <h5>General Stats</h5>
-    <p>New Visitors</p>
-    <div class="w3-grey">
-      <div class="w3-container w3-center w3-padding w3-green" style="width:25%">+25%</div>
-    </div>
-
-    <p>New Users</p>
-    <div class="w3-grey">
-      <div class="w3-container w3-center w3-padding w3-orange" style="width:50%">50%</div>
-    </div>
-
-    <p>Bounce Rate</p>
-    <div class="w3-grey">
-      <div class="w3-container w3-center w3-padding w3-red" style="width:75%">75%</div>
-    </div>
-  </div>
-  <hr>
-
-  <div class="w3-container">
-    <h5>Countries</h5>
-    <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
-      <tr>
-        <td>United States</td>
-        <td>65%</td>
-      </tr>
-      <tr>
-        <td>UK</td>
-        <td>15.7%</td>
-      </tr>
-      <tr>
-        <td>Russia</td>
-        <td>5.6%</td>
-      </tr>
-      <tr>
-        <td>Spain</td>
-        <td>2.1%</td>
-      </tr>
-      <tr>
-        <td>India</td>
-        <td>1.9%</td>
-      </tr>
-      <tr>
-        <td>France</td>
-        <td>1.5%</td>
-      </tr>
-    </table><br>
-    <button class="w3-button w3-dark-grey">More Countries  <i class="fa fa-arrow-right"></i></button>
-  </div>
-  <hr>
-  <div class="w3-container">
-    <h5>Recent Users</h5>
-    <ul class="w3-ul w3-card-4 w3-white">
-      <li class="w3-padding-16">
-        <img src="/w3images/avatar2.png" class="w3-left w3-circle w3-margin-right" style="width:35px">
-        <span class="w3-xlarge">Mike</span><br>
-      </li>
-      <li class="w3-padding-16">
-        <img src="/w3images/avatar5.png" class="w3-left w3-circle w3-margin-right" style="width:35px">
-        <span class="w3-xlarge">Jill</span><br>
-      </li>
-      <li class="w3-padding-16">
-        <img src="/w3images/avatar6.png" class="w3-left w3-circle w3-margin-right" style="width:35px">
-        <span class="w3-xlarge">Jane</span><br>
-      </li>
-    </ul>
-  </div>
-  <hr>
-
-  <div class="w3-container">
-    <h5>Recent Comments</h5>
-    <div class="w3-row">
-      <div class="w3-col m2 text-center">
-        <img class="w3-circle" src="/w3images/avatar3.png" style="width:96px;height:96px">
-      </div>
-      <div class="w3-col m10 w3-container">
-        <h4>John <span class="w3-opacity w3-medium">Sep 29, 2014, 9:12 PM</span></h4>
-        <p>Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><br>
-      </div>
-    </div>
-
-    <div class="w3-row">
-      <div class="w3-col m2 text-center">
-        <img class="w3-circle" src="/w3images/avatar1.png" style="width:96px;height:96px">
-      </div>
-      <div class="w3-col m10 w3-container">
-        <h4>Bo <span class="w3-opacity w3-medium">Sep 28, 2014, 10:15 PM</span></h4>
-        <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><br>
-      </div>
-    </div>
-  </div>
-  <br>
-  <div class="w3-container w3-dark-grey w3-padding-32">
-    <div class="w3-row">
-      <div class="w3-container w3-third">
-        <h5 class="w3-bottombar w3-border-green">Demographic</h5>
-        <p>Language</p>
-        <p>Country</p>
-        <p>City</p>
-      </div>
-      <div class="w3-container w3-third">
-        <h5 class="w3-bottombar w3-border-red">System</h5>
-        <p>Browser</p>
-        <p>OS</p>
-        <p>More</p>
-      </div>
-      <div class="w3-container w3-third">
-        <h5 class="w3-bottombar w3-border-orange">Target</h5>
-        <p>Users</p>
-        <p>Active</p>
-        <p>Geo</p>
-        <p>Interests</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <footer class="w3-container w3-padding-16 w3-light-grey">
-    <h4>FOOTER</h4>
-    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-  </footer>
-
-  <!-- End page content -->
 </div>
 
 <script>
@@ -347,6 +248,7 @@ function w3_close() {
 </script>
 
 <script src="./admin.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script src="/js/chart.js"></script>
 </body>
 </html>

@@ -1,4 +1,3 @@
-
 //chart para dibujar citas por mes
 
 var citas_mes = {

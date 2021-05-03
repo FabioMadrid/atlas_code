@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/8bf4511c4b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/perfil_vendedor.css">
+    <link rel="stylesheet" href="https://atlas-home-colombia.s3.amazonaws.com/fonts/fonts.css">
+    <style>
+        table, th, td {
+          border: none;
+          border-collapse: collapse;
+        }
+        th, td {
+          padding: 10px;
+          text-align: left;
+        }
+        td
+        {
+            color: #6F7A88;
+        }
+        .order
+        {
+            display: flex;
+            justify-content: flex-start;
+            flex-flow: row wrap;
+            margin-bottom: 50px;
+    
+        }
+        .contenido_cita
+        {
+            display: flex;
+            justify-content: space-between;
+            flex-flow: row wrap;
+        }
+        .marginl
+        {
+            margin-left: 60px;
+        }
+        @media screen and (max-width: 1300px)  
+        {
+            .order
+            {
+
+            }
+        }
+        @media screen and (max-width: 500px)  
+        {
+            .marginl
+            {
+            margin-left: 0px;
+            margin-top: 25px;
+            }
+            .correcion-links
+            {
+             margin-top: 40px;
+            }
+        }
+        </style>
+    <title>Atlas Home</title>
+</head>
+<body>
+    
+    <div class="topnav" id="myTopnav">
+        <div class="column-25" style="left: 0;">
+            <a href="/">
+
+                <div style="position: absolute; left:0; top: 0;margin: 25px;">
+
+                    <span style="padding-left:10px; font-size: 18px;color: #2680EB;">❮ Salir</span> 
+                </div>
+                
+            </a>
+        </div>
+        <div class="column-85">
+           
+            
+        </div> 
+    </div> 
+
+
+
+    <div class="titulo-inmueble hide-mobile" style="margin-top: 95px;" id="titulo-propiedad">
+        <div class="space-between" style="margin-top: 5px;">
+
+            <div class="text">
+                <span id="">Fabio Madrid</span>,
+                <br>
+                <b style="font-size: 22px;display:block">Solicitud de crédito exitósa</b> 
+                <br>
+
+                Tu solicitud de crédito esta siendo procesada. <br>
+                Recibirás la respuesta de tu cotización directamente al correo que brindastes. 
+                
+            </div>
+
+            <div class="relative-container">
+
+                    <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/artes/ingresos.svg" alt="Logo Atlas" class="dibujo">
+
+            </div>
+
+        </div>
+    </div>
+    <br>
+
+    <div style="display: flex;justify-content: center;margin: 0 5% 100px">
+        <a href="/" class="btn-social-login" style="width: 40%;min-width: 250px;">Volver al Inicio</a>
+    </div>
+    
+<script src="./js/vendedor.js"></script>
+<script src="js/general.js"></script>
+
+</body>
+</html>
