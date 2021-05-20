@@ -17,7 +17,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 <!-- Top container -->
 <div class="w3-bar w3-top w3-white w3-large" style="z-index:4">
   <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i></button>
-  <img class="w3-bar-item w3-right" src="/svg/logo_alargado_azul.svg" style="height:60px;">
+  <img class="w3-bar-item w3-right" src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/icons/logo_alargado_azul.svg" style="height:60px;">
 </div>
 
 <!-- Sidebar/menu -->
@@ -64,6 +64,19 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
         </a>
         <a href="#" class="w3-bar-item w3-button w3-padding ">
         Terrenos
+        </a>
+    </div>
+
+    <button class="accordion w3-bar-item w3-button w3-padding ">Estadísticas</button>
+    <div class="panel">
+        <a href="#" class="w3-bar-item w3-button w3-padding ">
+        Estadísticas Propiedades 
+        </a>
+        <a href="#" class="w3-bar-item w3-button w3-padding ">
+        Estadísticas Financieras
+        </a>
+        <a href="#" class="w3-bar-item w3-button w3-padding ">
+        Estadísticas Comportamientos
         </a>
     </div>
 
@@ -132,7 +145,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
  
        </section>
  
-       <h5 class="subtitles"><b>Estadísticas Generales</b></h5>
+       <h5 class="subtitles"><b>Estadísticas Propiedades</b></h5>
       
        <section id="estadisticas_vendedor">
  
@@ -172,6 +185,8 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
              </p>
  
          </div>
+
+         <h5 class="subtitles"><b>Estadísticas Citas</b></h5>
  
          <div class="estadisticas_card" style="min-height: 400px;">
            <b class="text">Citas Semana Actual:</b>
@@ -189,8 +204,6 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
  
          </div>
  
-         
- 
          <div class="estadisticas_card" style="min-height: 400px;">
            <b class="text">Distribución tipo de citas recibidas: (Mes Actual)</b>
  
@@ -199,14 +212,18 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
            </div>
  
          </div>
- 
+         
+         <h5 class="subtitles"><b>Estadísticas Usuarios</b></h5>
+
          <div class="estadisticas_card" style="min-height: 400px;">
-           <b class="text">Clientes cerrados por Mes:</b>
+           <b class="text">Crecimiento Usuario Vendedores por Mes:</b>
              <br>
              <div id="clientes_cerrados">
              </div>
  
          </div>
+
+         <h5 class="subtitles"><b>Estadísticas Crédito</b></h5>
  
  
  

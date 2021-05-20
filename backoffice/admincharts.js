@@ -76,7 +76,7 @@ var citas_mes = {
 
   var clientes_cerrados = {
     series: [{
-      name: "Clientes Cerrados",
+      name: "Nuevos Vendedores",
       data: [1, 3, 5, 7, 10, 12, 15, 16, 20,23,24,29]
   }],
     chart: {

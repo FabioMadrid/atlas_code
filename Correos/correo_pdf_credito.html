@@ -362,7 +362,7 @@
         <tr>
           <td
             colspan="5"
-            style="font-size: 20px; color: #404040; font-weight: bold"
+            style="font-size: 20px; color: #E30909; font-weight: bold"
           >
             TUS DATOS - Actividad Laboral : "Otro"<br /><span
               style="font-size: 14px; color: #393e43; font-weight: 400"
@@ -409,14 +409,17 @@
               style="font-size: 14px; color: #393e43; font-weight: 400"
             >
               {{$nombre['nombre']}}, este es el resumen de tu
-              cotización.</span
+              cotización.
+              <br>
+              Tu Cotización ha sido: <b style="color: #E30909;"> {{$resultado_cotizacion}} </b>
+              </span
             >
           </td>
         </tr>
         
         <tr class="line">
           
-          <td style="font-size: 12px">
+          <td style="font-size: 12px; padding-top: 25px">
             <p style="display: none">{{++$cont}}</p>
             <img
               src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/logosbancos/ba_logo_sin_slogan.png"
