@@ -15,6 +15,11 @@
     object-fit: cover;
     vertical-align: middle;
 }
+.relative-container
+{
+    position: relative;
+}
+
 .top-text 
 {
     position: absolute;
