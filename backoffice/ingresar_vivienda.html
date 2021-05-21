@@ -87,43 +87,64 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif;}
 
         <h3 class="titulos">Datos Generales</h3>
 
+            <div class="subtitles" style="text-align: left;">Estado de la vivienda*</div>
+
+            <div class="fcontainer">
+
+                <label for="disponible" class="checkbox" > Disponible
+                    <input type="radio" id="disponible" name="estado" required>
+                    <span class="checkmark"></span>
+                </label>
+
+                <label for="no_disponible" class="checkbox" >No Disponible
+                    <input type="radio" id="no_disponible"  name="estado" required>
+                    <span class="checkmark"></span>
+                </label>
+
+                <label for="revision" class="checkbox" >En Revisión
+                    <input type="radio" id="revision" name="estado" required>
+                    <span class="checkmark"></span>
+                </label>
+
+            </div>
+
             <div class="subtitles" style="text-align: left;">Operación:*</div>
 
-                <div class="fcontainer">
+                <div class="fcontainer"> 
 
                     <label for="venta" class="checkbox" > Venta
-                        <input type="radio" id="venta"  name="operacion_vivienda" required>
+                        <input type="radio" id="venta"  name="operacion" required>
                         <span class="checkmark"></span>
                     </label>
 
                     <label for="renta" class="checkbox" >Renta
-                        <input type="radio" id="renta"  name="operacion_vivienda" required>
+                        <input type="radio" id="renta"  name="operacion" required>
                         <span class="checkmark"></span>
                     </label>
 
                     <label for="venta_renta" class="checkbox" > Venta y Renta
-                        <input type="radio" id="venta_renta"  name="operacion_vivienda" required>
+                        <input type="radio" id="venta_renta"  name="operacion" required>
                         <span class="checkmark"></span>
                     </label>
 
                 </div>
 
-            <div class="subtitles" style="text-align: left;">Estado de la vivienda*</div>
+            <div class="subtitles" style="text-align: left;">Condición de la vivienda*</div>
 
-                <div class="fcontainer">
+                <div class="fcontainer"> <!--agregar condicion de vivienda a base de datos-->
 
                     <label for="nueva" class="checkbox" > Vivienda Nueva
-                        <input type="radio" id="nueva" name="estado_vivienda" required>
+                        <input type="radio" id="nueva" name="condicion" required>
                         <span class="checkmark"></span>
                     </label>
 
                     <label for="usada" class="checkbox" >Vivienda Usada
-                        <input type="radio" id="usada"  name="estado_vivienda" required>
+                        <input type="radio" id="usada"  name="condicion" required>
                         <span class="checkmark"></span>
                     </label>
 
                     <label for="preventa" class="checkbox" > Vivienda en Pre-Venta
-                        <input type="radio" id="preventa" name="estado_vivienda" required>
+                        <input type="radio" id="preventa" name="condicion" required>
                         <span class="checkmark"></span>
                     </label>
 
@@ -179,7 +200,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif;}
 
             <div class="subtitles" style="text-align: left;">Precios*</div>
 
-                <div class="fcontainer">
+                <div class="fcontainer"> <!--agregar moneda a base de datos-->
                     
                     <label for="precio_lempira" class="checkbox" > Lempiras (L.)
                         <input type="radio" id="precio_lempira" name="moneda" onclick="openRegistro(event, 'lempira')" checked="checked">
@@ -194,16 +215,16 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif;}
                 </div>
                 
                 <div id="lempira" class="tabcontent" style="display: block;">
-
+                    <!-- agregar precio_lempiras en base de datos -->
                    <label for="precio_lempiras">Precio en Lempiras:</label>
-                   <input type="number" id="precio_lempiras" placeholder="Ingresar Precio de Vivienda en Lempiras" autocomplete="off">
+                   <input type="number" name="precio_lempiras" id="precio_lempiras" placeholder="Ingresar Precio de Vivienda en Lempiras" autocomplete="off">
 
                 </div>
 
                 <div id="dolar" class="tabcontent">
-
+                    <!-- agregar precio_dolares en base de datos -->
                     <label for="precio_dolares">Precio en Dólares:</label>
-                    <input type="number" id="precio_dolares" placeholder="Ingresar Precio de Vivienda en Dólares" autocomplete="off">
+                    <input type="number" name="precio_dolares" id="precio_dolares" placeholder="Ingresar Precio de Vivienda en Dólares" autocomplete="off">
 
                 </div>
                 <br>
@@ -211,19 +232,19 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif;}
                 <div class="fcontainer">
 
                     <label for="titulo">Colonia / Nombre del proyecto*</label>
-                    <input type="text" class="capitalize" id="titulo" maxlength="35" required placeholder="Nombre del proyecto / Conjunto, si no aplica poner la colonia" autocomplete="off">
+                    <input type="text" name="nombre_proyecto" class="capitalize" id="titulo" maxlength="35" required placeholder="Nombre del proyecto / Conjunto, si no aplica poner la colonia" autocomplete="off">
 
                     <label for="titulo">Nombre del Modelo*</label>
-                    <input type="text" class="capitalize" id="titulo" maxlength="25" required placeholder="Solo si aplica, si no dejarlo como Casa de Habitación" value="Casa de Habitación" autocomplete="off">
+                    <input type="text" name="nombre_modelo" class="capitalize" id="titulo" maxlength="25" required placeholder="Solo si aplica, si no dejarlo como Casa de Habitación" value="Casa de Habitación" autocomplete="off">
 
                     <label for="titulo">Zona</label>
-                    <input type="text" class="capitalize" id="titulo" maxlength="35" placeholder="Nombre de la zona de la ciudad, Ejemplo: El Hatillo" autocomplete="off">
+                    <input type="text" name="zona" class="capitalize" id="titulo" maxlength="35" placeholder="Nombre de la zona de la ciudad, Ejemplo: El Hatillo" autocomplete="off">
 
                     <label for="habitaciones">Habitaciones*</label>
-                    <input type="number" id="habitaciones" required placeholder="No incluir en este campo el dormitorio de servidumbre" min="1" autocomplete="off">
+                    <input type="number" name="habitaciones" id="habitaciones" required placeholder="No incluir en este campo el dormitorio de servidumbre" min="1" autocomplete="off">
 
                     <div style="width: 100%;">
-                        ¿Cuenta con dormitorio de Servidumbre?* <br>
+                        ¿Cuenta con dormitorio de Servidumbre?* <br> <!--agregar dormitorio_servidumbre a base datos-->
                         <label for="dormitorio_servidumbre_si" class="checkbox" >Si
                             <input type="radio" id="dormitorio_servidumbre_si" name="dormitorio_servidumbre" required>
                             <span class="checkmark"></span>
@@ -236,19 +257,20 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif;}
                     </div>
 
                     <label for="banos">Baños*</label>
-                    <input type="number" id="banos" required placeholder="0.5 = medio baño" step="0.5" min="0" autocomplete="off">
+                    <input type="number" name="banos" id="banos" required placeholder="0.5 = medio baño" step="0.5" min="0" autocomplete="off">
 
                     <label for="niveles">Niveles*</label>
-                    <input type="number" id="niveles" required placeholder="Niveles que tiene la casa" min="0" autocomplete="off">
+                    <input type="number" name="niveles" id="niveles" required placeholder="Niveles que tiene la casa" min="0" autocomplete="off">
 
                     <label for="estacionamientos">Estacionamientos*</label>
-                    <input type="number" id="estacionamientos" required placeholder="Estacionamientos Internos que tiene la vivienda" min="0" autocomplete="off">
+                    <input type="number" name="estacionamientos" id="estacionamientos" required placeholder="Estacionamientos Internos que tiene la vivienda" min="0" autocomplete="off">
 
                     <div style="width: 100%;">
+                        <!-- agregar garaje_tipo a base de datos -->
                         Tipo de Garaje:* <br>
                         <label for="garaje_sin_techar" class="checkbox" >Techado
                             <input type="radio" id="garaje_sin_techar" name="garaje_tipo" required>
-                            <span class="checkmark"></span>
+                            <span class="checkmark"></span> 
                         </label>
 
                         <label for="garaje_techado" class="checkbox" >Sin Techar
@@ -256,22 +278,22 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif;}
                             <span class="checkmark"></span>
                         </label>
                     </div>
-
+                    <!-- corregir cambo a ano_construccion -->
                     <label for="ano_construccion">Año de Construcción*</label>
-                    <input type="number" id="ano_construccion" required autocomplete="off" placeholder="Ejemplo: 2020">
+                    <input type="number" name="ano_construccion" id="ano_construccion" required autocomplete="off" placeholder="Ejemplo: 2020">
 
                     <label for="area_construccion">área de Construcción (M2)*</label>
-                    <input type="number" id="area_construccion" required placeholder="En Metros Cuadrados" autocomplete="off">
+                    <input type="number" name="area_construccion" id="area_construccion" required placeholder="En Metros Cuadrados" autocomplete="off">
 
-                    <label for="area_terreno">área de terreno (M2)*</label>
-                    <input type="number" id="area_terreno" required placeholder="En Metros Cuadrados" autocomplete="off">
+                    <label for="area_terreno">área de Lote (M2)</label>
+                    <input type="number" name="area_lote" id="area_terreno"  placeholder="En Metros Cuadrados" autocomplete="off">
 
                 </div>
 
             <h3 class="titulos">Datos Legales</h3>
 
                 <div class="fcontainer">
-                            
+                    <!-- agregar estado_legal a base de datos -->
                     <div style="width: 100%;">
                         Estado Legal de la Propiedad: * <br>
                         <label for="libre_gravamen" class="checkbox" >Libre de gravámen
@@ -286,23 +308,24 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif;}
                     </div>
 
                     <div style="width: 100%;">
+                        <!-- agregar regimen_legal a base de datos -->
                         Régimen: <br>
                         <label for="propiedad_individual" class="checkbox" >Propiedad Individual
-                            <input type="radio" id="propiedad_individual" name="regimen" >
+                            <input type="radio" id="propiedad_individual" name="regimen_legal" >
                             <span class="checkmark"></span>
                         </label>
 
                         <label for="condominios_horizontales" class="checkbox" >Condominios Horizontales
-                            <input type="radio" id="condominios_horizontales" name="regimen" >
+                            <input type="radio" id="condominios_horizontales" name="regimen_legal" >
                             <span class="checkmark"></span>
                         </label>
                     </div>
-
+                    <!-- agregar numero_matricula a base de datos -->
                     <label for="numero_matricula">Número de Matrícula</label>
-                    <input type="text" id="numero_matricula" maxlength="10"  placeholder="Número de Matrícula ante el IP" autocomplete="off">
-
+                    <input type="text" name="numero_matricula" id="numero_matricula" maxlength="10"  placeholder="Número de Matrícula ante el IP" autocomplete="off">
+                    <!-- agregar clave_catastral a base de datos -->
                     <label for="clave_catastral">Clave Catastral</label>
-                    <input type="text" id="clave_catastral" maxlength="10"  placeholder="Clave catastral de la Alcaldía" autocomplete="off">
+                    <input type="text" name="clave_catastral" id="clave_catastral" maxlength="10"  placeholder="Clave catastral de la Alcaldía" autocomplete="off">
 
                     <label for="propietario"> Propietario</label>
                     <input type="search" placeholder="Vincula la propiedad con un usuario vendedor, Usuario debe existir para vincular" name="search"  id="propietario" autocomplete="off">
@@ -310,7 +333,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif;}
                 </div>
 
             <h3 class="titulos">Tipología</h3>
-
+                <!-- agregar uso a base de Datos -->
                 <div style="width: 100%;">
                     Uso* <br>
                     <label for="unifamiliar" class="checkbox" >Uni Familiar
@@ -325,6 +348,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif;}
                 </div>
 
                 <div style="width: 100%;">
+                    <!-- agregar categoria_social a base de datos -->
                     Categoría Social* <br>
                     <label for="no_vis" class="checkbox" >Común, de NO interés social
                         <input type="radio" id="no_vis" name="categoria_social" required checked="checked">
@@ -344,187 +368,195 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif;}
                 <div style="display:flex;justify-content:flex-start;flex-flow: row wrap;">
 
                     <label for="acceso_discapacitados" class="checkbox" style="padding-left: 85px;">Acceso a discapacitados
-                        <input type="checkbox" id="acceso_discapacitados">
+                        <input type="checkbox" id="acceso_discapacitados" name="acceso_discapacitados">
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/proyectos_general/acceso_discapacitados.svg" alt="i" class="icono-filtros">
                     </label>
 
-                    <label for="aire-acondicionado" class="checkbox" style="padding-left: 85px;">Aire Acondicionado
-                        <input type="checkbox" id="aire-acondicionado">
+                    <label for="ascensor" class="checkbox" style="padding-left: 85px;">Ascensor
+                        <input type="checkbox" id="ascensor" name="ascensor">
+                        <span class="checkmark"></span>
+                        <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/proyectos_general/asensor.svg" alt="i" class="icono-filtros">
+                    </label>
+
+                    <label for="aire_acondicionado" class="checkbox" style="padding-left: 85px;">Aire Acondicionado
+                        <input type="checkbox" id="aire_acondicionado" name="aire_acondicionado">
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/carateristicas_vivienda/ac.svg" alt="i" class="icono-filtros">
                     </label>
 
-                    <label for="walk_in_closet" class="checkbox" style="padding-left: 85px;">Walk In Closet
-                        <input type="checkbox" id="walk_in_closet">
+                    <label for="walk_closet" class="checkbox" style="padding-left: 85px;">Walk In Closet
+                        <input type="checkbox" id="walk_closet" name="walk_closet">
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/carateristicas_vivienda/wc.svg" alt="i" class="icono-filtros">
                     </label>
 
                     <label for="balcon" class="checkbox" style="padding-left: 85px;">Balcones 
-                        <input type="checkbox" id="balcon">
+                        <input type="checkbox" id="balcon" name="balcon">
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/carateristicas_vivienda/balcon.svg" alt="i" class="icono-filtros">
                     </label>
 
                     <label for="alacena" class="checkbox" style="padding-left: 85px;">Alacena 
-                        <input type="checkbox" id="alacena">
+                        <input type="checkbox" id="alacena" name="alacena">
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/carateristicas_vivienda/alacena.svg" alt="i" class="icono-filtros">
                     </label>
 
                     <label for="banera" class="checkbox" style="padding-left: 85px;">Bañera 
-                        <input type="checkbox" id="banera">
+                        <input type="checkbox" id="banera" name="banera">
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/carateristicas_vivienda/banera.svg" alt="i" class="icono-filtros">
                     </label>
                     
-                    <label for="area-social-propia" class="checkbox" style="padding-left: 85px;">Área Social propia
-                        <input type="checkbox" id="area-social-propia">
+                    <label for="area_socialpropia" class="checkbox" style="padding-left: 85px;">Área Social propia
+                        <input type="checkbox" id="area_socialpropia" name="area_socialpropia"> 
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/carateristicas_vivienda/area_social.svg" alt="i" class="icono-filtros">
                     </label>
 
-                    <label for="area-bar" class="checkbox" style="padding-left: 85px;">Área de bar
-                        <input type="checkbox" id="area-bar">
+                    <label for="area_barpropia" class="checkbox" style="padding-left: 85px;">Área de bar propia
+                        <input type="checkbox" id="area_barpropia" name="area_barpropia">
+                        <!-- cambiar en base de datos a area_barpropia -->
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/carateristicas_vivienda/bar.svg" alt="i" class="icono-filtros">
                     </label>
-
-                    <label for="piscina" class="checkbox" style="padding-left: 85px;">Piscina
-                        <input type="checkbox" id="piscina">
+                    <!-- cambiar en base de datos piscina_propia -->
+                    <label for="piscina_propia" class="checkbox" style="padding-left: 85px;">Piscina Propia
+                        <input type="checkbox" id="piscina_propia" name="piscina_propia">
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/carateristicas_vivienda/pisicina.svg" alt="i" class="icono-filtros">
                     </label>
 
-                    <label for="gimnasio" class="checkbox" style="padding-left: 85px;">Gimnasio
-                        <input type="checkbox" id="gimnasio">
+                    <label for="gimnasio_propio" class="checkbox" style="padding-left: 85px;">Gimnasio Propio
+                        <input type="checkbox" id="gimnasio_propio" name="gimnasio_propio">
+                        <!-- cambiar en base de datos a gimnasio_propio -->
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/carateristicas_vivienda/gym.svg" alt="i" class="icono-filtros">
                     </label>
 
                     <label for="estudio" class="checkbox" style="padding-left: 85px;">Estudio
-                        <input type="checkbox" id="estudio">
+                        <input type="checkbox" id="estudio" name="estudio">
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/carateristicas_vivienda/estudio.svg" alt="i" class="icono-filtros">
                     </label>
 
                     <label for="jardin" class="checkbox" style="padding-left: 85px;">Jardín
-                        <input type="checkbox" id="jardin">
+                        <input type="checkbox" id="jardin" name="jardin">
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/carateristicas_vivienda/jardin.svg" alt="i" class="icono-filtros">
                     </label>
 
-                    <label for="sistema-sonido" class="checkbox" style="padding-left: 85px;">Sistema de Sonido
-                        <input type="checkbox" id="sistema-sonido">
+                    <label for="sistema_sonido" class="checkbox" style="padding-left: 85px;">Sistema de Sonido
+                        <input type="checkbox" id="sistema_sonido" name="sistema_sonido">
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/carateristicas_vivienda/sonido_integrado.svg" alt="i" class="icono-filtros">
                     </label>
 
-                    <label for="aire-acondicionado-central" class="checkbox" style="padding-left: 85px;">Aire Acondicionado Central
-                        <input type="checkbox" id="aire-acondicionado-central">
+                    <label for="aire_central" class="checkbox" style="padding-left: 85px;">Aire Acondicionado Central
+                        <input type="checkbox" id="aire_central" name="aire_central" >
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/carateristicas_vivienda/aireCentral.svg" alt="i" class="icono-filtros">
                     </label>
 
-                    <label for="lavanderia-techada" class="checkbox" style="padding-left: 85px;">Lavandería Techada
-                        <input type="checkbox" id="lavanderia-techada">
+                    <label for="lavanderia_techada" class="checkbox" style="padding-left: 85px;">Lavandería Techada
+                        <input type="checkbox" id="lavanderia_techada" name="lavanderia_techada">
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/carateristicas_vivienda/lavadora.svg" alt="i" class="icono-filtros">
                     </label>
 
                     <label for="bodega" class="checkbox" style="padding-left: 85px;">Bodega
-                        <input type="checkbox" id="bodega">
+                        <input type="checkbox" id="bodega" name="bodega">
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/carateristicas_vivienda/bodega.svg" alt="i" class="icono-filtros">
                     </label>
 
-                    <label for="mobiliario-incluido" class="checkbox" style="padding-left: 85px;">Mobiliario Incluido
-                        <input type="checkbox" id="mobiliario-incluido">
+                    <label for="mobiliario_incluido" class="checkbox" style="padding-left: 85px;">Mobiliario Incluido
+                        <input type="checkbox" id="mobiliario_incluido" name="mobiliario_incluido">
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/carateristicas_vivienda/mobiliarioincluido.svg" alt="i" class="icono-filtros">
                     </label>
-
-                    <label for="jacuzzi" class="checkbox" style="padding-left: 85px;">Jacuzzi
-                        <input type="checkbox" id="jacuzzi">
+                    <!-- agregar jacuzzi_propio a base de datos -->
+                    <label for="jacuzzi_propio" class="checkbox" style="padding-left: 85px;">Jacuzzi Propio
+                        <input type="checkbox" id="jacuzzi_propio" name="jacuzzi_propio">
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/carateristicas_vivienda/jacuzzi.svg" alt="i" class="icono-filtros">
                     </label>
-
-                    <label for="sauna" class="checkbox" style="padding-left: 85px;">Sauna
-                        <input type="checkbox" id="sauna">
+                    <!-- agregar sauna_propio a base de datos -->
+                    <label for="sauna_propio" class="checkbox" style="padding-left: 85px;">Sauna Propio
+                        <input type="checkbox" id="sauna_propio" name="sauna_propio">
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/carateristicas_vivienda/sauna.svg" alt="i" class="icono-filtros">
                     </label>
 
-                    <label for="smart-home" class="checkbox" style="padding-left: 85px;">Smart Home
-                        <input type="checkbox" id="smart-home">
+                    <label for="smart_home" class="checkbox" style="padding-left: 85px;">Smart Home
+                        <input type="checkbox" id="smart_home" name="smart_home">
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/carateristicas_vivienda/smarthome.svg" alt="i" class="icono-filtros">
                     </label>
 
                     <label for="sotano" class="checkbox" style="padding-left: 85px;">Sótano
-                        <input type="checkbox" id="sotano">
+                        <input type="checkbox" id="sotano" name="sotano">
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/carateristicas_vivienda/sotano.svg" alt="i" class="icono-filtros">
                     </label>
 
-                    <label for="sala_cine" class="checkbox" style="padding-left: 85px;">Sala de Cine
-                        <input type="checkbox" id="sala_cine">
+                    <label for="sala_cine_propia" class="checkbox" style="padding-left: 85px;">Sala de Cine Propia
+                        <input type="checkbox" id="sala_cine_propia" name="sala_cine_propia">
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/carateristicas_vivienda/sala_cine.svg" alt="i" class="icono-filtros">
                     </label>
 
                     <label for="vistas" class="checkbox" style="padding-left: 85px;">Vistas
-                        <input type="checkbox" id="vistas">
+                        <input type="checkbox" id="vistas" name="vistas">
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/carateristicas_vivienda/vistas.svg" alt="i" class="icono-filtros">
                     </label>
 
                     <label for="ecologica" class="checkbox" style="padding-left: 85px;">Ecológica
-                        <input type="checkbox" id="ecologica">
+                        <input type="checkbox" id="ecologica" name="ecologica">
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/carateristicas_vivienda/ecologica.svg" alt="i" class="icono-filtros">
                     </label>
 
-                    <label for="calentador-agua" class="checkbox" style="padding-left: 85px;">Calentador de Agua
-                        <input type="checkbox" id="calentador-agua">
+                    <label for="calentador_agua" class="checkbox" style="padding-left: 85px;">Calentador de Agua
+                        <input type="checkbox" id="calentador_agua" name="calentador_agua">
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/carateristicas_vivienda/calentador.svg" alt="i" class="icono-filtros">
                     </label>
 
-                    <label for="fosa-septica" class="checkbox" style="padding-left: 85px;">Fosa Séptica
-                        <input type="checkbox" id="fosa-septica">
+                    <label for="fosa_septica" class="checkbox" style="padding-left: 85px;">Fosa Séptica
+                        <input type="checkbox" id="fosa_septica" name="fosa_septica">
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/carateristicas_vivienda/fosa_septica.svg" alt="i" class="icono-filtros">
                     </label>
 
                     <label for="tinaco" class="checkbox" style="padding-left: 85px;">Tinaco
-                        <input type="checkbox" id="tinaco">
+                        <input type="checkbox" id="tinaco" name="tinaco">
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/carateristicas_vivienda/tinaco.svg" alt="i" class="icono-filtros">
                     </label>
 
-                    <label for="generador-electrico" class="checkbox" style="padding-left: 85px;">Generador Eléctrico
-                        <input type="checkbox" id="generador-electrico">
+                    <label for="generador_electrico" class="checkbox" style="padding-left: 85px;">Generador Eléctrico
+                        <input type="checkbox" id="generador_electrico" name="generador_electrico">
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/carateristicas_vivienda/generador_electrico.svg" alt="i" class="icono-filtros">
                     </label>
 
-                    <label for="muro-perimetral" class="checkbox" style="padding-left: 85px;">Muro Perimetral
-                        <input type="checkbox" id="muro-perimetral">
+                    <label for="muro_perimetral" class="checkbox" style="padding-left: 85px;">Muro Perimetral
+                        <input type="checkbox" id="muro_perimetral" name="muro_perimetral">
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/carateristicas_vivienda/muro_perimetral_existente.svg" alt="i" class="icono-filtros">
                     </label>
 
-                    <label for="sistema-vigilancia" class="checkbox" style="padding-left: 85px;">Sistema de vigilancia
-                        <input type="checkbox" id="sistema-vigilancia">
+                    <label for="sistema_vigilancia" class="checkbox" style="padding-left: 85px;">Sistema de vigilancia
+                        <input type="checkbox" id="sistema_vigilancia" name="sistema_vigilancia">
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/carateristicas_vivienda/sistema_vigilancia.svg" alt="i" class="icono-filtros">
                     </label>
 
                     <label for="cisterna" class="checkbox" style="padding-left: 85px;">Cisterna
-                        <input type="checkbox" id="cisterna">
+                        <input type="checkbox" id="cisterna" name="cisterna">
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/carateristicas_vivienda/cisterna.svg" alt="i" class="icono-filtros">
                     </label>
@@ -537,110 +569,134 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif;}
 
                 <div style="display:flex;justify-content:flex-start;flex-flow: row wrap;">
 
-                    <label for="area-social-conjunto" class="checkbox" style="padding-left: 85px;">Área social común
-                        <input type="checkbox" id="area-social-conjunto">
+                    <label for="area_socialcomun" class="checkbox" style="padding-left: 85px;">Área social común
+                        <input type="checkbox" id="area_socialcomun" name="area_socialcomun">
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/proyectos_general/area_social.svg" alt="i" class="icono-filtros">
                     </label>
 
-                    <label for="piscina-conjunto" class="checkbox" style="padding-left: 85px;">Piscina común
-                        <input type="checkbox" id="piscina-conjunto">
+                    <label for="area_barcomun" class="checkbox" style="padding-left: 85px;">Área de bar común
+                        <input type="checkbox" id="area_barcomun" name="area_barcomun">
+                        <span class="checkmark"></span>
+                        <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/proyectos_general/area_social.svg" alt="i" class="icono-filtros">
+                    </label>
+
+                    <label for="piscina_comun" class="checkbox" style="padding-left: 85px;">Piscina común
+                        <input type="checkbox" id="piscina_comun" name="piscina_comun">
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/proyectos_general/pisicina.svg" alt="i" class="icono-filtros">
                     </label>
+
+                    <label for="jacuzzi_comun" class="checkbox" style="padding-left: 85px;">Jacuzzi Común
+                        <input type="checkbox" id="jacuzzi_comun" name="jacuzzi_comun">
+                        <span class="checkmark"></span>
+                        <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/carateristicas_vivienda/jacuzzi.svg" alt="i" class="icono-filtros">
+                    </label>
+
+                    <label for="sala_cine_comun" class="checkbox" style="padding-left: 85px;">Sala de Cine Común
+                        <input type="checkbox" id="sala_cine_comun" name="sala_cine_comun">
+                        <span class="checkmark"></span>
+                        <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/carateristicas_vivienda/sala_cine.svg" alt="i" class="icono-filtros">
+                    </label>
                     
-                    <label for="gimnasio-conjunto" class="checkbox" style="padding-left: 85px;">Gimnasio común
-                        <input type="checkbox" id="gimnasio-conjunto">
+                    <label for="gimnasio_comun" class="checkbox" style="padding-left: 85px;">Gimnasio común
+                        <input type="checkbox" id="gimnasio_comun" name="gimnasio_comun">
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/proyectos_general/gym.svg" alt="i" class="icono-filtros">
                     </label>
 
+                    <label for="area_coworking" class="checkbox" style="padding-left: 85px;">Área de Coworking
+                        <input type="checkbox" id="area_coworking" name="area_coworking">
+                        <span class="checkmark"></span>
+                        <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/proyectos_general/coworking.svg" alt="i" class="icono-filtros">
+                    </label>
+
                     <label for="area_juegos" class="checkbox" style="padding-left: 85px;">Área de juegos
-                        <input type="checkbox" id="area_juegos">
+                        <input type="checkbox" id="area_juegos" name="area_juegos">
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/proyectos_general/area_juegos.svg" alt="i" class="icono-filtros">
                     </label>
 
                     <label for="cancha_deportiva" class="checkbox" style="padding-left: 85px;">Canchas deportivas
-                        <input type="checkbox" id="cancha_deportiva">
+                        <input type="checkbox" id="cancha_deportiva" name="canchas_deportivas">
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/proyectos_general/cancha_deportiva.svg" alt="i" class="icono-filtros">
                     </label>
                     
                     <label for="mirador" class="checkbox" style="padding-left: 85px;">Mirador
-                        <input type="checkbox" id="mirador">
+                        <input type="checkbox" id="mirador" name="mirador">
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/proyectos_general/mirador.svg" alt="i" class="icono-filtros">
                     </label>
 
                     <label for="area_bosque" class="checkbox" style="padding-left: 85px;">Área de bosque
-                        <input type="checkbox" id="area_bosque">
+                        <input type="checkbox" id="area_bosque" name="area_bosque">
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/proyectos_general/area_bosque.svg" alt="i" class="icono-filtros">
                     </label>
 
                     <label for="area_verde" class="checkbox" style="padding-left: 85px;">Área verde
-                        <input type="checkbox" id="area_verde">
+                        <input type="checkbox" id="area_verde" name="area_verde">
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/proyectos_general/area_verde.svg" alt="i" class="icono-filtros">
                     </label>
 
                     <label for="salon_eventos" class="checkbox" style="padding-left: 85px;">Salón de eventos
-                        <input type="checkbox" id="salon_eventos">
+                        <input type="checkbox" id="salon_eventos" name="salon_eventos">
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/proyectos_general/salon_eventos.svg" alt="i" class="icono-filtros">
                     </label>
 
                     <label for="area_comercial" class="checkbox" style="padding-left: 85px;">Área comercial
-                        <input type="checkbox" id="area_comercial">
+                        <input type="checkbox" id="area_comercial" name="area_comercial">
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/proyectos_general/comercio.svg" alt="i" class="icono-filtros">
                     </label>
                     
-                    <label for="circuito-cerrado" class="checkbox" style="padding-left: 85px;">Circuito Cerrado
-                        <input type="checkbox" id="circuito-cerrado">
+                    <label for="circuito_cerrado" class="checkbox" style="padding-left: 85px;">Circuito Cerrado
+                        <input type="checkbox" id="circuito_cerrado" name="circuito_cerrado">
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/proyectos_general/circuito_cerrado.svg" alt="i" class="icono-filtros">
                     </label>
 
                     <label for="vigilancia" class="checkbox" style="padding-left: 85px;">Vigilancia
-                        <input type="checkbox" id="vigilancia">
+                        <input type="checkbox" id="vigilancia" name="vigilancia">
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/proyectos_general/vigilancia.svg" alt="i" class="icono-filtros">
                     </label>
                     
-                    <label for="acceso-pavimentado" class="checkbox" style="padding-left: 85px;">Calles Pavimentadas
-                        <input type="checkbox" id="acceso-pavimentado">
+                    <label for="calles_pavimentadas" class="checkbox" style="padding-left: 85px;">Calles Pavimentadas
+                        <input type="checkbox" id="calles_pavimentadas" name="calles_pavimentadas">
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/proyectos_general/pavimentado.svg" alt="i" class="icono-filtros">
                     </label>
 
                     <label for="alcantarillado" class="checkbox" style="padding-left: 85px;">Alcantarillado
-                        <input type="checkbox" id="alcantarillado">
+                        <input type="checkbox" id="alcantarillado" name="alcantarillado">
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/proyectos_general/alcantarillado.svg" alt="i" class="icono-filtros">
                     </label>
 
                     <label for="cableado_subterraneo" class="checkbox" style="padding-left: 85px;">Cableado Subterráneo
-                        <input type="checkbox" id="cableado_subterraneo">
+                        <input type="checkbox" id="cableado_subterraneo" name="cableado_subterraneo">
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/proyectos_general/cableado_subterraneo.svg" alt="i" class="icono-filtros">
                     </label>
 
                     <label for="telecomunicaciones" class="checkbox" style="padding-left: 85px;">Telecomunicaciones
-                        <input type="checkbox" id="telecomunicaciones">
+                        <input type="checkbox" id="telecomunicaciones" name="telecomunicaciones">
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/proyectos_general/servicios_telecomunicacion.svg" alt="i" class="icono-filtros">
                     </label>
 
-                    <label for="agua-pozo" class="checkbox" style="padding-left: 85px;">Agua de Pozo
-                        <input type="checkbox" id="agua-pozo">
+                    <label for="agua_pozo" class="checkbox" style="padding-left: 85px;">Agua de Pozo
+                        <input type="checkbox" id="agua_pozo" name="agua_pozo">
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/proyectos_general/agua_municipal.svg" alt="i" class="icono-filtros">
                     </label>
 
-                    <label for="agua-municipal" class="checkbox" style="padding-left: 85px;">Agua Municipal
-                        <input type="checkbox" id="agua-municipal">
+                    <label for="agua_municipal" class="checkbox" style="padding-left: 85px;">Agua Municipal
+                        <input type="checkbox" id="agua_municipal" name="agua_municipal">
                         <span class="checkmark"></span>
                         <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/proyectos_general/agua_municipal.svg" alt="i" class="icono-filtros">
                     </label>
@@ -652,22 +708,22 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif;}
                 <label for="supermercado">Super Mercado Cercano*</label>
                 <input type="text" name="supermercado" id="supermercado" placeholder="Escribe el nombre del supermercado mas cercano" class="capitalize" required>
                 <label for="distancia_supermercado">Distancia Supermercado en KM*</label>
-                <input type="number" step="0.1" min="0.1" id="distancia_supermercado" required >
+                <input type="number" step="0.1" min="0.1" id="distancia_supermercado" name="distancia_supermercado" required >
 
                 <label for="restaurante">Restaurante Cercano*</label>
-                <input type="text" name="distancia_restaurante" id="restaurante" placeholder="Escribe el nombre del restaurante mas cercano" class="capitalize" required>
+                <input type="text" name="restaurante" id="restaurante" placeholder="Escribe el nombre del restaurante mas cercano" class="capitalize" required>
                 <label for="distancia_restaurante">Distancia restaurante en KM*</label>
-                <input type="number" step="0.1" min="0.1" id="distancia_restaurante" required >
+                <input type="number" step="0.1" min="0.1" id="distancia_restaurante" name="distancia_restaurante" required >
 
                 <label for="farmacia">Farmacia Cercana*</label>
-                <input type="text" name="distancia_farmacia" id="farmacia" placeholder="Escribe el nombre de la farmacia mas cercana" class="capitalize" required>
+                <input type="text" name="farmacia" id="farmacia" placeholder="Escribe el nombre de la farmacia mas cercana" class="capitalize" required>
                 <label for="distancia_farmacia">Distancia Farmacia en KM*</label>
-                <input type="number" step="0.1" min="0.1" id="distancia_farmacia" required >
+                <input type="number" step="0.1" min="0.1" id="distancia_farmacia" name="distancia_farmacia" required >
 
                 <label for="escuela">Escuela Cercana*</label>
-                <input type="text" name="distancia_escuela" id="escuela" placeholder="Escribe el nombre de la escuela mas cercana" class="capitalize" required>
+                <input type="text" name="escuela" id="escuela" placeholder="Escribe el nombre de la escuela mas cercana" class="capitalize" required>
                 <label for="distancia_escuela">Distancia Escuela en KM*</label >
-                <input type="number" step="0.1" min="0.1" id="distancia_escuela" required>
+                <input type="number" step="0.1" min="0.1" id="distancia_escuela" name="distancia_escuela" required>
 
             <h3 class="titulos">Multimedia</h3>
                 
