@@ -790,90 +790,177 @@
 
         <button class="accordion">Amenidades del proyecto </button>
         <div class="panel">
+            
+       
+            {{#if acceso_discapacitados}}
             <div  class="checkbox text" style="padding-left: 85px;">Acceso a discapacitados
-                <img src="./svg/filtros/proyecto/acceso_discapacitados.svg" alt="i" class="icono-filtros">
+                <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/proyectos_general/acceso_discapacitados.svg" alt="i" class="icono-filtros" >
             </div>
+            {{/if}}
+
+            {{#if ascensor}
             <div  class="checkbox text" style="padding-left: 85px;">Ascensor
-                <img src="./svg/filtros/proyecto/asensor.svg" alt="i" class="icono-filtros">
+                <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/proyectos_general/asensor.svg" alt="i" class="icono-filtros">
             </div>
+            {{/if}}
+
+            {{#if parqueo_techado}}
             <div  class="checkbox text" style="padding-left: 85px;">Parqueo Techado
-                <img src="./svg/filtros/proyecto/parqueo_techado.svg" alt="i" class="icono-filtros">
+                <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/proyectos_general/parqueo_techado.svg" alt="i" class="icono-filtros">
             </div>
-            <div  class="checkbox text" style="padding-left: 85px;">Área social común
-                <img src="./svg/filtros/comodidades/area_social.svg" alt="i" class="icono-filtros">
+            {{/if}}
+
+            {{#if area_socialcomun}}
+            <div  class="checkbox text" style="padding-left: 85px;"  name="area_socialcomun">Área social común
+                <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/proyectos_general/area_social.svg" alt="i" class="icono-filtros">
             </div>
+            {{/if}}
+
+            {{#if area_barcomun}}
             <div  class="checkbox text" style="padding-left: 85px;">Área de bar común
-                <img src="./svg/filtros/comodidades/bar.svg" alt="i" class="icono-filtros">
+                <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/carateristicas_vivienda/bar.svg" alt="i" class="icono-filtros">
             </div>
+            {{/if}}
+
+            {{#if piscina_comun}}
             <div  class="checkbox text" style="padding-left: 85px;">Piscina común
                 <img src="./svg/filtros/comodidades/pisicina.svg" alt="i" class="icono-filtros">
             </div>
+            {{/if}}
+
+            {{#if gimnasio_comun}}
             <div  class="checkbox text" style="padding-left: 85px;">Gimnasio común
                 <img src="./svg/filtros/comodidades/gym.svg" alt="i" class="icono-filtros">
             </div>
+            {{/if}}
+
+            {{#if area_coworking}}
             <div  class="checkbox text" style="padding-left: 85px;">Área de Co-working
-                <img src="./svg/filtros/proyecto/coworking.svg" alt="i" class="icono-filtros">
+                <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/proyectos_general/coworking.svg" alt="i" class="icono-filtros">
             </div>
+            {{/if}}
+
+            {{#if lavanderia_comun}}
             <div  class="checkbox text" style="padding-left: 85px;">Lavandería común
-                <img src="./svg/filtros/comodidades/lavadora.svg" alt="i" class="icono-filtros">
+                <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/proyectos_general/lavadora.svg" alt="i" class="icono-filtros">
             </div>
+            {{/if}}
+
+            {{#if bodegas_comunes}}
             <div  class="checkbox text" style="padding-left: 85px;">Bodegas comunes
-                <img src="./svg/filtros/proyecto/bodegas.svg" alt="i" class="icono-filtros">
+                <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/proyectos_general/bodegas.svg" alt="i" class="icono-filtros">
             </div>
+            {{/if}}
+
+            {{#if jacuzzi_comun}}
             <div  class="checkbox text" style="padding-left: 85px;">Jacuzzi común
-                <img src="./svg/filtros/comodidades/jacuzzi.svg" alt="i" class="icono-filtros">
+                <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/proyectos_general/jacuzzi.svg" alt="i" class="icono-filtros">
             </div>
-            <div  class="checkbox text" style="padding-left: 85px;">Sauna común
-                <img src="./svg/filtros/comodidades/sauna.svg" alt="i" class="icono-filtros">
-            </div>
-            <div  class="checkbox text" style="padding-left: 85px;">Área de juegos
-                <img src="./svg/filtros/proyecto/area_juegos.svg" alt="i" class="icono-filtros">
-            </div>
+            {{/if}}
+
+            {{#if sala_cine_comun}}
             <div  class="checkbox text" style="padding-left: 85px;">Sala cine común
-                <img src="./svg/filtros/comodidades/sala_cine.svg" alt="i" class="icono-filtros">
+                <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/carateristicas_vivienda/sala_cine.svg alt="i" class="icono-filtros">
             </div>
+            {{/if}}
+
+            {{#if sauna_comun}}
+            <div  class="checkbox text" style="padding-left: 85px;">Sauna común
+                <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/proyectos_general/sauna.svg" alt="i" class="icono-filtros">
+            </div>
+            {{/if}}
+
+            {{#if area_juegos}}
+            <div  class="checkbox text" style="padding-left: 85px;">Área de juegos
+                <img src=https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/proyectos_general/area_juegos.svg" alt="i" class="icono-filtros">
+            </div>
+            {{/if}}
+            
+            {{#if cancha_deportiva}}
             <div  class="checkbox text" style="padding-left: 85px;">Canchas deportivas
-                <img src="./svg/filtros/proyecto/cancha_deportiva.svg" alt="i" class="icono-filtros">
+                <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/proyectos_general/cancha_deportiva.svg" alt="i" class="icono-filtros">
             </div>
+            {{/if}}
+
+            {{#if mirador}}
             <div  class="checkbox text" style="padding-left: 85px;">Mirador
-                <img src="./svg/filtros/proyecto/mirador.svg" alt="i" class="icono-filtros">
+                <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/proyectos_general/mirador.svg" alt="i" class="icono-filtros">
             </div>
+            {{/if}}
+            
+            {{#if area_bosque}}
             <div  class="checkbox text" style="padding-left: 85px;">Área de bosque
-                <img src="./svg/filtros/proyecto/area_bosque.svg" alt="i" class="icono-filtros">
+                <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/proyectos_general/area_bosque.svg" alt="i" class="icono-filtros">
             </div>
+            {{/if}}
+            
+            {{#if area_verde}}
             <div  class="checkbox text" style="padding-left: 85px;">Área verde
-                <img src="./svg/filtros/proyecto/area_verde.svg" alt="i" class="icono-filtros">
+                <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/proyectos_general/area_verde.svg alt="i" class="icono-filtros">
             </div>
+            {{/if}}
+            
+            {{#if salon_eventos}}
             <div  class="checkbox text" style="padding-left: 85px;">Salón de eventos
-                <img src="./svg/filtros/proyecto/salon_eventos.svg" alt="i" class="icono-filtros">
+                <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/proyectos_general/salon_eventos.svg" alt="i" class="icono-filtros">
             </div>
-            <div  class="checkbox text" style="padding-left: 85px;">Spa
-                <img src="./svg/filtros/proyecto/spa.svg" alt="i" class="icono-filtros">
+            {{/if}}
+            
+            {{#if spa}}
+            <div  class="checkbox text" style="padding-left: 85px;">Spa común
+                <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/proyectos_general/spa.svg" alt="i" class="icono-filtros">
             </div>
+            {{/if}}
+            
+            {{#if valet_parking}}
             <div  class="checkbox text" style="padding-left: 85px;">Valet parking
-                <img src="./svg/filtros/proyecto/valet_parking.svg" alt="i" class="icono-filtros">
+                <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/proyectos_general/valet_parking.svg" alt="i" class="icono-filtros">
             </div>
+            {{/if}}
+            
+            {{#if area_comercial}}
             <div  class="checkbox text" style="padding-left: 85px;">Área comercial  
-                <img src="./svg/filtros/proyecto/comercio.svg" alt="i" class="icono-filtros">
+                <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/proyectos_general/comercio.svg" alt="i" class="icono-filtros">
             </div>
+            {{/if}}
+
+            {{#if helipuerto}}
             <div  class="checkbox text" style="padding-left: 85px;">Helipuerto  
-                <img src="./svg/filtros/proyecto/helipuerto.svg" alt="i" class="icono-filtros">
+                <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/proyectos_general/helipuerto.svg" alt="i" class="icono-filtros">
             </div>
+            {{/if}}
+
+            {{#if vigilancia}}
             <div  class="checkbox text" style="padding-left: 85px;">Vigilancia 24/7  
-                <img src="./svg/filtros/seguridad/vigilancia.svg" alt="i" class="icono-filtros">
+                <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/proyectos_general/vigilancia.svg" alt="i" class="icono-filtros">
             </div>
+            {{/if}}
+
+            {{#if sistema_vigilancia}}
             <div  class="checkbox text" style="padding-left: 85px;">Sistema de vigilancia  
-                <img src="./svg/filtros/seguridad/sistema_vigilancia.svg" alt="i" class="icono-filtros">
+                <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/proyectos_general/sistema_vigilancia.svg" alt="i" class="icono-filtros">
             </div>
+            {{/if}}
+
+            {{#if generador_electrico}}
             <div  class="checkbox text" style="padding-left: 85px;">Generador eléctrico   
-                <img src="./svg/filtros/servicios/generador_electrico.svg" alt="i" class="icono-filtros">
+                <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/proyectos_general/generador_electrico.svg" alt="i" class="icono-filtros">
             </div>
+            {{/if}}
+
+            {{#if agua_pozo}}
             <div  class="checkbox text" style="padding-left: 85px;">Agua de pozo  
-                <img src="./svg/filtros/servicios/agua_pozo.svg" alt="i" class="icono-filtros">
+                <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/proyectos_general/agua_pozo.svg" alt="i" class="icono-filtros">
             </div>
+            {{/if}}
+            
+            {{#if agua_municipal}}
             <div  class="checkbox text" style="padding-left: 85px;">Agua municipal  
-                <img src="./svg/filtros/servicios/agua_municipal.svg" alt="i" class="icono-filtros">
+                <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/amenidades_propiedades/proyectos_general/agua_municipal.svg" alt="i" class="icono-filtros">
             </div>
+            {{/if}}          
+            
+
         </div>
 
         <button class="accordion">Datos Legales</button>

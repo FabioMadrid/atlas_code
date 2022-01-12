@@ -138,18 +138,21 @@
 
     <div id="modal-credito" class="modal">
         <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
-            <div class="modal-content overflow">
+            <div class="modal-content overflow" style="height: 650px;">
 
-            <div class="cr-titulo">
+                <iframe style="height: 100%; width: 100%;overflow: hidden;"
+                src="http://paginas-estaticas.s3-website-us-east-1.amazonaws.com/" frameborder="0"></iframe>
+
+                <!-- <div class="cr-titulo">
                 <div> <h3 style="margin: 0px auto 0px;">Solicitud de Crédito Hipotecario</h3>
                    
                     
                 </div>
-            </div>
+                </div>
 
                 <form id="regForm" action="" method="POST">
 
-                    <div class="tab"> <!-- tab numero 1 -->
+                    <div class="tab">  tab numero 1 
                         <img src="./svg/step_form.svg" alt="." class="icon-lp"style="width:270px; margin-top:20px;">
                         <p class="text" style="text-align: center; padding-bottom: 15px;">
                         Te ayudaremos a encontrar la entidad financiera que más se adapta a tí. <br>
@@ -158,7 +161,7 @@
 
                     </div>
 
-                    <div class="tab"> <!-- tab numero 2 -->
+                    <div class="tab">  tab numero 2 
                         <h3 class="subtitles" style="text-align: left;margin-top: 10px;">
                             Tus datos personales:
                         </h3>
@@ -193,20 +196,20 @@
                                 <option value="otro_ciudad">Otro</option>
                             </select>
 
-                            <!--
+                            
                             <p style="clear: both; display: block; text-align: center;" class="text">Al continuar aceptas nuestras<br>
                             <a href="#" target="_blank" style="color: #0894FE;">Politicas de Privacidad </a> & <a href="" target="_blank" style="color: #0894FE;"> Términos y Condiciones</a></p>
-                                -->
+                                
 
 
                     </div>
 
-                    <div class="tab"><!-- tab numero 4 -->
+                    <div class="tab"> tab numero 4 
                         <h3 class="subtitles">
                             ¿Cual es tu actividad Laboral?
                         </h3>
 
-                        <!--Muestra los dibujos con una explicacion de actividad laboral-->
+                        Muestra los dibujos con una explicacion de actividad laboral
 
                         <div id="empleado_show" class="tabcontent" style="display: block;">
                             <div style="display: flex;justify-content: center;">
@@ -303,7 +306,7 @@
 
                     </div>
 
-                    <div class="tab"><!-- tab numero 3 -->
+                    <div class="tab"> tab numero 3 
                         <h3 class="subtitles">
                           Requisitos como Empleado
                         </h3>
@@ -357,7 +360,7 @@
                             <br>
                     </div>
 
-                    <div class="tab"><!-- tab numero 4 -->
+                    <div class="tab"> tab numero 4 
                         <h3 class="subtitles">
                             Requisitos como Independiente
                         </h3>
@@ -404,7 +407,7 @@
                             <br>
                     </div>
 
-                    <div class="tab"><!-- tab numero 5-->
+                    <div class="tab"> tab numero 5
 
                         <h3 class="subtitles">
                             Requisitos Socio de Empresa
@@ -459,7 +462,7 @@
 
                     </div>
 
-                    <div class="tab"><!-- tab numero 6 -->
+                    <div class="tab"> tab numero 6 
 
                         <h3 class="subtitles">
                             Requisitos como Jubilado
@@ -491,7 +494,7 @@
                               
                     </div>
 
-                    <div class="tab"><!-- tab numero 7 -->
+                    <div class="tab"> tab numero 7 
 
                         <h3 class="subtitles">
                             Requisitos Como "Otra Actividad Laboral"
@@ -523,7 +526,7 @@
                         
                     </div>
                     
-                    <div class="tab"><!-- tab numero 8 -->
+                    <div class="tab"> tab numero 8 
                         <h3 class="subtitles">Ingresos Extra</h3>
                         <div style="display: flex;justify-content: center;">
                             <img src="./svg/ingresos.svg" alt="." style="height: 210px;">
@@ -546,7 +549,7 @@
                         <br>
                     </div>
                     
-                    <div class="tab"><!-- tab numero 9 -->
+                    <div class="tab">< tab numero 9 
                         <h3 class="subtitles">Ingresos Extra</h3>
                         <div style="display: flex;justify-content: center;">
                             <img src="./svg/ingresos.svg" alt="." style="height: 210px;">
@@ -572,7 +575,7 @@
 
                     </div>
 
-                    <div class="tab"><!-- tab numero 10 -->
+                    <div class="tab"> tab numero 10 
                         <h3 class="subtitles" style="padding-left:20px;">¿Como harías tu Solicitud?</h3>
 
                         <div id="creditoindividual" class="tabcontent" style="display: block;">
@@ -613,7 +616,7 @@
 
                     </div>
 
-                    <div class="tab"><!-- tab numero 11 -->
+                    <div class="tab"> tab numero 11 
 
                         <h3 class="subtitles" style="text-align: left;margin-top: 10px;">
                             Datos del Co-deudor
@@ -646,7 +649,7 @@
                             <br>
                     </div>
 
-                    <div class="tab"><!-- tab numero 12 -->
+                    <div class="tab"> tab numero 12 
 
                         <h3 class="subtitles">¡Genial, eso es todo por ahora!</h3>
                         <div style="display: flex;justify-content: center;">
@@ -664,8 +667,13 @@
                         <button type="button" id="prevBtn" class="submit-boton cr-boton"  onclick="prevCredito(false)">Anterior</button>
                         <button type="button" id="nextBtn" class="submit-boton cr-boton" style="margin:auto;" onclick="nextCredito(true)">Empezar</button>
                     </div>
-                </form>
-            </div>
+                </form> -->
+
+
+
+            </div> 
+
+
         </div>
     </div>
 <!---------------------------------------------------------- MODAL DE VENTA ----------------------------------------------------------------------->
