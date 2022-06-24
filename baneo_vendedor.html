@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/8bf4511c4b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://atlas-home-colombia.s3.amazonaws.com/fonts/fonts.css">
+    <style>
+        table, th, td {
+          border: none;
+          border-collapse: collapse;
+        }
+        th, td {
+          padding: 10px;
+          text-align: left;
+        }
+        td
+        {
+            color: #6F7A88;
+        }
+        .order
+        {
+            display: flex;
+            justify-content: flex-start;
+            flex-flow: row wrap;
+            margin-bottom: 50px;
+    
+        }
+        .contenido_cita
+        {
+            display: flex;
+            justify-content: space-between;
+            flex-flow: row wrap;
+        }
+        .marginl
+        {
+            margin-left: 60px;
+        }
+        *{
+            font-family: sans-serif;
+        }
+
+
+        .titulo-inmueble
+           {
+            min-height: 80px;
+            width: 90%;
+            margin: auto;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+            border-radius: 8px;
+            padding: 10px 20px;
+            overflow: hidden;
+            }
+
+        .titulo-inmueble>h2
+        {
+            margin: 5px 0 5px 0;
+        }
+        .relative-container
+        {
+            position: relative;
+        }
+
+        .column-25
+        {
+            float: left;
+            margin: auto;
+            display: inline-block;
+        }
+        .column-85
+        {
+            width: 85%;
+            float: right;
+            margin-top: 10px;
+            display: inline-block;
+        }
+        .btn-social-login 
+        {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            margin: 10px 0;
+            display: inline-block;
+            font-size: 16px;
+            text-decoration: none; /* remove underline from anchors */
+            text-align: center;
+        }
+        .btn-social-login:hover
+        {
+        border-color: #425163;
+        }
+        .dibujo
+        {
+            width: 200px;
+            height: 200px;
+        }
+        .text
+        {
+            font-family:"Forma DJR Text Edu";
+            color: #6F7A88;
+        }
+
+        .space-between
+        {
+            justify-content: space-between;
+            display: flex;
+            display: -webkit-flex; /* Safari */
+            flex-flow: row nowrap;
+            align-items: center;
+        }
+        .topnav 
+        {
+            overflow: hidden;
+            background-color:white;
+            left: 0;
+            right: 0;
+            top: 0;
+            position: fixed;
+            box-shadow:0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -1px rgba(0,0,0,.06);
+            min-height: 80px;
+            z-index: 1;
+        }
+
+        @media screen and (max-width: 1300px)  
+        {
+            .column-85
+            {
+            width: 100%;
+            clear: both;
+            margin: 0;
+            display: inline-block;
+            }
+        }
+
+        @media screen and (max-width: 765px)  
+        {
+            .dibujo
+            {
+                margin: 20px auto;
+            }
+
+        }
+        @media screen and (max-width: 500px)  
+        {
+            .marginl
+            {
+            margin-left: 0px;
+            margin-top: 25px;
+            }
+            .correcion-links
+            {
+             margin-top: 40px;
+            }
+            .space-between
+            {
+                justify-content: center;
+                flex-flow: row wrap;
+            }
+        }
+        </style>
+    <title>Atlas Home</title>
+</head>
+<body>
+    
+    <div class="topnav" id="myTopnav">
+        <div class="column-25" style="left: 0;">
+            <a href="https://atlashome.hn/">
+
+                <div style="position: absolute; left:0; top: 0;margin: 25px;">
+                  
+                    <span style="padding-left:10px; font-size: 18px;color: #2680EB;">❮ Inicio</span> 
+                    
+                </div>
+                
+            </a>
+        </div>
+        <div class="column-85">
+           
+            
+        </div> 
+    </div> 
+
+
+
+    <div class="titulo-inmueble hide-mobile" style="margin-top: 95px;" id="titulo-propiedad">
+        <div class="space-between" style="margin-top: 5px;">
+
+            <div class="text">
+                <span id="">ALERTA, IMPORTANTE</span>,
+                <br>
+                <b style="font-size: 22px;display:block"> ¡ Este Vendedor ha sido baneado de Atlas Home !</b> 
+                <br>
+
+                El Vendedor que te proveyó este URL ha sido beaneado por violación de Térmicos y Condiciones / malas práxis. <br>
+                Si quieres solicitar un crédito de vivienda directamente con nosotros utiliza el botón inferior. 
+                
+            </div>
+
+            <div class="relative-container">
+
+                    <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/artes/women_error.svg" alt="Logo Atlas" class="dibujo">
+
+            </div>
+
+        </div>
+    </div>
+    <br>
+
+    <div style="display: flex;justify-content: center;margin: 0 5% 100px">
+        <a href="https://creditos.atlashome.hn/" class="btn-social-login" style="width: 40%;min-width: 250px; background-color: #2680EB; color: #ffffff;">Continua tu crédito aquí</a>
+    </div>
+
+
+</body>
+</html>
