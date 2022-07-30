@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/8bf4511c4b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/busquedainmueble.css">
+    <link rel="stylesheet" href="https://atlas-home-colombia.s3.amazonaws.com/fonts/fonts.css">
+    <style>
+        html {
+        scroll-behavior: smooth;
+        }
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            }
+          .dark
+          {
+            -webkit-filter: grayscale(60%); /* Safari 6.0 - 9.0 */
+            filter: grayscale(60%);
+          }  
+          .tituloVendedor
+          {
+            font-size: 2.0rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: #707070;
+            text-align: center;
+          }
+          .top-left {
+            position: absolute;
+            top: 8px;
+            left: 16px;
+          }
+          .serviciosCard
+            {
+                min-height: 350px;
+                margin: 0 10% 40px;
+                padding: 15px;
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                transition: 0.3s;
+                border-radius: 8px;
+                padding: none;
+                overflow: hidden;
+                color: #707070;
+            }
+            .serviciosCard:hover 
+            {
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            }
+            .flex-container {
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            }
+
+            .flex-item-left {
+
+            flex: 50%;
+            }
+
+            .flex-item-right {
+
+            flex: 50%;
+            }
+
+            /* Responsive layout - makes a one column-layout instead of two-column layout */
+            @media (max-width: 800px) {
+            .flex-container {
+                flex-direction: column;
+            }
+            }
+
+    </style>
+    <title>Nombre Vendedor</title>
+</head>
+<body>
+
+    <div class="topnav" id="myTopnav">
+        <div class="column-25" style="left: 0;">
+
+        </div>
+        <div class="column-85">
+            <a href="#solicitudCredito">
+                <button class="boton-registro" style="background-color: #ff1f07; border-color: #ff1f07;" >Solicitar Crédito</button>
+            </a>
+                
+            <div class="dropdown">
+                <a href="#servicios">
+                    <button class="dropbtn" style="font-weight: bold; font-size:16px;">Servicios</button>
+                </a>
+            </div>
+
+            <div class="dropdown">
+                <a href="#catalogo">
+                    <button class="dropbtn" style="font-weight: bold; font-size:16px;">Cátalogo de propiedades</button>
+                </a>
+            </div>
+
+            
+
+            <a href="javascript:void(0);" style="font-size:35px;" class="icon" onclick="HamburgerFuction()">&#9776;</a>
+        </div> 
+    </div>  
+
+    <div style="margin-top: 70px;">
+        <img src="./img/hitos_urbanos.jpg" alt="" style="display: block; margin-left: auto; margin-right: auto; max-width: 200px;"  id="logo_vendedor">
+    </div>
+<section>
+    <div class="relative-container" style="text-align: center; color: white;">
+        <h1 class="centered" id="nombre_vendedor" style="font-size: 2.8rem; z-index: +2;"> CONSTRUCTORA CONTECH</h1>
+
+        <img style="width: 100%; height: 400px; object-fit: cover;vertical-align: middle;" class="dark"
+        src="./img/vivienda/1.jpg" alt="">
+    </div>
+
+</section>
+
+<h1 class="tituloVendedor" > Catálogo de Propiedades </h1>
+<h3 style="text-align: center; color: #707070;">Agenda tu cita hoy mismo</h3>
+<div style="margin: 0 40%;background-color:#707070; height:7px"></div>
+    
+<!---------------------------------------------------------------INICIO DEL CONTENIDO-------------------------------------------------------------------->
+<section id="catalogo" style="margin-top:30px;">
+
+
+<div class="card-container" style="margin-bottom:100px;">
+<!-- RENDERIZA CUANDO NO SE ENCUENTRAN PROPIEDADES -->
+    <!-- <div style="margin: 25px auto 0;">
+
+        <div style="display: flex; justify-content: center;">
+            <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/artes/robot_explotando.svg" alt="" >
+        </div>
+
+        <h1 class="text" style="text-align: center;">
+            Actualmente no existen propiedades
+        </h1>
+        <p class="text" style="text-align: center;">
+            Sube propiedades para poder mostrarlas en esta sección.
+        </p>
+
+    </div> -->
+
+    <a href="./vivienda.html" target="_blank">
+        <div class="atlas-card">
+             <div class="relative-container">
+                <div class="slideshow-container">
+
+                    <div class="mySlides fade">
+                      <img src="./img/default_vivienda.png" alt="imagen" class="image-card">
+                      <div class="text-number">1 / 3</div>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      <img src="./img/foto1.jpg" alt="imagen" class="image-card">
+                      <div class="text-number">2 / 3</div>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      <img src="./img/foto2.jpg" alt="imagen" class="image-card">
+                      <div class="text-number">3 / 3</div>
+                    </div>
+                    
+                    <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+                    
+                    </div>
+                    <br>
+    
+                <div class="top-text">
+                    ArqDaily SAS 
+                </div>
+    
+            </div>
+            <div style="padding:0 15px 0 15px;">
+                <div class="titulo-propiedades"> Residencial El Hatillo </div>
+                <div class="text" style="display: inline;"> Modelo Jazmín</div>
+                <div class="space-between" style="margin-top: 5px;">
+                    <div class="text" style="font-size: 12px;display: inline;"> 3 Habs | 2 Baño | 78m2</div>
+                    <div class="text" style="font-size: 12px;display: inline;"> Área de lote: <span style="color:#0894FE"> 320m2</span></div>
+                </div>
+                <div class="space-between" style="margin-top: 5px;">
+                    <div class="text" style="display: inline;"> L. 5,800,000</div>
+                    <div class="text" style="font-size: 12px;display: inline;"> 
+                        Estado: <span style="color:#0894FE"> Usada</span></div>
+                </div>
+            </div>
+        </div>
+    </a>
+        
+    <a href="./vivienda.html" target="_blank">
+        <div class="atlas-card" >
+             <div class="relative-container">
+                <div class="slideshow-container">
+
+                    <div class="mySlides1 fade">
+                      <img src="./img/casa1_2.jpg" alt="imagen" class="image-card">
+                      <div class="text-number">1 / 3</div>
+                    </div>
+                    
+                    <div class="mySlides1 fade">
+                      <img src="./img/foto1.jpg" alt="imagen" class="image-card">
+                      <div class="text-number">2 / 3</div>
+                    </div>
+                    
+                    <div class="mySlides1 fade">
+                      <img src="./img/foto2.jpg" alt="imagen" class="image-card">
+                      <div class="text-number">3 / 3</div>
+                    </div>
+                    
+                    <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+                    
+                    </div>
+                    <br>
+    
+                <div class="top-text">
+                    Urbanizador Roble
+                </div>
+
+            </div>
+            <div style="padding:0 15px 0 15px;">
+                <div class="titulo-propiedades"> Residencial Los Pinos </div>
+                <div class="text" style="display: inline;"> Modelo Roble</div>
+                <div class="space-between" style="margin-top: 5px;">
+                    <div class="text" style="font-size: 12px;display: inline;"> 4 Habs | 4.5 Baño | 250m2</div>
+                    <div class="text" style="font-size: 12px;display: inline;"> Área de lote: <span style="color:#0894FE"> 450m2</span></div>
+                </div>
+                <div class="space-between" style="margin-top: 5px;">
+                    <div class="text" style="display: inline;"> L. 4,500,000</div>
+                    <div class="text" style="font-size: 12px;display: inline;"> 
+                        Estado: <span style="color:#0894FE"> Usada</span></div>
+                </div>
+            </div>
+        </div>
+    </a>
+     
+    
+    <div class="atlas-card" style="overflow:none">
+        <a href="./vivienda.html" target="_blank">
+        <div class="relative-container">
+            <img src="./img/casa1_3.jpg" alt="imagen" class="image-card">
+
+            <div class="top-text">
+                Vendedor Particular
+            </div>
+            <div>
+                <img src="./svg/share_icon.svg" alt="c" class="share-right ">
+                <img src="./svg/corazon.svg" alt="c" class="corazon-right">
+            </div>
+        </div>
+        </a>
+        <div style="padding:20px 15px 0 15px;">
+            <div class="titulo-propiedades"> Valle de ángeles </div>
+            <div class="text" style="display: inline;"> Modelo 3 Hab</div>
+            <div class="space-between" style="margin-top: 5px;">
+                <div class="text" style="font-size: 12px;display: inline;"> 3 Habs | 2.5 Baños | 278m2</div>
+                <div class="text" style="font-size: 12px;display: inline;"> Área de lote: <span style="color:#0894FE"> 328m2</span></div>
+            </div>
+            <div class="space-between" style="margin-top: 5px;">
+                <div class="text" style="display: inline;"> L. 4,800,000</div>
+                <div class="text" style="font-size: 12px;display: inline;"> 
+                    Estado: <span style="color:#0894FE"> Nueva</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="atlas-card" style="overflow:none">
+        <a href="./vivienda.html" target="_blank">
+        <div class="relative-container">
+            <img src="./img/casa1_4.jpg" alt="imagen" class="image-card">
+
+            <div class="top-text">
+                Inmobi SAS
+            </div>
+
+        </div>
+        </a>
+        <div style="padding:20px 15px 0 15px;">
+            <div class="titulo-propiedades"> Residencial Entre Pinos </div>
+            <div class="text" style="display: inline;"> Modelo 3 Hab</div>
+            <div class="space-between" style="margin-top: 5px;">
+                <div class="text" style="font-size: 12px;display: inline;"> 5 Habs | 3.5 Baños | 382m2</div>
+                <div class="text" style="font-size: 12px;display: inline;"> Área de lote: <span style="color:#0894FE"> 250m2</span></div>
+            </div>
+            <div class="space-between" style="margin-top: 5px;">
+                <div class="text" style="display: inline;"> L. 7,800,000</div>
+                <div class="text" style="font-size: 12px;display: inline;"> 
+                    Estado: <span style="color:#0894FE"> Usada</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="atlas-card" style="overflow:none">
+        <a href="./vivienda.html" target="_blank">
+        <div class="relative-container">
+            <img src="./img/casa1_5.jpg" alt="imagen" class="image-card">
+
+            <div class="top-text">
+                Inmobiliaria NX
+            </div>
+
+        </div>
+        </a>
+        <div style="padding:20px 15px 0 15px;">
+            <div class="titulo-propiedades"> Residencial Ciudad Nueva </div>
+            <div class="text" style="display: inline;"> Casa de habitación</div>
+            <div class="space-between" style="margin-top: 5px;">
+                <div class="text" style="font-size: 12px;display: inline;"> 6 Habs | 6.5 Baño | 420m2</div>
+                <div class="text" style="font-size: 12px;display: inline;"> Área de lote: <span style="color:#0894FE"> 1000m2</span></div>
+            </div>
+            <div class="space-between" style="margin-top: 5px;">
+                <div class="text" style="display: inline;"> L. 9,800,000</div>
+                <div class="text" style="font-size: 12px;display: inline;"> 
+                    Estado: <span style="color:#0894FE"> Usada</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="atlas-card" style="overflow:none">
+        <a href="./vivienda.html" target="_blank">
+        <div class="relative-container">
+            <img src="./img/casa1_1.jpg" alt="imagen" class="image-card">
+
+            <div class="top-text">
+                Realtor SAS
+            </div>
+
+        </div>
+        </a>
+        <div style="padding:20px 15px 0 15px;">
+            <div class="titulo-propiedades"> Tatumbla </div>
+            <div class="text" style="display: inline;"> Modelo 3 Hab</div>
+            <div class="space-between" style="margin-top: 5px;">
+                <div class="text" style="font-size: 12px;display: inline;"> 3 Habs | 2 Baño | 110m2</div>
+                <div class="text" style="font-size: 12px;display: inline;"> Área de lote: <span style="color:#0894FE"> 250m2</span></div>
+            </div>
+            <div class="space-between" style="margin-top: 5px;">
+                <div class="text" style="display: inline;"> L. 1,800,000</div>
+                <div class="text" style="font-size: 12px;display: inline;"> 
+                    Estado: <span style="color:#0894FE"> Pre-Venta</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="atlas-card" style="overflow:none">
+        <a href="./vivienda.html" target="_blank">
+        <div class="relative-container">
+            <img src="./img/casa1_6.jpg" alt="imagen" class="image-card">
+
+            <div class="top-text">
+                Constructora Comaco
+            </div>
+
+        </div>
+        </a>
+        <div style="padding:20px 15px 0 15px;">
+            <div class="titulo-propiedades"> Santa Lucía </div>
+            <div class="text" style="display: inline;"> Modelo Lila</div>
+            <div class="space-between" style="margin-top: 5px;">
+                <div class="text" style="font-size: 12px;display: inline;"> 4 Habs | 4.5 Baños | 410m2</div>
+                <div class="text" style="font-size: 12px;display: inline;"> Área de lote: <span style="color:#0894FE"> 629.45m2</span></div>
+            </div>
+            <div class="space-between" style="margin-top: 5px;">
+                <div class="text" style="display: inline;"> L. 8,500,000</div>
+                <div class="text" style="font-size: 12px;display: inline;"> 
+                    Estado: <span style="color:#0894FE"> Nueva</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="atlas-card" style="overflow:none">
+        <a href="./vivienda.html" target="_blank">
+        <div class="relative-container">
+            <img src="./img/casa1_7.jpg" alt="imagen" class="image-card">
+
+            <div class="top-text">
+                AV ingenieros
+            </div>
+
+        </div>
+        </a>
+        <div style="padding:20px 15px 0 15px;">
+            <div class="titulo-propiedades"> Lomas del Guijarro </div>
+            <div class="text" style="display: inline;"> Casa de habitación</div>
+            <div class="space-between" style="margin-top: 5px;">
+                <div class="text" style="font-size: 12px;display: inline;"> 5 Habs | 6 Baños | 410m2</div>
+                <div class="text" style="font-size: 12px;display: inline;"> Área de lote: <span style="color:#0894FE"> 450m2</span></div>
+            </div>
+            <div class="space-between" style="margin-top: 5px;">
+                <div class="text" style="display: inline;"> L. 10,900,000</div>
+                <div class="text" style="font-size: 12px;display: inline;"> 
+                    Estado: <span style="color:#0894FE"> Nueva</span></div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<section id="solicitudCredito">
+    <h1 class="tituloVendedor" > ¡Aplica a tu crédito hipotecario hoy mismo! </h1>
+    <div style="margin: 0 40% 40px;background-color:#707070; height:7px"></div>
+</section>
+
+<section>
+    <iframe src="https://creditos.atlashome.hn/" frameborder="0" width="100%" height="auto">
+
+    </iframe>
+</section>
+
+<h1 class="tituloVendedor" > Nuestros Servicio Profesionales </h1>
+<div style="margin: 0 40% 40px;background-color:#707070; height:7px"></div>
+
+<section id="servicios">
+
+
+            <div class="flex-container serviciosCard" id="servicios_construccion">
+                <div class="flex-item-left">
+                    <img style="width: 300px; " src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/artes/casa_gps.svg" alt="">
+                </div>
+                <div class="flex-item-right">
+                <h2 style="color:#0894FE">Producto Finalizado</h2> 
+
+                <p>
+                    Puedes comprar inmuebles ya listos para su entrega o predeterminados, los cuales son propiedad y forman parte del 
+                    catálogo de la empresa. 
+                </p>
+                <br>
+
+                <div style="text-align: left; font-size: 16px;font-weight: bold;">
+                        <div>
+                        - Modelos de vivienda predeterminados
+                        <br>
+                        - Modelos de apartamentos predeterminados
+                        <br>
+                        - Lotes de terrenos predeterminados
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex-container serviciosCard" id="servicios_construccion">
+                <div class="flex-item-left">
+                    <img style="width: 400px; " src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/artes/pareja_casa_planos.svg" alt="">
+                </div>
+                <div class="flex-item-right">
+                <h2 style="color:#0894FE">Construcción Personalizada</h2> 
+
+                <p>
+                    Nuesta empresa ofrece todo el servicio 360 de construcción personalizada, a tu gusto y presupuesto.
+                    Construimos en tu terreno o del inventario de terrenos de la empresa.
+                </p>
+                <br>
+
+                <div style="text-align: left; font-size: 16px;font-weight: bold;">
+                        <div>
+                        - Diseño arquitectónico
+                        <br>
+                        - Elaboración de planos 
+                        <br>
+                        - Elaboración de presupuestos
+                        <br>
+                        - Asesoria bancaria
+                        <br>
+                        - Construcción 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex-container serviciosCard " id="servicios_bienesraices">
+                <div class="flex-item-left">
+                    <img style="width: 400px; " src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/artes/asesores_profesionales.svg" alt="">
+                </div>
+                <div class="flex-item-right">
+                <h2 style="color:#0894FE">Bienes raíces</h2> 
+
+                <p>
+                    Servicio de asesoría inmobiliaria personalizada 
+                </p>
+                <br>
+
+                <div style="text-align: left; font-size: 16px;font-weight: bold;">
+                        <div>
+                        - Mostrar ofertas de propiedades ideales para ti 
+                        <br>
+                        - Citas en las propiedades
+                        <br>
+                        - Seguimiento en el proceso de compra - venta
+                        <br>
+                        - Asesoria bancaria
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+        <div class="flex-container serviciosCard " id="servicios_bienesraices">
+            <div class="flex-item-left">
+                <img style="width: 400px; " src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/artes/credito_tramite.svg" alt="">
+            </div>
+            <div class="flex-item-right">
+            <h2 style="color:#0894FE">Asesoria Financiera</h2> 
+
+            <p>
+                Te guiamos y explicamos todo el proceso y requisitos que piden los bancos para comprar tu propiedad.
+                Desde la precalificación hasta el desembolso. 
+            </p>
+            <br>
+
+            <div style="text-align: left; font-size: 16px;font-weight: bold;">
+                    <div>
+                    - Pre-calificación (Descubre el monto máximo al que aplicas)
+                    <br>
+                    - Documentación de tu expediente
+                    <br>
+                    - Mantenerte informado del proceso
+                    <br>
+                    - Asesoria bancaria personalizada
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+<!-- <h1 class="tituloVendedor" > Contáctanos </h1>
+<div style="margin: 0 40% 40px;background-color:#707070; height:7px"></div>
+
+<section style="margin: 40px 10%;">
+
+    <form id="form_contacto" action="" method="POST">
+
+        <input type="text" id="nombre_contacto" name="nombre" placeholder="Nombre y Apellido" required autocomplete="on">
+        <input type="email" id="contacto_email" name="correo" placeholder="Correo Electrónico" required autocomplete="on">
+        
+        <input type="tel" style="margin-top: 10px;" placeholder="Celular de Contacto" name="celular-contacto" 
+        id="telefono-contacto" minlength="8" autocomplete="on">
+        <textarea id="subject" name="subject" placeholder="Déjanos tu mensaje.." style="height:200px" required form="form_contacto"></textarea>
+        <input type="submit" value="Enviar Mensaje" class="submit-boton" style="margin: 30px auto; width: 100%;">
+      </form>
+</section> -->
+
+<footer style="position: absolute; width: 100%; left: 0;">
+    <div class="footer flex-box footer-img" style="left: 0;right: 0;"> 
+        <div>
+             <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/logo_alargado_azul.svg" alt="logo" class="footer-logo">
+             <p class="text" style="font-weight:bold;">
+                Powered by © Atlas Home Tecnologies S.A de C.V. All Rights Reserved. 
+             </p>
+
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script src="js/general.js"></script>
+<script src="js/busqueda.js"></script>
+
+</body>
+</html>
