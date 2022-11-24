@@ -37,15 +37,52 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   </div>
   <hr>
   <div class="w3-container">
-    <h5 style="color:#0894FE; font-weight: bold;">Panel de Control</h5>
+    <h5 style="color:#0894FE; font-weight: bold;">Panel de Vendedores</h5>
   </div>
   <div class="w3-bar-block">
     <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Cerrar Menú</a>
-    <a href="./perfilVendedor.html" class="w3-bar-item w3-button w3-padding  "> Tablero General</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding w3-blue">Mi Perfil</a>
-    <a href="./infoLegal.html" class="w3-bar-item w3-button w3-padding">Información Legal</a>
-    <a href="./historial_citas.html" class="w3-bar-item w3-button w3-padding">Historial de Citas</a>
-    <a href="./anunciar_propiedad.html" class="w3-bar-item w3-button w3-padding ">Anunciar Nueva Propiedad</a>
+    <a href="./inicio.html" class="w3-bar-item w3-button w3-padding  "> Inicio</a>
+    <button class="accordion w3-bar-item w3-button w3-padding ">Mi Cuenta</button>
+    <div class="panel" style="min-height: 80px;">
+        <a href="#" class="w3-bar-item w3-button w3-padding w3-blue">
+        Información Perfil 
+        </a>
+        <a href="./infoLegal.html" class="w3-bar-item w3-button w3-padding ">
+        Información Legal
+        </a>
+    </div>
+    <button class="accordion w3-bar-item w3-button w3-padding ">Citas y Precalificaciones</button>
+    <div class="panel">
+        <a href="./historial_citas.html" class="w3-bar-item w3-button w3-padding ">
+        Historial de Citas
+        </a>
+        <a href="./historial_creditos.html" class="w3-bar-item w3-button w3-padding ">
+        Historial de Pre-Calificaciones
+        </a>
+    </div>
+    <button class="accordion w3-bar-item w3-button w3-padding ">Ingresar Nueva Propiedad</button>
+    <div class="panel">
+        <a href="./ingresar_vivienda.html" class="w3-bar-item w3-button w3-padding ">
+        Vivienda 
+        </a>
+        <a href="./ingresar_apartamento.html" class="w3-bar-item w3-button w3-padding ">
+        Apartamento
+        </a>
+        <a href="./ingresar_terreno.html" class="w3-bar-item w3-button w3-padding ">
+        Terreno
+        </a>
+    </div>
+    <button class="accordion w3-bar-item w3-button w3-padding ">Herramientas de Venta</button>
+    <div class="panel">
+        <a href="./motorCredito.html" class="w3-bar-item w3-button w3-padding ">
+            Motor de Crédito
+        </a>
+        <a href="./miPaginaWeb.html" class="w3-bar-item w3-button w3-padding ">
+            Mi Página Web
+        </a>
+    </div>
+    <a href="./editarPropiedades.html" class="w3-bar-item w3-button w3-padding ">Editar mis Propiedades</a>
+    <a href="./estadisticas.html" class="w3-bar-item w3-button w3-padding ">Métricas de tu negocio</a>
     <a href="./reportar_problema.html" class="w3-bar-item w3-button w3-padding ">Reportar Un Problema</a>
 
   </div>
@@ -209,7 +246,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 
     <button class="accordion">
         
-        <b class="text_blue">Teléfono de Contacto </b>
+        <b class="text_blue">Teléfono de Administrador de cuenta </b>
         <br>
         <span id="telefono_empresa"> 9441-3447</span>
 
@@ -219,7 +256,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
             <br>
             <form action="" >
 
-                <label for="telefono_empresa" class="text" >Teléfono de contacto:</label>
+                <label for="telefono_empresa" class="text" >Teléfono de Admistrador de cuenta:</label>
                 <div>
                     
                     <input type="tel" name="country_code" id="country_code" maxlenght="4" style="width: 25%;float: left;" placeholder="+504" value="+504">
@@ -229,17 +266,6 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
                         <input type="number" id="telefono_empresa" placeholder="Número de celular" required minlen>
                     </div>
                 </div>
-                
-                <label for="telefono_secundario_empresa" class="text" >Teléfono Secundario:</label>
-                <div>
-                    
-                    <input type="tel" name="country_code_tel2" id="country_code_tel2" maxlenght="4" style="width: 25%;float: left;" placeholder="+504" value="+504">
-
-                    <div style="width: 70%;float: left;margin-left: 5%;">
-                        
-                        <input type="number" id="telefono_secundario_empresa" placeholder="Número de celular">
-                    </div>
-                </div>
 
                 <input type="submit" value="Guardar" class="submit-boton" style="width: 150px;">
             </form>
@@ -247,6 +273,36 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
             <br>
             
         </div>
+
+        <button class="accordion">
+        
+            <b class="text_blue">Teléfono Comercial </b>
+            <br>
+            <span id="telefono_comercial"> +50497129496</span>
+    
+        </button>
+            <div class="panel">
+    
+                <br>
+                <form action="" >
+    
+                    <label for="telefono_comercial" class="text" >Teléfono de atención al cliente</label>
+                    <div>
+                        
+                        <input type="tel" name="country_comercial" id="country_code2" maxlenght="4" style="width: 25%;float: left;" placeholder="+504" value="+504">
+    
+                        <div style="width: 70%;float: left;margin-left: 5%;">
+                            
+                            <input type="number" id="telefono_comercial" placeholder="Número de celular" required minlen>
+                        </div>
+                    </div>
+    
+                    <input type="submit" value="Guardar" class="submit-boton" style="width: 150px;">
+                </form>
+    
+                <br>
+                
+            </div>
 
     <button class="accordion">
         
