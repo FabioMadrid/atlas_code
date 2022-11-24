@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<title>Panel Admin</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="./dashboard.css">
+<link rel="stylesheet" href="/css/general.css">
+<link rel="stylesheet" href="/css/perfil_vendedor.css">
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+<body style="background-color: #f9fafb!important;">
+
+<!-- Top container -->
+<div class="w3-bar w3-top w3-white w3-large" style="z-index:4">
+  <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i></button>
+  <button class="w3-bar-item w3-right boton-ingresar" id="boton-ingresar" onclick="" style="border:#0894FE solid 1px">Cerrar Sesión</button>
+</div>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container w3-row">
+    <div class="w3-col s4">
+      <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/icons/logo_circular_azul.svg" class="w3-circle w3-margin-right" style="width:66px">
+    </div>
+    <div class="w3-col s8 w3-bar">
+      <span>Bienvenido, <br> <strong>Atlas Home</strong></span><br>
+      <!--
+      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
+      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
+      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-cog"></i></a>
+      -->
+    </div>
+  </div>
+  <hr>
+  <div class="w3-container">
+    <h5 style="color:#0894FE; font-weight: bold;">Panel de Vendedores</h5>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Cerrar Menú</a>
+    <a href="./inicio.html" class="w3-bar-item w3-button w3-padding  "> Inicio</a>
+    <button class="accordion w3-bar-item w3-button w3-padding ">Mi Cuenta</button>
+    <div class="panel" >
+        <a href="./perfil.html" class="w3-bar-item w3-button w3-padding ">
+        Información Perfil 
+        </a>
+        <a href="./infoLegal.html" class="w3-bar-item w3-button w3-padding ">
+        Información Legal
+        </a>
+    </div>
+    <button class="accordion w3-bar-item w3-button w3-padding ">Citas y Precalificaciones</button>
+    <div class="panel">
+        <a href="#" class="w3-bar-item w3-button w3-padding ">
+        Historial de Citas
+        </a>
+        <a href="./historial_creditos.html" class="w3-bar-item w3-button w3-padding ">
+        Historial de Pre-Calificaciones
+        </a>
+    </div>
+    <button class="accordion w3-bar-item w3-button w3-padding ">Ingresar Nueva Propiedad</button>
+    <div class="panel">
+        <a href="./ingresar_vivienda.html" class="w3-bar-item w3-button w3-padding ">
+        Vivienda 
+        </a>
+        <a href="./ingresar_apartamento.html" class="w3-bar-item w3-button w3-padding ">
+        Apartamento
+        </a>
+        <a href="./ingresar_terreno.html" class="w3-bar-item w3-button w3-padding ">
+        Terreno
+        </a>
+    </div>
+    <button class="accordion w3-bar-item w3-button w3-padding ">Herramientas de Venta</button>
+    <div class="panel">
+        <a href="./motorCredito.html" class="w3-bar-item w3-button w3-padding ">
+            Motor de Crédito
+        </a>
+        <a href="./miPaginaWeb.html" class="w3-bar-item w3-button w3-padding ">
+            Mi Página Web
+        </a>
+    </div>
+    <a href="./editarPropiedades.html" class="w3-bar-item w3-button w3-padding ">Editar mis Propiedades</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding w3-blue">Métricas de tu negocio</a>
+    <a href="./reportar_problema.html" class="w3-bar-item w3-button w3-padding ">Reportar Un Problema</a>
+
+  </div>
+</nav>
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px;margin-top:43px;" >
+  
+  <!-- Este Div sirve para dar un padding al Contenido  -->
+  <div style="padding-top: 60px;"></div>
+  <!-- Termina -->
+
+  <section style="margin: 0 5% 100px">
+
+      <h5 class="subtitles"><b> Accesos Rápidos</b></h5>
+
+      <section style="display: flex; flex-direction: row wrap;overflow: auto;">
+        
+        <a href="./perfil.html">
+          <div class="info-card">
+              <div style="display: flex;justify-content: center;">
+                  <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/icons/icon_perfil.svg" alt="" class="icons">
+              </div>
+              
+              <p class="text" style="text-align: center;">
+                  Mi Perfíl
+              </p>  
+          </div>
+      </a>
+
+      <a href="./infoLegal.html">
+          <div class="info-card">
+              <div style="display: flex;justify-content: center;">
+                  <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/icons/icon_legal_line.svg" alt="" class="icons">
+              </div>
+                  
+              <p class="text" style="text-align: center;">
+                  Información legal
+              </p>      
+          </div>
+      </a>
+
+      <!-- Items quedan para version 2.0
+      <a href="#">
+          <div class="info-card">
+              <div style="display: flex;justify-content: center;">
+                  <img src="" alt="" class="icons">
+              </div>
+                  
+              <p class="text" style="text-align: center;">
+                  Colaboradores
+              </p>      
+          </div>
+      </a>
+
+      <a href="#">
+          <div class="info-card">
+              <div style="display: flex;justify-content: center;">
+                  <img src="" alt="" class="icons">
+              </div>
+                  
+              <p class="text" style="text-align: center;">
+                  Facturación
+              </p>   
+          </div>
+      </a>
+      -->
+
+      <a href="./historial_citas.html">
+        <div class="info-card">
+            <div style="display: flex;justify-content: center;">
+                <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/icons/icon_citas.svg" alt="" class="icons">
+            </div>
+        
+            <p class="text" style="text-align: center;">
+                Historial de Citas
+            </p>
+        </div>
+      </a>
+
+      <!-- Items quedan para version 2.0
+      <a href="">
+        <div class="info-card">
+            <div style="display: flex;justify-content: center;">
+                <img src="" alt="" class="icons">
+            </div>
+        
+            <p class="text" style="text-align: center;">
+                Administrar Propiedades
+            </p>   
+        </div>
+      </a>
+
+
+      <a href="">
+        <div class="info-card">
+            <div style="display: flex;justify-content: center;">
+                <img src="" alt="" class="icons">
+            </div>
+            
+            <p class="text" style="text-align: center;">
+                Mensajes
+            </p>   
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="info-card">
+            <div style="display: flex;justify-content: center;">
+                <img src="" alt="" class="icons">
+            </div>
+                
+            <p class="text" style="text-align: center;">
+                Notificaciones
+            </p>   
+        </div>
+      </a>
+      -->
+
+      <a href="./anunciar_propiedad.html">
+        <div class="info-card">
+            <div style="display: flex;justify-content: center;">
+                <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/icons/icon_megafono.svg" alt="" class="icons">
+            </div>
+                
+            <p class="text" style="text-align: center;">
+                Anunciar nuevo inmueble
+            </p>   
+        </div>
+      </a>
+
+      <!-- Items quedan para version 2.0
+      <a href="#">
+        <div class="info-card">
+            <div style="display: flex;justify-content: center;">
+                <img src="./svg/icon_estadisticas_line.svg" alt="" class="icons">
+            </div>
+                
+            <p class="text" style="text-align: center;">
+                Estadísticas
+            </p>   
+        </div>
+      </a>
+      -->   
+
+      <a href="./reportar_problema.html">
+        <div class="info-card">
+            <div style="display: flex;justify-content: center;">
+                <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/icons/icon_error.svg" alt="" class="icons">
+            </div>
+                
+            <p class="text" style="text-align: center;">
+                Reportar un problema
+            </p>   
+        </div>
+      </a> 
+
+      </section>
+
+      <h5 class="subtitles"><b>Estadísticas de tu negocio</b></h5>
+     
+      <section id="estadisticas_vendedor">
+
+        <div class="estadisticas_card">
+          <b class="text"> Precio Promedio de tus propiedades: </b>
+          <h1 class="title" style="text-align: center;">L.1,895,310</h1>
+          
+          <div class="text">Este dato te da una idea del segmento de mercado el cual atiendes.</div>
+           
+        </div>
+
+        <div class="estadisticas_card">
+          <b class="text">Propiedades alojadas en Atlas Home:</b>
+            
+
+            <div style="display: flex; justify-content: space-evenly; flex-flow: wrap;">
+
+              <div style="display: inline-block;">
+                <span class="title" style="text-align: center;">3</span>
+                <span class="text">Viviendas</span> 
+              </div>
+
+              <div style="display: inline-block;">
+                <span class="title" style="text-align: center;">12</span>
+                <span class="text">Apartamentos</span> 
+              </div>
+
+              <div style="display: inline-block;">
+                <span class="title" style="text-align: center;">4</span>
+                <span class="text">Terrenos</span> 
+              </div>
+
+            </div>
+
+            <p>
+            Total de propiedades: <span class="subtitles" style="display: inline-block;"> 19</span>
+            </p>
+
+        </div>
+
+        <div class="estadisticas_card" style="min-height: 400px;">
+          <b class="text">Citas Semana Actual:</b>
+
+            <div id="citas_diarias">
+            </div>
+
+        </div>
+
+        <div class="estadisticas_card" style="min-height: 400px;">
+          <b class="text">Citas recibidas por Mes:</b>
+            <br>
+            <div id="citas_mes">
+            </div>
+
+        </div>
+
+        
+
+        <div class="estadisticas_card" style="min-height: 400px;">
+          <b class="text">Distribución tipo de citas recibidas: (Mes Actual)</b>
+
+          <div id="tipo_cita" style="height: 100px;">
+
+          </div>
+
+        </div>
+
+        <div class="estadisticas_card" style="min-height: 400px;">
+          <b class="text">Clientes cerrados por Mes:</b>
+            <br>
+            <div id="clientes_cerrados">
+            </div>
+
+        </div>
+
+
+
+      </section>
+        
+
+
+      
+
+
+  </section>
+  <!-- End page content -->
+</div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+
+<script src="./dashboard.js"></script>
+
+<!-- Mandamos a llamar la libreria de ApexCharts -->
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+<script src="/js/chart.js"></script>
+
+
+</body>
+</html>
