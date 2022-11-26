@@ -96,38 +96,79 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 
 <!-- !PAGE CONTENT! -->
 <div class="w3-main" style="margin-left:300px;margin-top:43px;" >
-    <!-- Este Div sirve para dar un padding al Contenido  -->
-    <div style="padding-top: 60px;"></div>
-    <!-- Termina -->
+  <!-- Este Div sirve para dar un padding al Contenido  -->
+  <div style="padding-top: 60px;"></div>
+  <!-- Termina -->
 
-    <div class="titulo-inmueble hide-mobile" style="background-color: #ffffff; overflow: visible;" id="titulo-propiedad">
+  <div class="titulo-inmueble hide-mobile" style="background-color: #ffffff; overflow: visible; margin-bottom: 50px;" id="titulo-propiedad" >
 
-        <div class="space-between" style="margin-top: 5px;">
+      <div class="space-between" style="margin-top: 5px;">
 
-            <div class="text">
-                <span id="">Atlas Home</span>,
-                <br>
-                <b style="font-size: 22px;display:block">Aqui va la pagina web </b> 
-                <br>
+          <div class="text">
+              <span id="nombre_vendedor">Atlas Home</span>,
+              <br>
+              <b style="font-size: 22px;display:block">Hemos construido una Página web única para tí</b> 
+              <br>
+              Atlas Home te ha construido tu propia página web para que la compartas con tus clientes. <br>
+              Nota: Las propiedades e información mostrada en dicha web son las mismas que subes a Atlas Home. <br><br>
 
-                Gestiona y visualiza todas las citas que recibes en tus propiedades.
-                
-            </div>
+              <b style="font-size: 18px;display:block">Funcionalidades:</b> 
+              - Solo se pueden ver tus propiedades <br>
+              - Incluye el Sistema de citas de Atlas Home <br>
+              - Incluye tu link de crédito para que tus clientes se precalifiquen <br>
+              - Se muestra tu logo y colores <br>
+              - Mejoras continuas <br>
+              
+          </div>
 
-            <div class="relative-container">
 
-                    <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/artes/calendario_mujer.svg" alt="Logo Atlas" class="dibujo">
+          <div class="relative-container">
+
+                  <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/artes/programador.svg" alt="Logo QR" class="dibujo">
+
+          </div>
+
+      </div>
+  </div>
+
+
+  <div class="titulo-inmueble hide-mobile" style="background-color: #ffffff; overflow: visible; margin-bottom: 50px;" id="titulo-propiedad" style="height: auto;">
+
+    <div class="space-between" style="margin-top: 5px;">
+
+        <div class="text">
+
+            <b style="font-size: 22px;display:block">Comparte tu Página Web</b> 
+            <br>
+
+            Copia y pega tu link para compartirlo con tus clientes <br>
+            Puedes enviar el tu página web por correo, redes sociales, whatsapp o cualquier medio digital. <br><br>
+            <input type="text" value="https://atlashome.hn/vendedor/Contech" id="urlVendedor" readonly> <br>
+
+            <div class="space-between" style="justify-content: flex-start;">
+
+                <button onclick="copiarURL()" class="submit-boton" style="max-width: 150px; margin: 0 25px 0 0;">Copiar Link</button>
+
+                <a href="https://atlashome.hn/vendedor/Contech" target="_blank">
+                  <button class="submit-boton" style="width: auto; background-color: #ffffff; color: #2680EB; border: 1px solid #2680EB;">Ver Página Web</button>
+                </a>
 
             </div>
 
         </div>
+
+        <div class="relative-container">
+                
+        </div>
+
     </div>
+    <br>
+</div>
+
+  
 
 
-    
-
-
-  <!-- End page content -->
+<!-- End page content -->
 </div>
 </body>
 
@@ -160,6 +201,22 @@ var infocita = document.getElementById("modal_info_cita");
 function modalINFOCITA() 
 {
 infocita.style.display = "block";
+}
+
+// Funcion para COPIAR EL URL DE CREDITOS // 
+function copiarURL() {
+  // Get the text field
+  var copyText = document.getElementById("urlVendedor");
+
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);
+  
+  // Alert the copied text
+  alert("URL copiado en Portapapeles");
 }
 
 </script>

@@ -98,154 +98,8 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   <!-- Este Div sirve para dar un padding al Contenido  -->
   <div style="padding-top: 60px;"></div>
   <!-- Termina -->
-
   <section style="margin: 0 5% 100px">
-
-      <h5 class="subtitles"><b> Accesos Rápidos</b></h5>
-
-      <section style="display: flex; flex-direction: row wrap;overflow: auto;">
-        
-        <a href="./perfil.html">
-          <div class="info-card">
-              <div style="display: flex;justify-content: center;">
-                  <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/icons/icon_perfil.svg" alt="" class="icons">
-              </div>
-              
-              <p class="text" style="text-align: center;">
-                  Mi Perfíl
-              </p>  
-          </div>
-      </a>
-
-      <a href="./infoLegal.html">
-          <div class="info-card">
-              <div style="display: flex;justify-content: center;">
-                  <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/icons/icon_legal_line.svg" alt="" class="icons">
-              </div>
-                  
-              <p class="text" style="text-align: center;">
-                  Información legal
-              </p>      
-          </div>
-      </a>
-
-      <!-- Items quedan para version 2.0
-      <a href="#">
-          <div class="info-card">
-              <div style="display: flex;justify-content: center;">
-                  <img src="" alt="" class="icons">
-              </div>
-                  
-              <p class="text" style="text-align: center;">
-                  Colaboradores
-              </p>      
-          </div>
-      </a>
-
-      <a href="#">
-          <div class="info-card">
-              <div style="display: flex;justify-content: center;">
-                  <img src="" alt="" class="icons">
-              </div>
-                  
-              <p class="text" style="text-align: center;">
-                  Facturación
-              </p>   
-          </div>
-      </a>
-      -->
-
-      <a href="./historial_citas.html">
-        <div class="info-card">
-            <div style="display: flex;justify-content: center;">
-                <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/icons/icon_citas.svg" alt="" class="icons">
-            </div>
-        
-            <p class="text" style="text-align: center;">
-                Historial de Citas
-            </p>
-        </div>
-      </a>
-
-      <!-- Items quedan para version 2.0
-      <a href="">
-        <div class="info-card">
-            <div style="display: flex;justify-content: center;">
-                <img src="" alt="" class="icons">
-            </div>
-        
-            <p class="text" style="text-align: center;">
-                Administrar Propiedades
-            </p>   
-        </div>
-      </a>
-
-
-      <a href="">
-        <div class="info-card">
-            <div style="display: flex;justify-content: center;">
-                <img src="" alt="" class="icons">
-            </div>
-            
-            <p class="text" style="text-align: center;">
-                Mensajes
-            </p>   
-        </div>
-      </a>
-
-      <a href="#">
-        <div class="info-card">
-            <div style="display: flex;justify-content: center;">
-                <img src="" alt="" class="icons">
-            </div>
-                
-            <p class="text" style="text-align: center;">
-                Notificaciones
-            </p>   
-        </div>
-      </a>
-      -->
-
-      <a href="./anunciar_propiedad.html">
-        <div class="info-card">
-            <div style="display: flex;justify-content: center;">
-                <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/icons/icon_megafono.svg" alt="" class="icons">
-            </div>
-                
-            <p class="text" style="text-align: center;">
-                Anunciar nuevo inmueble
-            </p>   
-        </div>
-      </a>
-
-      <!-- Items quedan para version 2.0
-      <a href="#">
-        <div class="info-card">
-            <div style="display: flex;justify-content: center;">
-                <img src="./svg/icon_estadisticas_line.svg" alt="" class="icons">
-            </div>
-                
-            <p class="text" style="text-align: center;">
-                Estadísticas
-            </p>   
-        </div>
-      </a>
-      -->   
-
-      <a href="./reportar_problema.html">
-        <div class="info-card">
-            <div style="display: flex;justify-content: center;">
-                <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/icons/icon_error.svg" alt="" class="icons">
-            </div>
-                
-            <p class="text" style="text-align: center;">
-                Reportar un problema
-            </p>   
-        </div>
-      </a> 
-
-      </section>
-
+    
       <h5 class="subtitles"><b>Estadísticas de tu negocio</b></h5>
      
       <section id="estadisticas_vendedor">
@@ -303,9 +157,24 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 
         </div>
 
-        
+        <div class="estadisticas_card" style="min-height: 400px;">
+          <b class="text">Solicitudes de Crédito Hipotecario recibidas Semana Actual:</b>
+
+            <div id="creditos_diarios">
+            </div>
+
+        </div>
 
         <div class="estadisticas_card" style="min-height: 400px;">
+          <b class="text">Solicitudes de Crédito Hipotecario recibidas por Mes:</b>
+            <br>
+            <div id="creditos_mes">
+            </div>
+
+        </div>
+
+        
+        <!-- <div class="estadisticas_card" style="min-height: 400px;">
           <b class="text">Distribución tipo de citas recibidas: (Mes Actual)</b>
 
           <div id="tipo_cita" style="height: 100px;">
@@ -320,7 +189,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
             <div id="clientes_cerrados">
             </div>
 
-        </div>
+        </div> -->
 
 
 

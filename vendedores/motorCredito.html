@@ -105,7 +105,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
         <div class="space-between" style="margin-top: 5px;">
 
             <div class="text">
-                <span id="">Atlas Home</span>,
+                <span id="nombre_vendedor">Atlas Home</span>,
                 <br>
                 <b style="font-size: 22px;display:block">Pre-Califica tus cliente tú mismo con nuestro motor de crédito hipotecario</b> 
                 <br>
@@ -114,7 +114,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
                 Dicho link también se puede consumir como un Código QR impreso, el cual tus clientes lo puede escanear. <br><br>
 
                 <b style="font-size: 18px;display:block">CONDICIONES DE USO:</b> 
-                - No es un cotizador, debe cumplir con un porcentaje de conversión minimo. Caso contrato se te removerá su uso. <br>
+                - No es un cotizador, debes cumplir con un porcentaje de conversión minimo. Caso contrato se te removerá su uso. <br>
                 - Aceptas que Atlas Home llevará el proceso de Préstamo Hipotecario por tu cliente. <br>
                 - Si deseas mover a tu cliente del banco asignado, deberás justificar el porqué. <br>
                 - Puedes usarlo 24/7, su uso actualmente es gratuito <br>
@@ -142,12 +142,26 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
               <br>
 
               Copia y pega tu link para compartirlo con tus clientes <br>
+              Puedes enviar el link a tu cliente por correo, redes sociales, whatsapp o cualquier medio digital. <br>
               Te recomendamos que imprimas y uses el QR en tu sala de ventas o puntos físicos. <br><br>
+
               <input type="text" value="https://creditos.atlashome.hn/Origen?Nombre=Contech%20S%20de%20RL&IdVendedor=617ee032cca12b54b" id="urlVendedor" readonly>
-              <button onclick="copiarURL()" class="submit-boton" style="max-width: 150px;">Copiar Link</button>
+
+              <div class="space-between" style="justify-content: flex-start;">
+
+                <button onclick="copiarURL()" class="submit-boton" style="max-width: 150px; margin: 0 25px 0 0;">Copiar Link</button>
+
+                <a href="https://creditos.atlashome.hn/Origen?Nombre=Contech%20S%20de%20RL&IdVendedor=617ee032cca12b54b" target="_blank">
+                  <button class="submit-boton" style="width: auto; background-color: #ffffff; color: #2680EB; border: 1px solid #2680EB;">Abrir Link</button>
+                </a>
+
+            </div>
+
+
+              
 
               <p>
-                ¿Buscas el historial de tus precalifcados? <a href="./historial_creditos.html" style="color: #0894FE;text-decoration: underline;">Haz Clic Aquí</a> 
+                ¿Buscas el historial de tus clientes precalifcados? <a href="./historial_creditos.html" style="color: #0894FE;text-decoration: underline;">Haz Clic Aquí</a> 
             </p>
         
 
@@ -156,7 +170,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
           </div>
 
           <div class="relative-container">
-              <a href="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/artes/qr_contech.png" download>
+              <a href="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/artes/qr_contech.png" target="_blank">
                   <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/artes/qr_contech.png" alt="Logo QR" class="dibujo">
               </a>
           </div>

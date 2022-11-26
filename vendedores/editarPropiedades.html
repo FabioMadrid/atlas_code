@@ -54,7 +54,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
         </div>
         <button class="accordion w3-bar-item w3-button w3-padding ">Citas y Precalificaciones</button>
         <div class="panel">
-            <a href="#" class="w3-bar-item w3-button w3-padding ">
+            <a href="./historial_citas.html" class="w3-bar-item w3-button w3-padding ">
             Historial de Citas
             </a>
             <a href="./historial_creditos.html" class="w3-bar-item w3-button w3-padding ">
@@ -107,16 +107,16 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
             <div class="text">
                 <span id="">Atlas Home</span>,
                 <br>
-                <b style="font-size: 22px;display:block">Selecciona la propiedad que deseas editar</b> 
+                <b style="font-size: 22px;display:block">Edita tus Propiedades</b> 
                 <br>
 
-                Gestiona y visualiza todas las citas que recibes en tus propiedades.
+                En esta sección puede editar Precios, disponibilidad, fotografías y demás información sobre tus propiedades. <br>
                 
             </div>
 
             <div class="relative-container">
 
-                    <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/artes/calendario_mujer.svg" alt="Logo Atlas" class="dibujo">
+                    <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/artes/busqueda_guardar.svg" alt="Logo Atlas" class="dibujo">
 
             </div>
 
@@ -134,15 +134,24 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     -->
     
 
-<section style="margin: 50px 5% 100px">
+<section style="margin: 30px 5% 100px">
 
     <p>
-        ¿Buscas visualizar las citas que tienes pendientes? <a href="./citas_pendientes.html" style="color: #0894FE;text-decoration: underline;">Haz Clic Aquí</a> 
+        Selecciona El Tipo de Propiedad <br>
     </p>
 
-    
+    <form action="" >
+        <select name="categoria_inmueble" id="categoria_inmueble" class="minimal" required style="width: 50%;">
+            <option value="todas">Mostrar Todas</option>
+            <option value="vivienda">Vivienda</option>
+            <option value="apartamento">Apartamento</option>
+            <option value="terreno">Terreno</option>
+        </select>
+    </form>
+    <br>
+    <b>(Haz Clic sobre una opción para editar)</b> <br>
 
-    <div id="historial_citas">
+    <div id="lista_propiedades">
 
         <!-- Esta parte renderiza cuando el nunca ha recibido una cita
             <p class="text">
@@ -156,72 +165,72 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
         <div style="overflow: auto;"> 
             <table class="citas">
                 <tr>
-                    <th>Cliente</th>
-                    <th>Identidad Cliente </th>
-                    <th>Fecha y Hora</th>
-                    <th>Inmueble</th>
-                    <th>Estado Crédito Cliente</th>
-                    <th>Tipo de Cita</th>
+                    <th>Tipo </th>
+                    <th>Fecha de ingreso </th>
+                    <th>Nombre Inmueble</th>
+                    <th>Precio </th>
+                    <th>Estado</th>
+                    <th>Ciudad</th>
 
                 </tr>
 
                 <tr onclick="modalINFOCITA()" >
-                    <td id="nombre_cliente">Roger Santos</td>
-                    <td id="Identidad Cliente">1503-1993-01546</td>
-                    <td id="fecha_hora_cita">10 Marzo 2021, 1:00pm</td>
-                    <td id="id_propiedad">Residencial El Sauce - Modelo Jeranios</td> <!--Titulo (+) - (+) subtitulo -->
-                    <td id="estado_credito_cliente"> Pre-aprobado</td>
-                    <td id="tipo_cita">Virtual</td>
+                    <td id="tipo_propiedad">Vivienda</td>
+                    <td id="fecha_ingreso">10/Marzo/2021</td>
+                    <td id="nombre_modelo">Modelo Roble</td>
+                    <td id="precio_venta">L.2,500,000</td> <!--Titulo (+) - (+) subtitulo -->
+                    <td id="estado_propiedad">Activo</td>
+                    <td id="ciudad">Tegucigalpa</td>
  
                 </tr>
 
                 <tr onclick="modalINFOCITA()" >
-                    <td >Juan Lopez</td>
-                    <td >1503-1993-01546</td>
-                    <td >12 Enero 2021, 3:00pm</td>
-                    <td >Residencial Roble Oeste - Modelo Laurel</td> <!--Titulo (+) - (+) subtitulo -->
-                    <td > Aprobado</td>
-                    <td >Presencial</td>
+                    <td >Vivienda</td>
+                    <td >10/Marzo/2021</td>
+                    <td >Modelo Laurel</td>
+                    <td >L.3,600,000</td> <!--Titulo (+) - (+) subtitulo -->
+                    <td > Activo</td>
+                    <td >Tegucigalpa</td>
 
                 </tr>
 
                 <tr onclick="modalINFOCITA()" >
-                    <td >Francisco Morazán</td>
-                    <td >1503-1993-01546</td>
-                    <td >10 Enero 2021, 10:00am</td>
-                    <td >Torre Ventu - Modelo 3Hab</td> <!--Titulo (+) - (+) subtitulo -->
-                    <td > Aprobado por buró</td>
-                    <td >Virtual</td>
+                    <td >Apartamento</td>
+                    <td >10/Marzo/2021</td>
+                    <td >Modelo Venecia</td>
+                    <td >L.2,750,000</td> <!--Titulo (+) - (+) subtitulo -->
+                    <td >En Revisión</td>
+                    <td >Tegucigalpa</td>
 
                 </tr>
 
                 <tr onclick="modalINFOCITA()" >
-                    <td >Francisco Morazán</td>
-                    <td >1503-1993-01546</td>
-                    <td >10 Enero 2021, 10:00am</td>
-                    <td >Torre Ventu - Modelo 3Hab</td> <!--Titulo (+) - (+) subtitulo -->
-                    <td > Verificación Pendiente</td>
-                    <td >Virtual</td>
+                    <td >Apartamento</td>
+                    <td >10/Marzo/2021</td>
+                    <td >Modelo lila</td>
+                    <td >L.1,800,000</td> <!--Titulo (+) - (+) subtitulo -->
+                    <td >Activo</td>
+                    <td >San Pedro Sula</td>
 
                 </tr>
 
                 <tr onclick="modalINFOCITA()" >
-                    <td >Francisco Morazán</td>
-                    <td >1503-1993-01546</td>
-                    <td >10 Enero 2021, 10:00am</td>
-                    <td >Torre Ventu - Modelo 3Hab</td> <!--Titulo (+) - (+) subtitulo -->
-                    <td > Aprobado</td>
-                    <td >Virtual</td>
+                    <td >Terreno</td>
+                    <td >10/Marzo/2021</td>
+                    <td >Las Uvas</td>
+                    <td >L.1,800,000</td> <!--Titulo (+) - (+) subtitulo -->
+                    <td > Activo</td>
+                    <td >Tegucigalpa</td>
 
                 </tr>
 
                 <tr onclick="modalINFOCITA()" >
-                    <td >Francisco Morazán</td>
-                    <td >1503-1993-01546</td>
-                    <td >10 Enero 2021, 10:00am</td>
-                    <td >Torre Ventu - Modelo 3Hab</td> <!--Titulo (+) - (+) subtitulo -->
-                    <td > Pre-aprobado</td>
-                    <td >Virtual</td>
+                    <td >Terreno</td>
+                    <td >10/Marzo/2021</td>
+                    <td >Los Angeles</td>
+                    <td >L.1,200,000</td> <!--Titulo (+) - (+) subtitulo -->
+                    <td >En Revisión</td>
+                    <td >Tegucigalpa</td>
 
                 </tr>
 
@@ -240,16 +249,15 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
         <div class="modal-content overflow relative-container">
 
-            <div class="text" style="text-align: center; font-size: 18px;">
-                <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/icons/icon_calendario.svg" alt="" style="width: 25px;height:25px;">
-                <span style="padding-left: 10px;">Solicitud de Cita</span> 
+            <div class="text" style="text-align: center; font-size: 25px;">
+                Editar Propiedad
             </div>
     
             <div class="contenedor_x">
 
 
                 <div class="atlas-card" style="overflow:none">
-                    <a href="./vivienda.html" target="_blank">
+                    <a href="https://atlashome.hn/vistaPropiedades/vivienda/22" target="_blank">
                             <div class="relative-container">
                                 <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/imgTests/casa1_3.jpg" alt="imagen" class="image-card">            
                             </div>
@@ -268,106 +276,63 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
                         </div>
                     </a>    
                 </div>
-
-
-            
+                     
                 <div class="columna_modal_cita">
 
-                    <div style="font-weight: bold;font-size: 18px;">Detalles:</div><br>
-                    
-                    <div style="display: flex; justify-content: space-between;flex-flow: row nowrap;">
-
-                        <div style="width: 33%;color: #2680EB;">
-    
-                            <div >
-                                Fecha:
-                            </div>
-    
-                            <div>
-                                Hora:
-                            </div>
-    
-                            <div>
-                                Tipo:
-                            </div>
-                            
-                            <div>
-                                Atiende:
-                            </div>
-
-                            <div>
-                                Estado:
-                            </div>
-                        </div>
-    
-                        <div style="width: 66%;" class="text" >
-    
-                            <div >
-                                    10 enero 2021       
-                            </div>
-    
-                            <div >
-                                    10:00am
-                            </div>
-    
-                            <div >
-                                    Virtual
-                            </div>
-
-                            <div >
-                                Juan Lopez
-                            </div>
-
-                            <div style="color: #FC9500;"> <!--cambio de color segun estado de cita-->
-                                    Sin Confirmar
-                            </div>
-                        </div>
-    
-                    </div>
-
                     <br>
-                    <div style="font-weight: bold;font-size: 18px;">info Cliente:</div><br>
+                        <a href="./ingresar_vivienda.html">
+                            <button class="submit-boton" style="width: 100%; background-color: #FC2D38; color: #ffffff;">Editar Propiedad</button>
+                        </a>
+                        <br>
+
+
+                    <div style="font-weight: bold;font-size: 18px;">Editar disponibilidad</div><br>
                     
-                    <div style="display: flex; justify-content: space-between;flex-flow: row nowrap;">
+                    <div style="justify-content: space-between;flex-flow: row nowrap;">
 
-                        <div style="width: 33%;color: #2680EB;">
-                            <div >
-                                Cliente:
-                            </div>
+                        <form action="" >
+                            <select name="categoria_inmueble" id="categoria_inmueble" class="minimal" required style="width: 100%;">
+                                <option value="activo">Activo</option>
+                                <option value="inactivo">Inactivo</option>
+                            </select>
+                        </form>
 
-                            <div >
-                                Celular:
-                            </div>
+                        <form action="">
 
-                            <div >
-                                Crédito:
+                            <input id="step2" type="checkbox">
+            
+                            <div id="part1">
+                                <div style="display: flex; justify-content: center;flex-flow: row wrap;">
+            
+                                    <label for="step2" id="continue-step2" style="width: 100%;cursor: pointer;">
+                                        <div class="submit-boton" style="width: 100%;padding-top: 9px; background-color: #6F7A88;">
+                                            Guardar
+                                        </div>
+                                    </label>
+                                </div>
                             </div>
-    
-                            <div >
-                                Cédula:
-    
+            
+                            <div id="part2" style="position: relative;">
+                                
+                                <div class="text" style="text-align: center;">
+                                ¿Estas seguro que cambiar la disponibilidad?
+                                </div> 
+            
+                                <div style="display: flex; justify-content: center;flex-flow: row wrap;">
+                                    <input type="submit" class="boton_azul" value="Si, Cambiar">
+            
+                                    </input>
+            
+                                    <label for="step2" id="continue-step2">
+                                        <div class="boton_azul" style="width: auto;padding-top: 9px;color:#CC5F54;border-color: #CC5F54;">
+                                            No
+                                        </div>
+                                    </label>
+                                </div>
+            
                             </div>
-
-                        </div>
-    
-                        <div style="width: 66%;" class="text" >
-                            <div >                      
-                                    Felipe Madrid
-                            </div>
-
-                            <div >                      
-                                    95775730
-                            </div>
-
-                            <div >                      
-                                    Pre-Aprobado
-                            </div>
-    
-                            <div >
-                                    1503-1993-01546     
-                            </div>
-
-                        </div>
+            
+                        </form>
     
                     </div>
 
@@ -375,76 +340,8 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 
             </div>
 
-        <!-- informacion a renderizar cuando no se ha confirmado la cita aun--- Estado: Sin Confirmar
-            <form action="">
-
-                <input id="step2" type="checkbox">
-
-                <div id="part1">
-                    <div style="display: flex; justify-content: center;flex-flow: row wrap;">
-                        <input type="submit" class="boton_azul" value="Confirmar Cita">
-
-                        </input>
-
-                        <label for="step2" id="continue-step2" style="width: 40%;cursor: pointer;">
-                            <div class="boton_azul" style="color:#CC5F54; border-color: #CC5F54;width: 100%;padding-top: 9px;">
-                                Denegar Cita
-                            </div>
-                        </label>
-                    </div>
-                </div>
-
-                <div id="part2" style="position: relative;">
-                    
-                    <div class="text" style="text-align: center;">
-                    ¿Estas seguro que deseas cancelar la cita?
-                    </div> 
-
-                    <div style="display: flex; justify-content: center;flex-flow: row wrap;">
-                        <input type="submit" class="boton_azul" value="Si, Cancelar" style="color:#CC5F54;border-color: #CC5F54;">
-
-                        </input>
-
-                        <label for="step2" id="continue-step2" style="width: 40%;cursor: pointer;">
-                            <div class="boton_azul" style="width: 100%;padding-top: 9px;">
-                                Regresar
-                            </div>
-                        </label>
-                    </div>
-
-                </div>
-
-            </form> -->
-        
-        <!--Renderiza cuando el estado de la cita fue Cancelada
-
-            <div class="text" style="text-align: left;">
-               Cita Cancelada por : <span id="">El Cliente</span>
-            </div> 
-
-        <!-Renderiza cuando la cita ya fue confirmada
-
-        <div class="text" style="text-align: left;">
-            Cita ha sido confirmada con éxito por ambas partes, favor revisa tu correo y contacta al cliente 
-            para su coordinación.
-         </div> 
-
-         <!-Renderiza cuando la cita ya se vencio y nunca la confirmo el vendedor
-
-        <div class="text" style="text-align: left;">
-            Cita ha vencido porque no has dado una respuesta, esto daña tu scrore y reputación de tu empresa dentro 
-            de nuestra plataforma, porfavor estar pendiente para la próxima vez.
-         </div> 
-
-         <!-Renderiza cuando la cita se efectuo satisfacoriamente
-
-        <div class="text" style="text-align: left;">
-            Cita realizada satisfactoriamente, favor has el seguimiento de venta correspondiente. Atlas Home 
-            lleva el seguimiento financiero del cliente, contactanos cualquier duda o consulta.
-         </div> 
-        -->
-
-
+        <!--informacion a renderizar cuando no se ha confirmado la cita aun--- Estado: Sin Confirmar-->
+           
 
         </div>
     </div>

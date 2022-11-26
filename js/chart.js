@@ -109,3 +109,41 @@ var citas_mes = {
 
   var clientes_cerrados = new ApexCharts(document.querySelector("#clientes_cerrados"), clientes_cerrados);
   clientes_cerrados.render();
+
+
+  //chart para dibujar CREDITOS por mes
+
+var creditos_mes = {
+  chart: {
+    type: 'bar'
+  },
+  series: [{
+    name: 'Citas',
+    data: [0,0,0,0,49,60,70,91,125,150,170,205]
+  }],
+  xaxis: {
+    categories: ["Ene","Feb","Mar","Abr","Mayo","Jun","Jul","Ago","Sep","Oct","Nov","Dic"]
+  }
+}
+
+var creditos_mes = new ApexCharts(document.querySelector("#creditos_mes"), creditos_mes);
+
+creditos_mes.render();
+
+//chart para dibujar Creditos por semana
+var creditos_diarios = {
+  chart: {
+    type: 'bar'
+  },
+  series: [{
+    name: 'Citas',
+    data: [2,0,3,7,10,13,10]
+  }],
+  xaxis: {
+    categories: ["Lun","Mar","Mie","Jue","Vie","Sab","Dom"]
+  }
+}
+
+var creditos_diarios = new ApexCharts(document.querySelector("#creditos_diarios"), creditos_diarios);
+
+creditos_diarios.render();
