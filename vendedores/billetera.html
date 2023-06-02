@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<title>Admin Atlas Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="./dashboard.css">
+<link rel="stylesheet" href="/css/general.css">
+<link rel="stylesheet" href="/css/perfil_vendedor.css">
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+<body style="background-color: #f9fafb!important;">
+
+<!-- Top container -->
+<div class="w3-bar w3-top w3-white w3-large" style="z-index:4">
+  <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i></button>
+  <button class="w3-bar-item w3-right boton-ingresar" id="boton-ingresar" onclick="" style="border:#0894FE solid 1px">Cerrar Sesión</button>
+</div>
+
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+    <div class="w3-container w3-row">
+      <div class="w3-col s4">
+        <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/icons/logo_circular_azul.svg" class="w3-circle w3-margin-right" style="width:66px">
+      </div>
+      <div class="w3-col s8 w3-bar">
+        <span>Bienvenido, <br> <strong>Atlas Home</strong></span><br>
+        <!--
+        <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
+        <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
+        <a href="#" class="w3-bar-item w3-button"><i class="fa fa-cog"></i></a>
+        -->
+      </div>
+    </div>
+    <hr>
+    <div class="w3-container">
+        <h5 style="color:#0894FE; font-weight: bold;">Panel de Vendedores</h5>
+      </div>
+      <div class="w3-bar-block">
+        <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Cerrar Menú</a>
+        <a href="./inicio.html" class="w3-bar-item w3-button w3-padding  "> Inicio</a>
+        <button class="accordion w3-bar-item w3-button w3-padding ">Mi Cuenta</button>
+        <div class="panel" >
+            <a href="./perfil.html" class="w3-bar-item w3-button w3-padding ">
+            Información Perfil 
+            </a>
+            <a href="./infoLegal.html" class="w3-bar-item w3-button w3-padding ">
+            Información Legal
+            </a>
+        </div>
+        <button class="accordion w3-bar-item w3-button w3-padding ">Citas y Precalificaciones</button>
+        <div class="panel" >
+            <a href="./historial_citas.html" class="w3-bar-item w3-button w3-padding ">
+            Historial de Citas
+            </a>
+            <a href="./historial_creditos.html" class="w3-bar-item w3-button w3-padding">
+            Historial de Pre-Calificaciones
+            </a>
+        </div>
+        <button class="accordion w3-bar-item w3-button w3-padding ">Ingresar Nueva Propiedad</button>
+        <div class="panel" >
+            <a href="./ingresar_vivienda.html" class="w3-bar-item w3-button w3-padding  ">
+            Vivienda 
+            </a>
+            <a href="./ingresar_apartamento.html" class="w3-bar-item w3-button w3-padding ">
+            Apartamento
+            </a>
+            <a href="./ingresar_terreno.html" class="w3-bar-item w3-button w3-padding ">
+            Terreno
+            </a>
+        </div>
+        <button class="accordion w3-bar-item w3-button w3-padding ">Herramientas de Venta</button>
+        <div class="panel" >
+            <a href="#" class="w3-bar-item w3-button w3-padding ">
+                Motor de Crédito
+            </a>
+            <a href="./miPaginaWeb.html" class="w3-bar-item w3-button w3-padding ">
+                Mi Página Web
+            </a>
+        </div>
+        <a href="#" class="w3-bar-item w3-button w3-padding w3-blue">Billetera Digital</a>
+        <a href="./editarPropiedades.html" class="w3-bar-item w3-button w3-padding ">Editar mis Propiedades</a>
+        <a href="./estadisticas.html" class="w3-bar-item w3-button w3-padding ">Métricas de tu negocio</a>
+        <a href="./reportar_problema.html" class="w3-bar-item w3-button w3-padding ">Reportar Un Problema</a>
+    
+      </div>
+  </nav>
+  
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px;margin-top:43px;" >
+    <!-- Este Div sirve para dar un padding al Contenido  -->
+    <div style="padding-top: 60px;"></div>
+    <!-- Termina -->
+    <h5 class="subtitles" style="margin-left:55px"><b> Billetera Digital</b></h5>
+
+    <div class="titulo-inmueble hide-mobile" style="background: conic-gradient(from 30deg at 50% 74%, rgb(0, 0, 0), rgb(0, 12, 145), rgb(34, 53, 255)) ;overflow: visible; margin-bottom: 50px;" id="titulo-propiedad" style="height: auto;">
+
+      <div class="space-between" style="margin-top: 5px;">
+
+          <div>
+              <b style="font-size: 1.5rem;display:block; color: #ffffff">ATLAS HOME - E-Wallet</b> 
+          </div>
+
+          <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/emails/logo_alargado_blanco.png" style="width:200px;">
+
+      </div>
+
+      <b style="font-size: 80px;display:block; color: #ffffff">2,500 <span style="font-size: 22px;"> / Puntos</span> </b> 
+
+        <div class="space-between" style="justify-content: space-between;">
+
+            <h3 style="display:block; color: #ffffff">Constructora Contech</h3> 
+
+            <button class="submit-boton" style="max-width: 200px;font-weight: bold; margin: 0 25px 0 0; background: rgb(34, 53, 255)">Comprar Puntos</button>
+
+        </div>
+     </div>
+
+<!-- Tarjetas de acciones e historial  -->
+
+     <section style="display: flex; flex-direction: row wrap;overflow: auto; margin-left: 50px; margin-bottom: 50px;">
+
+        <div class="info-card" style="background: #D6EAF8; box-shadow: none; height: 150px;">
+            <div style="display: flex;justify-content: flex-start;">
+                <div style="background-color: #ffffff; position: relative;padding: 7px; border-radius: 50%;">
+                  <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/icons/icon_star.svg" class="icons" style="height: 23px;">
+                </div>
+             </div>
+            
+            <b style="font-weight: bold; font-size: 35px;text-align: center;">160</b> <br>
+            <div class="text" style="text-align: center;">
+               Puntos Consumidos
+            </div>
+        </div>
+
+
+
+        <div class="info-card" style="background: #D6EAF8; box-shadow: none; height: 150px;">
+          <div style="display: flex;justify-content: flex-start;">
+              <div style="background-color: #ffffff; position: relative;padding: 7px; border-radius: 50%;">
+                <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/icons/icon_dinero.svg" class="icons" style="height: 23px;">
+              </div>
+           </div>
+          
+          <b style="font-weight: bold; font-size: 35px;text-align: center;">0</b> <br>
+          <div class="text" style="text-align: center;">
+             Puntos Comprados
+          </div>
+      </div>
+      
+      <div class="info-card" style="background: #D6EAF8; box-shadow: none; height: 150px;">
+        <div style="display: flex;justify-content: flex-start;">
+            <div style="background-color: #ffffff; position: relative;padding: 7px; border-radius: 50%;">
+              <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/icons/icon_happy2.svg" class="icons" style="height: 23px;">
+            </div>
+         </div>
+        
+        <b style="font-weight: bold; font-size: 35px;text-align: center;">160</b> <br>
+        <div class="text" style="text-align: center;">
+           Puntos Ganados
+        </div>
+    </div>
+
+      <div class="info-card" style="background: #D6EAF8; box-shadow: none; height: 150px;">
+        <div style="display: flex;justify-content: flex-start;">
+            <div style="background-color: #ffffff; position: relative;padding: 7px; border-radius: 50%;">
+              <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/icons/icon_certificado.svg" class="icons" style="height: 23px;">
+            </div>
+         </div>
+        
+        <b style="font-weight: bold; font-size: 35px;text-align: center;">160</b> <br>
+        <div class="text" style="text-align: center;">
+           Puntos Canjeados
+        </div>
+    </div>
+
+
+
+    <div class="info-card" style="background: #D6EAF8; box-shadow: none; height: 150px;">
+      <div style="display: flex;justify-content: flex-start;">
+          <div style="background-color: #ffffff; position: relative;padding: 7px; border-radius: 50%;">
+            <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/icons/icon_identidad.svg" class="icons" style="height: 18px;">
+          </div>
+      </div>
+      
+      <b style="font-weight: bold; font-size: 35px;text-align: center;">160</b> <br>
+      <div class="text" style="text-align: center;">
+        Clientes Consultados
+      </div>
+  </div>
+
+
+
+    </section>
+
+
+  <h5 class="subtitles" style="margin-left:55px"><b> ¿En qué los puedo gastar?</b></h5>
+
+  <div class="titulo-inmueble hide-mobile" style="background-color: #ffffff; overflow: visible; margin-bottom: 50px; height: auto;" id="titulo-propiedad" >
+
+    <div class="space-between" style="margin-top: 5px;">
+
+      <div class="relative-container">
+
+        <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/artes/rating_usuarios.svg" alt="billetera" class="dibujo" style="width: auto;margin: 30px;">
+
+      </div>
+
+      <div class="text">
+
+        <b style="font-size: 18px;display:block">Canjea tus puntos por Clientes Pre-Aprobados</b> 
+        <br>
+
+            Puedes canjear tus puntos a cambio de datos de clientes de adquisición 100% de Atlas Home. 
+            Estas personas ya han sido precalificadas para un préstamo hipotecario y también han autorizado a 
+            nuestros comercios aliados a ponerse en contacto con ellos, con el fin de ayudarles a encontrar su propiedad ideal. <br>
+            En esta lista puedes filtrar y encontrar clientes por: <br>
+            - Monto Pre-Aprobado <br>
+            - Ciudad <br>
+            - Tipo de Inmueble de Interés <br>
+            Al comprar el cliente se te liberan los datos de Contacto, Banco y Asesor que llevan el caso del cliente. 
+            Ten en cuenta que el cliente tiene un limite finito de 5 consultas y una vigencia de 30 días en la cartera. <br> 
+
+        <br>
+            
+            <button class="submit-boton" style="max-width: 200px;font-weight: bold; margin: 0 25px 0 0; background: rgb(34, 53, 255)">Ver Listado</button>
+
+        <br>
+            
+      </div>
+
+    </div>
+</div>
+
+<h5 class="subtitles" style="margin-left:55px"><b> ¿Como gano puntos?</b></h5>
+
+<div class="titulo-inmueble hide-mobile" style="background-color: #ffffff; overflow: visible; margin-bottom: 50px; height: auto;" id="titulo-propiedad" >
+
+  <div class="space-between" style="margin-top: 5px;">
+
+    <div class="relative-container">
+
+      <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/artes/billetera.svg" alt="billetera" class="dibujo" style="width: auto;margin: 30px;">
+
+    </div>
+
+    <div class="text">
+
+      <b style="font-size: 18px;display:block">Compra o Gana puntos</b> 
+      <br>
+
+          Ganas puntos realizando las siguientes acciones: <br>
+          - Por cada Cliente Pre-Calificado mediante tu link o QR asignado   
+          - Subir Propiedades a Atlas Home <br>
+          - Por cada desembolso realizado mediante Atlas Home <br>
+          Cada acción te adjudica una cantidad diferente de puntos, los puntos ganados los podrás 
+          canjear por clientes Pre-Aprobados de nuestra lista. <br> 
+
+      <br>
+          
+          <button class="submit-boton" style="max-width: 200px;font-weight: bold; margin: 0 25px 0 0; background: rgb(34, 53, 255)">Comprar Puntos</button>
+
+      <br>
+          
+    </div>
+
+  </div>
+</div>
+
+    
+
+
+  <!-- End page content -->
+</div>
+</body>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+
+//Modal mostrar informacion de cita//
+var infocita = document.getElementById("modal_info_cita");
+function modalINFOCITA() 
+{
+infocita.style.display = "block";
+}
+
+// Funcion para COPIAR EL URL DE CREDITOS // 
+function copiarURL() {
+  // Get the text field
+  var copyText = document.getElementById("urlVendedor");
+
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);
+  
+  // Alert the copied text
+  alert("URL copiado en Portapapeles");
+}
+
+</script>
+
+<script src="./dashboard.js"></script>
+
+</body>
+</html>
