@@ -542,7 +542,6 @@ button:active
     }
     .boton-landing
     {
-        width: 250px;
         height: 60px;
     }
     .title
@@ -714,7 +713,6 @@ input[type="radio"]:checked+label {
  */
 .curved-div {
     position: relative;
-    background: #0894FE;
     color: #FFF;
     text-align: center;
     overflow: hidden;
@@ -732,6 +730,5 @@ input[type="radio"]:checked+label {
   }
   .curved-div p {
     font-size: 1rem;
-    margin:0 5rem 0rem 5rem;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }

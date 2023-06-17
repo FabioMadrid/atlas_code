@@ -20,6 +20,10 @@
         * {
           box-sizing: border-box;
         }
+        h1
+        {
+            font-size: clamp(40px,8vw,105px);
+        }
         
         .flex-container {
           display: flex;
@@ -37,13 +41,128 @@
           padding: 10px;
           flex: 40%;
         }
+        .div_pasos
+        {
+            margin: 0 15%;
+        }
+        .movil_cards
+        {
+            position: absolute;
+            background-color: #FC2D38;
+            opacity: 70%; 
+            min-height: 50px !important;
+            max-height: 50px;
+            color: #ffffff;
+            font-size: 1.1rem; 
+            font-weight: bold;
+            padding: 14px;
+            max-width: 250px;
+            animation: move-up-down 4s ease-in-out 1s infinite;
+        }
+        .left_arreglo
+        {
+            left: 60%;
+        }
         
+        @keyframes move-up-down
+        {
+            0%{
+                -webkit-transform: translateX(0) translateY(5px);
+                transform: translateX(0) translateY(5px);
+            }
+            50% {
+                -webkit-transform: translateX(0) translateY(-15px);
+                transform: translateX(0) translateY(-15px);
+            }
+
+            100% {
+                -webkit-transform: translateX(0) translateY(5px);
+                transform: translateX(0) translateY(5px);
+            }
+        }
+
         /* Responsive layout - makes a one column-layout instead of a two-column layout */
-        @media (max-width: 800px) {
+        @media (max-width: 1000px) {
           .flex-item-right, .flex-item-left {
             flex: 100%;
           }
+          .div_pasos
+          {
+            margin: 0 7%;
+          }
+          .left_arreglo
+          {
+            left: 30%;
+          }
+          .boton-landing
+          {
+            margin: 30px auto 30px auto;
+          }
+          
         }
+
+
+        /* Para el tema de los pasos este es el CSS */
+
+            .pasos {
+            font-size: 1em;
+            line-height: 1.75em;
+            border-top: 3px solid;
+            border-image: linear-gradient(to right, #2ef7e9 0%, #2932b5  100%);  
+            border-image-slice: 1;
+            border-width: 3px;
+            margin: 0;
+            padding: 40px;
+            counter-increment: section;
+            position: relative;
+            color: black;
+            
+            &:before {
+                content: counter(section);
+                position: absolute;
+                border-radius: 50%;
+                padding: 0px;
+                height: 2.25em;
+                width: 2.25em;
+                background-color: #2932b5;
+                text-align: center;
+                line-height: 2.25em;
+                color: white;
+                font-size: 1em;
+            }
+            }
+            /* //odd number borders */
+            .pasos:nth-child(odd) {
+            border-right: 3px solid;
+            padding-left: 0;
+            
+            &:before {
+                left: 100%; 
+                margin-left: -20px;
+            }
+            }
+            /* //even number borders */
+            .pasos:nth-child(even) {
+            border-left: 3px solid;
+            padding-right: 0;
+            
+            &:before {
+                right: 100%; 
+                margin-right: -20px;
+            }
+            }
+            /* //handle first and last */
+            .pasos:first-child {
+            border-top: 0;
+            border-top-right-radius:0;
+            border-top-left-radius:0;
+            }
+            .pasos:last-child {
+            border-bottom-right-radius:0;
+            border-bottom-left-radius:0;
+            }
+
+            
         </style>
 
 </head>
@@ -169,440 +288,246 @@
             </div>
         </div>
 
-
+<!-------------- MODAL PARA BUSQUEDA DE PROPIEDADES------->
+<div id="myModal" class="modal" style="padding: 80px 25px 0 25px;">
+    <div class="modal-content" style="height: auto">
+        <div class="relative-container">
+            <span class="close">&times;</span>
+        </div>
+        <h3 class="titulo-modal" >Selecciona Tipo de Propiedad</h3>
+    <form action="./busquedavivienda.html" method="GET" onsubmit="">
+        <div class="inmueble-selector" id="inmueble-selector">
+            <input id="vivienda" type="radio" name="inmueble-tipo" value="vivienda" checked />
+            <label class="drinkcard-cc vivienda" for="vivienda" style="border: none;">
+                <div class="relative-container">
+                    <div class="bottom-text correcion">Vivienda</div>
+                </div>
+            </label>
+            <input id="apartamento" type="radio" name="inmueble-tipo" value="apartamento" />
+            <label class="drinkcard-cc apartamento"for="apartamento" style="border: none;">
+                <div class="relative-container">
+                    <div class="bottom-text correcion-a">Apartamento</div>
+                </div>
+            </label>
+            <input id="terreno" type="radio" name="inmueble-tipo" value="terreno" />
+            <label class="drinkcard-cc terreno"for="terreno" style="border: none;">
+                <div class="relative-container">
+                    <div class="bottom-text correcion">Terreno</div>
+                </div>
+            </label>
+        </div>
+        <label for="ciudad" class="text-modal" style="margin-top: 50px;">Selecciona la Ciudad:</label>
+            <select name="ciudad" id="ciudad" class="minimal" required>
+                <option value="tegucigalpa">Tegucigalpa</option>
+                <option value="sanpedrosula">San Pedro Sula</option>
+            </select>
+            <label for="operacion" class="text-modal">¿Qué Buscas?</label>
+            <select name="operacion" id="operacion" class="minimal" required><br>
+                <option value="venta">Propiedades en Venta</option>
+                <option value="renta">Propiedades en Renta</option>
+            </select>
+        <input type="submit" value="Buscar" class="submit-boton" style="margin: 40px auto;">
+    </form>
+    </div>
+</div>
 
 <!----------------------------------------------------------------------------- INICIO DE LANDING PAGE-------------------------------------------------------------->
 
 
-<section style="margin: 80px 5% 0px;">
+<section style="margin: 80px 0 0px; ">
     
 
-    <div class="flex-container">
+    <div class="flex-container" style="margin: 0 8%;">
 
         <div class="flex-item-left order2" style="align-self:center;">
              
-            <div style=" color:#0894FE; margin: 0;text-align: center;">
-                <h3 class="subtitles" style="color:#707070">Atlas Centraliza Vendedores, Compradores y Bancos</h3>
-                <h3 class="title" >Préstamo Hipotecario y Vivienda en un solo lugar</h3>
+            <div style="color:#0894FE; margin: 0;text-align: left;" class="curved-div">
+                <h3 class="subtitles" style="color:#707070; margin-bottom: 0;">
+                    Atlas Centraliza Vendedores, Compradores y Bancos
+                </h3>
+
+            <h1  style="color: #2932b5;text-align: left; margin: auto 10% auto auto; font-size: clamp(1.6rem, 2.8rem,2.8rem);">Préstamo Hipotecario y Vivienda en un solo lugar</h1>
+            <p style="color: #707070; margin: 15px 0 0 0; font: clamp(0.4rem, 0.6rem,0.8rem);">
+                Encuentra ofertas de Constructoras y Bienes Raíces a nivel nacional en un solo lugar. <br> 
+                Solicita tu préstamo hipotecario 100% digital, fácil y seguro.
+            </p>
  
             </div>
             
-                <button class="boton-landing" id="myBtn" onclick="modalPROPIEDADES()">Buscar mi nuevo Hogar</button>
+                <button class="boton-landing" style="margin-left: 0" id="myBtn" onclick="modalPROPIEDADES()">Buscar Propiedades</button>
 
                 <a href="https://creditos.atlashome.hn/" target="_self">
-                    <button class="boton-landing" style="background:#0894FE; color:#ffff">Quiero un Crédito de Vivienda</button>
+                    <button  class="boton-landing" style="background-color: #FC2D38; color:#ffffff; border:none;margin-left: 0;">
+                        Pre-Calificate en 3 Minutos
+                    </button>
                 </a> 
-                <!-------------- MODAL PARA BUSQUEDA DE PROPIEDADES------->
-                        <div id="myModal" class="modal" style="padding: 80px 25px 0 25px;">
-                            <div class="modal-content" style="height: auto">
-                                <div class="relative-container">
-                                    <span class="close">&times;</span>
-                                </div>
-                                <h3 class="titulo-modal" >Selecciona Tipo de Propiedad</h3>
-                            <form action="./busquedavivienda.html" method="GET" onsubmit="">
-                                <div class="inmueble-selector" id="inmueble-selector">
-                                    <input id="vivienda" type="radio" name="inmueble-tipo" value="vivienda" checked />
-                                    <label class="drinkcard-cc vivienda" for="vivienda" style="border: none;">
-                                        <div class="relative-container">
-                                            <div class="bottom-text correcion">Vivienda</div>
-                                        </div>
-                                    </label>
-                                    <input id="apartamento" type="radio" name="inmueble-tipo" value="apartamento" />
-                                    <label class="drinkcard-cc apartamento"for="apartamento" style="border: none;">
-                                        <div class="relative-container">
-                                            <div class="bottom-text correcion-a">Apartamento</div>
-                                        </div>
-                                    </label>
-                                    <input id="terreno" type="radio" name="inmueble-tipo" value="terreno" />
-                                    <label class="drinkcard-cc terreno"for="terreno" style="border: none;">
-                                        <div class="relative-container">
-                                            <div class="bottom-text correcion">Terreno</div>
-                                        </div>
-                                    </label>
-                                </div>
-                                <label for="ciudad" class="text-modal" style="margin-top: 50px;">Selecciona la Ciudad:</label>
-                                    <select name="ciudad" id="ciudad" class="minimal" required>
-                                        <option value="tegucigalpa">Tegucigalpa</option>
-                                        <option value="sanpedrosula">San Pedro Sula</option>
-                                    </select>
-                                    <label for="operacion" class="text-modal">¿Qué Buscas?</label>
-                                    <select name="operacion" id="operacion" class="minimal" required><br>
-                                        <option value="venta">Propiedades en Venta</option>
-                                        <option value="renta">Propiedades en Renta</option>
-                                    </select>
-                                <input type="submit" value="Buscar" class="submit-boton" style="margin: 40px auto;">
-                            </form>
-                            </div>
-                        </div>
-                    
-            
-
         </div>
 
-        <div class="flex-item-right order1" style="align-self:center;">
-            <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/artes/credito_tramite.svg" alt="Banco, Propiedades, Comercio" class="icon-lp">
+        <div class="flex-item-right order1" style="align-self:center; position: relative;">
+            <div class="movil_cards atlas-card" style="left: -20%;top: 20%;">
+               <span style="opacity: 100%;">Préstamo Hipotecario</span> 
+            </div>
+            <div class="movil_cards atlas-card left_arreglo" style="top: 40%; background-color: #0894FE;">
+                <span style="opacity: 100%;">Viviendas, Apts, Terrenos</span> 
+             </div>
+             <div class="movil_cards atlas-card" style="left: -15%;top: 60%; background-color: #2ECC71;">
+                <span style="opacity: 100%;">Procesos Digitales</span> 
+             </div>
+            <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/imgpersonas/cel_arte.png" alt="Banco, Propiedades, Comercio" class="icon-lp" style="max-height: 80vh; max-width: 70vh;">
         </div>
 
     </div>
-
-</section>
-
-<section>
-
-    <div class="curved-div upper">
-        <svg viewBox="0 0 1440 319">
-          <path fill="#0894FE" fill-opacity="1" d="M0,32L48,80C96,128,192,224,288,224C384,224,480,128,576,90.7C672,53,768,75,864,96C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-        </svg>
-      </div>  
-
-      <div class="curved-div">
-        <h1 style="margin: 0 5%;">¿Cuánto te prestaría un banco? <br> <a href="https://creditos.atlashome.hn/" target="_blank" style="text-decoration: underline;">Descúbrelo aquí</a> </h1>
-            <div class="flex-container">
-                                      
-                <div class="flex-item-right order2" style="align-self:center;">
-                    <p style="text-align: left;">
-                        Llena nuestro formulario de crédito hipotecario:
-                        <br>- Tiene un 95% de certeza.
-                        <br>- Te dará una oferta bancaria formal de manera inmediata
-                        <br>- Datos como a cuanto aplicas, cuota mensual, gastos complementarios, tasas de intéres, ect..
-                        <br>- Te tomará de 5 a 10 minutos, 100% online. <br><br>
-                        <span style="font-weight: bold;"> **Servicio disponible solo para Hondureños y Residentes** </span>
-                    </p>
-                    <a href="https://creditos.atlashome.hn/" target="_self" style="margin: 0 10%;">
-                        <button class="boton-landing" style="margin: 0 auto;">Aplicar a un Crédito de Vivienda</button>
-                    </a>
-                </div>
-
-                <div class="flex-item-left order1" style="align-self:center;">
-                    <img _ngcontent-serverapp-c62="" src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/form-credito/step_form.svg" alt="." class="icon-lp" style="margin-top: 20px;">
-                </div>
-
-            </div>
-        <svg viewBox="0 0 1440 319">
-          <path fill="#ffff" fill-opacity="1" d="M0,32L48,80C96,128,192,224,288,224C384,224,480,128,576,90.7C672,53,768,75,864,96C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-        </svg>
-      </div>  
-
-
-
-</section>
-
-
-
-<section>
-
-
-      <div class="curved-div" style="background: #ffffff;">
-        <h1 style="margin: 0 0 50px;color: #0894FE;" >¿Porqué usar Atlas Home?  
-            
-        </h1>
-            <div >
-                
-                                 
-                    <section class="carrusel-container" style="margin-bottom: 100px;color: #707070;">
-                        <div id="wrapper" class="wrapper" >
-                            <div id="carousel" class="carousel">
-                                <div id="content" class="content">
-
-                                    <div class="atlas-card" style="overflow:none; height: 500px;">
-                                        <div class="relative-container">
-                                            <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/artes/gps_mapa_mujer.svg" alt="imagen" class="image-card" style="height: 300px;">
-                            
-                                        </div>
-                                        <h3 style="color: #0894FE;">Visualiza la oferta de tu ciudad digitalmente</h3>
-                                        <div>
-                                            Navega, filtra, encuentra y agenda citas directamente en las propiedades dentro de tu presupuesto ideal.
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="atlas-card" style="overflow:none; height: 500px;">
-                                        <div class="relative-container">
-                                            <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/artes/ahorro_tiempo.svg" alt="imagen" class="image-card" style="height: 300px;">
-                            
-                                        </div>
-                                        <h3 style="color: #0894FE;">Ahorra tiempo siendo digital</h3>
-                                        <div>
-                                            Andar dando vueltas por la ciudad es cosa del pasado. Aquí encontrarás todo lo que necesitas, tu proceso crediticio y propiedades de vendedores certificados.
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="atlas-card" style="overflow:none; height: 500px;">
-                                        <div class="relative-container">
-                                            <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/artes/step_form.svg" alt="imagen" class="image-card" style="height: 300px;">
-                            
-                                        </div>
-                                        <h3 style="color: #0894FE;">Tu crédito hipotecario online</h3>
-                                        <div>
-                                            Solicita y gestiona todo el proceso de tu crédito hipotecario, tendrás atención personalizada de nuestros asesores financieros.
-                                        </div>
-                                    </div>
-
-                                    <div class="atlas-card" style="overflow:none; height: 500px;">
-                                        <div class="relative-container">
-                                            <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/artes/contacto.svg" alt="imagen" class="image-card" style="height: 300px;">
-                            
-                                        </div>
-                                        <h3 style="color: #0894FE;">Asesor de crédito personal</h3>
-                                        <div>
-                                            Un asesor bancario te dará atención personalizada con todo tu proceso, dudas, requisitos, entre otros.
-                                        </div>
-                                    </div>
-
-                                    
-
-                
-                                    <div class="atlas-card" style="overflow:none; height: 500px;">
-                                        <div class="relative-container">
-                                            <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/artes/calendario_mujer.svg" alt="imagen" class="image-card" style="height: 300px;">
-                            
-                                        </div>
-                                        <h3 style="color: #0894FE;">Agenda tus citas de forma virtual o presencial</h3>
-                                        <div>
-                                            Puedes agendar tu reunion con el vendedor de un inmueble ya sea virtual o presencial en la propiedad, es fácil y rápido.
-                                        </div>
-                                    </div>
-                                
-                                    
-                                
-                                    
-                                
-
-                            
-                                </div>
-                            </div>
-                            <button id="prev" class="prev">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                            >
-                                <path fill="none" d="M0 0h24v24H0V0z" />
-                                <path d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z" />
-                            </svg>
-                            </button>
-                            <button id="next" class="next">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                            >
-                                <path fill="none" d="M0 0h24v24H0V0z" />
-                                <path d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z" />
-                            </svg>
-                            </button>
-                        </div>
-                        </section>
-                                                                                        
-                </div>
-               
-            </div>
-      </div>  
-
-      <div class="subtitle show" style="text-align:center;color:#707070;font-weight: bold;">
-        Desliza a la derecha para ver las demás tarjetas →
-      </div>
-
-    <div style="align-self:center; margin: 0px 10%;">
-                
-        <a href="https://atlashome.hn/beneficios" target="_blank">
-            <button class="boton-landing" >Conoce todos los beneficios aquí</button>
-        </a>
-   
-    </div>
-
-
-</section>
-
-
-<section>
-
-    <div class="curved-div upper">
-        <svg viewBox="0 0 1440 319">
-          <path fill="#0048CD" fill-opacity="1" d="M0,32L48,80C96,128,192,224,288,224C384,224,480,128,576,90.7C672,53,768,75,864,96C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-        </svg>
-      </div>  
-      <div class="curved-div" style="background: #0048CD;">
-        <h1 style="margin: 0;">Atlas Home para Empresas <br> <span style="font-size: 1.8rem;">Constructoras y Bienes raíces</span></h1>
-            <div class="flex-container">
-                                      
-                
-                <div class="flex-item-left" style="align-self:center;">
-                    <img _ngcontent-serverapp-c62="" src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/artes/desarrollador_inmobiliario.svg" alt="." class="icon-lp" style="width: 450px; margin-top: 20px;">
-                </div>
-
-                <div class="flex-item-right" style="align-self:center;">
-                    <p>
-                        Conoce en la  siguiente sección todos los beneficios que hemos preparado para tí en Atlas Home.
-                        Estamos comprometidos en mejorar tus métricas y crecer juntos.  
-                        <br><br>
-                        <span style="font-weight: bold;"> Mas ventas y en menor tiempo </span>
-                    </p>
-                    <a href="" target="_blank" style="margin: 0 10%">
-                        <button class="boton-landing" style="margin: 0 auto;" >Crea tu cuenta hoy mismo</button>
-                    </a>
-                </div>
-
-            </div>
-        <svg viewBox="0 0 1440 319">
-          <path fill="#ffff" fill-opacity="1" d="M0,32L48,80C96,128,192,224,288,224C384,224,480,128,576,90.7C672,53,768,75,864,96C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-        </svg>
-      </div>  
-
-
-
-</section>
-
-
-<section>
-
-    <div class="curved-div" style="background: #ffffff;">
-        <h1 style="margin: 0 10% 50px;color: #0894FE;" >
-            <span>¿Como me ayudaría en mi negocio?</span> 
-        </h1>
-    </div>                 
-                  <section class="carrusel-container" style="margin-bottom: 100px;color: #707070;">
-                      <div id="wrapper" class="wrapper" >
-                          <div id="carousel2" class="carousel">
-                              <div id="content2" class="content">
-                                  
-                                  <div class="atlas-card" style="overflow:none; height: 500px; background: #ffffff;">
-                                      <div class="relative-container">
-                                          <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/artes/qr_creditos.svg" alt="imagen" class="image-card" style="height: 300px;">
-                          
-                                      </div>
-                                      <h3 style="color: #0894FE;">Pre-Califica tus clientes de forma digital</h3>
-                                      <div>
-                                          Te asignamos un link único para que útilices nuestro motor de crédito y puedas pre-calificar tus clientes de forma instantanea 24/7.
-                                      </div>
-                                  </div>
-                                  
-                                  <div class="atlas-card" style="overflow:none; height: 500px; background: #ffffff;">
-                                      <div class="relative-container">
-                                          <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/artes/empresario.svg" alt="imagen" class="image-card" style="height: 300px;">
-                          
-                                      </div>
-                                      <h3 style="color: #0894FE;">Acceso al sistema bancario</h3>
-                                      <div>
-                                          Nuestras alianzas serán tus alianzas, Atlas te podrá aperturar relaciones comerciales en todas las instituciones financieras del ecosistema nacional.
-                                      </div>
-                                  </div>
-
-                                  <div class="atlas-card" style="overflow:none; height: 500px; background: #ffffff;">
-                                      <div class="relative-container">
-                                          <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/artes/independiente.svg" alt="imagen" class="image-card" style="height: 300px;">
-                          
-                                      </div>
-                                      <h3 style="color: #0894FE;">Gestiona tu negocio en un solo lugar</h3>
-                                      <div>
-                                          Al crear tu usuario cuentas con un módulo donde podrás gestionar tus proceso de venta, clientes, citas, inmuebles, créditos, tu equipo y muchos más funciones.
-                                      </div>
-                                  </div>
-
-                                  <div class="atlas-card" style="overflow:none; height: 500px; background: #ffffff;">
-                                      <div class="relative-container">
-                                          <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/artes/tour_virtual.svg" alt="imagen" class="image-card" style="height: 300px;">
-                          
-                                      </div>
-                                      <h3 style="color: #0894FE;">Digitaliza tu portafolio de propiedades</h3>
-                                      <div>
-                                          Al digitalizar tu portafolio podras tener un mayor alcance con tus clientes, usando tecnologías de visualización como recorridos 360.
-                                      </div>
-                                  </div>
-
-              
-                                  <div class="atlas-card" style="overflow:none; height: 500px; background: #ffffff;">
-                                      <div class="relative-container">
-                                          <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/artes/calendario_hombre.svg" alt="imagen" class="image-card" style="height: 300px;">
-                          
-                                      </div>
-                                      <h3 style="color: #0894FE;">Recibe citas de forma digital</h3>
-                                      <div>
-                                          Los clientes a través de nuestra plataforma podrán agendar citas directamente contigo en los inmuebles que tengas anunciados, ya sea de forma virtual o presencial.
-                                      </div>
-                                  </div>
-                              
-                                  
-                              
-                                  
-                              
-
-                          
-                              </div>
-                          </div>
-                          <button id="prev2" class="prev">
-                          <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="24"
-                              height="24"
-                              viewBox="0 0 24 24"
-                          >
-                              <path fill="none" d="M0 0h24v24H0V0z" />
-                              <path d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z" />
-                          </svg>
-                          </button>
-                          <button id="next2" class="next">
-                          <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="24"
-                              height="24"
-                              viewBox="0 0 24 24"
-                          >
-                              <path fill="none" d="M0 0h24v24H0V0z" />
-                              <path d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z" />
-                          </svg>
-                          </button>
-                      </div>
-                      </section>
-                
-                  
-                      <div class="subtitle show" style="text-align:center;color:#707070;font-weight: bold;">
-                        Desliza a la derecha para ver las demás tarjetas →
-                      </div>
-                      <br><br> 
-              
-              
-              </div>
-              
-              <div style="align-self:center; color: #707070;text-align: center;margin: 0 10%;">
-                  
-                      <h2 style="font-weight: bold;font-size: 1.8rem;margin-top: 0;"> ¿Que esperas para crear tu cuenta? <br>
-                         ¡Inicia hoy mismo, es gratis! </h2>
-                      
-                  
-                  <a href="" target="_blank">
-                      <button class="boton-landing" style="background:#0894FE; color:#ffff">Crear Mi Cuenta</button>
-                  </a>
-                 
-              </div>
-
-    </div>  
-
-</section>
-
-<section style="margin: 80px 12px 0px;background: #0048CD;border-radius: 16px;padding: 15px; margin-bottom: 40px;">
     
-
-    <div class="flex-container">
-
-        <div class="flex-item-left" style="align-self:center;">
-            <h3 style="color: #ffffff; text-align: center;">Conoce nuestra historia</h3>
-
-            <iframe width="70%" height="300px" src="https://www.youtube.com/embed/54xHEehrjww" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">>
-            </iframe>
-
-        </div>
-
-        <div class="flex-item-right" style="align-self:center;">
-            <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/artes/contacto.svg" alt="Banco, Propiedades, Comercio" class="icon-lp" style="height: 250px;">                              
-            <button class="boton-landing" id="myBtn" onclick="modalC()">Contáctanos</button>
-
-        </div>
-
-    </div>
-
 </section>
+
+    <section>
+
+        <div class="curved-div upper">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" ><path fill="#f8f9fa" fill-opacity="1" d="M0,128L1440,256L1440,320L0,320Z" ></path></svg>
+        </div>  
+
+        <!-- -webkit-linear-gradient(315deg, #2ef7e9 0%, #2932b5 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;">   -->
+
+        <div class="curved-div" style="background-color: #f8f9fa;">
+            <h1 style="margin: 0 5%; ">
+                <span style="color: #0a2540;">
+                ¿Cuánto te prestaría un banco?
+                </span> 
+            </h1>
+                <div style="text-align: center; color: #2932b5; font-size: 25px; font-weight: bold; margin: 0 5%;">Para Préstamo de Vivienda</div> 
+                <div class="flex-container" style="margin: 0 5% 50px; justify-content: space-evenly;">
+                                        
+                    <div class="order2" style="align-self:center; color:#707070;" >
+                        <p style="text-align: left;">
+                            Llena nuestro formulario de Préstamo hipotecario: <br>
+                            <br>- Tiene un 95% de certeza.
+                            <br>- Te dará una oferta bancaria formal de manera inmediata, 24/7.
+                            <br>- Datos como a cuanto aplicas, cuota mensual, <br> gastos complementarios, tasas de intéres, ect.. <br>
+                            <br>
+                            <span style="font-weight: bold;"> **Servicio disponible solo para Hondureños y Residentes** </span>
+                        </p>
+                        <a href="https://creditos.atlashome.hn/" target="_self" style="margin: 0 10%;">
+                            <button class="boton-landing" style="margin: 0 auto 0 0; background-color: #FC2D38; color:#ffffff; border:none;">Pre-Calificate en 3 Minutos</button>
+                        </a>
+                    </div>
+
+                    <div class="order1" style="align-self:center;" >
+                        <img _ngcontent-serverapp-c62="" src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/imgpersonas/hombre_pensando_bgazul.png" alt="." class="icon-lp" style="margin-top: 20px; max-width: 450px;">
+                    </div>
+
+                </div>
+            <!-- <svg viewBox="0 0 1440 319">
+            <path fill="#ffff" fill-opacity="1" d="M0,32L48,80C96,128,192,224,288,224C384,224,480,128,576,90.7C672,53,768,75,864,96C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg> -->
+
+        </div>  
+
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f8f9fa" fill-opacity="1" d="M0,256L1440,32L1440,0L0,0Z"></path></svg>
+
+
+    </section>
+
+
+
+    <section style="margin: 0 8% 60px; ">
+
+        <div class="curved-div">
+
+        <div class="curved-div" >
+            <h1 style="margin: 0 0 50px;" >
+                <span style="color: #0a2540;"> 
+                    Atlas Home Para Empresas
+                </span> <br>
+                <span style="font-size: clamp(1.8rem, 1.8rem, 1.0rem); color: #707070;">Constructoras y Bienes raíces</span>
+            </h1>
+
+            <div class="space-between">
+
+                <div class="left-column">
+                    <div class="flex-item-left" style="align-self:center;">
+                        <img _ngcontent-serverapp-c62="" src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/imgpersonas/vendedores_landing.png" alt="." class="icon-lp" style="max-width: 650px; margin-top: 20px;">
+                    </div>
+                </div>
+            
+                <div class="right-column">
+
+                    <h2 style="color: #0a2540">Plataforma 360 para tus necesidades</h2>
+                    <div style="display: flex; justify-content: flex-start; margin: 25px 0;">
+                        <div class="burbuja" style="background-color: #0894FE;">
+                            <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/icons/icon_eye.svg" alt="Mercado" style="width:20px; height:20px; filter: brightness(0) invert(1);">
+                        </div>
+                        <div style="margin-left: 30px;">
+                            <div  style="color: #0a2540;text-align: left;font-weight: bold;">Mayor Visibilidad a tus Propiedades</div>
+                            <div  class="text" style="text-align: justify;">
+                                Forma parte del marketplace Atlas 
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; justify-content: flex-start; margin: 25px 0;">
+                        <div class="burbuja" style="background-color: #3ecfaf;">
+                            <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/icons/icon_proteccion.svg" alt="Mercado" style="width:20px; height:20px; filter: brightness(0) invert(1);">
+                        </div>
+                        <div style="margin-left: 30px;">
+                            <div  style="color: #0a2540;text-align: left;font-weight: bold;">Pre-Califica Tus Propios Clientes 24/7</div>
+                            <div  class="text" style="text-align: justify;">
+                                Acceso a Motor Hipotecario
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div style="display: flex; justify-content: flex-start; margin: 25px 0;">
+                        <div class="burbuja" style="background-color: #ffac00;">
+                            <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/icons/icon_2personas.svg" alt="Mercado" style="width:20px; height:20px;filter: brightness(0) invert(1); ">
+                        </div>
+                        <div style="margin-left: 30px;">
+                            <div  style="color: #0a2540;text-align: left;font-weight: bold;">Adquire Clientes Pre-Calificados</div>
+                            <div  class="text" style="text-align: justify;">
+                                Nuevo Canal de adquisición 
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div style="display: flex; justify-content: flex-start; margin: 25px 0;">
+                        <div class="burbuja" style="background-color: #8995ff;">
+                            <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/icons/icon_cloud.svg" alt="Mercado" style="width:20px; height:20px;filter: brightness(0) invert(1); ">
+                        </div>
+                        <div style="margin-left: 30px;">
+                            <div  style="color: #0a2540;text-align: left;font-weight: bold;">Digitaliza Tu Inventario</div>
+                            <div  class="text" style="text-align: justify;">
+                              Gestión en un solo lugar
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div style="display: flex; justify-content: flex-start; margin: 25px 0;">
+                        <div class="burbuja" style="background-color: #71b5ff;">
+                            <img src="https://atlashomegenerals.s3.amazonaws.com/imagenes/web/icons/icon_laptop.svg" alt="Mercado" style="width:20px; height:20px; filter: brightness(0) invert(1); ">
+                        </div>
+                        <div style="margin-left: 30px;">
+                            <div  style="color: #0a2540;text-align: left;font-weight: bold;">Tu Propia Página Web</div>
+                            <div  class="text" style="text-align: justify;">
+                                Autogenerada por Atas Home
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://creditos.atlashome.hn/" target="_self">
+                        <button  class="boton-landing" style="margin-left: auto; background-color: #FC2D38; color:#ffffff; border:none">
+                            Crea Tu Cuenta
+                        </button>
+
+                </div>
+            </div>
+
+        </div>  
+
+        
+        
+    </section>`
+
 
 <footer style="position: absolute; width: 100%; left: 0;">
     <div class="footer flex-box footer-img" style="left: 0;right: 0;"> 
